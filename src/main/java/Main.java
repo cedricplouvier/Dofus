@@ -64,8 +64,8 @@ public class Main {
     static Pattern epeeCombat = new Pattern("src/main/resources/img/epeeCombat.png").similar((float) 0.80);
 
     public static void main(String[] args) throws IOException, InterruptedException, AWTException, FindFailed {
-        //abraglandsIop();
-        abraglandsEnu();
+        abraglandsIop();
+        //abraglandsEnu();
         //betaKamas();
         //arakne();
         //cheminFer();
@@ -110,7 +110,7 @@ public class Main {
         Screen s = new Screen();
 
         TimeUnit.SECONDS.sleep(3);
-        for (int i = 0; i < 340; i++) {
+        for (int i = 0; i < 350; i++) {
             try {
                 boolean abraFound = false;
                 TimeUnit.SECONDS.sleep(1);
@@ -135,7 +135,7 @@ public class Main {
                 } else {
                     System.out.println("ABRA NOT FOUND");
                 }
-                if(abraFound) {
+                if (abraFound) {
                     TimeUnit.SECONDS.sleep(1);
                     Location A = new Location(735, 410);
                     s.click(A);
@@ -143,10 +143,10 @@ public class Main {
                     Location B = new Location(900, 350);
                     s.click(B);
 
-                    //TimeUnit.SECONDS.sleep(5); //temps que enus rejoignes
+                    TimeUnit.SECONDS.sleep(5); //temps que enus rejoignes
                     s.type(Key.F1);
 
-                    TimeUnit.SECONDS.sleep(2);
+                    TimeUnit.SECONDS.sleep(3);
                     s.type(Key.F7);
                     s.click(abraFight);
 
@@ -168,17 +168,16 @@ public class Main {
                         s.click(abraFight);
                         TimeUnit.SECONDS.sleep(1);
                         s.type(Key.F1);
-                        TimeUnit.SECONDS.sleep(10);
+                        TimeUnit.SECONDS.sleep(13);
                     }
                 }
             } catch (FindFailed e) {
                 e.printStackTrace();
             }
-            if (s.exists(fermerCombat) != null) {
-                s.click(fermerCombat);
-            }
         }
 
+        TimeUnit.SECONDS.sleep(2);
+        s.type(Key.ESC);
         TimeUnit.SECONDS.sleep(1);
         s.doubleClick(popoRappel);
         TimeUnit.SECONDS.sleep(5);
@@ -329,8 +328,8 @@ public class Main {
         Location R = new Location(670, 440);
         s.click(R);
         abraglandsIop();
-
     }
+
     public static void cheminFer() throws InterruptedException, FindFailed {
         Keyboard kb = new DesktopKeyboard();
         Screen s = new Screen();
