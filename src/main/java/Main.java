@@ -61,16 +61,48 @@ public class Main {
     static Pattern seveAbra = new Pattern("src/main/resources/img/seveAbra.png").similar((float) 0.80);
     static Pattern abraGlands = new Pattern("src/main/resources/img/abraGlands.png").similar((float) 0.80);
     static Pattern ecorceAbra = new Pattern("src/main/resources/img/ecorceAbra.png").similar((float) 0.80);
+    static Pattern epeeCombat = new Pattern("src/main/resources/img/epeeCombat.png").similar((float) 0.80);
 
     public static void main(String[] args) throws IOException, InterruptedException, AWTException, FindFailed {
-        abraglandsIop();
+        //abraglandsIop();
+        abraglandsEnu();
         //betaKamas();
         //arakne();
         //cheminFer();
         //depodsGlands();
     }
 
+    public static void abraglandsEnu() throws InterruptedException, FindFailed {
 
+        TimeUnit.SECONDS.sleep(3);
+        Screen s = new Screen();
+        while(true) {
+            try {
+                if (s.exists(epeeCombat) != null) {
+                    TimeUnit.SECONDS.sleep(3);
+                    s.rightClick(epeeCombat);
+                    TimeUnit.SECONDS.sleep(1);
+
+                    Location A = new Location(600, 400);
+                    s.click(A);
+                    TimeUnit.SECONDS.sleep(1);
+                    Location B = new Location(870, 260);
+                    s.click(B);
+
+                    s.type(Key.F1);
+
+                    TimeUnit.SECONDS.sleep(2);
+                    while (s.exists(abraFight) != null) {
+                        TimeUnit.SECONDS.sleep(1);
+                        System.out.println("abraFound");
+                        s.type(Key.F1);
+                    }
+                }
+            } catch (FindFailed e) {
+                e.printStackTrace();
+            }
+        }
+    }
     public static void abraglandsIop() throws InterruptedException, FindFailed {
 
         TimeUnit.SECONDS.sleep(3);
@@ -355,7 +387,8 @@ public class Main {
 
 
         TimeUnit.SECONDS.sleep(5);
-        while(s.exists(tropCharge) == null){
+        //while(s.exists(tropCharge) == null){
+        for(int i=0; i<200; i ++){
             try {
                 boolean arakneFound = false;
 
