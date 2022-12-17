@@ -65,8 +65,9 @@ public class Main {
 
     public static void main(String[] args) throws IOException, InterruptedException, AWTException, FindFailed {
         //abraglandsIop();
-        abraglandsIopBoucher();
+        //abraglandsIopBoucher();
         //abraglandsEnu();
+        abraglandsEnuBoucher();
         //betaKamas();
         //arakne();
         //cheminFer();
@@ -74,6 +75,38 @@ public class Main {
     }
 
     public static void abraglandsEnu() throws InterruptedException, FindFailed {
+
+        TimeUnit.SECONDS.sleep(3);
+        Screen s = new Screen();
+        while(true) {
+            try {
+                if (s.exists(epeeCombat) != null) {
+                    TimeUnit.SECONDS.sleep(3);
+                    s.rightClick(epeeCombat);
+                    TimeUnit.SECONDS.sleep(1);
+
+                    Location A = new Location(690, 400);
+                    s.click(A);
+                    TimeUnit.SECONDS.sleep(1);
+                    Location B = new Location(770, 360);
+                    s.click(B);
+
+                    s.type(Key.F1);
+
+                    TimeUnit.SECONDS.sleep(2);
+                    while (s.exists(abraFight) != null) {
+                        TimeUnit.SECONDS.sleep(1);
+                        System.out.println("abraFound");
+                        s.type(Key.F1);
+                    }
+                }
+            } catch (FindFailed e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public static void abraglandsEnuBoucher() throws InterruptedException, FindFailed {
 
         TimeUnit.SECONDS.sleep(3);
         Screen s = new Screen();
