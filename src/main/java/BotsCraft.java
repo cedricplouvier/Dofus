@@ -57,6 +57,8 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             s.click(Nine);
             TimeUnit.SECONDS.sleep(1);
+            s.mouseMove(50,50);
+            TimeUnit.SECONDS.sleep(1);
             s.click(Nine);
             TimeUnit.SECONDS.sleep(1);
             s.click(Six);
