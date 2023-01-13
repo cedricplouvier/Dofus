@@ -107,17 +107,7 @@ public class BotsFourbe extends Main {
                 throw new RuntimeException(e);
             }
         }
-        System.out.println("trop chargé");
-        s.type(Key.F8); //inventaire
-        TimeUnit.SECONDS.sleep(1);
-        s.click(swordInventaire);
-        TimeUnit.SECONDS.sleep(1);
-        s.click(arrowInventaire);
-        TimeUnit.SECONDS.sleep(1);
-        s.click(familierInventaire);
-        TimeUnit.SECONDS.sleep(1);
-        s.doubleClick(bworky);
-        TimeUnit.SECONDS.sleep(1);
+
         s.doubleClick(popoRappel);
         TimeUnit.SECONDS.sleep(5);
         Location D = new Location(860, 60);
@@ -164,14 +154,14 @@ public class BotsFourbe extends Main {
         TimeUnit.SECONDS.sleep(1);
         s.click(Seven);
         TimeUnit.SECONDS.sleep(1);
-        /*s.click(One);
+        s.click(One);
         TimeUnit.SECONDS.sleep(1);
         s.click(Nine);
         TimeUnit.SECONDS.sleep(1);
         s.click(Nine);
         TimeUnit.SECONDS.sleep(1);
         s.click(Six);
-        TimeUnit.SECONDS.sleep(1);*/
+        TimeUnit.SECONDS.sleep(1);
         s.click(delock);
         TimeUnit.SECONDS.sleep(3);
         Location G = new Location(1100, 200);
@@ -252,17 +242,6 @@ public class BotsFourbe extends Main {
         Location N = new Location(360, 470);
         s.click(N);
         TimeUnit.SECONDS.sleep(6);
-        s.type(Key.F8); //inventaire
-        TimeUnit.SECONDS.sleep(1);
-        s.click(swordInventaire);
-        TimeUnit.SECONDS.sleep(1);
-        s.click(arrowInventaire);
-        TimeUnit.SECONDS.sleep(1);
-        s.click(familierInventaire);
-        TimeUnit.SECONDS.sleep(1);
-        s.doubleClick(nomoon);
-        TimeUnit.SECONDS.sleep(1);
-        s.click(close);
         cheminFer();
     }
 }

@@ -43,6 +43,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(5);
             Location E = new Location(740, 440);
             s.click(E);
+            TimeUnit.SECONDS.sleep(1);
             s.click(ouvreCoffre);
             TimeUnit.SECONDS.sleep(3);
             s.click(One);
