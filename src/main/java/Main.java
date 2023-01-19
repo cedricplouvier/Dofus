@@ -119,7 +119,8 @@ public class Main {
 
         Abraglands abraglands = new Abraglands();
         //abraglands.abraglandsSculpteurIop();
-        abraglands.abraglandsIopBoucherAmakna();
+        //abraglands.abraglandsIopBoucherAmakna();
+        abraglands.abraglandsIopAlchiAmakna();
 
         //abraglandsEnu();
         //betaKamas();
