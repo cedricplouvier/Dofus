@@ -664,7 +664,8 @@ public class Abraglands extends Main {
                     Location B = new Location(950, 373);
                     Color red = new Color(245,0,6);
                     Color colorA = A.getColor();
-                    TimeUnit.MILLISECONDS.sleep(700);
+                    System.out.println(red);
+                    TimeUnit.MILLISECONDS.sleep(1500);
                     if(colorA.equals(red)) {
                         s.click(A);
                         s.type(Key.F1);
