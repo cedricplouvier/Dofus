@@ -93,18 +93,33 @@ public class Main {
     static Pattern champChamp3 = new Pattern("src/main/resources/img/champChamp3.png").similar((float) 0.78);
     static Pattern mapSudCheminFer = new Pattern("src/main/resources/img/mapSudCheminFer.png").similar((float) 0.80);
 
+    static Pattern potionFoyer = new Pattern("src/main/resources/img/potionFoyer.png").similar((float) 0.80);
+    static Pattern poudrePerlenpain = new Pattern("src/main/resources/img/poudrePerlenpain.png").similar((float) 0.80);
+    static Pattern boisErable = new Pattern("src/main/resources/img/boisErable.png").similar((float) 0.80);
+    static Pattern boisNoyer = new Pattern("src/main/resources/img/boisNoyer.png").similar((float) 0.80);
+    static Pattern geleesRouge = new Pattern("src/main/resources/img/geleesRouge.png").similar((float) 0.80);
+
+    static Pattern osChafer = new Pattern("src/main/resources/img/osChafer.png").similar((float) 0.80);
+    static Pattern boisChataignier = new Pattern("src/main/resources/img/boisChataignier.png").similar((float) 0.80);
+    static Pattern boisChene = new Pattern("src/main/resources/img/boisChene.png").similar((float) 0.80);
+
+    static Pattern popoBrakmar = new Pattern("src/main/resources/img/popoBrakmar.png").similar((float) 0.80);
+
+
 
     public static void main(String[] args) throws IOException, InterruptedException, AWTException, FindFailed {
 
         BotsCraft botsCraft = new BotsCraft();
-        botsCraft.craftTristeLame();
+        //botsCraft.craftTristeLame();
+        //botsCraft.craftBatonDakn();
+        //botsCraft.craftBaton110();
 
         BotsFourbe botsFourbe = new BotsFourbe();
         //botsFourbe.cheminFer();
 
         Abraglands abraglands = new Abraglands();
         //abraglands.abraglandsSculpteurIop();
-        //abraglands.abraglandsIopBoucherAmakna();
+        abraglands.abraglandsIopBoucherAmakna();
 
         //abraglandsEnu();
         //betaKamas();

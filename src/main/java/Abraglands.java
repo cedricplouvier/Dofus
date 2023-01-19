@@ -50,12 +50,12 @@ public class Abraglands extends Main {
                     TimeUnit.SECONDS.sleep(1);
                     Location A = new Location(735, 410);
                     s.click(A);
-                    TimeUnit.SECONDS.sleep(1);
+                    TimeUnit.MILLISECONDS.sleep(700);
                     Location B = new Location(900, 350);
                     s.click(B);
 
                     //TimeUnit.SECONDS.sleep(6); //temps que enus rejoignes
-                    TimeUnit.SECONDS.sleep(1);
+                    TimeUnit.MILLISECONDS.sleep(700);
                     s.type(Key.F1);
 
                     TimeUnit.SECONDS.sleep(2);
@@ -82,7 +82,7 @@ public class Abraglands extends Main {
                     s.type(Key.F7);
                     s.click(abraFight);
 
-                    Location four = new Location(805, 365);
+                    /*Location four = new Location(805, 365);
                     s.click(four);
                     TimeUnit.MILLISECONDS.sleep(1500);
                     s.type(Key.F7);
@@ -106,32 +106,32 @@ public class Abraglands extends Main {
                     s.click(abraFight);
                     TimeUnit.MILLISECONDS.sleep(700);
                     s.type(Key.F7);
-                    s.click(abraFight);
+                    s.click(abraFight);*/
 
-                    TimeUnit.SECONDS.sleep(2);
+                    TimeUnit.SECONDS.sleep(1);
                     while (s.exists(abraFight) != null) {
-                        s.type(Key.F7);
+                        /*s.type(Key.F7);
                         s.click(abraFight);
                         TimeUnit.MILLISECONDS.sleep(700);
                         s.type(Key.F7);
                         s.click(abraFight);
                         TimeUnit.MILLISECONDS.sleep(700);
                         s.type(Key.F7);
+                        TimeUnit.MILLISECONDS.sleep(700);*/
+                        s.type(Key.F6);
+                        s.click(abraFight);
                         TimeUnit.MILLISECONDS.sleep(700);
                         s.type(Key.F6);
                         s.click(abraFight);
-                        TimeUnit.SECONDS.sleep(1);
-                        s.type(Key.F6);
-                        s.click(abraFight);
-                        TimeUnit.SECONDS.sleep(1);
+                        /*TimeUnit.SECONDS.sleep(1);
                         s.type(Key.F5);
                         s.click(abraFight);
                         TimeUnit.SECONDS.sleep(1);
                         s.type(Key.F5);
-                        s.click(abraFight);
-                        TimeUnit.SECONDS.sleep(1);
+                        s.click(abraFight);*/
+                        TimeUnit.MILLISECONDS.sleep(700);
                         s.type(Key.F1);
-                        TimeUnit.SECONDS.sleep(15);
+                        TimeUnit.SECONDS.sleep(10);
                     }
                 }
             } catch (FindFailed e) {
@@ -317,11 +317,11 @@ public class Abraglands extends Main {
         Screen s = new Screen();
 
         TimeUnit.SECONDS.sleep(3);
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 150; i++) {
             try {
-                Location pain = new Location(1000, 680);
+                /*Location pain = new Location(1000, 680);
                 s.doubleClick(pain);
-                s.doubleClick(pain);
+                s.doubleClick(pain);*/
                 boolean abraFound = false;
                 TimeUnit.SECONDS.sleep(1);
                 s.type(Key.F2);
@@ -357,23 +357,20 @@ public class Abraglands extends Main {
                     TimeUnit.SECONDS.sleep(1);
                     Location B = new Location(840, 380);
                     s.click(B);
-
-                    TimeUnit.SECONDS.sleep(6); //temps que enus rejoignes
+                    TimeUnit.MILLISECONDS.sleep(700);
                     s.type(Key.F1);
 
                     TimeUnit.SECONDS.sleep(2);
                     s.type(Key.F7);
                     s.click(abraFight);
-
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    s.type(Key.F7);
+                    s.click(abraFight);
                     TimeUnit.MILLISECONDS.sleep(700);
                     s.type(Key.F7);
                     s.click(abraFight);
 
-                    TimeUnit.MILLISECONDS.sleep(700);
-                    s.type(Key.F7);
-                    s.click(abraFight);
-
-                    TimeUnit.MILLISECONDS.sleep(1500);
+                    TimeUnit.MILLISECONDS.sleep(1000);
                     Location twoBis = new Location(740, 410);
                     s.click(twoBis);
 
@@ -387,7 +384,7 @@ public class Abraglands extends Main {
                     s.type(Key.F7);
                     s.click(abraFight);
 
-                    TimeUnit.MILLISECONDS.sleep(1500);
+                    /*TimeUnit.MILLISECONDS.sleep(1500);
                     Location twoBisBis = new Location(770, 390);
                     s.click(twoBisBis);
 
@@ -399,9 +396,9 @@ public class Abraglands extends Main {
                     s.click(abraFight);
                     TimeUnit.MILLISECONDS.sleep(700);
                     s.type(Key.F7);
-                    s.click(abraFight);
+                    s.click(abraFight);*/
 
-                    TimeUnit.MILLISECONDS.sleep(1500);
+                    TimeUnit.MILLISECONDS.sleep(1000);
                     Location two = new Location(850, 370);
                     s.click(two);
 
@@ -415,7 +412,7 @@ public class Abraglands extends Main {
                     s.type(Key.F7);
                     s.click(abraFight);
 
-                    TimeUnit.MILLISECONDS.sleep(1500);
+                    /*TimeUnit.MILLISECONDS.sleep(1500);
                     Location three = new Location(840, 380);
                     s.click(three);
 
@@ -427,33 +424,18 @@ public class Abraglands extends Main {
                     s.click(abraFight);
                     TimeUnit.MILLISECONDS.sleep(700);
                     s.type(Key.F7);
-                    s.click(abraFight);
+                    s.click(abraFight);*/
 
-                    TimeUnit.SECONDS.sleep(2);
+                    TimeUnit.SECONDS.sleep(1);
                     while (s.exists(abraFight) != null) {
 
-                        s.type(Key.F7);
-                        s.click(abraFight);
-                        TimeUnit.MILLISECONDS.sleep(700);
-                        s.type(Key.F7);
-                        s.click(abraFight);
-                        TimeUnit.MILLISECONDS.sleep(700);
-                        s.type(Key.F7);
-                        TimeUnit.MILLISECONDS.sleep(700);
                         s.type(Key.F6);
                         s.click(abraFight);
-                        TimeUnit.SECONDS.sleep(1);
+                        TimeUnit.MILLISECONDS.sleep(1000);
                         s.type(Key.F6);
-                        s.click(abraFight);
-                        TimeUnit.SECONDS.sleep(1);
-                        s.type(Key.F5);
-                        s.click(abraFight);
-                        TimeUnit.SECONDS.sleep(1);
-                        s.type(Key.F5);
-                        s.click(abraFight);
-                        TimeUnit.SECONDS.sleep(1);
+                        TimeUnit.MILLISECONDS.sleep(1000);
                         s.type(Key.F1);
-                        TimeUnit.SECONDS.sleep(15);
+                        TimeUnit.SECONDS.sleep(10);
                     }
                 }
             } catch (FindFailed e) {
@@ -501,6 +483,14 @@ public class Abraglands extends Main {
         s.click(Zero);
         TimeUnit.SECONDS.sleep(1);
         s.click(Seven);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(One);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(Nine);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(Nine);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(Six);
         TimeUnit.SECONDS.sleep(1);
         s.click(delock);
         TimeUnit.SECONDS.sleep(3);
