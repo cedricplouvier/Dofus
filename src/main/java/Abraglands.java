@@ -434,6 +434,7 @@ public class Abraglands extends Main {
                         s.click(abraFight);
                         TimeUnit.MILLISECONDS.sleep(1000);
                         s.type(Key.F6);
+                        s.click(abraFight);
                         TimeUnit.MILLISECONDS.sleep(1000);
                         s.type(Key.F1);
                         TimeUnit.SECONDS.sleep(10);
@@ -724,6 +725,7 @@ public class Abraglands extends Main {
                         s.click(abraFight);
                         TimeUnit.MILLISECONDS.sleep(1000);
                         s.type(Key.F6);
+                        s.click(abraFight);
                         TimeUnit.MILLISECONDS.sleep(1000);
                         s.type(Key.F1);
                         TimeUnit.SECONDS.sleep(10);
