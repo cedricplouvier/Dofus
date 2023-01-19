@@ -662,13 +662,12 @@ public class Abraglands extends Main {
                     TimeUnit.SECONDS.sleep(1);
                     Location A = new Location(700, 452);
                     Location B = new Location(950, 373);
-                    Color red = new Color(245,0,6);
+                    Color redMac = new Color(245,0,6);
+                    Color redWindows = new Color(255, 0, 0);
                     Color colorA = A.getColor();
-                    System.out.println(red);
-                    TimeUnit.MILLISECONDS.sleep(1500);
-                    if(colorA.equals(red)) {
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    if((colorA.equals(redMac)) || (colorA.equals(redWindows))) {
                         s.click(A);
-                        TimeUnit.MILLISECONDS.sleep(700);
                         s.type(Key.F1);
                         TimeUnit.SECONDS.sleep(2);
                         Location AA = new Location(860, 350);
