@@ -350,7 +350,6 @@ public class Abraglands extends Main {
                 TimeUnit.MILLISECONDS.sleep(500);
                 Location launch = new Location(670, 420);
                 s.rightClick(launch);
-                s.rightClick(launch);
                 if (abraFound) {
                     TimeUnit.SECONDS.sleep(1);
                     Location A = new Location(925, 340);
@@ -658,7 +657,6 @@ public class Abraglands extends Main {
                 abraFound=true;
                 TimeUnit.MILLISECONDS.sleep(500);
                 Location launch = new Location(700, 430);
-                s.rightClick(launch);
                 s.rightClick(launch);
                 if (abraFound) {
                     TimeUnit.SECONDS.sleep(1);
