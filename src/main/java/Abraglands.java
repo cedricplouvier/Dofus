@@ -668,6 +668,7 @@ public class Abraglands extends Main {
                     TimeUnit.MILLISECONDS.sleep(1500);
                     if(colorA.equals(red)) {
                         s.click(A);
+                        TimeUnit.MILLISECONDS.sleep(700);
                         s.type(Key.F1);
                         TimeUnit.SECONDS.sleep(2);
                         Location AA = new Location(860, 350);
@@ -686,6 +687,7 @@ public class Abraglands extends Main {
                     }
                     else{
                         s.click(B);
+                        TimeUnit.MILLISECONDS.sleep(700);
                         s.type(Key.F1);
                         TimeUnit.SECONDS.sleep(2);
                         Location BB = new Location(900, 400);
