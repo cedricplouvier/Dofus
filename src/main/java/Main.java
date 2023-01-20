@@ -105,6 +105,10 @@ public class Main {
 
     static Pattern popoBrakmar = new Pattern("src/main/resources/img/popoBrakmar.png").similar((float) 0.80);
 
+    static Pattern polirPierre = new Pattern("src/main/resources/img/polirPierre.png").similar((float) 0.80);
+    static Pattern pierreSaphir = new Pattern("src/main/resources/img/pierreSaphir.png").similar((float) 0.80);
+    static Pattern eau = new Pattern("src/main/resources/img/eau.png").similar((float) 0.80);
+
 
 
     public static void main(String[] args) throws IOException, InterruptedException, AWTException, FindFailed {
@@ -113,6 +117,7 @@ public class Main {
         //botsCraft.craftTristeLame();
         //botsCraft.craftBatonDakn();
         //botsCraft.craftBaton110();
+        botsCraft.polirSaphir();
 
         BotsFourbe botsFourbe = new BotsFourbe();
         //botsFourbe.cheminFer();
@@ -120,7 +125,7 @@ public class Main {
         Abraglands abraglands = new Abraglands();
         //abraglands.abraglandsSculpteurIop();
         //abraglands.abraglandsIopBoucherAmakna();
-        abraglands.abraglandsIopAlchiAmakna();
+        //abraglands.abraglandsIopAlchiAmakna();
 
         //abraglandsEnu();
         //betaKamas();
