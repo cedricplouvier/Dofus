@@ -108,6 +108,7 @@ public class Main {
     static Pattern polirPierre = new Pattern("src/main/resources/img/polirPierre.png").similar((float) 0.80);
     static Pattern pierreSaphir = new Pattern("src/main/resources/img/pierreSaphir.png").similar((float) 0.80);
     static Pattern eau = new Pattern("src/main/resources/img/eau.png").similar((float) 0.80);
+    static Pattern pierreChristal = new Pattern("src/main/resources/img/pierreChristal.png").similar((float) 0.80);
 
 
 
@@ -117,7 +118,8 @@ public class Main {
         //botsCraft.craftTristeLame();
         //botsCraft.craftBatonDakn();
         //botsCraft.craftBaton110();
-        botsCraft.polirSaphir();
+        //botsCraft.polirSaphir();
+        botsCraft.polirChristal();
 
         BotsFourbe botsFourbe = new BotsFourbe();
         //botsFourbe.cheminFer();
