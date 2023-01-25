@@ -48,7 +48,7 @@ public class BotsCraft extends Main{
 
             if (!firstCraft) {
 
-                for (int i = 0; i < i; i++) {
+                for (int i = 0; i < 1; i++) {
                     TimeUnit.SECONDS.sleep(1);
                     Location AA = new Location(1050, 200);
                     s.click(AA);
