@@ -51,6 +51,7 @@ public class Main {
     static Pattern utiliser = new Pattern("src/main/resources/img/utiliser.png").similar((float) 0.80);
     static Pattern selectZaapViVi = new Pattern("src/main/resources/img/selectZaapViVi.png").similar((float) 0.80);
     static Pattern selectZaapMili = new Pattern("src/main/resources/img/selectZaapMili.png").similar((float) 0.80);
+    static Pattern selectZaapScara = new Pattern("src/main/resources/img/selectZaapScara.png").similar((float) 0.80);
     static Pattern oui = new Pattern("src/main/resources/img/oui.png").similar((float) 0.80);
     static Pattern pykur = new Pattern("src/main/resources/img/pykur.png").similar((float) 0.80);
     static Pattern nomoon = new Pattern("src/main/resources/img/nomoon.png").similar((float) 0.80);
@@ -109,6 +110,7 @@ public class Main {
     static Pattern pierreSaphir = new Pattern("src/main/resources/img/pierreSaphir.png").similar((float) 0.80);
     static Pattern eau = new Pattern("src/main/resources/img/eau.png").similar((float) 0.80);
     static Pattern pierreChristal = new Pattern("src/main/resources/img/pierreChristal.png").similar((float) 0.80);
+    static Pattern pierreEmeraude = new Pattern("src/main/resources/img/pierreEmeraude.png").similar((float) 0.80);
 
 
 
@@ -119,15 +121,17 @@ public class Main {
         //botsCraft.craftBatonDakn();
         //botsCraft.craftBaton110();
         //botsCraft.polirSaphir();
-        botsCraft.polirChristal();
+        //botsCraft.polirChristal();
+        //botsCraft.polirEmeraude();
 
         BotsFourbe botsFourbe = new BotsFourbe();
         //botsFourbe.cheminFer();
 
         Abraglands abraglands = new Abraglands();
-        //abraglands.abraglandsSculpteurIop();
+        abraglands.abraglandsSculpteurIop();
         //abraglands.abraglandsIopBoucherAmakna();
         //abraglands.abraglandsIopAlchiAmakna();
+        //abraglands.abraglandsIopScaraNord();
 
         //abraglandsEnu();
         //betaKamas();

@@ -14,7 +14,7 @@ public class Abraglands extends Main {
         Screen s = new Screen();
 
         TimeUnit.SECONDS.sleep(3);
-        for (int i = 0; i < 150; i++) {
+        for (int i = 0; i < 200; i++) {
             try {
                 //Location pain = new Location(1000, 680);
                 //s.doubleClick(pain);
@@ -44,8 +44,8 @@ public class Abraglands extends Main {
                     System.out.println("ABRA NOT FOUND");
                 }*/
                 abraFound=true;
+                Location launch = new Location(670, 410);
                 TimeUnit.MILLISECONDS.sleep(500);
-                Location launch = new Location(670, 420);
                 s.rightClick(launch);
                 if (abraFound) {
                     TimeUnit.SECONDS.sleep(1);
@@ -83,53 +83,13 @@ public class Abraglands extends Main {
                     s.type(Key.F7);
                     s.click(abraFight);
 
-                    /*Location four = new Location(805, 365);
-                    s.click(four);
-                    TimeUnit.MILLISECONDS.sleep(1500);
-                    s.type(Key.F7);
-                    s.click(abraFight);
-                    TimeUnit.MILLISECONDS.sleep(700);
-                    s.type(Key.F7);
-                    s.click(abraFight);
-                    TimeUnit.MILLISECONDS.sleep(700);
-                    s.type(Key.F7);
-                    s.click(abraFight);
-
-                    TimeUnit.SECONDS.sleep(1);
-                    Location three = new Location(790, 340);
-                    s.click(three);
-
-                    TimeUnit.MILLISECONDS.sleep(1500);
-                    s.type(Key.F7);
-                    s.click(abraFight);
-                    TimeUnit.MILLISECONDS.sleep(700);
-                    s.type(Key.F7);
-                    s.click(abraFight);
-                    TimeUnit.MILLISECONDS.sleep(700);
-                    s.type(Key.F7);
-                    s.click(abraFight);*/
-
                     TimeUnit.SECONDS.sleep(1);
                     while (s.exists(abraFight) != null) {
-                        /*s.type(Key.F7);
-                        s.click(abraFight);
-                        TimeUnit.MILLISECONDS.sleep(700);
-                        s.type(Key.F7);
-                        s.click(abraFight);
-                        TimeUnit.MILLISECONDS.sleep(700);
-                        s.type(Key.F7);
-                        TimeUnit.MILLISECONDS.sleep(700);*/
                         s.type(Key.F6);
                         s.click(abraFight);
                         TimeUnit.MILLISECONDS.sleep(700);
                         s.type(Key.F6);
                         s.click(abraFight);
-                        /*TimeUnit.SECONDS.sleep(1);
-                        s.type(Key.F5);
-                        s.click(abraFight);
-                        TimeUnit.SECONDS.sleep(1);
-                        s.type(Key.F5);
-                        s.click(abraFight);*/
                         TimeUnit.MILLISECONDS.sleep(700);
                         s.type(Key.F1);
                         TimeUnit.SECONDS.sleep(10);
@@ -248,9 +208,9 @@ public class Abraglands extends Main {
         Match region8 = s.find(abraGlands);
         s.dragDrop(region8, Z);
         TimeUnit.SECONDS.sleep(1);
-        kb.type(Key.NUM1);
+        kb.type(Key.NUM2);
         TimeUnit.SECONDS.sleep(1);
-        kb.type(Key.NUM5);
+        kb.type(Key.NUM0);
         TimeUnit.SECONDS.sleep(1);
         kb.type(Key.NUM0);
         TimeUnit.SECONDS.sleep(1);
@@ -318,7 +278,7 @@ public class Abraglands extends Main {
         Screen s = new Screen();
 
         TimeUnit.SECONDS.sleep(3);
-        for (int i = 0; i < 150; i++) {
+        for (int i = 0; i < 200; i++) {
             try {
                 /*Location pain = new Location(1000, 680);
                 s.doubleClick(pain);
@@ -349,6 +309,7 @@ public class Abraglands extends Main {
                 abraFound=true;
                 TimeUnit.MILLISECONDS.sleep(500);
                 Location launch = new Location(670, 420);
+                TimeUnit.MILLISECONDS.sleep(500);
                 s.rightClick(launch);
                 if (abraFound) {
                     TimeUnit.SECONDS.sleep(1);
@@ -552,9 +513,9 @@ public class Abraglands extends Main {
         Match region8 = s.find(abraGlands);
         s.dragDrop(region8, Z);
         TimeUnit.SECONDS.sleep(1);
-        kb.type(Key.NUM1);
+        kb.type(Key.NUM2);
         TimeUnit.SECONDS.sleep(1);
-        kb.type(Key.NUM5);
+        kb.type(Key.NUM0);
         TimeUnit.SECONDS.sleep(1);
         kb.type(Key.NUM0);
         TimeUnit.SECONDS.sleep(1);
@@ -626,7 +587,7 @@ public class Abraglands extends Main {
         Screen s = new Screen();
 
         TimeUnit.SECONDS.sleep(3);
-        for (int i = 0; i < 150; i++) {
+        for (int i = 0; i < 200; i++) {
             try {
                 /*Location pain = new Location(1000, 680);
                 s.doubleClick(pain);
@@ -655,8 +616,8 @@ public class Abraglands extends Main {
                     System.out.println("ABRA NOT FOUND");
                 }*/
                 abraFound=true;
-                TimeUnit.MILLISECONDS.sleep(500);
-                Location launch = new Location(700, 430);
+                Location launch = new Location(700, 425);
+                TimeUnit.MILLISECONDS.sleep(1000);
                 s.rightClick(launch);
                 if (abraFound) {
                     TimeUnit.SECONDS.sleep(1);
@@ -844,9 +805,9 @@ public class Abraglands extends Main {
         Match region8 = s.find(abraGlands);
         s.dragDrop(region8, Z);
         TimeUnit.SECONDS.sleep(1);
-        kb.type(Key.NUM1);
+        kb.type(Key.NUM2);
         TimeUnit.SECONDS.sleep(1);
-        kb.type(Key.NUM5);
+        kb.type(Key.NUM0);
         TimeUnit.SECONDS.sleep(1);
         kb.type(Key.NUM0);
         TimeUnit.SECONDS.sleep(1);
@@ -919,6 +880,248 @@ public class Abraglands extends Main {
         Location U = new Location(660, 430);
         s.click(U);
         abraglandsIopAlchiAmakna();
+
+    }
+
+    public  void abraglandsIopScaraNord() throws InterruptedException, FindFailed {
+
+        TimeUnit.SECONDS.sleep(3);
+        Keyboard kb = new DesktopKeyboard();
+        Screen s = new Screen();
+
+        TimeUnit.SECONDS.sleep(3);
+        for (int i = 0; i < 200; i++) {
+            try {
+                boolean abraFound = false;
+                TimeUnit.SECONDS.sleep(1);
+                s.type(Key.F2);
+                abraFound=true;
+                Location launch = new Location(610, 205);
+                TimeUnit.MILLISECONDS.sleep(500);
+                s.rightClick(launch);
+                if (abraFound) {
+                    TimeUnit.SECONDS.sleep(1);
+                    Location A = new Location(590, 270);
+                    Location B = new Location(770, 370);
+                    Color redMac = new Color(245,0,6);
+                    Color redWindows = new Color(255, 0, 0);
+                    Color colorA = A.getColor();
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    if((colorA.equals(redMac)) || (colorA.equals(redWindows))) {
+                        s.click(A);
+                        s.type(Key.F1);
+                        TimeUnit.SECONDS.sleep(2);
+                        Location AA = new Location(670, 320);
+                        s.click(AA);
+                        TimeUnit.MILLISECONDS.sleep(1500);
+                        s.type(Key.F7);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(700);
+                        s.type(Key.F7);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(700);
+                        s.type(Key.F7);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(700);
+                        Location AAA = new Location(740, 360);
+                        s.click(AAA);
+                        TimeUnit.MILLISECONDS.sleep(1500);
+                        s.type(Key.F7);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(700);
+                        s.type(Key.F7);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(700);
+                        s.type(Key.F7);
+                        s.click(abraFight);
+                    }
+                    else{
+                        s.click(B);
+                        TimeUnit.MILLISECONDS.sleep(700);
+                        s.type(Key.F1);
+                        TimeUnit.SECONDS.sleep(2);
+                        Location BB = new Location(670, 320);
+                        s.click(BB);
+                        TimeUnit.MILLISECONDS.sleep(1500);
+                        s.type(Key.F7);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(700);
+                        s.type(Key.F7);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(700);
+                        s.type(Key.F7);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(1000);
+                        Location BBB = new Location(600, 290);
+                        s.click(BBB);
+                        TimeUnit.MILLISECONDS.sleep(1500);
+                        s.type(Key.F7);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(700);
+                        s.type(Key.F7);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(700);
+                        s.type(Key.F7);
+                        s.click(abraFight);
+                    }
+
+                    TimeUnit.SECONDS.sleep(1);
+                    while (s.exists(abraFight) != null) {
+
+                        s.type(Key.F6);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(1000);
+                        s.type(Key.F6);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(1000);
+                        s.type(Key.F1);
+                        TimeUnit.SECONDS.sleep(10);
+                    }
+                }
+            } catch (FindFailed e) {
+                e.printStackTrace();
+            }
+        }
+
+        TimeUnit.SECONDS.sleep(2);
+        s.type(Key.ESC);
+        TimeUnit.SECONDS.sleep(1);
+        s.doubleClick(popoRappel);
+        TimeUnit.SECONDS.sleep(7);
+        Location D = new Location(860, 60);
+        s.click(D);
+        TimeUnit.SECONDS.sleep(5);
+        Location AA = new Location(1245, 350);
+        s.click(AA);
+        TimeUnit.SECONDS.sleep(5);
+        Location BB = new Location(490, 135);
+        s.click(BB);
+        TimeUnit.SECONDS.sleep(2);
+        s.click(entreMaison);
+        TimeUnit.SECONDS.sleep(3);
+        s.click(One);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(Nine);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(Zero);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(Seven);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(delock);
+        TimeUnit.SECONDS.sleep(1);
+        Location E = new Location(940, 370);
+        s.click(E);
+        TimeUnit.SECONDS.sleep(5);
+        Location F = new Location(740, 440);
+        s.click(F);
+        s.click(ouvreCoffre);
+        TimeUnit.SECONDS.sleep(3);
+        s.click(One);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(Nine);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(Zero);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(Seven);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(One);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(Nine);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(Nine);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(Six);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(delock);
+        TimeUnit.SECONDS.sleep(3);
+        Location G = new Location(1100, 200);
+        s.click(G);
+        TimeUnit.SECONDS.sleep(1);
+        Location H = new Location(370, 200);
+        s.click(H);
+        TimeUnit.SECONDS.sleep(1);
+        Match region1 = s.find(ambre);
+        Location I = new Location(500, 470);
+        s.dragDrop(region1, I);
+        s.click(max);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(check);
+        TimeUnit.SECONDS.sleep(1);
+        Match region2 = s.find(ambreAbra);
+        s.dragDrop(region2, I);
+        s.click(max);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(check);
+        TimeUnit.SECONDS.sleep(1);
+        Match region3 = s.find(bourgeonAbra);
+        s.dragDrop(region3, I);
+        s.click(max);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(check);
+        TimeUnit.SECONDS.sleep(1);
+        Match region5 = s.find(racineAbra);
+        s.dragDrop(region5, I);
+        s.click(max);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(check);
+        TimeUnit.SECONDS.sleep(1);
+        Match region6 = s.find(seveAbra);
+        s.dragDrop(region6, I);
+        s.click(max);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(check);
+        TimeUnit.SECONDS.sleep(1);
+        Match region7 = s.find(ecorceAbra);
+        s.dragDrop(region7, I);
+        s.click(max);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(check);
+
+        TimeUnit.SECONDS.sleep(1);
+        Location Z = new Location(1100, 400);
+        TimeUnit.SECONDS.sleep(1);
+        Location ZZ = new Location(400, 200);
+        s.click(ZZ);
+        Match region8 = s.find(abraGlands);
+        s.dragDrop(region8, Z);
+        TimeUnit.SECONDS.sleep(1);
+        kb.type(Key.NUM2);
+        TimeUnit.SECONDS.sleep(1);
+        kb.type(Key.NUM0);
+        TimeUnit.SECONDS.sleep(1);
+        kb.type(Key.NUM0);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(check);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(close);
+        TimeUnit.SECONDS.sleep(1);
+        s.doubleClick(popoBonta);
+        TimeUnit.SECONDS.sleep(10);
+        s.doubleClick(popoRappel);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(zaapAstrub);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(utiliser);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(selectZaapScara);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(oui);
+
+        TimeUnit.SECONDS.sleep(2);
+        Location J = new Location(825, 100);
+        s.click(J);
+        TimeUnit.SECONDS.sleep(5);
+        Location K = new Location(960, 60);
+        s.click(K);
+        TimeUnit.SECONDS.sleep(6);
+
+        Location L = new Location(530, 180);
+        s.click(L);
+        TimeUnit.SECONDS.sleep(7);
+        Location M = new Location(560, 200);
+        s.click(M);
+        TimeUnit.SECONDS.sleep(2);
+        abraglandsIopScaraNord();
 
     }
 }
