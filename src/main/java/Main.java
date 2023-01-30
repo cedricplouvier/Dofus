@@ -111,6 +111,7 @@ public class Main {
     static Pattern eau = new Pattern("src/main/resources/img/eau.png").similar((float) 0.80);
     static Pattern pierreChristal = new Pattern("src/main/resources/img/pierreChristal.png").similar((float) 0.80);
     static Pattern pierreEmeraude = new Pattern("src/main/resources/img/pierreEmeraude.png").similar((float) 0.80);
+    static Pattern aluminite = new Pattern("src/main/resources/img/aluminite.png").similar((float) 0.80);
 
 
 
@@ -120,18 +121,20 @@ public class Main {
         //botsCraft.craftTristeLame();
         //botsCraft.craftBatonDakn();
         //botsCraft.craftBaton110();
+        //botsCraft.craftSylvien();
         //botsCraft.polirSaphir();
         //botsCraft.polirChristal();
         //botsCraft.polirEmeraude();
+        //botsCraft.ouvrirRunes();
 
         BotsFourbe botsFourbe = new BotsFourbe();
         //botsFourbe.cheminFer();
 
         Abraglands abraglands = new Abraglands();
-        abraglands.abraglandsSculpteurIop();
+        //abraglands.abraglandsSculpteurIop();
         //abraglands.abraglandsIopBoucherAmakna();
         //abraglands.abraglandsIopAlchiAmakna();
-        //abraglands.abraglandsIopScaraNord();
+        abraglands.abraglandsIopScaraNord();
 
         //abraglandsEnu();
         //betaKamas();

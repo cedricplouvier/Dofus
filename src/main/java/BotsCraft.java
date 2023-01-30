@@ -6,6 +6,14 @@ import java.util.concurrent.TimeUnit;
 
 public class BotsCraft extends Main{
 
+    public static void ouvrirRunes() throws InterruptedException, FindFailed {
+        Screen s = new Screen();
+        while(true){
+                TimeUnit.MILLISECONDS.sleep(500);
+                Location BB = new Location(1100, 250);
+                s.doubleClick(BB);
+        }
+    }
     public void craftBatonDakn() throws InterruptedException, FindFailed {
         Keyboard kb = new DesktopKeyboard();
         Screen s = new Screen();
@@ -397,6 +405,237 @@ public class BotsCraft extends Main{
             s.type(Key.ESC);
             TimeUnit.MILLISECONDS.sleep(500);
             craftBaton110();
+        }
+    }
+
+    public void craftSylvien() throws InterruptedException, FindFailed {
+
+        int amountCraft = 50;
+        Keyboard kb = new DesktopKeyboard();
+        Screen s = new Screen();
+        TimeUnit.SECONDS.sleep(5);
+
+        while(true) {
+            TimeUnit.SECONDS.sleep(1);
+            s.doubleClick(potionFoyer);
+
+            TimeUnit.SECONDS.sleep(2);
+            Location A = new Location(820, 290);
+            s.click(A);
+            TimeUnit.SECONDS.sleep(3);
+            Location B = new Location(670, 380);
+            s.click(B);
+            TimeUnit.SECONDS.sleep(2);
+            s.click(ouvreCoffre);
+            TimeUnit.SECONDS.sleep(2);
+            /*s.click(One);
+            TimeUnit.SECONDS.sleep(1);
+            s.click(Nine);
+            TimeUnit.SECONDS.sleep(1);
+            s.click(Zero);
+            TimeUnit.SECONDS.sleep(1);
+            s.click(Seven);
+            TimeUnit.SECONDS.sleep(1);
+            s.click(One);
+            TimeUnit.SECONDS.sleep(1);
+            s.click(Nine);
+            TimeUnit.SECONDS.sleep(1);
+            s.mouseMove(50,50);
+            TimeUnit.SECONDS.sleep(1);
+            s.click(Nine);
+            TimeUnit.SECONDS.sleep(1);
+            s.click(Six);
+            TimeUnit.SECONDS.sleep(1);
+            s.click(delock);*/
+
+            TimeUnit.SECONDS.sleep(3);
+            Location F = new Location(1100, 200);
+            s.click(F);
+            TimeUnit.SECONDS.sleep(1);
+            Location G = new Location(420, 200);
+            s.click(G);
+            TimeUnit.SECONDS.sleep(1);
+
+            Location I = new Location(1100, 470);
+
+            Match regionChataignier = s.find(boisChataignier);
+            s.dragDrop(regionChataignier, I);
+            TimeUnit.SECONDS.sleep(1);
+            kb.type(Key.NUM2);
+            TimeUnit.MILLISECONDS.sleep(500);
+            kb.type(Key.NUM0);
+            TimeUnit.MILLISECONDS.sleep(500);
+            kb.type(Key.NUM0);
+            TimeUnit.MILLISECONDS.sleep(500);
+            s.click(check);
+            TimeUnit.SECONDS.sleep(1);
+
+            Match regionBoisNoyer = s.find(boisNoyer);
+            s.dragDrop(regionBoisNoyer, I);
+            TimeUnit.SECONDS.sleep(1);
+            kb.type(Key.NUM2);
+            TimeUnit.MILLISECONDS.sleep(500);
+            kb.type(Key.NUM0);
+            TimeUnit.MILLISECONDS.sleep(500);
+            kb.type(Key.NUM0);
+            TimeUnit.MILLISECONDS.sleep(500);
+            s.click(check);
+            TimeUnit.SECONDS.sleep(1);
+
+            Match regionBourgeonAbra = s.find(bourgeonAbra);
+            s.dragDrop(regionBourgeonAbra, I);
+            TimeUnit.SECONDS.sleep(1);
+            kb.type(Key.NUM1);
+            TimeUnit.MILLISECONDS.sleep(500);
+            kb.type(Key.NUM0);
+            TimeUnit.MILLISECONDS.sleep(500);
+            kb.type(Key.NUM0);
+            TimeUnit.MILLISECONDS.sleep(500);
+            s.click(check);
+            TimeUnit.SECONDS.sleep(1);
+
+            Match regionAmbre = s.find(ambre);
+            s.dragDrop(regionAmbre, I);
+            TimeUnit.SECONDS.sleep(1);
+            kb.type(Key.NUM5);
+            TimeUnit.MILLISECONDS.sleep(500);
+            kb.type(Key.NUM0);
+            TimeUnit.MILLISECONDS.sleep(500);
+            //kb.type(Key.NUM0);
+            //TimeUnit.MILLISECONDS.sleep(500);
+            s.click(check);
+            TimeUnit.MILLISECONDS.sleep(500);
+
+            Match regionAluminite = s.find(aluminite);
+            s.dragDrop(regionAluminite, I);
+            TimeUnit.SECONDS.sleep(1);
+            kb.type(Key.NUM5);
+            TimeUnit.MILLISECONDS.sleep(500);
+            kb.type(Key.NUM0);
+            TimeUnit.MILLISECONDS.sleep(500);
+            //kb.type(Key.NUM0);
+            //TimeUnit.MILLISECONDS.sleep(500);
+            s.click(check);
+            TimeUnit.MILLISECONDS.sleep(500);
+
+            //s.click(close);
+            s.type(Key.ESC);
+
+            TimeUnit.SECONDS.sleep(1);
+            Location J = new Location(840, 300);
+            s.click(J);
+            TimeUnit.SECONDS.sleep(3);
+            Location K = new Location(850, 400);
+            s.click(K);
+            TimeUnit.MILLISECONDS.sleep(500);
+            Location L = new Location(920, 565
+            );
+            s.click(L);
+            TimeUnit.SECONDS.sleep(3);
+
+            Location P = new Location(1220, 500);
+
+            Location Q = new Location(930, 250);
+            s.click(Q);
+            TimeUnit.SECONDS.sleep(1);
+            Match regionChataignier2 = s.find(boisChataignier);
+            s.dragDrop(regionChataignier2, P);
+            TimeUnit.MILLISECONDS.sleep(500);
+            kb.type(Key.NUM4);
+            TimeUnit.MILLISECONDS.sleep(500);
+            s.click(check);
+            TimeUnit.MILLISECONDS.sleep(500);
+            Match regionAmbre2 = s.find(ambre);
+            s.dragDrop(regionAmbre2, P);
+            TimeUnit.MILLISECONDS.sleep(500);
+            kb.type(Key.NUM1);
+            TimeUnit.MILLISECONDS.sleep(500);
+            s.click(check);
+            TimeUnit.MILLISECONDS.sleep(500);
+            Match regionNoyer2 = s.find(boisNoyer);
+            s.dragDrop(regionNoyer2, P);
+            TimeUnit.MILLISECONDS.sleep(500);
+            kb.type(Key.NUM4);
+            TimeUnit.MILLISECONDS.sleep(500);
+            s.click(check);
+            TimeUnit.MILLISECONDS.sleep(500);
+            Match regionBourgeonAbra2 = s.find(bourgeonAbra);
+            s.dragDrop(regionBourgeonAbra2, P);
+            TimeUnit.MILLISECONDS.sleep(500);
+            kb.type(Key.NUM2);
+            s.click(check);
+            TimeUnit.MILLISECONDS.sleep(500);
+            Match regionAluminite2 = s.find(aluminite);
+            s.dragDrop(regionAluminite2, P);
+            TimeUnit.MILLISECONDS.sleep(500);
+            kb.type(Key.NUM1);
+            TimeUnit.MILLISECONDS.sleep(500);
+            s.click(check);
+            TimeUnit.MILLISECONDS.sleep(500);
+
+            Location R = new Location(1000, 550);
+            s.click(R);
+            TimeUnit.SECONDS.sleep(1);
+            s.click(maxCraft);
+            TimeUnit.SECONDS.sleep(1);
+            s.click(check);
+            TimeUnit.SECONDS.sleep(1);
+            Location S = new Location(1200, 550);
+            s.click(S);
+            TimeUnit.SECONDS.sleep(80);
+            s.type(Key.ENTER);
+            TimeUnit.SECONDS.sleep(1);
+            s.type(Key.ENTER);
+            TimeUnit.SECONDS.sleep(1);
+            s.type(Key.ENTER);
+            TimeUnit.SECONDS.sleep(1);
+            s.type(Key.ESC);
+
+            TimeUnit.SECONDS.sleep(1);
+            s.doubleClick(popoBrakmar);
+            TimeUnit.SECONDS.sleep(1);
+            Location T = new Location(1050, 145);
+            s.click(T);
+            TimeUnit.MILLISECONDS.sleep(1000);
+            Location U = new Location(1100, 185);
+            s.click(U);
+            TimeUnit.SECONDS.sleep(2);
+            Location V = new Location(600, 390);
+            s.click(V);
+            TimeUnit.MILLISECONDS.sleep(700);
+            Location W = new Location(690, 510);
+            s.click(W);
+            TimeUnit.MILLISECONDS.sleep(7000);
+            Location X = new Location(990, 300);
+            s.click(X);
+            TimeUnit.MILLISECONDS.sleep(700);
+            Location Y = new Location(1000, 340);
+            s.click(Y);
+            TimeUnit.SECONDS.sleep(5);
+            Location Z = new Location(880, 250);
+            s.click(Z);
+            TimeUnit.MILLISECONDS.sleep(500);
+
+            for(int j=0 ; j<amountCraft;j=j+8){
+                for(int k=0; k<8; k++) {
+                    TimeUnit.MILLISECONDS.sleep(500);
+                    Location BB = new Location(880, 320);
+                    s.doubleClick(BB);
+                    TimeUnit.MILLISECONDS.sleep(200);
+                }
+                TimeUnit.MILLISECONDS.sleep(500);
+                Location CC = new Location(1150, 560);
+                s.click(CC);
+                TimeUnit.MILLISECONDS.sleep(500);
+                s.type(Key.ENTER);
+                TimeUnit.MILLISECONDS.sleep(500);
+                s.type(Key.ENTER);
+                TimeUnit.MILLISECONDS.sleep(500);
+            }
+            TimeUnit.MILLISECONDS.sleep(500);
+            s.type(Key.ESC);
+            TimeUnit.MILLISECONDS.sleep(500);
+            craftSylvien();
         }
     }
 
