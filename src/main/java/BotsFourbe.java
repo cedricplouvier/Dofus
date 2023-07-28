@@ -2,6 +2,7 @@ import org.sikuli.api.robot.Keyboard;
 import org.sikuli.api.robot.desktop.DesktopKeyboard;
 import org.sikuli.script.*;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class BotsFourbe extends Main {
@@ -12,8 +13,11 @@ public class BotsFourbe extends Main {
      * @throws InterruptedException
      * @throws FindFailed
      */
-    public void cheminFer() throws InterruptedException, FindFailed {
+
+    static General general = new General();
+    public void cheminFer() throws InterruptedException, FindFailed, IOException {
         Screen s = new Screen();
+        Keyboard kb = new DesktopKeyboard();
 
         TimeUnit.SECONDS.sleep(5);
         //while(s.exists(tropCharge) == null){
@@ -81,19 +85,19 @@ public class BotsFourbe extends Main {
                     TimeUnit.SECONDS.sleep(5);
                     Location A = new Location(840, 300);
                     s.click(A);
-                    TimeUnit.SECONDS.sleep(2);
+                    TimeUnit.MILLISECONDS.sleep(1000);
                     Location B = new Location(770, 240);
                     s.click(B);
 
-                    TimeUnit.SECONDS.sleep(1);
+                    TimeUnit.MILLISECONDS.sleep(1000);
                     s.type(Key.F1);
                     TimeUnit.SECONDS.sleep(2);
                     s.type(Key.F2);
                     s.click(sadiFight);
-                    TimeUnit.SECONDS.sleep(1);
+                    TimeUnit.MILLISECONDS.sleep(1000);
                     s.type(Key.F3);
                     s.click(sadiFight);
-                    TimeUnit.SECONDS.sleep(1);
+                    TimeUnit.SECONDS.sleep(2);
                     while (s.exists(sadiFight) != null) {
                         TimeUnit.SECONDS.sleep(1);
                         s.type(Key.F1);
@@ -107,62 +111,8 @@ public class BotsFourbe extends Main {
                 throw new RuntimeException(e);
             }
         }
-
-        s.doubleClick(popoRappel);
-        TimeUnit.SECONDS.sleep(5);
-        Location D = new Location(860, 60);
-        s.click(D);
-        TimeUnit.SECONDS.sleep(5);
-        Location AA = new Location(1245, 350);
-        s.click(AA);
-        TimeUnit.SECONDS.sleep(5);
-        Location BB = new Location(490, 135);
-        s.click(BB);
         TimeUnit.SECONDS.sleep(2);
-        s.click(entreMaison);
-        TimeUnit.SECONDS.sleep(3);
-        s.click(One);
-        TimeUnit.SECONDS.sleep(1);
-        s.click(Nine);
-        TimeUnit.SECONDS.sleep(1);
-        s.click(Zero);
-        TimeUnit.SECONDS.sleep(1);
-        s.click(Seven);
-        /*TimeUnit.SECONDS.sleep(1);
-        s.click(One);
-        TimeUnit.SECONDS.sleep(1);
-        s.click(Nine);
-        TimeUnit.SECONDS.sleep(1);
-        s.click(Nine);
-        TimeUnit.SECONDS.sleep(1);
-        s.click(Six);*/
-        TimeUnit.SECONDS.sleep(1);
-        s.click(delock);
-        TimeUnit.SECONDS.sleep(1);
-        Location E = new Location(940, 370);
-        s.click(E);
-        TimeUnit.SECONDS.sleep(5);
-        Location F = new Location(740, 440);
-        s.click(F);
-        s.click(ouvreCoffre);
-        TimeUnit.SECONDS.sleep(3);
-        s.click(One);
-        TimeUnit.SECONDS.sleep(1);
-        s.click(Nine);
-        TimeUnit.SECONDS.sleep(1);
-        s.click(Zero);
-        TimeUnit.SECONDS.sleep(1);
-        s.click(Seven);
-        TimeUnit.SECONDS.sleep(1);
-        s.click(One);
-        TimeUnit.SECONDS.sleep(1);
-        s.click(Nine);
-        TimeUnit.SECONDS.sleep(1);
-        s.click(Nine);
-        TimeUnit.SECONDS.sleep(1);
-        s.click(Six);
-        TimeUnit.SECONDS.sleep(1);
-        s.click(delock);
+        general.zaapAstrubToMaisonCoffre1();
         TimeUnit.SECONDS.sleep(3);
         Location G = new Location(1100, 200);
         s.click(G);

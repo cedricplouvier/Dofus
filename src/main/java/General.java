@@ -1,0 +1,228 @@
+import org.sikuli.api.robot.Keyboard;
+import org.sikuli.api.robot.desktop.DesktopKeyboard;
+import org.sikuli.script.*;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+
+import static org.sikuli.script.Commands.doubleClick;
+
+public class General extends Main {
+
+    public void insertCode(String code) throws IOException, InterruptedException {
+        Keyboard kb = new DesktopKeyboard();
+        Screen s = new Screen();
+
+        InputStream input = new FileInputStream("src/main/resources/config.properties");
+        Properties properties = new Properties();
+        properties.load(input);
+
+        String pw = properties.get(code).toString();
+        String [] pwSplit = pw.split("-");
+
+        for(int i=0; i<pwSplit.length; i++){
+            if(pwSplit[i].matches("0")){
+                kb.type(Key.NUM0);
+            }
+            if(pwSplit[i].matches("1")){
+                kb.type(Key.NUM1);
+            }
+            if(pwSplit[i].matches("2")){
+                kb.type(Key.NUM2);
+            }
+            if(pwSplit[i].matches("3")){
+                kb.type(Key.NUM3);
+            }
+            if(pwSplit[i].matches("4")){
+                kb.type(Key.NUM4);
+            }
+            if(pwSplit[i].matches("5")){
+                kb.type(Key.NUM5);
+            }
+            if(pwSplit[i].matches("6")){
+                kb.type(Key.NUM6);
+            }
+            if(pwSplit[i].matches("7")){
+                kb.type(Key.NUM7);
+            }
+            if(pwSplit[i].matches("8")){
+                kb.type(Key.NUM8);
+            }
+            if(pwSplit[i].matches("9")){
+                kb.type(Key.NUM9);
+            }
+            TimeUnit.MILLISECONDS.sleep(300);
+        }
+
+    }
+    public void zaapAstrubToMaisonCoffre1() throws InterruptedException, FindFailed, IOException {
+        Screen s = new Screen();
+
+        doubleClick(popoRappel);
+        TimeUnit.SECONDS.sleep(5);
+        Location A = new Location(820, 60);
+        s.click(A);
+        TimeUnit.SECONDS.sleep(5);
+        Location B = new Location(1245, 350);
+        s.click(B);
+        TimeUnit.SECONDS.sleep(5);
+        Location C = new Location(490, 135);
+        s.click(C);
+        TimeUnit.SECONDS.sleep(2);
+        s.click(entreMaison);
+        TimeUnit.SECONDS.sleep(3);
+        insertCode("codeAstrubMaison");
+        TimeUnit.MILLISECONDS.sleep(300);
+        s.click(delock);
+        TimeUnit.SECONDS.sleep(1);
+        Location D = new Location(940, 370);
+        s.click(D);
+        TimeUnit.SECONDS.sleep(5);
+        Location E = new Location(740, 440);
+        s.click(E);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(ouvreCoffre);
+        TimeUnit.SECONDS.sleep(2);
+        insertCode("codeAstrubCoffre1");
+        s.click(delock);
+    }
+    public void zaapAstrubToMaisonCoffre2() throws InterruptedException, FindFailed, IOException {
+        Screen s = new Screen();
+
+        doubleClick(popoRappel);
+        TimeUnit.SECONDS.sleep(5);
+        Location A = new Location(820, 60);
+        s.click(A);
+        TimeUnit.SECONDS.sleep(5);
+        Location B = new Location(1245, 350);
+        s.click(B);
+        TimeUnit.SECONDS.sleep(5);
+        Location C = new Location(490, 135);
+        s.click(C);
+        TimeUnit.SECONDS.sleep(2);
+        s.click(entreMaison);
+        TimeUnit.SECONDS.sleep(3);
+        insertCode("codeAstrubMaison");
+        TimeUnit.MILLISECONDS.sleep(300);
+        s.click(delock);
+        TimeUnit.SECONDS.sleep(1);
+        Location D = new Location(940, 370);
+        s.click(D);
+        TimeUnit.SECONDS.sleep(3);
+        Location E = new Location(840, 320);
+        s.click(E);
+        TimeUnit.SECONDS.sleep(3);
+        Location EE = new Location(840, 450);
+        s.click(EE);
+        TimeUnit.MILLISECONDS.sleep(500);
+        s.click(ouvreCoffre);
+        TimeUnit.SECONDS.sleep(2);
+        insertCode("codeAstrubCoffre2");
+        s.click(delock);
+    }
+    public void maisonAstrubToAtelierMineur() throws FindFailed, InterruptedException {
+        Screen s = new Screen();
+
+        Location J = new Location(785, 370);
+        s.click(J);
+        TimeUnit.SECONDS.sleep(3);
+        Location K = new Location(950, 410);
+        s.click(K);
+        TimeUnit.SECONDS.sleep(3);
+        Location L = new Location(900, 420);
+        s.click(L);
+        TimeUnit.SECONDS.sleep(3);
+        Location M = new Location(1250, 400);
+        s.click(M);
+        TimeUnit.SECONDS.sleep(9);
+        Location N = new Location(1265, 340);
+        s.click(N);
+        TimeUnit.SECONDS.sleep(9);
+        Location O = new Location(755, 270);
+        s.click(O);
+        TimeUnit.SECONDS.sleep(3);
+        Location OO = new Location(1040, 370);
+        s.click(OO);
+        TimeUnit.MILLISECONDS.sleep(300);
+        s.click(polirPierre);
+    }
+    public void depodsAbraglands() throws InterruptedException, FindFailed {
+
+        Screen s = new Screen();
+        Keyboard kb = new DesktopKeyboard();
+
+        Location G = new Location(1100, 200);
+        s.click(G);
+        TimeUnit.SECONDS.sleep(1);
+        Location H = new Location(370, 200);
+        s.click(H);
+        TimeUnit.SECONDS.sleep(1);
+        Match region1 = s.find(ambre);
+        Location I = new Location(500, 470);
+        s.dragDrop(region1, I);
+        s.click(max);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(check);
+        TimeUnit.SECONDS.sleep(1);
+        Match region2 = s.find(ambreAbra);
+        s.dragDrop(region2, I);
+        s.click(max);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(check);
+        TimeUnit.SECONDS.sleep(1);
+        Match region3 = s.find(bourgeonAbra);
+        s.dragDrop(region3, I);
+        s.click(max);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(check);
+        /*TimeUnit.SECONDS.sleep(1);
+        Match region4 = s.find(clefAbra);
+        s.dragDrop(region4, I);
+        s.click(max);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(check);*/
+        TimeUnit.SECONDS.sleep(1);
+        Match region5 = s.find(racineAbra);
+        s.dragDrop(region5, I);
+        s.click(max);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(check);
+        TimeUnit.SECONDS.sleep(1);
+        Match region6 = s.find(seveAbra);
+        s.dragDrop(region6, I);
+        s.click(max);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(check);
+        TimeUnit.SECONDS.sleep(1);
+        Match region7 = s.find(ecorceAbra);
+        s.dragDrop(region7, I);
+        s.click(max);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(check);
+
+        TimeUnit.SECONDS.sleep(1);
+        Location Z = new Location(1100, 400);
+        TimeUnit.SECONDS.sleep(1);
+        Location ZZ = new Location(400, 200);
+        s.click(ZZ);
+        Match region8 = s.find(abraGlands);
+        s.dragDrop(region8, Z);
+        TimeUnit.SECONDS.sleep(1);
+        kb.type(Key.NUM2);
+        TimeUnit.SECONDS.sleep(1);
+        kb.type(Key.NUM0);
+        TimeUnit.SECONDS.sleep(1);
+        kb.type(Key.NUM0);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(check);
+        TimeUnit.SECONDS.sleep(1);
+        s.click(close);
+        TimeUnit.SECONDS.sleep(1);
+        s.doubleClick(popoBonta);
+        TimeUnit.SECONDS.sleep(10);
+        s.doubleClick(popoRappel);
+    }
+}
