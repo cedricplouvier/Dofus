@@ -1,4 +1,4 @@
-#DOFUS BOT
+# DOFUS BOT
 Dofus is a French 2D MMO turn based flash game. It has a heavy focus on economy and automated bots can easily generate in game currency due to the static nature of the game.
 The project consists of multiple bot such as battling monsters, creating objects in large quantities and collecting ressources.
 
