@@ -8,6 +8,12 @@ public class Main {
     Some images are related to a game character and screenshots need to be renewed to function for your account
      */
 
+    static Pattern phenix = new Pattern("SikuliEnuJava8/src/main/resources/img/phenix.png").similar((float) 0.8);
+    static Pattern abondonner = new Pattern("SikuliEnuJava8/src/main/resources/img/abondonner.png").similar((float) 0.8);
+    static Pattern couper = new Pattern("SikuliEnuJava8/src/main/resources/img/couper.png").similar((float) 0.8);
+    static Pattern arbreNoyer = new Pattern("SikuliEnuJava8/src/main/resources/img/arbreNoyer.png").similar((float) 0.8);
+    static Pattern arbreChataignier = new Pattern("SikuliEnuJava8/src/main/resources/img/arbreChataignier.png").similar((float) 0.8);
+    static Pattern arbreFrene = new Pattern("SikuliEnuJava8/src/main/resources/img/arbreFrene.png").similar((float) 0.8);
     static Pattern abraBack = new Pattern("SikuliEnuJava8/src/main/resources/img/abraBack.png").similar((float) 0.8);
     static Pattern abraLeft = new Pattern("SikuliEnuJava8/src/main/resources/img/abraLeft.png").similar((float) 0.8);
     static Pattern abraRight = new Pattern("SikuliEnuJava8/src/main/resources/img/abraRight.png").similar((float) 0.8);
@@ -18,6 +24,7 @@ public class Main {
     static Pattern tropCharge = new Pattern("SikuliEnuJava8/src/main/resources/img/tropCharge.png").similar((float) 0.80);
     static Pattern popoRappel = new Pattern("SikuliEnuJava8/src/main/resources/img/popoRappel.png").similar((float) 0.80);
     static Pattern popoBonta = new Pattern("SikuliEnuJava8/src/main/resources/img/popoBonta.png").similar((float) 0.80);
+    static Pattern popoBontaInventaire = new Pattern("SikuliEnuJava8/src/main/resources/img/popoBontaInventaire.png").similar((float) 0.80);
     static Pattern popoBrak = new Pattern("SikuliEnuJava8/src/main/resources/img/popoBrak.png").similar((float) 0.80);
     static Pattern fiolePandaPils = new Pattern("SikuliEnuJava8/src/main/resources/img/fiolePandaPils.png").similar((float) 0.80);
     static Pattern entreMaison = new Pattern("SikuliEnuJava8/src/main/resources/img/entreMaison.png").similar((float) 0.80);
@@ -41,6 +48,7 @@ public class Main {
     static Pattern utiliser = new Pattern("SikuliEnuJava8/src/main/resources/img/utiliser.png").similar((float) 0.80);
     static Pattern selectZaapViVi = new Pattern("SikuliEnuJava8/src/main/resources/img/selectZaapViVi.png").similar((float) 0.80);
     static Pattern selectZaapMili = new Pattern("SikuliEnuJava8/src/main/resources/img/selectZaapMili.png").similar((float) 0.80);
+    static Pattern milifutaie = new Pattern("SikuliEnuJava8/src/main/resources/img/milifutaie.png").similar((float) 0.80);
     static Pattern selectZaapScara = new Pattern("SikuliEnuJava8/src/main/resources/img/selectZaapScara.png").similar((float) 0.80);
     static Pattern oui = new Pattern("SikuliEnuJava8/src/main/resources/img/oui.png").similar((float) 0.80);
     static Pattern pykur = new Pattern("SikuliEnuJava8/src/main/resources/img/pykur.png").similar((float) 0.80);
@@ -69,7 +77,6 @@ public class Main {
     static Pattern sculpterBaguette = new Pattern("SikuliEnuJava8/src/main/resources/img/sculpterBaguette.png").similar((float) 0.80);
     static Pattern briserObjet = new Pattern("SikuliEnuJava8/src/main/resources/img/briserObjet.png").similar((float) 0.80);
     static Pattern ficelleLin = new Pattern("SikuliEnuJava8/src/main/resources/img/ficelleLin.png").similar((float) 0.80);
-    static Pattern chataignier = new Pattern("SikuliEnuJava8/src/main/resources/img/chataignier.png").similar((float) 0.80);
     static Pattern arcEco = new Pattern("SikuliEnuJava8/src/main/resources/img/arcEco.png").similar((float) 0.80);
     static Pattern batonDakn = new Pattern("SikuliEnuJava8/src/main/resources/img/batonDakn.png").similar((float) 0.80);
     static Pattern maxCraft = new Pattern("SikuliEnuJava8/src/main/resources/img/maxCraft.png").similar((float) 0.80);
@@ -144,7 +151,8 @@ public class Main {
     static Pattern floriDownRight = new Pattern("SikuliEnuJava8/src/main/resources/img/floriDownRight.png").similar((float) 0.80);
 
     static Pattern riz = new Pattern("SikuliEnuJava8/src/main/resources/img/riz.png").similar((float) 0.80);
-    Pattern trefle = new Pattern("SikuliEnuJava8/src/main/resources/img/trefle.png").similar((float) 0.80);
+    static Pattern chanvreRecolte = new Pattern("SikuliEnuJava8/src/main/resources/img/chanvreRecolte.png").similar((float) 0.80);
+    static Pattern trefle = new Pattern("SikuliEnuJava8/src/main/resources/img/trefle.png").similar((float) 0.80);
     static Pattern chanvre = new Pattern("SikuliEnuJava8/src/main/resources/img/chanvre.png").similar((float) 0.80);
     static Pattern faucher = new Pattern("SikuliEnuJava8/src/main/resources/img/faucher.png").similar((float) 0.80);
 
@@ -160,6 +168,9 @@ public class Main {
     static Pattern fiolePandaburg = new Pattern("SikuliEnuJava8/src/main/resources/img/fiolePandaburg.png").similar((float) 0.80);
     public static void main(String[] args) throws IOException, InterruptedException, AWTException, FindFailed {
 
+        General general = new General();
+        //general.testCombatDefi();
+
         BotsCraft botsCraft = new BotsCraft();
         //botsCraft.craftTristeLame();
         //botsCraft.craftLameDuChafer();
@@ -167,12 +178,10 @@ public class Main {
         //botsCraft.craftBatonDakn();
         //botsCraft.craftBatonDaknPublic();
         //botsCraft.craftBaton110();
+        //botsCraft.craftBaton110Public();
         //botsCraft.craftSylvien();
         //botsCraft.craftSylvienPublic();
         //botsCraft.craftArcEco();
-        //botsCraft.polirSaphir();
-        //botsCraft.polirChristal();
-        //botsCraft.polirEmeraude();
         //botsCraft.polirPierres("rubis"); //rubis - emeraude - saphir - cristal
         //botsCraft.ouvrirRunes();
         //botsCraft.polirPDAPetiteHazar();
@@ -183,6 +192,8 @@ public class Main {
 
         BotsRecolte botsRecolte = new BotsRecolte();
         //botsRecolte.recolteRiz();
+        botsRecolte.recolteChanvrePosX10Y5();
+        //botsRecolte.bucherForetAstrub();
 
         BotsFourbe botsFourbe = new BotsFourbe();
         //botsFourbe.cheminFer();

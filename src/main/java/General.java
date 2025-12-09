@@ -2,9 +2,11 @@ import org.sikuli.api.robot.Keyboard;
 import org.sikuli.api.robot.desktop.DesktopKeyboard;
 import org.sikuli.script.*;
 
+import java.awt.*;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -135,13 +137,13 @@ public class General extends Main {
 
         Location J = new Location(785, 370);
         s.click(J);
-        TimeUnit.SECONDS.sleep(3);
+        TimeUnit.SECONDS.sleep(4);
         Location K = new Location(950, 410);
         s.click(K);
-        TimeUnit.SECONDS.sleep(3);
+        TimeUnit.SECONDS.sleep(4);
         Location L = new Location(900, 420);
         s.click(L);
-        TimeUnit.SECONDS.sleep(3);
+        TimeUnit.SECONDS.sleep(4);
         Location M = new Location(1250, 400);
         s.click(M);
         TimeUnit.SECONDS.sleep(9);
@@ -155,6 +157,28 @@ public class General extends Main {
         s.click(OO);
         TimeUnit.MILLISECONDS.sleep(300);
         s.click(polirPierre);
+    }
+
+    public void zaapAstrubForetAstrub() throws FindFailed, InterruptedException {
+        Screen s = new Screen();
+
+        ArrayList<Location> mapsZaapAstrubToForetAstrub = new ArrayList<>();
+        mapsZaapAstrubToForetAstrub.add(new Location(840, 65));
+        mapsZaapAstrubToForetAstrub.add(new Location(765, 65));
+        mapsZaapAstrubToForetAstrub.add(new Location(1050, 65));
+        mapsZaapAstrubToForetAstrub.add(new Location(1250, 440));
+        mapsZaapAstrubToForetAstrub.add(new Location(905, 65));
+        mapsZaapAstrubToForetAstrub.add(new Location(365, 340));
+        mapsZaapAstrubToForetAstrub.add(new Location(365, 305));
+        mapsZaapAstrubToForetAstrub.add(new Location(770, 65));
+
+
+        doubleClick(popoRappel);
+        TimeUnit.SECONDS.sleep(5);
+        for( Location nexMap : mapsZaapAstrubToForetAstrub){
+            s.click(nexMap);
+            TimeUnit.SECONDS.sleep(6);
+        }
     }
 
     public void depodsAbraglands() throws InterruptedException, FindFailed {
@@ -304,19 +328,19 @@ public class General extends Main {
         TimeUnit.SECONDS.sleep(3);
         Location M = new Location(370, 350);
         s.click(M);
-        TimeUnit.SECONDS.sleep(6);
+        TimeUnit.SECONDS.sleep(7);
         Location N = new Location(370, 380);
         s.click(N);
-        TimeUnit.SECONDS.sleep(6);
+        TimeUnit.SECONDS.sleep(7);
         Location O = new Location(370, 310);
         s.click(O);
-        TimeUnit.SECONDS.sleep(6);
+        TimeUnit.SECONDS.sleep(7);
         Location P = new Location(860, 60);
         s.click(P);
-        TimeUnit.SECONDS.sleep(6);
+        TimeUnit.SECONDS.sleep(7);
         Location Q = new Location(720, 410);
         s.click(Q);
-        TimeUnit.SECONDS.sleep(6);
+        TimeUnit.SECONDS.sleep(7);
         Location R = new Location(800, 380);
         s.click(R);
         TimeUnit.SECONDS.sleep(2);
@@ -329,32 +353,58 @@ public class General extends Main {
 
         Location J = new Location(785, 370);
         s.click(J);
-        TimeUnit.SECONDS.sleep(3);
+        TimeUnit.SECONDS.sleep(5);
         Location K = new Location(950, 410);
         s.click(K);
-        TimeUnit.SECONDS.sleep(3);
+        TimeUnit.SECONDS.sleep(5);
         Location L = new Location(900, 420);
         s.click(L);
-        TimeUnit.SECONDS.sleep(3);
+        TimeUnit.SECONDS.sleep(5);
         Location M = new Location(370, 350);
         s.click(M);
-        TimeUnit.SECONDS.sleep(6);
+        TimeUnit.SECONDS.sleep(8);
         Location N = new Location(370, 380);
         s.click(N);
-        TimeUnit.SECONDS.sleep(6);
+        TimeUnit.SECONDS.sleep(8);
         Location O = new Location(370, 310);
         s.click(O);
-        TimeUnit.SECONDS.sleep(6);
+        TimeUnit.SECONDS.sleep(8);
         Location P = new Location(860, 60);
         s.click(P);
-        TimeUnit.SECONDS.sleep(6);
+        TimeUnit.SECONDS.sleep(8);
         Location Q = new Location(720, 410);
         s.click(Q);
-        TimeUnit.SECONDS.sleep(6);
+        TimeUnit.SECONDS.sleep(8);
         Location R = new Location(800, 380);
         s.click(R);
         TimeUnit.SECONDS.sleep(2);
         s.click(sculpterBaguette);
         TimeUnit.SECONDS.sleep(3);
+    }
+
+    public void testCombatDefi() throws InterruptedException, FindFailed {
+        Screen s = new Screen();
+        if (s.exists(pretCombat) != null) {
+            TimeUnit.MILLISECONDS.sleep(800);
+            s.click(new Location(1050, 355));
+            TimeUnit.MILLISECONDS.sleep(800);
+            s.click(new Location(1000, 180));
+            s.type(Key.F1);
+            TimeUnit.SECONDS.sleep(3);
+            s.click(new Location(870, 250));
+            TimeUnit.SECONDS.sleep(1);
+            s.type(Key.F5);
+            TimeUnit.SECONDS.sleep(1);
+            s.click(new Location(870, 320));
+            TimeUnit.MILLISECONDS.sleep(800);
+            s.type(Key.F1);
+            while (s.exists(epouventailFight) != null) {
+                s.type(Key.F6);
+                s.click(epouventailFight);
+                TimeUnit.MILLISECONDS.sleep(800);
+                s.type(Key.F1);
+                TimeUnit.MILLISECONDS.sleep(6000);
+            }
+        }
     }
 }

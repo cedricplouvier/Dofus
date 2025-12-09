@@ -346,7 +346,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             Location S = new Location(1200, 550);
             s.click(S);
-            TimeUnit.SECONDS.sleep(75);
+            TimeUnit.SECONDS.sleep(15);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
@@ -566,6 +566,180 @@ public class BotsCraft extends Main{
             s.type(Key.ESC);
             TimeUnit.MILLISECONDS.sleep(500);
             craftBaton110();
+        }
+    }
+
+    public void craftBaton110Public() throws InterruptedException, FindFailed, IOException {
+
+        int amountCraft = 100;
+        Keyboard kb = new DesktopKeyboard();
+        Screen s = new Screen();
+        TimeUnit.SECONDS.sleep(5);
+
+        while(true) {
+            TimeUnit.SECONDS.sleep(1);
+            general.zaapAstrubToMaisonCoffre1();
+
+            TimeUnit.SECONDS.sleep(3);
+            Location F = new Location(1100, 200);
+            s.click(F);
+            TimeUnit.SECONDS.sleep(1);
+            Location G = new Location(420, 200);
+            s.click(G);
+            TimeUnit.SECONDS.sleep(1);
+
+            Location I = new Location(1100, 470);
+
+            Match regionChataignier = s.find(boisChataignier);
+            s.dragDrop(regionChataignier, I);
+            TimeUnit.SECONDS.sleep(1);
+            kb.type(Key.NUM5);
+            TimeUnit.MILLISECONDS.sleep(500);
+            kb.type(Key.NUM0);
+            TimeUnit.MILLISECONDS.sleep(500);
+            kb.type(Key.NUM0);
+            TimeUnit.MILLISECONDS.sleep(500);
+            s.click(check);
+            TimeUnit.SECONDS.sleep(1);
+
+            Match regionBoisNoyer = s.find(boisNoyer);
+            s.dragDrop(regionBoisNoyer, I);
+            TimeUnit.SECONDS.sleep(1);
+            kb.type(Key.NUM4);
+            TimeUnit.MILLISECONDS.sleep(500);
+            kb.type(Key.NUM0);
+            TimeUnit.MILLISECONDS.sleep(500);
+            kb.type(Key.NUM0);
+            TimeUnit.MILLISECONDS.sleep(500);
+            s.click(check);
+            TimeUnit.SECONDS.sleep(1);
+
+            Match regionOsChafer = s.find(osChafer);
+            s.dragDrop(regionOsChafer, I);
+            TimeUnit.SECONDS.sleep(1);
+            kb.type(Key.NUM2);
+            TimeUnit.MILLISECONDS.sleep(500);
+            kb.type(Key.NUM0);
+            TimeUnit.MILLISECONDS.sleep(500);
+            kb.type(Key.NUM0);
+            TimeUnit.MILLISECONDS.sleep(500);
+            s.click(check);
+            TimeUnit.SECONDS.sleep(1);
+
+            Match regionBoisChene = s.find(boisChene);
+            s.dragDrop(regionBoisChene, I);
+            TimeUnit.SECONDS.sleep(1);
+            kb.type(Key.NUM2);
+            TimeUnit.MILLISECONDS.sleep(500);
+            kb.type(Key.NUM0);
+            TimeUnit.MILLISECONDS.sleep(500);
+            kb.type(Key.NUM0);
+            TimeUnit.MILLISECONDS.sleep(500);
+            s.click(check);
+            TimeUnit.MILLISECONDS.sleep(500);
+
+            s.type(Key.ESC);
+            TimeUnit.SECONDS.sleep(1);
+            general.maisonAstrubToAterlierSculpteurBaton();
+
+            Location P = new Location(1220, 500);
+
+            Location Q = new Location(930, 250);
+            s.click(Q);
+            TimeUnit.SECONDS.sleep(1);
+            Match regionChataignier2 = s.find(boisChataignier);
+            s.dragDrop(regionChataignier2, P);
+            TimeUnit.MILLISECONDS.sleep(500);
+            kb.type(Key.NUM5);
+            TimeUnit.MILLISECONDS.sleep(500);
+            s.click(check);
+            TimeUnit.MILLISECONDS.sleep(500);
+            Match regionBoisNoyer2 = s.find(boisNoyer);
+            s.dragDrop(regionBoisNoyer2, P);
+            TimeUnit.MILLISECONDS.sleep(500);
+            kb.type(Key.NUM4);
+            TimeUnit.MILLISECONDS.sleep(500);
+            s.click(check);
+            TimeUnit.MILLISECONDS.sleep(500);
+            Match regionOsChafer2 = s.find(osChafer);
+            s.dragDrop(regionOsChafer2, P);
+            TimeUnit.MILLISECONDS.sleep(500);
+            kb.type(Key.NUM2);
+            TimeUnit.MILLISECONDS.sleep(500);
+            s.click(check);
+            TimeUnit.MILLISECONDS.sleep(500);
+            Match regionBoisChene2 = s.find(boisChene);
+            s.dragDrop(regionBoisChene2, P);
+            TimeUnit.MILLISECONDS.sleep(500);
+            kb.type(Key.NUM2);
+            s.click(check);
+            TimeUnit.MILLISECONDS.sleep(500);
+
+            Location R = new Location(1000, 550);
+            s.click(R);
+            TimeUnit.SECONDS.sleep(1);
+            s.click(maxCraft);
+            TimeUnit.SECONDS.sleep(1);
+            s.click(check);
+            TimeUnit.SECONDS.sleep(1);
+            Location S = new Location(1200, 550);
+            s.click(S);
+            TimeUnit.SECONDS.sleep(160);
+            s.type(Key.ENTER);
+            TimeUnit.SECONDS.sleep(1);
+            s.type(Key.ENTER);
+            TimeUnit.SECONDS.sleep(1);
+            s.type(Key.ENTER);
+            TimeUnit.SECONDS.sleep(1);
+            s.type(Key.ESC);
+
+            TimeUnit.SECONDS.sleep(1);
+            s.doubleClick(popoBrakmar);
+            TimeUnit.SECONDS.sleep(2);
+            Location T = new Location(1050, 145);
+            s.click(T);
+            TimeUnit.MILLISECONDS.sleep(1000);
+            Location U = new Location(1100, 185);
+            s.click(U);
+            TimeUnit.SECONDS.sleep(2);
+            Location V = new Location(750, 145);
+            s.click(V);
+            TimeUnit.MILLISECONDS.sleep(2000);
+            Location W = new Location(750, 200);
+            s.click(W);
+            TimeUnit.MILLISECONDS.sleep(2000);
+            Location X = new Location(970, 420);
+            s.click(X);
+            TimeUnit.SECONDS.sleep(8);
+            Location Y = new Location(565, 320);
+            s.click(Y);
+            TimeUnit.MILLISECONDS.sleep(2000);
+            Location Z = new Location(620, 335);
+            s.click(Z);
+            TimeUnit.MILLISECONDS.sleep(2000);
+            Location AA = new Location(1060, 260);
+            s.click(AA);
+
+            for(int j=0 ; j<amountCraft;j++){
+
+                TimeUnit.MILLISECONDS.sleep(500);
+                Location BB = new Location(1060, 320);
+                s.click(BB);
+                TimeUnit.MILLISECONDS.sleep(1000);
+                Location CC = new Location(1060, 320);
+                s.click(CC);
+                TimeUnit.MILLISECONDS.sleep(500);
+                s.type(Key.ENTER);
+                TimeUnit.MILLISECONDS.sleep(500);
+                s.type(Key.ENTER);
+                TimeUnit.MILLISECONDS.sleep(500);
+
+                s.type(Key.ENTER);
+            }
+            TimeUnit.MILLISECONDS.sleep(500);
+            s.type(Key.ESC);
+            TimeUnit.MILLISECONDS.sleep(500);
+            craftBaton110Public();
         }
     }
 
@@ -943,7 +1117,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             Location S = new Location(1200, 550);
             s.click(S);
-            TimeUnit.SECONDS.sleep(160);
+            TimeUnit.SECONDS.sleep(25);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
@@ -1030,7 +1204,7 @@ public class BotsCraft extends Main{
             Location G = new Location(420, 200);
             s.click(G);
             TimeUnit.SECONDS.sleep(1);
-            Location H = new Location(560, 230);
+            Location H = new Location(530, 230);
             s.click(H);
             TimeUnit.SECONDS.sleep(1);
             s.click(minerai);
@@ -1151,7 +1325,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             Location S = new Location(1200, 550);
             s.click(S);
-            TimeUnit.SECONDS.sleep(180);
+            TimeUnit.SECONDS.sleep(20);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
@@ -1799,7 +1973,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             Location S = new Location(1200, 550);
             s.click(S);
-            TimeUnit.SECONDS.sleep(40);
+            TimeUnit.SECONDS.sleep(10);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
@@ -1830,7 +2004,7 @@ public class BotsCraft extends Main{
                     Location AA = new Location(1070, 200);
                     s.click(AA);
                     TimeUnit.SECONDS.sleep(1);
-                    Match regionPopoBonta = s.find(popoBonta);
+                    Match regionPopoBonta = s.find(popoBontaInventaire);
                     Location region2 = new Location(500, 470);
                     s.dragDrop(regionPopoBonta, region2);
                     TimeUnit.SECONDS.sleep(2);
@@ -1869,7 +2043,7 @@ public class BotsCraft extends Main{
             s.click(FF);
 
             TimeUnit.SECONDS.sleep(2);
-            Match regionPatternRiz = s.find(rizInventaire);
+            Match regionPatternRiz = s.find(rizInventaire2);
             s.dragDrop(regionPatternRiz, I);
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM2);
@@ -1921,12 +2095,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             Location S = new Location(1200, 550);
             s.click(S);
-            for(int k = 0; k<5 ; k++){
-                TimeUnit.SECONDS.sleep(480);
-                Location RR = new Location(100, 100);
-                s.click(RR);
-            }
-            TimeUnit.MILLISECONDS.sleep(500);
+            TimeUnit.SECONDS.sleep(250);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
@@ -2042,12 +2211,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             Location S = new Location(1200, 550);
             s.click(S);
-            for(int k = 0; k<5 ; k++){
-                TimeUnit.SECONDS.sleep(500);
-                Location RR = new Location(100, 100);
-                s.click(RR);
-            }
-            TimeUnit.MILLISECONDS.sleep(500);
+            TimeUnit.SECONDS.sleep(200);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
@@ -2157,12 +2321,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             Location S = new Location(1200, 550);
             s.click(S);
-            for(int k = 0; k<5 ; k++){
-                TimeUnit.SECONDS.sleep(250);
-                Location RR = new Location(100, 100);
-                s.click(RR);
-            }
-            TimeUnit.MILLISECONDS.sleep(500);
+            TimeUnit.SECONDS.sleep(110);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
@@ -2222,7 +2381,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM2);
             TimeUnit.MILLISECONDS.sleep(300);
-            kb.type(Key.NUM0);
+            kb.type(Key.NUM5);
             TimeUnit.MILLISECONDS.sleep(300);
             kb.type(Key.NUM0);
             TimeUnit.MILLISECONDS.sleep(300);
@@ -2237,7 +2396,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM2);
             TimeUnit.MILLISECONDS.sleep(300);
-            kb.type(Key.NUM0);
+            kb.type(Key.NUM5);
             TimeUnit.MILLISECONDS.sleep(300);
             kb.type(Key.NUM0);
             TimeUnit.MILLISECONDS.sleep(300);
@@ -2281,8 +2440,8 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             Location S = new Location(1200, 550);
             s.click(S);
-            for(int k = 0; k<5 ; k++){
-                TimeUnit.SECONDS.sleep(460);
+            for(int k = 0; k<1 ; k++){
+                TimeUnit.SECONDS.sleep(210);
                 Location RR = new Location(100, 100);
                 s.click(RR);
             }
