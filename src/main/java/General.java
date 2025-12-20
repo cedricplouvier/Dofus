@@ -382,6 +382,42 @@ public class General extends Main {
         TimeUnit.SECONDS.sleep(3);
     }
 
+    public void maisonAstrubToAterlierBijoutierAmu() throws FindFailed, InterruptedException {
+        Screen s = new Screen();
+
+        Location J = new Location(785, 370);
+        s.click(J);
+        TimeUnit.SECONDS.sleep(5);
+        Location K = new Location(950, 410);
+        s.click(K);
+        TimeUnit.SECONDS.sleep(5);
+        Location L = new Location(900, 420);
+        s.click(L);
+        TimeUnit.SECONDS.sleep(5);
+        Location M = new Location(775, 580);
+        s.click(M);
+        TimeUnit.SECONDS.sleep(8);
+        Location N = new Location(840, 580);
+        s.click(N);
+        TimeUnit.SECONDS.sleep(8);
+        Location O = new Location(835, 580);
+        s.click(O);
+        TimeUnit.SECONDS.sleep(8);
+        Location P = new Location(840, 580);
+        s.click(P);
+        TimeUnit.SECONDS.sleep(8);
+        Location Q = new Location(840, 580);
+        s.click(Q);
+        TimeUnit.SECONDS.sleep(8);
+        Location R = new Location(940, 355);
+        s.click(R);
+        TimeUnit.SECONDS.sleep(5);
+        s.click(new Location(800,200));
+        TimeUnit.SECONDS.sleep(5);
+        s.click(craftAmu);
+        TimeUnit.SECONDS.sleep(5);
+    }
+
     public void testCombatDefi() throws InterruptedException, FindFailed {
         Screen s = new Screen();
         if (s.exists(pretCombat) != null) {

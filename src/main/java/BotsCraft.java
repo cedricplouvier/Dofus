@@ -2584,4 +2584,153 @@ public class BotsCraft extends Main{
             firstCraft = false;
         }
     }
+
+    public void craftMedailleHoly() throws FindFailed, InterruptedException, IOException {
+
+        int amountCraft = 150;
+        Keyboard kb = new DesktopKeyboard();
+        Screen s = new Screen();
+
+        while(true) {
+            TimeUnit.SECONDS.sleep(5);
+            general.zaapAstrubToMaisonCoffre1();
+
+            TimeUnit.SECONDS.sleep(3);
+            Location F = new Location(1100, 200);
+            s.click(F);
+            TimeUnit.SECONDS.sleep(1);
+            Location G = new Location(420, 200);
+            s.click(G);
+            TimeUnit.SECONDS.sleep(1);
+
+            Location I = new Location(1100, 470);
+
+            Match regionErable = s.find(boisErable);
+            s.dragDrop(regionErable, I);
+            TimeUnit.SECONDS.sleep(1);
+            kb.type(Key.NUM6);
+            TimeUnit.MILLISECONDS.sleep(500);
+            kb.type(Key.NUM0);
+            TimeUnit.MILLISECONDS.sleep(500);
+            kb.type(Key.NUM0);
+            TimeUnit.MILLISECONDS.sleep(500);
+            s.click(check);
+            TimeUnit.SECONDS.sleep(1);
+
+            Match regionBoisChene = s.find(boisChene);
+            s.dragDrop(regionBoisChene, I);
+            TimeUnit.SECONDS.sleep(1);
+            kb.type(Key.NUM6);
+            TimeUnit.MILLISECONDS.sleep(500);
+            kb.type(Key.NUM0);
+            TimeUnit.MILLISECONDS.sleep(500);
+            kb.type(Key.NUM0);
+            TimeUnit.MILLISECONDS.sleep(500);
+            s.click(check);
+            TimeUnit.SECONDS.sleep(1);
+
+            Match regionFleurDeChanvre = s.find(fleurDeChanvre);
+            s.dragDrop(regionFleurDeChanvre, I);
+            TimeUnit.SECONDS.sleep(1);
+            kb.type(Key.NUM6);
+            TimeUnit.MILLISECONDS.sleep(500);
+            kb.type(Key.NUM0);
+            TimeUnit.MILLISECONDS.sleep(500);
+            kb.type(Key.NUM0);
+            TimeUnit.MILLISECONDS.sleep(500);
+            s.click(check);
+            TimeUnit.SECONDS.sleep(1);
+
+            TimeUnit.MILLISECONDS.sleep(500);
+
+            //s.click(close);
+            s.type(Key.ESC);
+            TimeUnit.SECONDS.sleep(1);
+            general.maisonAstrubToAterlierBijoutierAmu();
+
+            Location P = new Location(1220, 500);
+
+            Location Q = new Location(930, 250);
+            s.click(Q);
+            TimeUnit.SECONDS.sleep(1);
+            Match regionErable2 = s.find(boisErable);
+            s.dragDrop(regionErable2, P);
+            TimeUnit.MILLISECONDS.sleep(500);
+            kb.type(Key.NUM4);
+            TimeUnit.MILLISECONDS.sleep(500);
+            s.click(check);
+            TimeUnit.MILLISECONDS.sleep(500);
+            Match regionChene2 = s.find(boisChene);
+            s.dragDrop(regionChene2, P);
+            TimeUnit.MILLISECONDS.sleep(500);
+            kb.type(Key.NUM4);
+            TimeUnit.MILLISECONDS.sleep(500);
+            s.click(check);
+            TimeUnit.MILLISECONDS.sleep(500);
+            Match regionFleurDeChanvre2 = s.find(fleurDeChanvre);
+            s.dragDrop(regionFleurDeChanvre2, P);
+            TimeUnit.MILLISECONDS.sleep(500);
+            kb.type(Key.NUM4);
+            TimeUnit.MILLISECONDS.sleep(500);
+            s.click(check);
+            TimeUnit.MILLISECONDS.sleep(500);
+
+            Location R = new Location(1000, 550);
+            s.click(R);
+            TimeUnit.SECONDS.sleep(1);
+            s.click(maxCraft);
+            TimeUnit.SECONDS.sleep(1);
+            s.click(check);
+            TimeUnit.SECONDS.sleep(1);
+            Location S = new Location(1200, 550);
+            s.click(S);
+            TimeUnit.SECONDS.sleep(10);
+            s.type(Key.ENTER);
+            TimeUnit.SECONDS.sleep(10);
+            s.type(Key.ENTER);
+            TimeUnit.SECONDS.sleep(1);
+            s.type(Key.ENTER);
+            TimeUnit.SECONDS.sleep(1);
+            s.type(Key.ESC);
+
+            TimeUnit.SECONDS.sleep(1);
+            s.doubleClick(popoBrakmar);
+            TimeUnit.SECONDS.sleep(3);
+            Location T = new Location(1050, 145);
+            s.click(T);
+            TimeUnit.MILLISECONDS.sleep(1000);
+            Location U = new Location(1100, 185);
+            s.click(U);
+            TimeUnit.SECONDS.sleep(4);
+            Location V = new Location(600, 390);
+            s.click(V);
+            TimeUnit.MILLISECONDS.sleep(3000);
+            Location W = new Location(690, 510);
+            s.click(W);
+            TimeUnit.MILLISECONDS.sleep(20000);
+            Location X = new Location(990, 300);
+            s.click(X);
+            TimeUnit.MILLISECONDS.sleep(700);
+            Match briserObjet = s.find(general.briserObjet);
+            s.click(briserObjet);
+            TimeUnit.SECONDS.sleep(5);
+
+            for(int j=0 ; j<amountCraft;j++){
+                Location BB = new Location(1050, 270);
+                s.doubleClick(BB);
+                TimeUnit.MILLISECONDS.sleep(200);
+            }
+            TimeUnit.MILLISECONDS.sleep(500);
+            Location CC = new Location(950, 560);
+            s.click(CC);
+            TimeUnit.MILLISECONDS.sleep(500);
+            s.type(Key.ENTER);
+            TimeUnit.MILLISECONDS.sleep(500);
+            s.type(Key.ENTER);
+            TimeUnit.MILLISECONDS.sleep(1000);
+            s.type(Key.ESC);
+            TimeUnit.MILLISECONDS.sleep(500);
+            craftMedailleHoly();
+        }
+    }
 }

@@ -8,6 +8,7 @@ public class Main {
     Some images are related to a game character and screenshots need to be renewed to function for your account
      */
 
+    static Pattern fleurDeChanvre = new Pattern("SikuliEnuJava8/src/main/resources/img/fleurDeChanvre.png").similar((float) 0.8);
     static Pattern phenix = new Pattern("SikuliEnuJava8/src/main/resources/img/phenix.png").similar((float) 0.8);
     static Pattern abondonner = new Pattern("SikuliEnuJava8/src/main/resources/img/abondonner.png").similar((float) 0.8);
     static Pattern couper = new Pattern("SikuliEnuJava8/src/main/resources/img/couper.png").similar((float) 0.8);
@@ -75,6 +76,8 @@ public class Main {
     static Pattern sculpterArc = new Pattern("SikuliEnuJava8/src/main/resources/img/sculpterArc.png").similar((float) 0.80);
     static Pattern sculpterBaton = new Pattern("SikuliEnuJava8/src/main/resources/img/sculpterBaton.png").similar((float) 0.80);
     static Pattern sculpterBaguette = new Pattern("SikuliEnuJava8/src/main/resources/img/sculpterBaguette.png").similar((float) 0.80);
+    static Pattern craftAnneau = new Pattern("SikuliEnuJava8/src/main/resources/img/craftAnneau.png").similar((float) 0.80);
+    static Pattern craftAmu = new Pattern("SikuliEnuJava8/src/main/resources/img/craftAmu.png").similar((float) 0.80);
     static Pattern briserObjet = new Pattern("SikuliEnuJava8/src/main/resources/img/briserObjet.png").similar((float) 0.80);
     static Pattern ficelleLin = new Pattern("SikuliEnuJava8/src/main/resources/img/ficelleLin.png").similar((float) 0.80);
     static Pattern arcEco = new Pattern("SikuliEnuJava8/src/main/resources/img/arcEco.png").similar((float) 0.80);
@@ -182,6 +185,7 @@ public class Main {
         //botsCraft.craftSylvien();
         //botsCraft.craftSylvienPublic();
         //botsCraft.craftArcEco();
+        //botsCraft.craftMedailleHoly();
         //botsCraft.polirPierres("rubis"); //rubis - emeraude - saphir - cristal
         //botsCraft.ouvrirRunes();
         //botsCraft.polirPDAPetiteHazar();
