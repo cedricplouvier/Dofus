@@ -154,7 +154,7 @@ public class BotsRecolte extends Main{
                     TimeUnit.MILLISECONDS.sleep(7000);
                     first = false;
                 }
-                TimeUnit.MILLISECONDS.sleep(4000);
+                TimeUnit.MILLISECONDS.sleep(3000);
                 if (s.exists(pretCombat) != null) {
                     TimeUnit.MILLISECONDS.sleep(800);
                     s.click(new Location(1050, 355));
@@ -180,12 +180,53 @@ public class BotsRecolte extends Main{
 
                     s.type(Key.F1);
                     TimeUnit.SECONDS.sleep(5);
-                    while (s.exists(epouventailFight) != null) {
-                        s.type(Key.F6);
-                        s.click(epouventailFight);
-                        TimeUnit.MILLISECONDS.sleep(800);
-                        s.type(Key.F1);
-                        TimeUnit.MILLISECONDS.sleep(6000);
+                    if(s.exists(epouventailFight) != null){
+                        while (s.exists(epouventailFight) != null) {
+                            s.type(Key.F6);
+                            TimeUnit.MILLISECONDS.sleep(200);
+                            try {
+                                s.click(epouventailFight);
+                            } catch (FindFailed e) {
+                                System.out.println("Ennemi not found");
+                            }
+                            TimeUnit.MILLISECONDS.sleep(1000);
+                            s.type(Key.F6);
+                            TimeUnit.MILLISECONDS.sleep(200);
+                            try {
+                                s.click(epouventailFight);
+                            } catch (FindFailed e) {
+                                System.out.println("Ennemi not found");
+                            }
+                            TimeUnit.MILLISECONDS.sleep(1000);
+                            s.type(Key.F1);
+                            TimeUnit.MILLISECONDS.sleep(500);
+                            s.mouseMove(-10,-35);
+                            TimeUnit.MILLISECONDS.sleep(6000);
+                        }
+                    }
+                    else if (s.exists(ennemiCombat) != null){
+                        while (s.exists(ennemiCombat) != null) {
+                            s.type(Key.F6);
+                            TimeUnit.MILLISECONDS.sleep(200);
+                            try {
+                                s.click(ennemiCombat);
+                            } catch (FindFailed e) {
+                                System.out.println("Ennemi not found");
+                            }
+                            TimeUnit.MILLISECONDS.sleep(1000);
+                            s.type(Key.F6);
+                            TimeUnit.MILLISECONDS.sleep(200);
+                            try {
+                                s.click(ennemiCombat);
+                            } catch (FindFailed e) {
+                                System.out.println("Ennemi not found");
+                            }
+                            TimeUnit.MILLISECONDS.sleep(1000);
+                            s.type(Key.F1);
+                            TimeUnit.MILLISECONDS.sleep(500);
+                            s.mouseMove(-10,-35);
+                            TimeUnit.MILLISECONDS.sleep(6000);
+                        }
                     }
                 }
             }
