@@ -42,6 +42,8 @@ If you have no seperate PC to dedicate to the bot make use of a Virtual machine.
 
 All code is created and used through Intellij Community Edition
 
+Install Oracle OpenJDK 18.0.2 and set it as SDK to enable Sikuli
+
 ### Screen-resolution
 Images and pixel locations are based on a resolution of **1280x800**
 Terminal command for adjusting Virtualbox VM to necessary reslotion: **vboxmanage controlvm "MSEdge - Win10" setvideomodehint "1280" "800" "32”**
@@ -53,13 +55,13 @@ User specific properties are set in the config.properties file
 
 ## Potential Feature list
 
-Relative pixel locations for clicking based on screen resolution: Click(x/xreslotion, y/yresolution)
-Add user specific variables to config.properties
-Add delta time to clicks to avoid being detected and banned (never happenned but better safe than sorry)
-Dynamic max crafts resource pick-up: Calculate max crafts and # resources to pick up based on characters max weight.
-Autopilot movement between maps based on start and end location (HARD)
-Handle other players interacting with you during botting and get stuck (cancel exchange etc)
-Visualize most profitable crafts based on shop actual resource prices (Current using excel)
+- Relative pixel locations for clicking based on screen resolution: Click(x/xreslotion, y/yresolution)
+- Add user specific variables to config.properties
+- Add delta time to clicks to avoid being detected and banned (never happenned but better safe than sorry)
+- Dynamic max crafts resource pick-up: Calculate max crafts and # resources to pick up based on characters max weight.
+- Autopilot movement between maps based on start and end location (HARD)
+- Handle other players interacting with you during botting and get stuck (cancel exchange etc)
+- Visualize most profitable crafts based on shop actual resource prices (Current using excel)
 
 ## Known issues
 
