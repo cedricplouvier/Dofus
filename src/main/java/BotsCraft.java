@@ -1833,7 +1833,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             s.click(QQ);
             TimeUnit.SECONDS.sleep(2);
-            Match regionPotionVieilesse2 = s.find(potionVieilesse2);
+            Match regionPotionVieilesse2 = s.find(potionVieilesse);
             s.dragDrop(regionPotionVieilesse2, P);
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM1);

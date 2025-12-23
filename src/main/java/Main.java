@@ -29,11 +29,6 @@ public class Main {
     static Pattern popoBrak = new Pattern("SikuliEnuJava8/src/main/resources/img/popoBrak.png").similar((float) 0.80);
     static Pattern fiolePandaPils = new Pattern("SikuliEnuJava8/src/main/resources/img/fiolePandaPils.png").similar((float) 0.80);
     static Pattern entreMaison = new Pattern("SikuliEnuJava8/src/main/resources/img/entreMaison.png").similar((float) 0.80);
-    static Pattern One = new Pattern("SikuliEnuJava8/src/main/resources/img/one.png").similar((float) 0.80);
-    static Pattern Nine = new Pattern("SikuliEnuJava8/src/main/resources/img/nine.png").similar((float) 0.80);
-    static Pattern Zero = new Pattern("SikuliEnuJava8/src/main/resources/img/zero.png").similar((float) 0.80);
-    static Pattern Seven = new Pattern("SikuliEnuJava8/src/main/resources/img/seven.png").similar((float) 0.80);
-    static Pattern Six = new Pattern("SikuliEnuJava8/src/main/resources/img/six.png").similar((float) 0.80);
     static Pattern delock = new Pattern("SikuliEnuJava8/src/main/resources/img/delock.png").similar((float) 0.80);
     static Pattern ouvreCoffre = new Pattern("SikuliEnuJava8/src/main/resources/img/ouvreCoffre.png").similar((float) 0.80);
     static Pattern ressourceInventaire = new Pattern("SikuliEnuJava8/src/main/resources/img/ressourceInventaire.png").similar((float) 0.80);
@@ -135,25 +130,6 @@ public class Main {
     static Pattern pierreGranit = new Pattern("SikuliEnuJava8/src/main/resources/img/pierreGranit.png").similar((float) 0.80);
 
     static Pattern potionVieilesse = new Pattern("SikuliEnuJava8/src/main/resources/img/potionVieilesse.png").similar((float) 0.80);
-    static Pattern potionVieilesse2 = new Pattern("SikuliEnuJava8/src/main/resources/img/potionVieilesse2.png").similar((float) 0.80);
-
-    static Pattern chiendentFight = new Pattern("SikuliEnuJava8/src/main/resources/img/chiendentFight.png").similar((float) 0.90);
-    static Pattern chiendentUpLeft = new Pattern("SikuliEnuJava8/src/main/resources/img/chiendent.png").similar((float) 0.90);
-    static Pattern chiendentUpRight = new Pattern("SikuliEnuJava8/src/main/resources/img/chiendent.png").similar((float) 0.90);
-    static Pattern chiendentDownLeft = new Pattern("SikuliEnuJava8/src/main/resources/img/chiendent.png").similar((float) 0.90);
-    static Pattern chiendentDownRight = new Pattern("SikuliEnuJava8/src/main/resources/img/chiendent.png").similar((float) 0.90);
-
-    static Pattern nerbeFight = new Pattern("SikuliEnuJava8/src/main/resources/img/nerbeFight.png").similar((float) 0.80);
-    static Pattern nerbeUpLeft = new Pattern("SikuliEnuJava8/src/main/resources/img/nerbeUpLeft.png").similar((float) 0.80);
-    static Pattern nerbeUpRight = new Pattern("SikuliEnuJava8/src/main/resources/img/nerbeUpRight.png").similar((float) 0.80);
-    static Pattern nerbeDownLeft = new Pattern("SikuliEnuJava8/src/main/resources/img/nerbeDownLeft.png").similar((float) 0.80);
-    static Pattern nerbeDownRight = new Pattern("SikuliEnuJava8/src/main/resources/img/nerbeDownRight.png").similar((float) 0.80);
-
-    static Pattern floriFight = new Pattern("SikuliEnuJava8/src/main/resources/img/floriFight.png").similar((float) 0.80);
-    static Pattern floriUpLeft = new Pattern("SikuliEnuJava8/src/main/resources/img/floriUpLeft.png").similar((float) 0.80);
-    static Pattern floriUpRight = new Pattern("SikuliEnuJava8/src/main/resources/img/floriUpRight.png").similar((float) 0.80);
-    static Pattern floriDownLeft = new Pattern("SikuliEnuJava8/src/main/resources/img/floriDownLeft.png").similar((float) 0.80);
-    static Pattern floriDownRight = new Pattern("SikuliEnuJava8/src/main/resources/img/floriDownRight.png").similar((float) 0.80);
 
     static Pattern riz = new Pattern("SikuliEnuJava8/src/main/resources/img/riz.png").similar((float) 0.80);
     static Pattern chanvreRecolte = new Pattern("SikuliEnuJava8/src/main/resources/img/chanvreRecolte.png").similar((float) 0.80);
@@ -172,6 +148,8 @@ public class Main {
     static Pattern preparerPotion = new Pattern("SikuliEnuJava8/src/main/resources/img/preparerPotion.png").similar((float) 0.80);
     static Pattern fiolePandaburg = new Pattern("SikuliEnuJava8/src/main/resources/img/fiolePandaburg.png").similar((float) 0.80);
     public static void main(String[] args) throws IOException, InterruptedException, AWTException, FindFailed {
+
+
 
         General general = new General();
         //general.testCombatDefi();
