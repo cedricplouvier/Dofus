@@ -48,7 +48,7 @@ public class BotsRecolte extends Main{
                 } catch (FindFailed e) {
                     System.out.println("riz not found");
                 }
-                TimeUnit.MILLISECONDS.sleep(400);
+                TimeUnit.MILLISECONDS.sleep(200);
                 try {
                     s.click(faucher);
                 } catch (FindFailed e) {
@@ -58,7 +58,7 @@ public class BotsRecolte extends Main{
                     TimeUnit.MILLISECONDS.sleep(7000);
                     first = false;
                 }
-                TimeUnit.MILLISECONDS.sleep(2000);
+                TimeUnit.MILLISECONDS.sleep(1000);
                 if (s.exists(pretCombat) != null) {
                     TimeUnit.MILLISECONDS.sleep(800);
                     Location A = new Location(500, 370);
@@ -70,7 +70,9 @@ public class BotsRecolte extends Main{
                     while (s.exists(epouventailFight) != null) {
                         s.type(Key.F6);
                         s.click(epouventailFight);
-                        TimeUnit.MILLISECONDS.sleep(800);
+                        TimeUnit.MILLISECONDS.sleep(400);
+                        s.mouseMove(-10,-55);
+                        TimeUnit.MILLISECONDS.sleep(400);
                         s.type(Key.F1);
                         TimeUnit.MILLISECONDS.sleep(6000);
                     }
