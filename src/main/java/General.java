@@ -16,7 +16,6 @@ public class General extends Main {
 
     public void insertCode(String code) throws IOException, InterruptedException {
         Keyboard kb = new DesktopKeyboard();
-        Screen s = new Screen();
 
         InputStream input = new FileInputStream("SikuliEnuJava8/src/main/resources/config.properties");
         Properties properties = new Properties();
@@ -58,7 +57,6 @@ public class General extends Main {
             }
             TimeUnit.MILLISECONDS.sleep(300);
         }
-
     }
 
     public void zaapAstrubToMaisonCoffre1() throws InterruptedException, FindFailed, IOException {
@@ -66,35 +64,26 @@ public class General extends Main {
 
         doubleClick(popoRappel);
         TimeUnit.SECONDS.sleep(5);
-        Location A = new Location(820, 60);
-        s.click(A);
+        s.click(new Location(820, 60));
         TimeUnit.SECONDS.sleep(5);
-        Location B = new Location(1245, 350);
-        s.click(B);
+        s.click(new Location(1245, 350));
         TimeUnit.SECONDS.sleep(5);
-        Location C = new Location(490, 135);
-        s.click(C);
+        s.click(new Location(490, 135));
         TimeUnit.SECONDS.sleep(2);
         s.click(entreMaison);
         TimeUnit.SECONDS.sleep(3);
-        //using own account
         insertCode("codeAstrubMaison");
         TimeUnit.MILLISECONDS.sleep(300);
         s.click(delock);
-
         TimeUnit.SECONDS.sleep(1);
-        Location D = new Location(940, 370);
-        s.click(D);
+        s.click(new Location(940, 370));
         TimeUnit.SECONDS.sleep(5);
-        Location E = new Location(740, 440);
-        s.click(E);
+        s.click(new Location(740, 440));
         TimeUnit.SECONDS.sleep(1);
         s.click(ouvreCoffre);
         TimeUnit.SECONDS.sleep(2);
-
         insertCode("codeAstrubCoffre1");
         s.click(delock);
-
     }
 
     public void zaapAstrubToMaisonCoffre2() throws InterruptedException, FindFailed, IOException {
@@ -102,14 +91,11 @@ public class General extends Main {
 
         doubleClick(popoRappel);
         TimeUnit.SECONDS.sleep(5);
-        Location A = new Location(820, 60);
-        s.click(A);
+        s.click(new Location(820, 60));
         TimeUnit.SECONDS.sleep(5);
-        Location B = new Location(1245, 350);
-        s.click(B);
+        s.click(new Location(1245, 350));
         TimeUnit.SECONDS.sleep(5);
-        Location C = new Location(490, 135);
-        s.click(C);
+        s.click(new Location(490, 135));
         TimeUnit.SECONDS.sleep(2);
         s.click(entreMaison);
         TimeUnit.SECONDS.sleep(3);
@@ -117,14 +103,11 @@ public class General extends Main {
         TimeUnit.MILLISECONDS.sleep(300);
         s.click(delock);
         TimeUnit.SECONDS.sleep(1);
-        Location D = new Location(940, 370);
-        s.click(D);
+        s.click(new Location(940, 370));
         TimeUnit.SECONDS.sleep(3);
-        Location E = new Location(840, 320);
-        s.click(E);
+        s.click(new Location(840, 320));
         TimeUnit.SECONDS.sleep(3);
-        Location EE = new Location(840, 450);
-        s.click(EE);
+        s.click(new Location(840, 450));
         TimeUnit.MILLISECONDS.sleep(500);
         s.click(ouvreCoffre);
         TimeUnit.SECONDS.sleep(2);
@@ -135,26 +118,19 @@ public class General extends Main {
     public void maisonAstrubToAtelierMineur() throws FindFailed, InterruptedException {
         Screen s = new Screen();
 
-        Location J = new Location(785, 370);
-        s.click(J);
+        s.click(new Location(785, 370));
         TimeUnit.SECONDS.sleep(4);
-        Location K = new Location(950, 410);
-        s.click(K);
+        s.click(new Location(950, 410));
         TimeUnit.SECONDS.sleep(4);
-        Location L = new Location(900, 420);
-        s.click(L);
+        s.click(new Location(900, 420));
         TimeUnit.SECONDS.sleep(4);
-        Location M = new Location(1250, 400);
-        s.click(M);
+        s.click(new Location(1250, 400));
         TimeUnit.SECONDS.sleep(9);
-        Location N = new Location(1265, 340);
-        s.click(N);
+        s.click(new Location(1265, 340));
         TimeUnit.SECONDS.sleep(9);
-        Location O = new Location(755, 270);
-        s.click(O);
+        s.click(new Location(755, 270));
         TimeUnit.SECONDS.sleep(4);
-        Location OO = new Location(1040, 370);
-        s.click(OO);
+        s.click(new Location(1040, 370));
         TimeUnit.MILLISECONDS.sleep(300);
         s.click(polirPierre);
     }
@@ -172,7 +148,6 @@ public class General extends Main {
         mapsZaapAstrubToForetAstrub.add(new Location(365, 305));
         mapsZaapAstrubToForetAstrub.add(new Location(770, 65));
 
-
         doubleClick(popoRappel);
         TimeUnit.SECONDS.sleep(5);
         for( Location nexMap : mapsZaapAstrubToForetAstrub){
@@ -182,66 +157,52 @@ public class General extends Main {
     }
 
     public void depodsAbraglands() throws InterruptedException, FindFailed {
-
         Screen s = new Screen();
         Keyboard kb = new DesktopKeyboard();
 
-        Location G = new Location(1100, 200);
-        s.click(G);
+        s.click(new Location(1100, 200));
         TimeUnit.SECONDS.sleep(1);
-        Location H = new Location(370, 200);
-        s.click(H);
+        s.click(new Location(370, 200));
         TimeUnit.SECONDS.sleep(1);
         Match region1 = s.find(ambre);
-        Location I = new Location(500, 470);
-        s.dragDrop(region1, I);
+        s.dragDrop(region1, new Location(500, 470));
         s.click(max);
         TimeUnit.SECONDS.sleep(1);
         s.type(Key.ENTER);
         TimeUnit.SECONDS.sleep(1);
         Match region2 = s.find(ambreAbra);
-        s.dragDrop(region2, I);
+        s.dragDrop(region2, new Location(500, 470));
         s.click(max);
         TimeUnit.SECONDS.sleep(1);
         s.type(Key.ENTER);
         TimeUnit.SECONDS.sleep(1);
         Match region3 = s.find(bourgeonAbra);
-        s.dragDrop(region3, I);
+        s.dragDrop(region3, new Location(500, 470));
         s.click(max);
         TimeUnit.SECONDS.sleep(1);
         s.type(Key.ENTER);
-        /*TimeUnit.SECONDS.sleep(1);
-        Match region4 = s.find(clefAbra);
-        s.dragDrop(region4, I);
-        s.click(max);
-        TimeUnit.SECONDS.sleep(1);
-        s.type(Key.ENTER);*/
         TimeUnit.SECONDS.sleep(1);
         Match region5 = s.find(racineAbra);
-        s.dragDrop(region5, I);
+        s.dragDrop(region5, new Location(500, 470));
         s.click(max);
         TimeUnit.SECONDS.sleep(1);
         s.type(Key.ENTER);
         TimeUnit.SECONDS.sleep(1);
         Match region6 = s.find(seveAbra);
-        s.dragDrop(region6, I);
+        s.dragDrop(region6, new Location(500, 470));
         s.click(max);
         TimeUnit.SECONDS.sleep(1);
         s.type(Key.ENTER);
         TimeUnit.SECONDS.sleep(1);
         Match region7 = s.find(ecorceAbra);
-        s.dragDrop(region7, I);
+        s.dragDrop(region7, new Location(500, 470));
         s.click(max);
         TimeUnit.SECONDS.sleep(1);
         s.type(Key.ENTER);
-
         TimeUnit.SECONDS.sleep(1);
-        Location Z = new Location(1100, 400);
-        TimeUnit.SECONDS.sleep(1);
-        Location ZZ = new Location(400, 200);
-        s.click(ZZ);
+        s.click(new Location(400, 200));
         Match region8 = s.find(abraGlands);
-        s.dragDrop(region8, Z);
+        s.dragDrop(region8, new Location(1100, 400));
         TimeUnit.SECONDS.sleep(1);
         kb.type(Key.NUM2);
         TimeUnit.SECONDS.sleep(1);
@@ -261,20 +222,15 @@ public class General extends Main {
     public void maisonAstrubToAtelierAlchi() throws FindFailed, InterruptedException {
         Screen s = new Screen();
 
-        Location J = new Location(785, 370);
-        s.click(J);
+        s.click(new Location(785, 370));
         TimeUnit.SECONDS.sleep(3);
-        Location K = new Location(950, 410);
-        s.click(K);
+        s.click(new Location(950, 410));
         TimeUnit.SECONDS.sleep(3);
-        Location L = new Location(900, 420);
-        s.click(L);
+        s.click(new Location(900, 420));
         TimeUnit.SECONDS.sleep(3);
-        Location M = new Location(830, 410);
-        s.click(M);
+        s.click(new Location(830, 410));
         TimeUnit.SECONDS.sleep(6);
-        Location N = new Location(920, 280);
-        s.click(N);
+        s.click(new Location(920, 280));
         TimeUnit.SECONDS.sleep(2);
         s.click(preparerPotion);
         TimeUnit.SECONDS.sleep(3);
@@ -283,32 +239,23 @@ public class General extends Main {
     public void maisonAstrubToAterlierSculpteurArc() throws FindFailed, InterruptedException {
         Screen s = new Screen();
 
-        Location J = new Location(785, 370);
-        s.click(J);
+        s.click(new Location(785, 370));
         TimeUnit.SECONDS.sleep(3);
-        Location K = new Location(950, 410);
-        s.click(K);
+        s.click(new Location(950, 410));
         TimeUnit.SECONDS.sleep(3);
-        Location L = new Location(900, 420);
-        s.click(L);
+        s.click(new Location(900, 420));
         TimeUnit.SECONDS.sleep(3);
-        Location M = new Location(370, 350);
-        s.click(M);
+        s.click(new Location(370, 350));
         TimeUnit.SECONDS.sleep(6);
-        Location N = new Location(370, 380);
-        s.click(N);
+        s.click(new Location(370, 380));
         TimeUnit.SECONDS.sleep(6);
-        Location O = new Location(370, 310);
-        s.click(O);
+        s.click(new Location(370, 310));
         TimeUnit.SECONDS.sleep(6);
-        Location P = new Location(860, 60);
-        s.click(P);
+        s.click(new Location(860, 60));
         TimeUnit.SECONDS.sleep(6);
-        Location Q = new Location(720, 410);
-        s.click(Q);
+        s.click(new Location(720, 410));
         TimeUnit.SECONDS.sleep(6);
-        Location R = new Location(800, 380);
-        s.click(R);
+        s.click(new Location(800, 380));
         TimeUnit.SECONDS.sleep(2);
         s.click(sculpterArc);
         TimeUnit.SECONDS.sleep(3);
@@ -317,32 +264,23 @@ public class General extends Main {
     public void maisonAstrubToAterlierSculpteurBaton() throws FindFailed, InterruptedException {
         Screen s = new Screen();
 
-        Location J = new Location(785, 370);
-        s.click(J);
+        s.click(new Location(785, 370));
         TimeUnit.SECONDS.sleep(3);
-        Location K = new Location(950, 410);
-        s.click(K);
+        s.click(new Location(950, 410));
         TimeUnit.SECONDS.sleep(3);
-        Location L = new Location(900, 420);
-        s.click(L);
+        s.click(new Location(900, 420));
         TimeUnit.SECONDS.sleep(3);
-        Location M = new Location(370, 350);
-        s.click(M);
+        s.click(new Location(370, 350));
         TimeUnit.SECONDS.sleep(7);
-        Location N = new Location(370, 380);
-        s.click(N);
+        s.click(new Location(370, 380));
         TimeUnit.SECONDS.sleep(7);
-        Location O = new Location(370, 310);
-        s.click(O);
+        s.click(new Location(370, 310));
         TimeUnit.SECONDS.sleep(7);
-        Location P = new Location(860, 60);
-        s.click(P);
+        s.click(new Location(860, 60));
         TimeUnit.SECONDS.sleep(7);
-        Location Q = new Location(720, 410);
-        s.click(Q);
+        s.click(new Location(720, 410));
         TimeUnit.SECONDS.sleep(7);
-        Location R = new Location(800, 380);
-        s.click(R);
+        s.click(new Location(800, 380));
         TimeUnit.SECONDS.sleep(2);
         s.click(sculpterBaton);
         TimeUnit.SECONDS.sleep(3);
@@ -351,32 +289,23 @@ public class General extends Main {
     public void maisonAstrubToAterlierSculpteurBaguette() throws FindFailed, InterruptedException {
         Screen s = new Screen();
 
-        Location J = new Location(785, 370);
-        s.click(J);
+        s.click(new Location(785, 370));
         TimeUnit.SECONDS.sleep(5);
-        Location K = new Location(950, 410);
-        s.click(K);
+        s.click(new Location(950, 410));
         TimeUnit.SECONDS.sleep(5);
-        Location L = new Location(900, 420);
-        s.click(L);
+        s.click(new Location(900, 420));
         TimeUnit.SECONDS.sleep(5);
-        Location M = new Location(370, 350);
-        s.click(M);
+        s.click(new Location(370, 350));
         TimeUnit.SECONDS.sleep(8);
-        Location N = new Location(370, 380);
-        s.click(N);
+        s.click(new Location(370, 380));
         TimeUnit.SECONDS.sleep(8);
-        Location O = new Location(370, 310);
-        s.click(O);
+        s.click(new Location(370, 310));
         TimeUnit.SECONDS.sleep(8);
-        Location P = new Location(860, 60);
-        s.click(P);
+        s.click(new Location(860, 60));
         TimeUnit.SECONDS.sleep(8);
-        Location Q = new Location(720, 410);
-        s.click(Q);
+        s.click(new Location(720, 410));
         TimeUnit.SECONDS.sleep(8);
-        Location R = new Location(800, 380);
-        s.click(R);
+        s.click(new Location(800, 380));
         TimeUnit.SECONDS.sleep(2);
         s.click(sculpterBaguette);
         TimeUnit.SECONDS.sleep(3);
@@ -385,32 +314,23 @@ public class General extends Main {
     public void maisonAstrubToAterlierBijoutierAmu() throws FindFailed, InterruptedException {
         Screen s = new Screen();
 
-        Location J = new Location(785, 370);
-        s.click(J);
+        s.click(new Location(785, 370));
         TimeUnit.SECONDS.sleep(5);
-        Location K = new Location(950, 410);
-        s.click(K);
+        s.click(new Location(950, 410));
         TimeUnit.SECONDS.sleep(5);
-        Location L = new Location(900, 420);
-        s.click(L);
+        s.click(new Location(900, 420));
         TimeUnit.SECONDS.sleep(5);
-        Location M = new Location(775, 580);
-        s.click(M);
+        s.click(new Location(775, 580));
         TimeUnit.SECONDS.sleep(8);
-        Location N = new Location(840, 580);
-        s.click(N);
+        s.click(new Location(840, 580));
         TimeUnit.SECONDS.sleep(8);
-        Location O = new Location(835, 580);
-        s.click(O);
+        s.click(new Location(835, 580));
         TimeUnit.SECONDS.sleep(8);
-        Location P = new Location(840, 580);
-        s.click(P);
+        s.click(new Location(840, 580));
         TimeUnit.SECONDS.sleep(8);
-        Location Q = new Location(840, 580);
-        s.click(Q);
+        s.click(new Location(840, 580));
         TimeUnit.SECONDS.sleep(8);
-        Location R = new Location(940, 355);
-        s.click(R);
+        s.click(new Location(940, 355));
         TimeUnit.SECONDS.sleep(5);
         s.click(new Location(800,200));
         TimeUnit.SECONDS.sleep(5);

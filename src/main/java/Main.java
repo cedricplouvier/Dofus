@@ -147,9 +147,8 @@ public class Main {
     static Pattern pretCombat = new Pattern("SikuliEnuJava8/src/main/resources/img/pretCombat.png").similar((float) 0.80);
     static Pattern preparerPotion = new Pattern("SikuliEnuJava8/src/main/resources/img/preparerPotion.png").similar((float) 0.80);
     static Pattern fiolePandaburg = new Pattern("SikuliEnuJava8/src/main/resources/img/fiolePandaburg.png").similar((float) 0.80);
+
     public static void main(String[] args) throws IOException, InterruptedException, AWTException, FindFailed {
-
-
 
         General general = new General();
         //general.testCombatDefi();
