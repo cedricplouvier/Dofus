@@ -71,7 +71,7 @@ public class BotsCraft extends Main{
                     TimeUnit.SECONDS.sleep(1);
                     s.click(max);
                     TimeUnit.MILLISECONDS.sleep(500);
-                    s.click(check);
+                    s.type(Key.ENTER);
                 }
             }
 
@@ -94,7 +94,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM0);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Match regionPoudre = s.find(poudrePerlenpain);
@@ -106,7 +106,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM0);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Match regionNoyer = s.find(boisNoyer);
@@ -118,7 +118,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM0);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Match regionErable = s.find(boisErable);
@@ -130,7 +130,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM0);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
 
             //s.click(close);
@@ -157,7 +157,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM2);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
             Match regionPoudre2 = s.find(poudrePerlenpain);
             s.dragDrop(regionPoudre2, P);
@@ -166,27 +166,27 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM0);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
             Match regionNoyer2 = s.find(boisNoyer);
             s.dragDrop(regionNoyer2, P);
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM9);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
             Match regionErable2 = s.find(boisErable);
             s.dragDrop(regionErable2, P);
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM9);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
             Location R = new Location(1000, 550);
             s.click(R);
             TimeUnit.SECONDS.sleep(1);
             s.click(maxCraft);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Location S = new Location(1200, 550);
             s.click(S);
@@ -226,7 +226,7 @@ public class BotsCraft extends Main{
                     TimeUnit.SECONDS.sleep(1);
                     s.click(max);
                     TimeUnit.SECONDS.sleep(1);
-                    s.click(check);
+                    s.type(Key.ENTER);
                 }
             }
 
@@ -249,7 +249,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM0);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Match regionPoudre = s.find(poudrePerlenpain);
@@ -261,7 +261,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM0);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Match regionNoyer = s.find(boisNoyer);
@@ -273,7 +273,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM0);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Match regionErable = s.find(boisErable);
@@ -285,7 +285,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM0);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
 
             s.type(Key.ESC);
@@ -313,7 +313,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM2);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
             Match regionPoudre2 = s.find(poudrePerlenpain);
             s.dragDrop(regionPoudre2, P);
@@ -322,27 +322,27 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM0);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
             Match regionNoyer2 = s.find(boisNoyer);
             s.dragDrop(regionNoyer2, P);
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM9);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
             Match regionErable2 = s.find(boisErable);
             s.dragDrop(regionErable2, P);
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM9);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
             Location R = new Location(1000, 550);
             s.click(R);
             TimeUnit.SECONDS.sleep(1);
             s.click(maxCraft);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Location S = new Location(1200, 550);
             s.click(S);
@@ -415,7 +415,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM0);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Match regionsOsChafer = s.find(osChafer);
@@ -427,7 +427,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM0);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Match regionNoyer = s.find(boisNoyer);
@@ -439,7 +439,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM0);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Match regionChene = s.find(boisChene);
@@ -451,7 +451,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM0);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
 
             //s.click(close);
@@ -478,34 +478,34 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM5);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
             Match regionsOsChafer2 = s.find(osChafer);
             s.dragDrop(regionsOsChafer2, P);
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM2);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
             Match regionNoyer2 = s.find(boisNoyer);
             s.dragDrop(regionNoyer2, P);
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM4);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
             Match regionChene2 = s.find(boisChene);
             s.dragDrop(regionChene2, P);
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM2);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
             Location R = new Location(1000, 550);
             s.click(R);
             TimeUnit.SECONDS.sleep(1);
             s.click(maxCraft);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Location S = new Location(1200, 550);
             s.click(S);
@@ -599,7 +599,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM0);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Match regionBoisNoyer = s.find(boisNoyer);
@@ -611,7 +611,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM0);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Match regionOsChafer = s.find(osChafer);
@@ -623,7 +623,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM0);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Match regionBoisChene = s.find(boisChene);
@@ -635,7 +635,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM0);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
 
             s.type(Key.ESC);
@@ -652,27 +652,27 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM5);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
             Match regionBoisNoyer2 = s.find(boisNoyer);
             s.dragDrop(regionBoisNoyer2, P);
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM4);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
             Match regionOsChafer2 = s.find(osChafer);
             s.dragDrop(regionOsChafer2, P);
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM2);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
             Match regionBoisChene2 = s.find(boisChene);
             s.dragDrop(regionBoisChene2, P);
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM2);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
 
             Location R = new Location(1000, 550);
@@ -680,7 +680,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             s.click(maxCraft);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Location S = new Location(1200, 550);
             s.click(S);
@@ -802,7 +802,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM0);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Match regionBoisNoyer = s.find(boisNoyer);
@@ -814,7 +814,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM0);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Match regionBourgeonAbra = s.find(bourgeonAbra);
@@ -826,7 +826,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM0);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Match regionAmbre = s.find(ambre);
@@ -840,7 +840,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             //kb.type(Key.NUM0);
             //TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
 
             Match regionAluminite = s.find(aluminite);
@@ -854,7 +854,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             //kb.type(Key.NUM0);
             //TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
 
             //s.click(close);
@@ -882,34 +882,34 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM4);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
             Match regionAmbre2 = s.find(ambre);
             s.dragDrop(regionAmbre2, P);
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM1);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
             Match regionNoyer2 = s.find(boisNoyer);
             s.dragDrop(regionNoyer2, P);
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM4);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
             Match regionBourgeonAbra2 = s.find(bourgeonAbra);
             s.dragDrop(regionBourgeonAbra2, P);
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM2);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
             Match regionAluminite2 = s.find(aluminite);
             s.dragDrop(regionAluminite2, P);
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM1);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
 
             Location R = new Location(1000, 550);
@@ -917,7 +917,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             s.click(maxCraft);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Location S = new Location(1200, 550);
             s.click(S);
@@ -1008,7 +1008,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM0);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Match regionBoisNoyer = s.find(boisNoyer);
@@ -1020,7 +1020,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM0);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Match regionBourgeonAbra = s.find(bourgeonAbra);
@@ -1032,7 +1032,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM0);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Match regionAmbre = s.find(ambre);
@@ -1046,7 +1046,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             //kb.type(Key.NUM0);
             //TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
 
             Match regionAluminite = s.find(aluminite);
@@ -1060,7 +1060,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             //kb.type(Key.NUM0);
             //TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
 
             //s.click(close);
@@ -1078,34 +1078,34 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM4);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
             Match regionAmbre2 = s.find(ambre);
             s.dragDrop(regionAmbre2, P);
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM1);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
             Match regionNoyer2 = s.find(boisNoyer);
             s.dragDrop(regionNoyer2, P);
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM4);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
             Match regionBourgeonAbra2 = s.find(bourgeonAbra);
             s.dragDrop(regionBourgeonAbra2, P);
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM2);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
             Match regionAluminite2 = s.find(aluminite);
             s.dragDrop(regionAluminite2, P);
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM1);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
 
             Location R = new Location(1000, 550);
@@ -1113,7 +1113,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             s.click(maxCraft);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Location S = new Location(1200, 550);
             s.click(S);
@@ -1192,7 +1192,7 @@ public class BotsCraft extends Main{
                     TimeUnit.SECONDS.sleep(1);
                     s.click(max);
                     TimeUnit.SECONDS.sleep(1);
-                    s.click(check);
+                    s.type(Key.ENTER);
                 }
 
             }
@@ -1221,7 +1221,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM5);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Match regionBronze = s.find(bronze);
@@ -1233,7 +1233,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM0);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Match regionCuivre = s.find(cuivre);
@@ -1245,7 +1245,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM0);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Match regionEtain = s.find(etain);
@@ -1257,7 +1257,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM5);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             s.click(close);
@@ -1294,34 +1294,34 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM5);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Match regionBronze2 = s.find(bronze);
             s.dragDrop(regionBronze2, P);
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM4);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Match regionCuivre2 = s.find(cuivre);
             s.dragDrop(regionCuivre2, P);
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM2);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Match regionEtain2 = s.find(etain);
             s.dragDrop(regionEtain2, P);
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Location R = new Location(1000, 550);
             s.click(R);
             TimeUnit.SECONDS.sleep(1);
             s.click(maxCraft);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Location S = new Location(1200, 550);
             s.click(S);
@@ -1370,7 +1370,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM0);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Match regionBronze = s.find(argent);
@@ -1382,7 +1382,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM0);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Match regionCuivre = s.find(cuivre);
@@ -1394,7 +1394,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM0);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Match regionEtain = s.find(bronze);
@@ -1406,7 +1406,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM0);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             s.click(close);
@@ -1443,34 +1443,34 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM5);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Match regionBronze2 = s.find(argent);
             s.dragDrop(regionBronze2, P);
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM2);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Match regionCuivre2 = s.find(cuivre);
             s.dragDrop(regionCuivre2, P);
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM2);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Match regionEtain2 = s.find(bronze);
             s.dragDrop(regionEtain2, P);
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM2);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Location R = new Location(1000, 550);
             s.click(R);
             TimeUnit.SECONDS.sleep(1);
             s.click(maxCraft);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Location S = new Location(1200, 550);
             s.click(S);
@@ -1553,7 +1553,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM0);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Match regionNoyer = s.find(boisNoyer);
@@ -1565,7 +1565,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM0);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Match regionChene = s.find(boisChene);
@@ -1577,7 +1577,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM0);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Match regionKobalte = s.find(kobalte);
@@ -1589,7 +1589,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM0);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             s.click(close);
@@ -1626,34 +1626,34 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM3);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Match regionNoyer2 = s.find(boisNoyer);
             s.dragDrop(regionNoyer2, P);
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM3);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Match regionChene2 = s.find(boisChene);
             s.dragDrop(regionChene2, P);
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM3);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Match regionKobalte2 = s.find(kobalte);
             s.dragDrop(regionKobalte2, P);
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM6);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Location R = new Location(1000, 550);
             s.click(R);
             TimeUnit.SECONDS.sleep(1);
             s.click(maxCraft);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Location S = new Location(1200, 550);
             s.click(S);
@@ -1731,7 +1731,7 @@ public class BotsCraft extends Main{
                     TimeUnit.SECONDS.sleep(1);
                     s.click(max);
                     TimeUnit.SECONDS.sleep(1);
-                    s.click(check);
+                    s.type(Key.ENTER);
                 }
 
             }
@@ -1754,7 +1754,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM0);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Match regionPierrePolie = s.find(pierrePolie);
@@ -1766,7 +1766,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM0);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Match regionSilex = s.find(silex);
@@ -1778,7 +1778,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM0);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Location H = new Location(400, 200);
@@ -1794,7 +1794,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM0);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             s.click(close);
@@ -1815,21 +1815,21 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM1);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Match regionPierrePolie2 = s.find(pierrePolie);
             s.dragDrop(regionPierrePolie2, P);
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM1);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Match regionSilex2 = s.find(silex);
             s.dragDrop(regionSilex2, P);
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM1);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             s.click(QQ);
             TimeUnit.SECONDS.sleep(2);
@@ -1837,14 +1837,14 @@ public class BotsCraft extends Main{
             s.dragDrop(regionPotionVieilesse2, P);
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Location R = new Location(1000, 550);
             s.click(R);
             TimeUnit.SECONDS.sleep(1);
             s.click(maxCraft);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Location S = new Location(1200, 550);
             s.click(S);
@@ -1885,7 +1885,7 @@ public class BotsCraft extends Main{
                     TimeUnit.SECONDS.sleep(1);
                     s.click(max);
                     TimeUnit.SECONDS.sleep(1);
-                    s.click(check);
+                    s.type(Key.ENTER);
                 }
 
             }
@@ -1919,7 +1919,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(300);
             kb.type(Key.NUM0);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Match regionEau = s.find(eau);
@@ -1931,7 +1931,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(300);
             kb.type(Key.NUM0);
             TimeUnit.MILLISECONDS.sleep(300);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             s.click(close);
@@ -1952,7 +1952,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(300);
             kb.type(Key.NUM0);
             TimeUnit.MILLISECONDS.sleep(300);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Match regionEau2 = s.find(eau);
             s.dragDrop(regionEau2, P);
@@ -1961,7 +1961,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(300);
             kb.type(Key.NUM0);
             TimeUnit.MILLISECONDS.sleep(300);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Location R = new Location(1000, 550);
@@ -1969,7 +1969,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             s.click(maxCraft);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Location S = new Location(1200, 550);
             s.click(S);
@@ -2010,7 +2010,7 @@ public class BotsCraft extends Main{
                     TimeUnit.SECONDS.sleep(2);
                     s.click(max);
                     TimeUnit.SECONDS.sleep(2);
-                    s.click(check);
+                    s.type(Key.ENTER);
                     TimeUnit.SECONDS.sleep(1);
                     Location AAAA = new Location(1250, 720);
                     s.click(AAAA);
@@ -2036,7 +2036,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(300);
             kb.type(Key.NUM0);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Location FF = new Location(430, 200);
@@ -2054,7 +2054,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(300);
             kb.type(Key.NUM0);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             s.click(close);
@@ -2074,7 +2074,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM1);
             TimeUnit.MILLISECONDS.sleep(300);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             s.click(QQ);
             TimeUnit.SECONDS.sleep(1);
@@ -2083,7 +2083,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM1);
             TimeUnit.MILLISECONDS.sleep(300);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Location R = new Location(1000, 550);
@@ -2091,7 +2091,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             s.click(maxCraft);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Location S = new Location(1200, 550);
             s.click(S);
@@ -2129,7 +2129,7 @@ public class BotsCraft extends Main{
                     TimeUnit.SECONDS.sleep(1);
                     s.click(max);
                     TimeUnit.SECONDS.sleep(1);
-                    s.click(check);
+                    s.type(Key.ENTER);
                 }
 
             }
@@ -2152,7 +2152,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(300);
             kb.type(Key.NUM0);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Location FF = new Location(430, 200);
@@ -2170,7 +2170,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(300);
             kb.type(Key.NUM0);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             s.click(close);
@@ -2190,7 +2190,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM1);
             TimeUnit.MILLISECONDS.sleep(300);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             s.click(QQ);
             TimeUnit.SECONDS.sleep(1);
@@ -2199,7 +2199,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM1);
             TimeUnit.MILLISECONDS.sleep(300);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Location R = new Location(1000, 550);
@@ -2207,7 +2207,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             s.click(maxCraft);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Location S = new Location(1200, 550);
             s.click(S);
@@ -2245,7 +2245,7 @@ public class BotsCraft extends Main{
                     TimeUnit.SECONDS.sleep(1);
                     s.click(max);
                     TimeUnit.SECONDS.sleep(1);
-                    s.click(check);
+                    s.type(Key.ENTER);
                 }
 
             }
@@ -2268,7 +2268,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(300);
             kb.type(Key.NUM0);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             TimeUnit.SECONDS.sleep(2);
@@ -2283,7 +2283,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(300);
             kb.type(Key.NUM0);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             s.click(close);
@@ -2302,14 +2302,14 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM2);
             TimeUnit.MILLISECONDS.sleep(300);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Match regionBaveBouftou2 = s.find(baveBouftou);
             s.dragDrop(regionBaveBouftou2, P);
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM2);
             TimeUnit.MILLISECONDS.sleep(300);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Location R = new Location(1000, 550);
@@ -2317,7 +2317,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             s.click(maxCraft);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Location S = new Location(1200, 550);
             s.click(S);
@@ -2361,7 +2361,7 @@ public class BotsCraft extends Main{
                     TimeUnit.SECONDS.sleep(1);
                     s.click(max);
                     TimeUnit.SECONDS.sleep(1);
-                    s.click(check);
+                    s.type(Key.ENTER);
                     TimeUnit.SECONDS.sleep(1);
                     Location AAAA = new Location(1250, 720);
                     s.click(AAAA);
@@ -2387,7 +2387,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(300);
             kb.type(Key.NUM0);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             TimeUnit.SECONDS.sleep(2);
@@ -2402,7 +2402,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(300);
             kb.type(Key.NUM0);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             s.click(close);
@@ -2421,14 +2421,14 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM1);
             TimeUnit.MILLISECONDS.sleep(300);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Match regionTrefle2 = s.find(trefle);
             s.dragDrop(regionTrefle2, P);
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM1);
             TimeUnit.MILLISECONDS.sleep(300);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Location R = new Location(1000, 550);
@@ -2436,7 +2436,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             s.click(maxCraft);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Location S = new Location(1200, 550);
             s.click(S);
@@ -2482,7 +2482,7 @@ public class BotsCraft extends Main{
                     TimeUnit.SECONDS.sleep(1);
                     s.click(max);
                     TimeUnit.SECONDS.sleep(1);
-                    s.click(check);
+                    s.type(Key.ENTER);
                 }
 
             }
@@ -2508,7 +2508,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM0);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Match regionChataignier = s.find(boisChataignier);
@@ -2522,7 +2522,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM0);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Match regionFicelleLin = s.find(ficelleLin);
@@ -2534,7 +2534,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM0);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             s.click(close);
@@ -2550,28 +2550,28 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM4);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Match regionChataignier2 = s.find(boisChataignier);
             s.dragDrop(regionChataignier2, P);
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM3);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Match regionFicelleLin2 = s.find(ficelleLin);
             s.dragDrop(regionFicelleLin2, P);
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM1);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Location R = new Location(1000, 550);
             s.click(R);
             TimeUnit.SECONDS.sleep(1);
             s.click(maxCraft);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Location S = new Location(1200, 550);
             s.click(S);
@@ -2614,7 +2614,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM0);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Match regionBoisChene = s.find(boisChene);
@@ -2626,7 +2626,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM0);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             Match regionFleurDeChanvre = s.find(fleurDeChanvre);
@@ -2638,7 +2638,7 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM0);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
             TimeUnit.MILLISECONDS.sleep(500);
@@ -2658,21 +2658,21 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM4);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
             Match regionChene2 = s.find(boisChene);
             s.dragDrop(regionChene2, P);
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM4);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
             Match regionFleurDeChanvre2 = s.find(fleurDeChanvre);
             s.dragDrop(regionFleurDeChanvre2, P);
             TimeUnit.MILLISECONDS.sleep(500);
             kb.type(Key.NUM4);
             TimeUnit.MILLISECONDS.sleep(500);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(500);
 
             Location R = new Location(1000, 550);
@@ -2680,7 +2680,7 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             s.click(maxCraft);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Location S = new Location(1200, 550);
             s.click(S);

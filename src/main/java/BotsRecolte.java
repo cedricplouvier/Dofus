@@ -102,7 +102,7 @@ public class BotsRecolte extends Main{
             s.dragDrop(region1, K);
             s.click(max);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             s.click(close);
             TimeUnit.SECONDS.sleep(1);
@@ -260,7 +260,7 @@ public class BotsRecolte extends Main{
             s.dragDrop(region1, K);
             s.click(max);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             s.click(close);
             TimeUnit.SECONDS.sleep(1);
@@ -367,7 +367,7 @@ public class BotsRecolte extends Main{
             s.dragDrop(region1, K);
             s.click(max);
             TimeUnit.SECONDS.sleep(1);
-            s.click(check);
+            s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             s.click(close);
             TimeUnit.SECONDS.sleep(1);
