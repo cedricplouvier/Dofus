@@ -186,7 +186,7 @@ public class Main {
         //botsCraft.craftBaton110Public();
         //botsCraft.craftSylvien();
         //botsCraft.craftSylvienPublic();
-        //botsCraft.craftArcEco();
+        //botsCraft.craftArcEco();00
         //botsCraft.craftMedailleHoly();
         //botsCraft.polirPierres("rubis"); //rubis - emeraude - saphir - cristal
         //botsCraft.ouvrirRunes();

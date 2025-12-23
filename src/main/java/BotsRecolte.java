@@ -183,25 +183,27 @@ public class BotsRecolte extends Main{
                     if(s.exists(epouventailFight) != null){
                         while (s.exists(epouventailFight) != null) {
                             s.type(Key.F6);
-                            TimeUnit.MILLISECONDS.sleep(200);
+                            TimeUnit.MILLISECONDS.sleep(500);
                             try {
                                 s.click(epouventailFight);
                             } catch (FindFailed e) {
-                                System.out.println("Ennemi not found");
+                                System.out.println("Epouventail not found");
                             }
                             TimeUnit.MILLISECONDS.sleep(1000);
+                            s.mouseMove(-10,-55);
+                            TimeUnit.MILLISECONDS.sleep(1000);
                             s.type(Key.F6);
-                            TimeUnit.MILLISECONDS.sleep(200);
+                            TimeUnit.MILLISECONDS.sleep(1000);
                             try {
                                 s.click(epouventailFight);
                             } catch (FindFailed e) {
-                                System.out.println("Ennemi not found");
+                                System.out.println("Epouventail not found");
                             }
                             TimeUnit.MILLISECONDS.sleep(1000);
                             s.type(Key.F1);
                             TimeUnit.MILLISECONDS.sleep(500);
-                            s.mouseMove(-10,-35);
-                            TimeUnit.MILLISECONDS.sleep(6000);
+                            s.mouseMove(-10,-55);
+                            TimeUnit.MILLISECONDS.sleep(3000);
                         }
                     }
                     else if (s.exists(ennemiCombat) != null){
@@ -224,7 +226,7 @@ public class BotsRecolte extends Main{
                             TimeUnit.MILLISECONDS.sleep(1000);
                             s.type(Key.F1);
                             TimeUnit.MILLISECONDS.sleep(500);
-                            s.mouseMove(-10,-35);
+                            s.mouseMove(-10,-55);
                             TimeUnit.MILLISECONDS.sleep(6000);
                         }
                     }
