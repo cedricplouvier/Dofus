@@ -14,10 +14,9 @@ public class BotsRecolte extends Main{
     static General general = new General();
 
     public void recolteRiz() throws FindFailed, InterruptedException, IOException {
-
         Screen s = new Screen();
-        boolean first = true;
 
+        boolean first = true;
         while (true) {
             TimeUnit.SECONDS.sleep(5);
             doubleClick(popoRappel);
@@ -25,21 +24,17 @@ public class BotsRecolte extends Main{
             s.rightClick(zaapAstrub);
             TimeUnit.SECONDS.sleep(2);
             for (int j = 0; j < 20; j++) {
-                Location C = new Location(1100, 440);
-                s.click(C);
+                s.click(new Location(1100, 440));
                 TimeUnit.MILLISECONDS.sleep(500);
             }
             TimeUnit.SECONDS.sleep(1);
             s.doubleClick(zaapPandalaEau);
             TimeUnit.SECONDS.sleep(3);
-            Location D = new Location(500, 60);
-            s.click(D);
+            s.click(new Location(500, 60));
             TimeUnit.SECONDS.sleep(8);
-            Location E = new Location(370, 440);
-            s.click(E);
+            s.click(new Location(370, 440));
             TimeUnit.SECONDS.sleep(5);
-            Location F = new Location(700, 70);
-            s.click(F);
+            s.click(new Location(700, 70));
             TimeUnit.SECONDS.sleep(8);
             first=true;
             for (int i = 0; i < 200; i++) {
@@ -61,11 +56,9 @@ public class BotsRecolte extends Main{
                 TimeUnit.MILLISECONDS.sleep(1000);
                 if (s.exists(pretCombat) != null) {
                     TimeUnit.MILLISECONDS.sleep(800);
-                    Location A = new Location(500, 370);
-                    s.click(A);
+                    s.click(new Location(500, 370));
                     TimeUnit.MILLISECONDS.sleep(800);
-                    Location B = new Location(770, 370);
-                    s.click(B);
+                    s.click(new Location(770, 370));
                     s.type(Key.F1);
                     while (s.exists(epouventailFight) != null) {
                         s.type(Key.F6);
@@ -78,28 +71,22 @@ public class BotsRecolte extends Main{
                     }
                 }
             }
-            Location G = new Location(1030, 630);
-            s.click(G);
+            s.click(new Location(1030, 630));
             TimeUnit.MILLISECONDS.sleep(800);
-            Location H = new Location(1140, 155);
-            s.click(H);
+            s.click(new Location(1140, 155));
             TimeUnit.MILLISECONDS.sleep(1000);
             for(int k=0; k < 6; k++){
-                Location HH = new Location(1100, 250);
-                s.doubleClick(HH);
+                s.doubleClick(new Location(1100, 250));
                 TimeUnit.MILLISECONDS.sleep(1000);
             }
             general.zaapAstrubToMaisonCoffre1();
             TimeUnit.MILLISECONDS.sleep(2000);
-            Location I = new Location(1100, 200);
-            s.click(I);
+            s.click(new Location(1100, 200));
             TimeUnit.SECONDS.sleep(1);
-            Location J = new Location(370, 200);
-            s.click(J);
+            s.click(new Location(370, 200));
             TimeUnit.SECONDS.sleep(1);
             Match region1 = s.find(rizInventaire);
-            Location K = new Location(500, 470);
-            s.dragDrop(region1, K);
+            s.dragDrop(region1, new Location(500, 470));
             s.click(max);
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
@@ -114,8 +101,8 @@ public class BotsRecolte extends Main{
 
     public void recolteChanvrePosX10Y5() throws InterruptedException, FindFailed, IOException {
         Screen s = new Screen();
-        boolean first = true;
 
+        boolean first = true;
         while (true) {
             TimeUnit.SECONDS.sleep(5);
             doubleClick(popoRappel);
@@ -235,29 +222,23 @@ public class BotsRecolte extends Main{
                 }
             }
 
-            Location G = new Location(1030, 630);
-            s.click(G);
+            s.click(new Location(1030, 630));
             TimeUnit.MILLISECONDS.sleep(800);
-            Location H = new Location(1140, 155);
-            s.click(H);
+            s.click(new Location(1140, 155));
             TimeUnit.MILLISECONDS.sleep(1000);
             for(int k=0; k < 6; k++){
-                Location HH = new Location(1100, 250);
-                s.doubleClick(HH);
+                s.doubleClick(new Location(1100, 250));
                 TimeUnit.MILLISECONDS.sleep(1000);
             }
-
             general.zaapAstrubToMaisonCoffre1();
             TimeUnit.MILLISECONDS.sleep(2000);
-            Location I = new Location(1100, 200);
-            s.click(I);
+            s.click(new Location(1100, 200));
             TimeUnit.SECONDS.sleep(1);
-            Location J = new Location(370, 200);
-            s.click(J);
+            s.click(new Location(370, 200));
             TimeUnit.SECONDS.sleep(1);
             Match region1 = s.find(chanvre);
-            Location K = new Location(500, 470);
-            s.dragDrop(region1, K);
+            s.dragDrop(region1, new Location(500, 470));
+            TimeUnit.SECONDS.sleep(1);
             s.click(max);
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
@@ -345,26 +326,20 @@ public class BotsRecolte extends Main{
                     } catch (FindFailed e) {
                         System.out.println("not phantom");
                     }
-
                     TimeUnit.MILLISECONDS.sleep(4000);
                     s.type(Key.ESC);
                     TimeUnit.MILLISECONDS.sleep(5000);
                     general.zaapAstrubForetAstrub();
                 }
-
             }
-
             general.zaapAstrubToMaisonCoffre1();
             TimeUnit.MILLISECONDS.sleep(2000);
-            Location I = new Location(1100, 200);
-            s.click(I);
+            s.click(new Location(1100, 200));
             TimeUnit.SECONDS.sleep(1);
-            Location J = new Location(370, 200);
-            s.click(J);
+            s.click(new Location(370, 200));
             TimeUnit.SECONDS.sleep(1);
             Match region1 = s.find(chanvre);
-            Location K = new Location(500, 470);
-            s.dragDrop(region1, K);
+            s.dragDrop(region1, new Location(500, 470));
             s.click(max);
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);

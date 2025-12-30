@@ -157,24 +157,21 @@ public class Main {
         //botsCraft.craftTristeLame();
         //botsCraft.craftLameDuChafer();
         //botsCraft.craftHacheTerophyle();
-        //botsCraft.craftBatonDakn();
         //botsCraft.craftBatonDaknPublic();
-        //botsCraft.craftBaton110();
         //botsCraft.craftBaton110Public();
-        //botsCraft.craftSylvien();
         //botsCraft.craftSylvienPublic();
-        //botsCraft.craftArcEco();00
+        //botsCraft.craftArcEco();
         //botsCraft.craftMedailleHoly();
         //botsCraft.polirPierres("rubis"); //rubis - emeraude - saphir - cristal
         //botsCraft.ouvrirRunes();
         //botsCraft.polirPDAPetiteHazar();
         //botsCraft.potionBonta();
         //botsCraft.potionRappel();
-        botsCraft.potionBrak();
+        //botsCraft.potionBrak();
         //botsCraft.potionVieillesse();
 
         BotsRecolte botsRecolte = new BotsRecolte();
-        //botsRecolte.recolteRiz();
+        botsRecolte.recolteRiz();
         //botsRecolte.recolteChanvrePosX10Y5();
         //botsRecolte.bucherForetAstrub();
 
