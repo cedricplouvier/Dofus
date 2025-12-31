@@ -171,7 +171,7 @@ public class Main {
         //botsCraft.potionVieillesse();
 
         BotsRecolte botsRecolte = new BotsRecolte();
-        botsRecolte.recolteRiz();
+        //botsRecolte.recolteRiz();
         //botsRecolte.recolteChanvrePosX10Y5();
         //botsRecolte.bucherForetAstrub();
 

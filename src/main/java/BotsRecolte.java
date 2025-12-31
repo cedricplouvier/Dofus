@@ -62,7 +62,11 @@ public class BotsRecolte extends Main{
                     s.type(Key.F1);
                     while (s.exists(epouventailFight) != null) {
                         s.type(Key.F6);
-                        s.click(epouventailFight);
+                        try {
+                            s.click(epouventailFight);
+                        } catch (FindFailed e) {
+                        System.out.println("Epouventail not found");
+                        }
                         TimeUnit.MILLISECONDS.sleep(400);
                         s.mouseMove(-10,-55);
                         TimeUnit.MILLISECONDS.sleep(400);
@@ -75,7 +79,7 @@ public class BotsRecolte extends Main{
             TimeUnit.MILLISECONDS.sleep(800);
             s.click(new Location(1140, 155));
             TimeUnit.MILLISECONDS.sleep(1000);
-            for(int k=0; k < 6; k++){
+            for(int k=0; k < 10; k++){
                 s.doubleClick(new Location(1100, 250));
                 TimeUnit.MILLISECONDS.sleep(1000);
             }
@@ -91,7 +95,7 @@ public class BotsRecolte extends Main{
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
-            s.click(close);
+            s.type(Key.ESC);
             TimeUnit.SECONDS.sleep(1);
             s.doubleClick(popoBonta);
             TimeUnit.SECONDS.sleep(8);
@@ -226,7 +230,7 @@ public class BotsRecolte extends Main{
             TimeUnit.MILLISECONDS.sleep(800);
             s.click(new Location(1140, 155));
             TimeUnit.MILLISECONDS.sleep(1000);
-            for(int k=0; k < 6; k++){
+            for(int k=0; k < 5; k++){
                 s.doubleClick(new Location(1100, 250));
                 TimeUnit.MILLISECONDS.sleep(1000);
             }
@@ -243,7 +247,7 @@ public class BotsRecolte extends Main{
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
-            s.click(close);
+            s.type(Key.ESC);
             TimeUnit.SECONDS.sleep(1);
             s.doubleClick(popoBonta);
             TimeUnit.SECONDS.sleep(8);
@@ -344,7 +348,7 @@ public class BotsRecolte extends Main{
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
-            s.click(close);
+            s.type(Key.ESC);
             TimeUnit.SECONDS.sleep(1);
             s.doubleClick(popoBonta);
             TimeUnit.SECONDS.sleep(8);

@@ -558,7 +558,7 @@ public class BotsCraft extends Main{
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
-            s.click(close);
+            s.type(Key.ESC);
 
             TimeUnit.SECONDS.sleep(1);
             s.click(new Location(950, 400));
@@ -690,7 +690,7 @@ public class BotsCraft extends Main{
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
-            s.click(close);
+            s.type(Key.ESC);
 
             TimeUnit.SECONDS.sleep(1);
             s.click(new Location(950, 400));
@@ -850,7 +850,7 @@ public class BotsCraft extends Main{
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
-            s.click(close);
+            s.type(Key.ESC);
 
             TimeUnit.SECONDS.sleep(1);
             s.click(new Location(950, 400));
@@ -1024,7 +1024,7 @@ public class BotsCraft extends Main{
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
-            s.click(close);
+            s.type(Key.ESC);
 
             TimeUnit.SECONDS.sleep(1);
             general.maisonAstrubToAtelierMineur();
@@ -1144,7 +1144,7 @@ public class BotsCraft extends Main{
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
-            s.click(close);
+            s.type(Key.ESC);
 
             TimeUnit.SECONDS.sleep(1);
             general.maisonAstrubToAtelierMineur();
@@ -1252,7 +1252,7 @@ public class BotsCraft extends Main{
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
-            s.click(close);
+            s.type(Key.ESC);
 
             TimeUnit.SECONDS.sleep(1);
             general.maisonAstrubToAtelierAlchi();
@@ -1353,7 +1353,7 @@ public class BotsCraft extends Main{
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
-            s.click(close);
+            s.type(Key.ESC);
 
             TimeUnit.SECONDS.sleep(1);
             general.maisonAstrubToAtelierAlchi();
@@ -1452,7 +1452,7 @@ public class BotsCraft extends Main{
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
-            s.click(close);
+            s.type(Key.ESC);
 
             TimeUnit.SECONDS.sleep(1);
             general.maisonAstrubToAtelierAlchi();
@@ -1556,7 +1556,7 @@ public class BotsCraft extends Main{
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
-            s.click(close);
+            s.type(Key.ESC);
 
             TimeUnit.SECONDS.sleep(1);
             general.maisonAstrubToAtelierAlchi();
@@ -1670,7 +1670,7 @@ public class BotsCraft extends Main{
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
 
-            s.click(close);
+            s.type(Key.ESC);
             general.maisonAstrubToAterlierSculpteurArc();
 
             s.click(new Location(930, 250));
