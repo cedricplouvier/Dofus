@@ -277,25 +277,96 @@ public class BotsRecolte extends Main{
         general.zaapAstrubForetAstrub();
         while (true) {
             int routeCounter=0;
-            for (int i = 0; i < 700; i++) {
+            for (int i = 0; i < 200; i++) {
                 try {
                     if(s.exists(arbreNoyer) != null){
-                        s.click(arbreNoyer);
-                        TimeUnit.MILLISECONDS.sleep(400);
-                        s.click(couper);
-                        TimeUnit.MILLISECONDS.sleep(600);
+                        try {
+                            s.click(arbreNoyer);
+                        } catch (FindFailed e){
+                            System.out.println("Noyer not found");
+                        }
+                        TimeUnit.MILLISECONDS.sleep(200);
+                        try {
+                            s.click(couper);
+                        } catch (FindFailed e) {
+                            System.out.println("Couper not found");
+                        }
+                        TimeUnit.MILLISECONDS.sleep(2000);
                     }
                     else if (s.exists(arbreChataignier) != null){
-                        s.click(arbreChataignier);
-                        TimeUnit.MILLISECONDS.sleep(400);
-                        s.click(couper);
-                        TimeUnit.MILLISECONDS.sleep(400);
+                        try {
+                            s.click(arbreChataignier);
+                        } catch (FindFailed e){
+                            System.out.println("Noyer not found");
+                        }
+                        TimeUnit.MILLISECONDS.sleep(200);
+                        try {
+                            s.click(couper);
+                        } catch (FindFailed e) {
+                            System.out.println("Couper not found");
+                        }
+                        TimeUnit.MILLISECONDS.sleep(2000);
                     }
                     else if (s.exists(arbreFrene) != null){
-                        s.click(arbreFrene);
-                        TimeUnit.MILLISECONDS.sleep(400);
-                        s.click(couper);
-                        TimeUnit.MILLISECONDS.sleep(400);
+                        try {
+                            s.click(arbreFrene);
+                        } catch (FindFailed e){
+                            System.out.println("Noyer not found");
+                        }
+                        TimeUnit.MILLISECONDS.sleep(200);
+                        try {
+                            s.click(couper);
+                        } catch (FindFailed e) {
+                            System.out.println("Couper not found");
+                        }
+                        TimeUnit.MILLISECONDS.sleep(2000);
+                    }
+                    else if (s.exists(pretCombat) != null) {
+                        int turnCounter = 0;
+                        System.out.println("Fight started");
+                        TimeUnit.MILLISECONDS.sleep(1000);
+                        s.type(Key.F1);
+                        TimeUnit.SECONDS.sleep(6);
+                        s.type(Key.F2);
+                        try {
+                            s.click(allieCombat);
+                        }
+                        catch (FindFailed e){
+                            System.out.println("AlliéCombat not found");
+                        }
+                        TimeUnit.MILLISECONDS.sleep(1000);
+                        s.type(Key.F3);
+                        try {
+                            s.click(allieCombat);
+                        }
+                        catch (FindFailed e){
+                            System.out.println("AlliéCombat not found");
+                        }
+                        while (s.exists(allieCombat) != null) {
+                            TimeUnit.SECONDS.sleep(5);
+                            s.type(Key.F1);
+                            turnCounter +=1;
+                            if(turnCounter > 3){
+                                s.click(abondonner);
+                                TimeUnit.MILLISECONDS.sleep(2000);
+                                s.type(Key.ENTER);
+                                TimeUnit.MILLISECONDS.sleep(2000);
+                                s.type(Key.ENTER);
+                                TimeUnit.MILLISECONDS.sleep(2000);
+                                s.type(Key.ENTER);
+                                routeCounter =0;
+                                TimeUnit.MILLISECONDS.sleep(2000);
+                                try {
+                                    s.click(phenix);
+                                    TimeUnit.MILLISECONDS.sleep(4000);
+                                } catch (FindFailed e) {
+                                    System.out.println("not phantom");
+                                }
+                                TimeUnit.MILLISECONDS.sleep(4000);
+                                general.zaapAstrubForetAstrub();
+                            }
+                        }
+                        s.type(Key.ESC);
                     }
                     else{
                         Point nextPos = foretAstrubMaps.get(routeCounter);
@@ -304,38 +375,13 @@ public class BotsRecolte extends Main{
                         if(routeCounter  >= foretAstrubMaps.size()){
                             routeCounter = 0;
                         }
-                        TimeUnit.MILLISECONDS.sleep(6000);
+                        TimeUnit.MILLISECONDS.sleep(3000);
                     }
                 } catch (FindFailed e) {
                     System.out.println("Nothing found");
                 }
-
-                if (s.exists(pretCombat) != null) {
-                    System.out.println("Fight started");
-                    TimeUnit.MILLISECONDS.sleep(800);
-                    s.type(Key.F1);
-                    TimeUnit.MILLISECONDS.sleep(2000);
-                    s.click(abondonner);
-                    TimeUnit.MILLISECONDS.sleep(2000);
-                    s.type(Key.ENTER);
-                    TimeUnit.MILLISECONDS.sleep(2000);
-                    s.type(Key.ENTER);
-                    TimeUnit.MILLISECONDS.sleep(2000);
-                    s.type(Key.ENTER);
-                    routeCounter =0;
-                    TimeUnit.MILLISECONDS.sleep(2000);
-                    try {
-                        s.click(phenix);
-                        TimeUnit.MILLISECONDS.sleep(4000);
-                    } catch (FindFailed e) {
-                        System.out.println("not phantom");
-                    }
-                    TimeUnit.MILLISECONDS.sleep(4000);
-                    s.type(Key.ESC);
-                    TimeUnit.MILLISECONDS.sleep(5000);
-                    general.zaapAstrubForetAstrub();
-                }
             }
+
             general.zaapAstrubToMaisonCoffre1();
             TimeUnit.MILLISECONDS.sleep(2000);
             s.click(new Location(1100, 200));

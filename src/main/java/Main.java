@@ -61,6 +61,7 @@ public class Main {
     static Pattern epeeCombat = new Pattern("SikuliEnuJava8/src/main/resources/img/epeeCombat.png").similar((float) 0.80);
     static Pattern passerTour = new Pattern("SikuliEnuJava8/src/main/resources/img/passerTour.png").similar((float) 0.80);
     static Pattern ennemiCombat = new Pattern("SikuliEnuJava8/src/main/resources/img/ennemiCombat.png").similar((float) 0.90);
+    static Pattern allieCombat = new Pattern("SikuliEnuJava8/src/main/resources/img/allieCombat.png").similar((float) 0.80);
     static Pattern minerai = new Pattern("SikuliEnuJava8/src/main/resources/img/minerai.png").similar((float) 0.80);
     static Pattern argent = new Pattern("SikuliEnuJava8/src/main/resources/img/argent.png").similar((float) 0.80);
     static Pattern bauxite = new Pattern("SikuliEnuJava8/src/main/resources/img/bauxite.png").similar((float) 0.80);
@@ -173,7 +174,7 @@ public class Main {
         BotsRecolte botsRecolte = new BotsRecolte();
         //botsRecolte.recolteRiz();
         //botsRecolte.recolteChanvrePosX10Y5();
-        //botsRecolte.bucherForetAstrub();
+        botsRecolte.bucherForetAstrub();
 
         BotsFourbe botsFourbe = new BotsFourbe();
         //botsFourbe.cheminFer();
