@@ -10,8 +10,6 @@ import java.util.ArrayList;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-import static org.sikuli.script.Commands.doubleClick;
-
 public class General extends Main {
 
     public void insertCode(String code) throws IOException, InterruptedException {

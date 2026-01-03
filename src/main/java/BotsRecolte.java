@@ -7,8 +7,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
-import static org.sikuli.script.Commands.doubleClick;
-
 public class BotsRecolte extends Main{
 
     static General general = new General();
