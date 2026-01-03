@@ -62,7 +62,7 @@ public class General extends Main {
     public void zaapAstrubToMaisonCoffre1() throws InterruptedException, FindFailed, IOException {
         Screen s = new Screen();
 
-        doubleClick(popoRappel);
+        s.doubleClick(popoRappel);
         TimeUnit.SECONDS.sleep(5);
         s.click(new Location(820, 60));
         TimeUnit.SECONDS.sleep(5);
@@ -89,7 +89,7 @@ public class General extends Main {
     public void zaapAstrubToMaisonCoffre2() throws InterruptedException, FindFailed, IOException {
         Screen s = new Screen();
 
-        doubleClick(popoRappel);
+        s.doubleClick(popoRappel);
         TimeUnit.SECONDS.sleep(5);
         s.click(new Location(820, 60));
         TimeUnit.SECONDS.sleep(5);
@@ -148,7 +148,7 @@ public class General extends Main {
         mapsZaapAstrubToForetAstrub.add(new Location(365, 305));
         mapsZaapAstrubToForetAstrub.add(new Location(770, 65));
 
-        doubleClick(popoRappel);
+        s.doubleClick(popoRappel);
         TimeUnit.SECONDS.sleep(5);
         for( Location nexMap : mapsZaapAstrubToForetAstrub){
             s.click(nexMap);

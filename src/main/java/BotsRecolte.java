@@ -19,7 +19,7 @@ public class BotsRecolte extends Main{
         boolean first = true;
         while (true) {
             TimeUnit.SECONDS.sleep(5);
-            doubleClick(popoRappel);
+            s.doubleClick(popoRappel);
             TimeUnit.SECONDS.sleep(5);
             s.rightClick(zaapAstrub);
             TimeUnit.SECONDS.sleep(2);
@@ -109,7 +109,7 @@ public class BotsRecolte extends Main{
         boolean first = true;
         while (true) {
             TimeUnit.SECONDS.sleep(5);
-            doubleClick(popoRappel);
+            s.doubleClick(popoRappel);
             TimeUnit.SECONDS.sleep(5);
             s.rightClick(zaapAstrub);
             TimeUnit.SECONDS.sleep(2);
