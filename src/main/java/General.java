@@ -72,7 +72,7 @@ public class General extends Main {
         TimeUnit.SECONDS.sleep(3);
         insertCode("codeAstrubMaison");
         TimeUnit.MILLISECONDS.sleep(300);
-        s.click(delock);
+        s.type(Key.ENTER);
         TimeUnit.SECONDS.sleep(1);
         s.click(new Location(940, 370));
         TimeUnit.SECONDS.sleep(5);
@@ -81,7 +81,7 @@ public class General extends Main {
         s.click(ouvreCoffre);
         TimeUnit.SECONDS.sleep(2);
         insertCode("codeAstrubCoffre1");
-        s.click(delock);
+        s.type(Key.ENTER);
     }
 
     public void zaapAstrubToMaisonCoffre2() throws InterruptedException, FindFailed, IOException {
@@ -99,7 +99,7 @@ public class General extends Main {
         TimeUnit.SECONDS.sleep(3);
         insertCode("codeAstrubMaison");
         TimeUnit.MILLISECONDS.sleep(300);
-        s.click(delock);
+        s.type(Key.ENTER);
         TimeUnit.SECONDS.sleep(1);
         s.click(new Location(940, 370));
         TimeUnit.SECONDS.sleep(3);
@@ -110,7 +110,7 @@ public class General extends Main {
         s.click(ouvreCoffre);
         TimeUnit.SECONDS.sleep(2);
         insertCode("codeAstrubCoffre2");
-        s.click(delock);
+        s.type(Key.ENTER);
     }
 
     public void maisonAstrubToAtelierMineur() throws FindFailed, InterruptedException {

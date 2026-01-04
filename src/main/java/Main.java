@@ -173,7 +173,7 @@ public class Main {
 
         BotsRecolte botsRecolte = new BotsRecolte();
         //botsRecolte.recolteRiz();
-        //botsRecolte.recolteChanvrePosX10Y5();
+        botsRecolte.recolteChanvrePosX10Y5();
         //botsRecolte.bucherForetAstrub();
 
         BotsFourbe botsFourbe = new BotsFourbe();
