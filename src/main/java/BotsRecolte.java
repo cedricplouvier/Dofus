@@ -94,9 +94,7 @@ public class BotsRecolte extends Main{
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ESC);
-            TimeUnit.SECONDS.sleep(1);
-            s.doubleClick(popoBonta);
-            TimeUnit.SECONDS.sleep(8);
+            TimeUnit.SECONDS.sleep(4);
             s.doubleClick(popoRappel);
         }
     }
@@ -246,9 +244,7 @@ public class BotsRecolte extends Main{
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ESC);
-            TimeUnit.SECONDS.sleep(1);
-            s.doubleClick(popoBonta);
-            TimeUnit.SECONDS.sleep(8);
+            TimeUnit.SECONDS.sleep(4);
             s.doubleClick(popoRappel);
         }
     }
@@ -272,10 +268,10 @@ public class BotsRecolte extends Main{
         foretAstrubMaps.add(new Point(840,580));
         foretAstrubMaps.add(new Point(635,580));
 
-        general.zaapAstrubForetAstrub();
         while (true) {
+            general.zaapAstrubForetAstrub();
             int routeCounter=0;
-            for (int i = 0; i < 200; i++) {
+            for (int i = 0; i < 100; i++) {
                 try {
                     if(s.exists(arbreNoyer) != null){
                         try {
@@ -283,13 +279,12 @@ public class BotsRecolte extends Main{
                         } catch (FindFailed e){
                             System.out.println("Noyer not found");
                         }
-                        TimeUnit.MILLISECONDS.sleep(200);
                         try {
                             s.click(couper);
+                            TimeUnit.MILLISECONDS.sleep(12000);
                         } catch (FindFailed e) {
                             System.out.println("Couper not found");
                         }
-                        TimeUnit.MILLISECONDS.sleep(2000);
                     }
                     else if (s.exists(arbreChataignier) != null){
                         try {
@@ -297,13 +292,12 @@ public class BotsRecolte extends Main{
                         } catch (FindFailed e){
                             System.out.println("Noyer not found");
                         }
-                        TimeUnit.MILLISECONDS.sleep(200);
                         try {
                             s.click(couper);
+                            TimeUnit.MILLISECONDS.sleep(7000);
                         } catch (FindFailed e) {
                             System.out.println("Couper not found");
                         }
-                        TimeUnit.MILLISECONDS.sleep(2000);
                     }
                     else if (s.exists(arbreFrene) != null){
                         try {
@@ -311,13 +305,12 @@ public class BotsRecolte extends Main{
                         } catch (FindFailed e){
                             System.out.println("Noyer not found");
                         }
-                        TimeUnit.MILLISECONDS.sleep(200);
                         try {
                             s.click(couper);
+                            TimeUnit.MILLISECONDS.sleep(7000);
                         } catch (FindFailed e) {
                             System.out.println("Couper not found");
                         }
-                        TimeUnit.MILLISECONDS.sleep(2000);
                     }
                     else if (s.exists(pretCombat) != null) {
                         int turnCounter = 0;
@@ -379,23 +372,33 @@ public class BotsRecolte extends Main{
                     System.out.println("Nothing found");
                 }
             }
-
+            TimeUnit.MILLISECONDS.sleep(10000);
             general.zaapAstrubToMaisonCoffre1();
             TimeUnit.MILLISECONDS.sleep(2000);
             s.click(new Location(1100, 200));
             TimeUnit.SECONDS.sleep(1);
             s.click(new Location(370, 200));
             TimeUnit.SECONDS.sleep(1);
-            Match region1 = s.find(chanvre);
-            s.dragDrop(region1, new Location(500, 470));
+            Match regionNoyer = s.find(boisNoyer);
+            s.dragDrop(regionNoyer, new Location(500, 470));
+            s.click(max);
+            TimeUnit.SECONDS.sleep(1);
+            s.type(Key.ENTER);
+            TimeUnit.SECONDS.sleep(1);
+            Match regionChataignier = s.find(boisChataignier);
+            s.dragDrop(regionChataignier, new Location(500, 470));
+            s.click(max);
+            TimeUnit.SECONDS.sleep(1);
+            s.type(Key.ENTER);
+            TimeUnit.SECONDS.sleep(1);
+            Match regionFrene = s.find(boisFrene);
+            s.dragDrop(regionFrene, new Location(500, 470));
             s.click(max);
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ESC);
-            TimeUnit.SECONDS.sleep(1);
-            s.doubleClick(popoBonta);
-            TimeUnit.SECONDS.sleep(8);
+            TimeUnit.SECONDS.sleep(4);
             s.doubleClick(popoRappel);
         }
     }

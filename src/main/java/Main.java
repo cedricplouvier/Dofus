@@ -113,6 +113,7 @@ public class Main {
     static Pattern osChafer = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/osChafer.png").similar((float) 0.80);
     static Pattern boisChataignier = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/boisChataignier.png").similar((float) 0.80);
     static Pattern boisChene = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/boisChene.png").similar((float) 0.80);
+    static Pattern boisFrene = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/boisFrene.png").similar((float) 0.80);
 
     static Pattern popoBrakmar = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/popoBrakmar.png").similar((float) 0.80);
 
@@ -173,8 +174,8 @@ public class Main {
 
         BotsRecolte botsRecolte = new BotsRecolte();
         //botsRecolte.recolteRiz();
-        botsRecolte.recolteChanvrePosX10Y5();
-        //botsRecolte.bucherForetAstrub();
+        //botsRecolte.recolteChanvrePosX10Y5();
+        botsRecolte.bucherForetAstrub();
 
         BotsFourbe botsFourbe = new BotsFourbe();
         //botsFourbe.cheminFer();
