@@ -41,7 +41,6 @@ public class BotsRecolte extends Main{
                 } catch (FindFailed e) {
                     System.out.println("riz not found");
                 }
-                TimeUnit.MILLISECONDS.sleep(200);
                 try {
                     s.click(faucher);
                 } catch (FindFailed e) {
@@ -60,16 +59,27 @@ public class BotsRecolte extends Main{
                     s.type(Key.F1);
                     while (s.exists(epouventailFight) != null) {
                         s.type(Key.F6);
+                        TimeUnit.MILLISECONDS.sleep(500);
                         try {
                             s.click(epouventailFight);
                         } catch (FindFailed e) {
-                        System.out.println("Epouventail not found");
+                            System.out.println("Epouventail not found");
                         }
-                        TimeUnit.MILLISECONDS.sleep(400);
+                        TimeUnit.MILLISECONDS.sleep(1000);
                         s.mouseMove(-10,-55);
-                        TimeUnit.MILLISECONDS.sleep(400);
+                        TimeUnit.MILLISECONDS.sleep(1000);
+                        s.type(Key.F6);
+                        TimeUnit.MILLISECONDS.sleep(1000);
+                        try {
+                            s.click(epouventailFight);
+                        } catch (FindFailed e) {
+                            System.out.println("Epouventail not found");
+                        }
+                        TimeUnit.MILLISECONDS.sleep(1000);
                         s.type(Key.F1);
-                        TimeUnit.MILLISECONDS.sleep(6000);
+                        TimeUnit.MILLISECONDS.sleep(500);
+                        s.mouseMove(-10,-55);
+                        TimeUnit.MILLISECONDS.sleep(3000);
                     }
                 }
             }
@@ -89,156 +99,6 @@ public class BotsRecolte extends Main{
             TimeUnit.SECONDS.sleep(1);
             Match region1 = s.find(rizInventaire);
             s.dragDrop(region1, new Location(500, 470));
-            s.click(max);
-            TimeUnit.SECONDS.sleep(1);
-            s.type(Key.ENTER);
-            TimeUnit.SECONDS.sleep(1);
-            s.type(Key.ESC);
-            TimeUnit.SECONDS.sleep(4);
-            s.doubleClick(popoRappel);
-        }
-    }
-
-    public void recolteChanvrePosX10Y5() throws InterruptedException, FindFailed, IOException {
-        Screen s = new Screen();
-
-        boolean first = true;
-        while (true) {
-            TimeUnit.SECONDS.sleep(5);
-            s.doubleClick(popoRappel);
-            TimeUnit.SECONDS.sleep(5);
-            s.rightClick(zaapAstrub);
-            TimeUnit.SECONDS.sleep(2);
-            s.doubleClick(milifutaie);
-            TimeUnit.SECONDS.sleep(3);
-            s.click(new Location(1250,380));
-            TimeUnit.SECONDS.sleep(5);
-            s.click(new Location(570,60));
-            TimeUnit.SECONDS.sleep(8);
-            s.click(new Location(1250,340));
-            TimeUnit.SECONDS.sleep(8);
-            s.click(new Location(770,60));
-            TimeUnit.SECONDS.sleep(8);
-            s.click(new Location(1250,270));
-            TimeUnit.SECONDS.sleep(8);
-            s.click(new Location(1250,160));
-            TimeUnit.SECONDS.sleep(8);
-            s.click(new Location(1250,340));
-            TimeUnit.SECONDS.sleep(8);
-
-            first=true;
-            for (int i = 0; i < 200; i++) {
-                try {
-                    s.click(chanvreRecolte);
-                } catch (FindFailed e) {
-                    System.out.println("riz not found");
-                }
-                TimeUnit.MILLISECONDS.sleep(400);
-                try {
-                    s.click(faucher);
-                } catch (FindFailed e) {
-                    System.out.println("Faucher not found");
-                }
-                if (first){
-                    TimeUnit.MILLISECONDS.sleep(7000);
-                    first = false;
-                }
-                TimeUnit.MILLISECONDS.sleep(3000);
-                if (s.exists(pretCombat) != null) {
-                    TimeUnit.MILLISECONDS.sleep(800);
-                    s.click(new Location(1050, 355));
-                    TimeUnit.MILLISECONDS.sleep(800);
-                    s.click(new Location(1000, 180));
-                    s.type(Key.F1);
-                    TimeUnit.SECONDS.sleep(11);
-
-                    //case bas
-                    s.click(new Location(940, 280));
-                    TimeUnit.SECONDS.sleep(3);
-                    s.type(Key.F5);
-                    TimeUnit.SECONDS.sleep(2);
-                    s.click(new Location(770, 190));
-                    TimeUnit.SECONDS.sleep(3);
-                    //case haut
-                    s.click(new Location(1150, 250));
-                    TimeUnit.SECONDS.sleep(3);
-                    s.type(Key.F5);
-                    TimeUnit.SECONDS.sleep(2);
-                    s.click(new Location(1180, 350));
-                    TimeUnit.SECONDS.sleep(3);
-
-                    s.type(Key.F1);
-                    TimeUnit.SECONDS.sleep(5);
-                    if(s.exists(epouventailFight) != null){
-                        while (s.exists(epouventailFight) != null) {
-                            s.type(Key.F6);
-                            TimeUnit.MILLISECONDS.sleep(500);
-                            try {
-                                s.click(epouventailFight);
-                            } catch (FindFailed e) {
-                                System.out.println("Epouventail not found");
-                            }
-                            TimeUnit.MILLISECONDS.sleep(1000);
-                            s.mouseMove(-10,-55);
-                            TimeUnit.MILLISECONDS.sleep(1000);
-                            s.type(Key.F6);
-                            TimeUnit.MILLISECONDS.sleep(1000);
-                            try {
-                                s.click(epouventailFight);
-                            } catch (FindFailed e) {
-                                System.out.println("Epouventail not found");
-                            }
-                            TimeUnit.MILLISECONDS.sleep(1000);
-                            s.type(Key.F1);
-                            TimeUnit.MILLISECONDS.sleep(500);
-                            s.mouseMove(-10,-55);
-                            TimeUnit.MILLISECONDS.sleep(3000);
-                        }
-                    }
-                    else if (s.exists(ennemiCombat) != null){
-                        while (s.exists(ennemiCombat) != null) {
-                            s.type(Key.F6);
-                            TimeUnit.MILLISECONDS.sleep(200);
-                            try {
-                                s.click(ennemiCombat);
-                            } catch (FindFailed e) {
-                                System.out.println("Ennemi not found");
-                            }
-                            TimeUnit.MILLISECONDS.sleep(1000);
-                            s.type(Key.F6);
-                            TimeUnit.MILLISECONDS.sleep(200);
-                            try {
-                                s.click(ennemiCombat);
-                            } catch (FindFailed e) {
-                                System.out.println("Ennemi not found");
-                            }
-                            TimeUnit.MILLISECONDS.sleep(1000);
-                            s.type(Key.F1);
-                            TimeUnit.MILLISECONDS.sleep(500);
-                            s.mouseMove(-10,-55);
-                            TimeUnit.MILLISECONDS.sleep(6000);
-                        }
-                    }
-                }
-            }
-
-            s.click(new Location(1030, 630));
-            TimeUnit.MILLISECONDS.sleep(800);
-            s.click(new Location(1140, 155));
-            TimeUnit.MILLISECONDS.sleep(1000);
-            for(int k=0; k < 5; k++){
-                s.doubleClick(new Location(1100, 250));
-                TimeUnit.MILLISECONDS.sleep(1000);
-            }
-            general.zaapAstrubToMaisonCoffre1();
-            TimeUnit.MILLISECONDS.sleep(2000);
-            s.click(new Location(1100, 200));
-            TimeUnit.SECONDS.sleep(1);
-            s.click(new Location(370, 200));
-            TimeUnit.SECONDS.sleep(1);
-            Match region1 = s.find(chanvre);
-            s.dragDrop(region1, new Location(500, 470));
-            TimeUnit.SECONDS.sleep(1);
             s.click(max);
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
@@ -402,4 +262,286 @@ public class BotsRecolte extends Main{
             s.doubleClick(popoRappel);
         }
     }
+
+    public void recolteChanvrePosX10Y5(String classe) throws InterruptedException, FindFailed, IOException {
+        Screen s = new Screen();
+
+        boolean first = true;
+        while (true) {
+            TimeUnit.SECONDS.sleep(5);
+            s.doubleClick(popoRappel);
+            TimeUnit.SECONDS.sleep(5);
+            s.rightClick(zaapAstrub);
+            TimeUnit.SECONDS.sleep(2);
+            s.doubleClick(milifutaie);
+            TimeUnit.SECONDS.sleep(3);
+            s.click(new Location(1250,380));
+            TimeUnit.SECONDS.sleep(5);
+            s.click(new Location(570,60));
+            TimeUnit.SECONDS.sleep(8);
+            s.click(new Location(1250,340));
+            TimeUnit.SECONDS.sleep(8);
+            s.click(new Location(770,60));
+            TimeUnit.SECONDS.sleep(8);
+            s.click(new Location(1250,270));
+            TimeUnit.SECONDS.sleep(8);
+            s.click(new Location(1250,160));
+            TimeUnit.SECONDS.sleep(8);
+            s.click(new Location(1250,340));
+            TimeUnit.SECONDS.sleep(8);
+
+            first=true;
+            for (int i = 0; i < 100; i++) {
+                try {
+                    s.click(chanvreRecolte);
+                } catch (FindFailed e) {
+                    System.out.println("riz not found");
+                }
+                try {
+                    s.click(faucher);
+                    TimeUnit.MILLISECONDS.sleep(3000);
+                } catch (FindFailed e) {
+                    System.out.println("Faucher not found");
+                }
+                if (first){
+                    TimeUnit.MILLISECONDS.sleep(7000);
+                    first = false;
+                }
+                if (s.exists(pretCombat) != null) {
+                    TimeUnit.MILLISECONDS.sleep(800);
+                    s.click(new Location(1050, 355));
+                    TimeUnit.MILLISECONDS.sleep(800);
+                    s.click(new Location(1000, 180));
+                    TimeUnit.MILLISECONDS.sleep(800);
+                    s.type(Key.F1);
+                    TimeUnit.SECONDS.sleep(11);
+
+                    if(classe == "iop") {
+                        //case bas
+                        s.click(new Location(940, 280));
+                        TimeUnit.SECONDS.sleep(3);
+                        s.type(Key.F5);
+                        TimeUnit.SECONDS.sleep(2);
+                        s.click(new Location(770, 190));
+                        TimeUnit.SECONDS.sleep(3);
+                        //case haut
+                        s.click(new Location(1150, 250));
+                        TimeUnit.SECONDS.sleep(3);
+                        s.type(Key.F5);
+                        TimeUnit.SECONDS.sleep(2);
+                        s.click(new Location(1180, 350));
+                        TimeUnit.SECONDS.sleep(3);
+
+                        s.type(Key.F1);
+                        TimeUnit.SECONDS.sleep(5);
+                    }
+                    if(s.exists(epouventailFight) != null){
+                        while (s.exists(epouventailFight) != null) {
+                            s.type(Key.F6);
+                            TimeUnit.MILLISECONDS.sleep(500);
+                            try {
+                                s.click(epouventailFight);
+                            } catch (FindFailed e) {
+                                System.out.println("Epouventail not found");
+                            }
+                            TimeUnit.MILLISECONDS.sleep(1000);
+                            s.mouseMove(-10,-55);
+                            TimeUnit.MILLISECONDS.sleep(1000);
+                            s.type(Key.F6);
+                            TimeUnit.MILLISECONDS.sleep(1000);
+                            try {
+                                s.click(epouventailFight);
+                            } catch (FindFailed e) {
+                                System.out.println("Epouventail not found");
+                            }
+                            TimeUnit.MILLISECONDS.sleep(1000);
+                            s.type(Key.F1);
+                            TimeUnit.MILLISECONDS.sleep(500);
+                            s.mouseMove(-10,-55);
+                            TimeUnit.MILLISECONDS.sleep(3000);
+                        }
+                    }
+                    else if (s.exists(ennemiCombat) != null){
+                        while (s.exists(ennemiCombat) != null) {
+                            s.type(Key.F6);
+                            TimeUnit.MILLISECONDS.sleep(200);
+                            try {
+                                s.click(ennemiCombat);
+                            } catch (FindFailed e) {
+                                System.out.println("Ennemi not found");
+                            }
+                            TimeUnit.MILLISECONDS.sleep(1000);
+                            s.type(Key.F6);
+                            TimeUnit.MILLISECONDS.sleep(200);
+                            try {
+                                s.click(ennemiCombat);
+                            } catch (FindFailed e) {
+                                System.out.println("Ennemi not found");
+                            }
+                            TimeUnit.MILLISECONDS.sleep(1000);
+                            s.type(Key.F1);
+                            TimeUnit.MILLISECONDS.sleep(500);
+                            s.mouseMove(-10,-55);
+                            TimeUnit.MILLISECONDS.sleep(6000);
+                        }
+                    }
+                }
+            }
+
+            s.click(new Location(1030, 630));
+            TimeUnit.MILLISECONDS.sleep(800);
+            s.click(new Location(1140, 155));
+            TimeUnit.MILLISECONDS.sleep(1000);
+            for(int k=0; k < 5; k++){
+                s.doubleClick(new Location(1100, 250));
+                TimeUnit.MILLISECONDS.sleep(1000);
+            }
+            general.zaapAstrubToMaisonCoffre1();
+            TimeUnit.MILLISECONDS.sleep(2000);
+            s.click(new Location(1100, 200));
+            TimeUnit.SECONDS.sleep(1);
+            s.click(new Location(370, 200));
+            TimeUnit.SECONDS.sleep(1);
+            Match region1 = s.find(chanvre);
+            s.dragDrop(region1, new Location(500, 470));
+            TimeUnit.SECONDS.sleep(1);
+            s.click(max);
+            TimeUnit.SECONDS.sleep(1);
+            s.type(Key.ENTER);
+            TimeUnit.SECONDS.sleep(1);
+            s.type(Key.ESC);
+            TimeUnit.SECONDS.sleep(4);
+            s.doubleClick(popoRappel);
+        }
+    }
+
+    public void recolteBlePosX11Y6() throws InterruptedException, FindFailed, IOException {
+        Screen s = new Screen();
+
+        boolean first = true;
+        while (true) {
+            TimeUnit.SECONDS.sleep(5);
+            s.doubleClick(popoRappel);
+            TimeUnit.SECONDS.sleep(5);
+            s.rightClick(zaapAstrub);
+            TimeUnit.SECONDS.sleep(2);
+            s.doubleClick(milifutaie);
+            TimeUnit.SECONDS.sleep(3);
+            s.click(new Location(1250,380));
+            TimeUnit.SECONDS.sleep(5);
+            s.click(new Location(570,60));
+            TimeUnit.SECONDS.sleep(8);
+            s.click(new Location(1250,340));
+            TimeUnit.SECONDS.sleep(8);
+            s.click(new Location(1250,300));
+            TimeUnit.SECONDS.sleep(8);
+            s.click(new Location(1250,305));
+            TimeUnit.SECONDS.sleep(8);
+            s.click(new Location(1250,270));
+            TimeUnit.SECONDS.sleep(8);
+            s.click(new Location(1250,265));
+            TimeUnit.SECONDS.sleep(8);
+
+            first=true;
+            for (int i = 0; i < 100; i++) {
+                try {
+                    s.click(bleRecolte);
+                } catch (FindFailed e) {
+                    System.out.println("ble not found");
+                }
+                try {
+                    s.click(faucher);
+                } catch (FindFailed e) {
+                    System.out.println("Faucher not found");
+                }
+                if (first){
+                    TimeUnit.MILLISECONDS.sleep(7000);
+                    first = false;
+                }
+                TimeUnit.MILLISECONDS.sleep(2500);
+                if (s.exists(pretCombat) != null) {
+                    TimeUnit.MILLISECONDS.sleep(800);
+                    s.type(Key.F1);
+                    TimeUnit.SECONDS.sleep(11);
+
+                    if(s.exists(epouventailFight) != null){
+                        while (s.exists(epouventailFight) != null) {
+                            s.type(Key.F6);
+                            TimeUnit.MILLISECONDS.sleep(500);
+                            try {
+                                s.click(epouventailFight);
+                            } catch (FindFailed e) {
+                                System.out.println("Epouventail not found");
+                            }
+                            TimeUnit.MILLISECONDS.sleep(1000);
+                            s.mouseMove(-10,-55);
+                            TimeUnit.MILLISECONDS.sleep(1000);
+                            s.type(Key.F6);
+                            TimeUnit.MILLISECONDS.sleep(1000);
+                            try {
+                                s.click(epouventailFight);
+                            } catch (FindFailed e) {
+                                System.out.println("Epouventail not found");
+                            }
+                            TimeUnit.MILLISECONDS.sleep(1000);
+                            s.type(Key.F1);
+                            TimeUnit.MILLISECONDS.sleep(500);
+                            s.mouseMove(-10,-55);
+                            TimeUnit.MILLISECONDS.sleep(5000);
+                        }
+                    }
+                    else if (s.exists(ennemiCombat) != null){
+                        while (s.exists(ennemiCombat) != null) {
+                            s.type(Key.F6);
+                            TimeUnit.MILLISECONDS.sleep(200);
+                            try {
+                                s.click(ennemiCombat);
+                            } catch (FindFailed e) {
+                                System.out.println("Ennemi not found");
+                            }
+                            TimeUnit.MILLISECONDS.sleep(1000);
+                            s.type(Key.F6);
+                            TimeUnit.MILLISECONDS.sleep(200);
+                            try {
+                                s.click(ennemiCombat);
+                            } catch (FindFailed e) {
+                                System.out.println("Ennemi not found");
+                            }
+                            TimeUnit.MILLISECONDS.sleep(1000);
+                            s.type(Key.F1);
+                            TimeUnit.MILLISECONDS.sleep(500);
+                            s.mouseMove(-10,-55);
+                            TimeUnit.MILLISECONDS.sleep(7000);
+                        }
+                    }
+                }
+            }
+
+            s.click(new Location(1030, 630));
+            TimeUnit.MILLISECONDS.sleep(800);
+            s.click(new Location(1140, 155));
+            TimeUnit.MILLISECONDS.sleep(1000);
+            for(int k=0; k < 5; k++){
+                s.doubleClick(new Location(1100, 250));
+                TimeUnit.MILLISECONDS.sleep(1000);
+            }
+            general.zaapAstrubToMaisonCoffre1();
+            TimeUnit.MILLISECONDS.sleep(2000);
+            s.click(new Location(1100, 200));
+            TimeUnit.SECONDS.sleep(1);
+            s.click(new Location(370, 200));
+            TimeUnit.SECONDS.sleep(1);
+            Match region1 = s.find(bleInventaire);
+            s.dragDrop(region1, new Location(500, 470));
+            TimeUnit.SECONDS.sleep(1);
+            s.click(max);
+            TimeUnit.SECONDS.sleep(1);
+            s.type(Key.ENTER);
+            TimeUnit.SECONDS.sleep(1);
+            s.type(Key.ESC);
+            TimeUnit.SECONDS.sleep(4);
+            s.doubleClick(popoRappel);
+        }
+    }
+
 }
