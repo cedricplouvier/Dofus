@@ -169,11 +169,11 @@ public class Main {
         //botsCraft.potionBonta();
         //botsCraft.potionRappel();
         //botsCraft.potionBrak();
-        //botsCraft.potionVieillesse();
+        botsCraft.potionVieillesse();
 
         BotsRecolte botsRecolte = new BotsRecolte();
         //botsRecolte.recolteRiz();
-        botsRecolte.recolteChanvrePosX10Y5();
+        //botsRecolte.recolteChanvrePosX10Y5();
         //botsRecolte.bucherForetAstrub();
 
         BotsFourbe botsFourbe = new BotsFourbe();

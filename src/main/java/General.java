@@ -15,7 +15,7 @@ public class General extends Main {
     public void insertCode(String code) throws IOException, InterruptedException {
         Keyboard kb = new DesktopKeyboard();
 
-        InputStream input = new FileInputStream("DofusBots/src/main/resources/config.properties");
+        InputStream input = new FileInputStream("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/config.properties");
         Properties properties = new Properties();
         properties.load(input);
 
