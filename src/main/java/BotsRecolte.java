@@ -13,6 +13,7 @@ public class BotsRecolte extends Main{
 
     public void recolteRiz() throws FindFailed, InterruptedException, IOException {
         Screen s = new Screen();
+        Keyboard kb = new DesktopKeyboard();
 
         boolean first = true;
         while (true) {
@@ -21,11 +22,8 @@ public class BotsRecolte extends Main{
             TimeUnit.SECONDS.sleep(5);
             s.rightClick(zaapAstrub);
             TimeUnit.SECONDS.sleep(2);
-            for (int j = 0; j < 20; j++) {
-                s.click(new Location(1100, 440));
-                TimeUnit.MILLISECONDS.sleep(500);
-            }
-            TimeUnit.SECONDS.sleep(1);
+            kb.type("pqn");
+            TimeUnit.SECONDS.sleep(2);
             s.doubleClick(zaapPandalaEau);
             TimeUnit.SECONDS.sleep(3);
             s.click(new Location(500, 60));
@@ -443,7 +441,7 @@ public class BotsRecolte extends Main{
             TimeUnit.SECONDS.sleep(8);
 
             first=true;
-            for (int i = 0; i < 100; i++) {
+            for (int i = 0; i < 70; i++) {
                 try {
                     s.click(bleRecolte);
                 } catch (FindFailed e) {
