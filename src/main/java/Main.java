@@ -135,7 +135,7 @@ public class Main {
 
     static Pattern riz = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/riz.png").similar((float) 0.80);
     static Pattern chanvreRecolte = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/chanvreRecolte.png").similar((float) 0.80);
-    static Pattern bleRecolte = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/bleRecolte.png").similar((float) 0.80);
+    static Pattern bleRecolte = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/bleRecolte.png").similar((float) 0.75);
     static Pattern bleInventaire = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/bleInventaire.png").similar((float) 0.80);
     static Pattern trefle = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/trefle.png").similar((float) 0.80);
     static Pattern chanvre = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/chanvre.png").similar((float) 0.80);
@@ -175,10 +175,10 @@ public class Main {
         //botsCraft.potionVieillesse();
 
         BotsRecolte botsRecolte = new BotsRecolte();
-        botsRecolte.recolteRiz();
-        //botsRecolte.recolteChanvrePosX10Y5("cra");
+        //botsRecolte.recolteRiz();
+        botsRecolte.recolteChanvrePosX10Y5("cra");
         //botsRecolte.recolteBlePosX11Y6();
-        //botsRecolte.bucherForetAstrub();
+        //botsRecolte.bucherForetAstrub("cra");
 
         BotsFourbe botsFourbe = new BotsFourbe();
         //botsFourbe.cheminFer();
