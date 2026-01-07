@@ -139,14 +139,14 @@ public class BotsRecolte extends Main{
                         if (s.exists(arbreNoyer) != null) {
                             try {
                                 s.click(arbreNoyer);
+                                try {
+                                    s.click(couper);
+                                    TimeUnit.MILLISECONDS.sleep(13000);
+                                } catch (FindFailed e) {
+                                    System.out.println("Couper not found");
+                                }
                             } catch (FindFailed e) {
                                 System.out.println("Noyer not found");
-                            }
-                            try {
-                                s.click(couper);
-                                TimeUnit.MILLISECONDS.sleep(12000);
-                            } catch (FindFailed e) {
-                                System.out.println("Couper not found");
                             }
                         }
                     }
@@ -154,14 +154,14 @@ public class BotsRecolte extends Main{
                         if (s.exists(arbreChene) != null) {
                             try {
                                 s.click(arbreChene);
+                                try {
+                                    s.click(couper);
+                                    TimeUnit.MILLISECONDS.sleep(7000);
+                                } catch (FindFailed e) {
+                                    System.out.println("Couper not found");
+                                }
                             } catch (FindFailed e) {
                                 System.out.println("Chataignier not found");
-                            }
-                            try {
-                                s.click(couper);
-                                TimeUnit.MILLISECONDS.sleep(7000);
-                            } catch (FindFailed e) {
-                                System.out.println("Couper not found");
                             }
                         }
                     }
@@ -169,14 +169,14 @@ public class BotsRecolte extends Main{
                         if (s.exists(arbreChataignier) != null) {
                             try {
                                 s.click(arbreChataignier);
+                                try {
+                                    s.click(couper);
+                                    TimeUnit.MILLISECONDS.sleep(7000);
+                                } catch (FindFailed e) {
+                                    System.out.println("Couper not found");
+                                }
                             } catch (FindFailed e) {
                                 System.out.println("Chataignier not found");
-                            }
-                            try {
-                                s.click(couper);
-                                TimeUnit.MILLISECONDS.sleep(7000);
-                            } catch (FindFailed e) {
-                                System.out.println("Couper not found");
                             }
                         }
                     }
@@ -184,14 +184,14 @@ public class BotsRecolte extends Main{
                         if (s.exists(arbreFrene) != null) {
                             try {
                                 s.click(arbreFrene);
+                                try {
+                                    s.click(couper);
+                                    TimeUnit.MILLISECONDS.sleep(7000);
+                                } catch (FindFailed e) {
+                                    System.out.println("Couper not found");
+                                }
                             } catch (FindFailed e) {
                                 System.out.println("Frene not found");
-                            }
-                            try {
-                                s.click(couper);
-                                TimeUnit.MILLISECONDS.sleep(7000);
-                            } catch (FindFailed e) {
-                                System.out.println("Couper not found");
                             }
                         }
                     }
@@ -221,7 +221,7 @@ public class BotsRecolte extends Main{
                         if(routeCounter  >= foretAstrubMaps.size()){
                             routeCounter = 0;
                         }
-                        TimeUnit.MILLISECONDS.sleep(5000);
+                        TimeUnit.MILLISECONDS.sleep(6000);
                     }
                 } catch (FindFailed e) {
                     System.out.println("Nothing found");
@@ -349,6 +349,11 @@ public class BotsRecolte extends Main{
                         TimeUnit.SECONDS.sleep(3);
                         s.type(Key.F1);
                         TimeUnit.SECONDS.sleep(5);
+                    } else if (classe == "cra") {
+                        s.click(new Location(700, 340));
+                        TimeUnit.SECONDS.sleep(3);
+                        s.click(new Location(840, 400));
+                        TimeUnit.SECONDS.sleep(3);
                     }
                     while (s.exists(abondonner) != null) {
                         if (s.exists(epouventailFight) != null) {
