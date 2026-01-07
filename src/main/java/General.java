@@ -150,7 +150,7 @@ public class General extends Main {
         TimeUnit.SECONDS.sleep(5);
         for( Location nexMap : mapsZaapAstrubToForetAstrub){
             s.click(nexMap);
-            TimeUnit.SECONDS.sleep(6);
+            TimeUnit.SECONDS.sleep(7);
         }
     }
 

@@ -89,7 +89,7 @@ public class BotsRecolte extends Main{
             TimeUnit.MILLISECONDS.sleep(800);
             s.click(new Location(1140, 155));
             TimeUnit.MILLISECONDS.sleep(1000);
-            for(int k=0; k < Math.round(pods/500); k++){
+            for(int k=0; k < Math.round(pods/1000); k++){
                 s.doubleClick(new Location(1100, 250));
                 TimeUnit.MILLISECONDS.sleep(1000);
             }
@@ -111,7 +111,7 @@ public class BotsRecolte extends Main{
         }
     }
 
-    public void bucherForetAstrub(String classe) throws InterruptedException, FindFailed, IOException {
+    public void bucherForetAstrub(String classe, int pods, ArrayList<String> sortesBois) throws InterruptedException, FindFailed, IOException {
         Screen s = new Screen();
 
         ArrayList<Point> foretAstrubMaps = new ArrayList<>();
@@ -133,76 +133,85 @@ public class BotsRecolte extends Main{
         while (true) {
             general.zaapAstrubForetAstrub();
             int routeCounter=0;
-            for (int i = 0; i < 100; i++) {
+            for (int i = 0; i < (Math.round(pods/30)); i++) {
                 try {
-                    if(s.exists(arbreNoyer) != null){
-                        try {
-                            s.click(arbreNoyer);
-                        } catch (FindFailed e){
-                            System.out.println("Noyer not found");
-                        }
-                        try {
-                            s.click(couper);
-                            TimeUnit.MILLISECONDS.sleep(12000);
-                        } catch (FindFailed e) {
-                            System.out.println("Couper not found");
-                        }
-                    }
-                    else if (s.exists(arbreChataignier) != null){
-                        try {
-                            s.click(arbreChataignier);
-                        } catch (FindFailed e){
-                            System.out.println("Noyer not found");
-                        }
-                        try {
-                            s.click(couper);
-                            TimeUnit.MILLISECONDS.sleep(7000);
-                        } catch (FindFailed e) {
-                            System.out.println("Couper not found");
+                    if (sortesBois.contains("noyer")) {
+                        if (s.exists(arbreNoyer) != null) {
+                            try {
+                                s.click(arbreNoyer);
+                            } catch (FindFailed e) {
+                                System.out.println("Noyer not found");
+                            }
+                            try {
+                                s.click(couper);
+                                TimeUnit.MILLISECONDS.sleep(12000);
+                            } catch (FindFailed e) {
+                                System.out.println("Couper not found");
+                            }
                         }
                     }
-                    else if (s.exists(arbreFrene) != null){
-                        try {
-                            s.click(arbreFrene);
-                        } catch (FindFailed e){
-                            System.out.println("Noyer not found");
-                        }
-                        try {
-                            s.click(couper);
-                            TimeUnit.MILLISECONDS.sleep(7000);
-                        } catch (FindFailed e) {
-                            System.out.println("Couper not found");
+                    if(sortesBois.contains("chene")) {
+                        if (s.exists(arbreChene) != null) {
+                            try {
+                                s.click(arbreChene);
+                            } catch (FindFailed e) {
+                                System.out.println("Chataignier not found");
+                            }
+                            try {
+                                s.click(couper);
+                                TimeUnit.MILLISECONDS.sleep(7000);
+                            } catch (FindFailed e) {
+                                System.out.println("Couper not found");
+                            }
                         }
                     }
-                    else if (s.exists(pretCombat) != null) {
+                    if(sortesBois.contains("chataignier")) {
+                        if (s.exists(arbreChataignier) != null) {
+                            try {
+                                s.click(arbreChataignier);
+                            } catch (FindFailed e) {
+                                System.out.println("Chataignier not found");
+                            }
+                            try {
+                                s.click(couper);
+                                TimeUnit.MILLISECONDS.sleep(7000);
+                            } catch (FindFailed e) {
+                                System.out.println("Couper not found");
+                            }
+                        }
+                    }
+                    if(sortesBois.contains("frene")) {
+                        if (s.exists(arbreFrene) != null) {
+                            try {
+                                s.click(arbreFrene);
+                            } catch (FindFailed e) {
+                                System.out.println("Frene not found");
+                            }
+                            try {
+                                s.click(couper);
+                                TimeUnit.MILLISECONDS.sleep(7000);
+                            } catch (FindFailed e) {
+                                System.out.println("Couper not found");
+                            }
+                        }
+                    }
+                    if (s.exists(pretCombat) != null) {
                         TimeUnit.MILLISECONDS.sleep(800);
                         s.type(Key.F1);
                         TimeUnit.SECONDS.sleep(11);
-                        if(s.exists(ennemiCombat) != null){
-                            while (s.exists(ennemiCombat) != null) {
-                                s.type(Key.F6);
-                                TimeUnit.MILLISECONDS.sleep(500);
-                                try {
-                                    s.click(ennemiCombat);
-                                } catch (FindFailed e) {
-                                    System.out.println("Ennemie");
-                                }
-                                TimeUnit.MILLISECONDS.sleep(1000);
-                                s.mouseMove(-10,-55);
-                                TimeUnit.MILLISECONDS.sleep(1000);
-                                s.type(Key.F6);
-                                TimeUnit.MILLISECONDS.sleep(1000);
-                                try {
-                                    s.click(ennemiCombat);
-                                } catch (FindFailed e) {
-                                    System.out.println("Ennemie");
-                                }
-                                TimeUnit.MILLISECONDS.sleep(1000);
-                                s.type(Key.F1);
-                                TimeUnit.MILLISECONDS.sleep(500);
-                                s.mouseMove(-10,-55);
-                                TimeUnit.MILLISECONDS.sleep(5000);
-                            }
+                        while (s.exists(abondonner) != null) {
+                            s.type(Key.F6);
+                            TimeUnit.MILLISECONDS.sleep(500);
+                            s.click(new Location(1180,570));
+                            TimeUnit.MILLISECONDS.sleep(1000);
+                            s.type(Key.F6);
+                            TimeUnit.MILLISECONDS.sleep(500);
+                            s.click(new Location(1180,570));
+                            TimeUnit.MILLISECONDS.sleep(500);
+                            s.type(Key.F1);
+                            TimeUnit.MILLISECONDS.sleep(500);
+                            s.mouseMove(-10, -100);
+                            TimeUnit.MILLISECONDS.sleep(6000);
                         }
                     }
                     else{
@@ -212,13 +221,21 @@ public class BotsRecolte extends Main{
                         if(routeCounter  >= foretAstrubMaps.size()){
                             routeCounter = 0;
                         }
-                        TimeUnit.MILLISECONDS.sleep(3000);
+                        TimeUnit.MILLISECONDS.sleep(5000);
                     }
                 } catch (FindFailed e) {
                     System.out.println("Nothing found");
                 }
             }
             TimeUnit.MILLISECONDS.sleep(10000);
+            s.click(new Location(1030, 630));
+            TimeUnit.MILLISECONDS.sleep(800);
+            s.click(new Location(1140, 155));
+            TimeUnit.MILLISECONDS.sleep(1000);
+            for(int k=0; k < Math.round(pods/1000); k++){
+                s.doubleClick(new Location(1100, 250));
+                TimeUnit.MILLISECONDS.sleep(500);
+            }
             general.zaapAstrubToMaisonCoffre1();
             TimeUnit.MILLISECONDS.sleep(2000);
             s.click(new Location(1100, 200));
@@ -227,6 +244,12 @@ public class BotsRecolte extends Main{
             TimeUnit.SECONDS.sleep(1);
             Match regionNoyer = s.find(boisNoyer);
             s.dragDrop(regionNoyer, new Location(500, 470));
+            s.click(max);
+            TimeUnit.SECONDS.sleep(1);
+            s.type(Key.ENTER);
+            TimeUnit.SECONDS.sleep(1);
+            Match regionChene = s.find(boisChene);
+            s.dragDrop(regionChene, new Location(500, 470));
             s.click(max);
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
@@ -366,7 +389,7 @@ public class BotsRecolte extends Main{
             TimeUnit.MILLISECONDS.sleep(800);
             s.click(new Location(1140, 155));
             TimeUnit.MILLISECONDS.sleep(1000);
-            for(int k=0; k < Math.round(pods/500); k++){
+            for(int k=0; k < Math.round(pods/1000); k++){
                 s.doubleClick(new Location(1100, 250));
                 TimeUnit.MILLISECONDS.sleep(500);
             }
@@ -488,7 +511,7 @@ public class BotsRecolte extends Main{
             TimeUnit.MILLISECONDS.sleep(800);
             s.click(new Location(1140, 155));
             TimeUnit.MILLISECONDS.sleep(1000);
-            for(int k=0; k < Math.round(pods/500); k++){
+            for(int k=0; k < Math.round(pods/1000); k++){
                 s.doubleClick(new Location(1100, 250));
                 TimeUnit.MILLISECONDS.sleep(1000);
             }

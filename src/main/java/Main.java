@@ -2,6 +2,8 @@ import org.sikuli.script.*;
 
 import java.awt.*;
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Main {
     /* All Images have been taken in 1280x800. Make sure to use the same resolution for images to be recognized
@@ -15,6 +17,7 @@ public class Main {
     static Pattern arbreNoyer = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/arbreNoyer.png").similar((float) 0.8);
     static Pattern arbreChataignier = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/arbreChataignier.png").similar((float) 0.8);
     static Pattern arbreFrene = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/arbreFrene.png").similar((float) 0.8);
+    static Pattern arbreChene = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/arbreChene.png").similar((float) 0.8);
     static Pattern abraBack = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/abraBack.png").similar((float) 0.8);
     static Pattern abraLeft = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/abraLeft.png").similar((float) 0.8);
     static Pattern abraRight = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/abraRight.png").similar((float) 0.8);
@@ -175,10 +178,10 @@ public class Main {
         //botsCraft.potionVieillesse();
 
         BotsRecolte botsRecolte = new BotsRecolte();
-        botsRecolte.recolteRiz(8000);
+        //botsRecolte.recolteRiz(8000);
         //botsRecolte.recolteChanvrePosX10Y5("cra", 2000);
         //botsRecolte.recolteBlePosX11Y6("cra", 3000);
-        //botsRecolte.bucherForetAstrub("cra");
+        botsRecolte.bucherForetAstrub("cra", 3000, new ArrayList<String>(Arrays.asList("noyer","chene","chataignier")));
 
         BotsFourbe botsFourbe = new BotsFourbe();
         //botsFourbe.cheminFer();
