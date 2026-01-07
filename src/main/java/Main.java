@@ -186,8 +186,8 @@ public class Main {
         BotsRecolte botsRecolte = new BotsRecolte();
         //botsRecolte.recolteRiz(8000);
         //botsRecolte.recolteChanvrePosX10Y5("cra", 3000);
-        //botsRecolte.recolteBlePosX11Y6("cra", 3000);
-        botsRecolte.bucherForetAstrub("cra", 3000, new ArrayList<String>(Arrays.asList("noyer","chene","chataignier")));
+        botsRecolte.recolteBlePosX11Y6("cra", 3000);
+        //botsRecolte.bucherForetAstrub("cra", 3000, new ArrayList<String>(Arrays.asList("noyer","chene","chataignier")));
 
         BotsFourbe botsFourbe = new BotsFourbe();
         //botsFourbe.cheminFer();
