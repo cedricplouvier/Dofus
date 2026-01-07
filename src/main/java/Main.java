@@ -34,6 +34,7 @@ public class Main {
     static Pattern entreMaison = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/entreMaison.png").similar((float) 0.80);
     static Pattern delock = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/delock.png").similar((float) 0.80);
     static Pattern ouvreCoffre = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/ouvreCoffre.png").similar((float) 0.80);
+    static Pattern coffreOuvertKamas = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/coffreOuvertKamas.png").similar((float) 0.80);
     static Pattern ressourceInventaire = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/ressourceInventaire.png").similar((float) 0.80);
     static Pattern bworky = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/bworky.png").similar((float) 0.80);
     static Pattern arrowInventaire = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/arrowInventaire.png").similar((float) 0.80);
@@ -106,6 +107,7 @@ public class Main {
     static Pattern champChamp3 = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/champChamp3.png").similar((float) 0.78);
     static Pattern baveBouftou = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/baveBouftou.png").similar((float) 0.78);
     static Pattern mapSudCheminFer = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/mapSudCheminFer.png").similar((float) 0.80);
+    static Pattern startForetAstrub = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/startForetAstrub.png").similar((float) 0.80);
 
     static Pattern potionFoyer = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/potionFoyer.png").similar((float) 0.80);
     static Pattern poudrePerlenpain = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/poudrePerlenpain.png").similar((float) 0.80);

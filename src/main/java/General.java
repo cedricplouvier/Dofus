@@ -53,7 +53,7 @@ public class General extends Main {
             if(pwSplit[i].matches("9")){
                 kb.type(Key.NUM9);
             }
-            TimeUnit.MILLISECONDS.sleep(300);
+            TimeUnit.MILLISECONDS.sleep(500);
         }
     }
 
@@ -67,21 +67,38 @@ public class General extends Main {
         s.click(new Location(1245, 350));
         TimeUnit.SECONDS.sleep(5);
         s.click(new Location(490, 135));
-        TimeUnit.SECONDS.sleep(2);
-        s.click(entreMaison);
+        TimeUnit.SECONDS.sleep(3);
+        try {
+            s.click(entreMaison);
+        } catch (FindFailed e){
+            System.out.println("FindFailed entreMaison");
+            s.type(Key.ENTER);
+            zaapAstrubToMaisonCoffre1();
+        }
         TimeUnit.SECONDS.sleep(3);
         insertCode("codeAstrubMaison");
-        TimeUnit.MILLISECONDS.sleep(300);
+        TimeUnit.MILLISECONDS.sleep(500);
         s.type(Key.ENTER);
-        TimeUnit.SECONDS.sleep(1);
+        TimeUnit.SECONDS.sleep(2);
         s.click(new Location(940, 370));
         TimeUnit.SECONDS.sleep(5);
         s.click(new Location(740, 440));
-        TimeUnit.SECONDS.sleep(1);
-        s.click(ouvreCoffre);
+        TimeUnit.SECONDS.sleep(2);
+        try {
+            s.click(ouvreCoffre);
+        } catch(FindFailed e){
+            System.out.println("Findfailed ouvreCoffre");
+            s.type(Key.ENTER);
+            zaapAstrubToMaisonCoffre1();
+        }
         TimeUnit.SECONDS.sleep(2);
         insertCode("codeAstrubCoffre1");
         s.type(Key.ENTER);
+        TimeUnit.SECONDS.sleep(1);
+        if(s.exists(coffreOuvertKamas) == null){
+            s.type(Key.ENTER);
+            zaapAstrubToMaisonCoffre1();
+        }
     }
 
     public void zaapAstrubToMaisonCoffre2() throws InterruptedException, FindFailed, IOException {
@@ -95,7 +112,13 @@ public class General extends Main {
         TimeUnit.SECONDS.sleep(5);
         s.click(new Location(490, 135));
         TimeUnit.SECONDS.sleep(2);
-        s.click(entreMaison);
+        try {
+            s.click(entreMaison);
+        } catch (FindFailed e){
+            System.out.println("FindFailed entreMaison");
+            s.type(Key.ENTER);
+            zaapAstrubToMaisonCoffre2();
+        }
         TimeUnit.SECONDS.sleep(3);
         insertCode("codeAstrubMaison");
         TimeUnit.MILLISECONDS.sleep(300);
@@ -107,10 +130,21 @@ public class General extends Main {
         TimeUnit.SECONDS.sleep(3);
         s.click(new Location(840, 450));
         TimeUnit.MILLISECONDS.sleep(500);
-        s.click(ouvreCoffre);
+        try {
+            s.click(ouvreCoffre);
+        } catch (FindFailed e){
+            System.out.println("FindFailed ouvreCoffre");
+            s.type(Key.ENTER);
+            zaapAstrubToMaisonCoffre2();
+        }
         TimeUnit.SECONDS.sleep(2);
         insertCode("codeAstrubCoffre2");
         s.type(Key.ENTER);
+        TimeUnit.SECONDS.sleep(1);
+        if(s.exists(coffreOuvertKamas) == null){
+            s.type(Key.ENTER);
+            zaapAstrubToMaisonCoffre2();
+        }
     }
 
     public void maisonAstrubToAtelierMineur() throws FindFailed, InterruptedException {
@@ -130,7 +164,11 @@ public class General extends Main {
         TimeUnit.SECONDS.sleep(4);
         s.click(new Location(1040, 370));
         TimeUnit.MILLISECONDS.sleep(300);
-        s.click(polirPierre);
+        try {
+            s.click(polirPierre);
+        } catch (FindFailed e) {
+            maisonAstrubToAtelierMineur();
+        }
     }
 
     public void zaapAstrubForetAstrub() throws FindFailed, InterruptedException {
@@ -151,6 +189,9 @@ public class General extends Main {
         for( Location nexMap : mapsZaapAstrubToForetAstrub){
             s.click(nexMap);
             TimeUnit.SECONDS.sleep(7);
+        }
+        if (s.exists(startForetAstrub) == null){
+            zaapAstrubForetAstrub();
         }
     }
 
@@ -211,9 +252,7 @@ public class General extends Main {
         s.type(Key.ENTER);
         TimeUnit.SECONDS.sleep(1);
         s.click(close);
-        TimeUnit.SECONDS.sleep(1);
-        s.doubleClick(popoBonta);
-        TimeUnit.SECONDS.sleep(10);
+        TimeUnit.SECONDS.sleep(5);
         s.doubleClick(popoRappel);
     }
 
@@ -230,7 +269,11 @@ public class General extends Main {
         TimeUnit.SECONDS.sleep(6);
         s.click(new Location(920, 280));
         TimeUnit.SECONDS.sleep(2);
-        s.click(preparerPotion);
+        try {
+            s.click(preparerPotion);
+        } catch (FindFailed e) {
+            maisonAstrubToAtelierAlchi();
+        }
         TimeUnit.SECONDS.sleep(3);
     }
 
@@ -255,7 +298,11 @@ public class General extends Main {
         TimeUnit.SECONDS.sleep(6);
         s.click(new Location(800, 380));
         TimeUnit.SECONDS.sleep(2);
-        s.click(sculpterArc);
+        try {
+            s.click(sculpterArc);
+        } catch (FindFailed e) {
+            maisonAstrubToAterlierSculpteurArc();
+        }
         TimeUnit.SECONDS.sleep(3);
     }
 
@@ -280,7 +327,11 @@ public class General extends Main {
         TimeUnit.SECONDS.sleep(7);
         s.click(new Location(800, 380));
         TimeUnit.SECONDS.sleep(2);
-        s.click(sculpterBaton);
+        try {
+            s.click(sculpterBaton);
+        } catch (FindFailed e) {
+            maisonAstrubToAterlierSculpteurBaton();
+        }
         TimeUnit.SECONDS.sleep(3);
     }
 
@@ -305,7 +356,11 @@ public class General extends Main {
         TimeUnit.SECONDS.sleep(8);
         s.click(new Location(800, 380));
         TimeUnit.SECONDS.sleep(2);
-        s.click(sculpterBaguette);
+        try {
+            s.click(sculpterBaguette);
+        } catch (FindFailed e) {
+            maisonAstrubToAterlierSculpteurBaguette();
+        }
         TimeUnit.SECONDS.sleep(3);
     }
 
@@ -332,7 +387,11 @@ public class General extends Main {
         TimeUnit.SECONDS.sleep(5);
         s.click(new Location(800,200));
         TimeUnit.SECONDS.sleep(5);
-        s.click(craftAmu);
+        try {
+            s.click(craftAmu);
+        } catch (FindFailed e) {
+            maisonAstrubToAterlierBijoutierAmu();
+        }
         TimeUnit.SECONDS.sleep(5);
     }
 
