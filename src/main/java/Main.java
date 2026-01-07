@@ -157,6 +157,10 @@ public class Main {
     static Pattern preparerPotion = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/preparerPotion.png").similar((float) 0.80);
     static Pattern fiolePandaburg = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/fiolePandaburg.png").similar((float) 0.80);
 
+    static int yUp = 65;
+    static int xLeft = 365;
+    static int xRight = 1250;
+    static int yDown = 580;
     public static void main(String[] args) throws IOException, InterruptedException, AWTException, FindFailed {
 
         General general = new General();

@@ -115,20 +115,20 @@ public class BotsRecolte extends Main{
         Screen s = new Screen();
 
         ArrayList<Point> foretAstrubMaps = new ArrayList<>();
-        foretAstrubMaps.add(new Point(365, 370));
-        foretAstrubMaps.add(new Point(365,305));
-        foretAstrubMaps.add(new Point(365,340));
-        foretAstrubMaps.add(new Point(770,65));
-        foretAstrubMaps.add(new Point(705,65));
-        foretAstrubMaps.add(new Point(770,65));
-        foretAstrubMaps.add(new Point(775,65));
-        foretAstrubMaps.add(new Point(1250,235));
-        foretAstrubMaps.add(new Point(1250,440));
-        foretAstrubMaps.add(new Point(910,580));
-        foretAstrubMaps.add(new Point(1250,340));
-        foretAstrubMaps.add(new Point(1050,580));
-        foretAstrubMaps.add(new Point(840,580));
-        foretAstrubMaps.add(new Point(635,580));
+        foretAstrubMaps.add(new Point(xLeft, 370));
+        foretAstrubMaps.add(new Point(xLeft,305));
+        foretAstrubMaps.add(new Point(xLeft,340));
+        foretAstrubMaps.add(new Point(770,yUp));
+        foretAstrubMaps.add(new Point(705,yUp));
+        foretAstrubMaps.add(new Point(770,yUp));
+        foretAstrubMaps.add(new Point(775,yUp));
+        foretAstrubMaps.add(new Point(xRight,235));
+        foretAstrubMaps.add(new Point(xRight,440));
+        foretAstrubMaps.add(new Point(910,yDown));
+        foretAstrubMaps.add(new Point(xRight,340));
+        foretAstrubMaps.add(new Point(1050,yDown));
+        foretAstrubMaps.add(new Point(840,yDown));
+        foretAstrubMaps.add(new Point(635,yDown));
 
         while (true) {
             general.zaapAstrubForetAstrub();
