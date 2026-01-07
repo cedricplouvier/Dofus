@@ -60,7 +60,7 @@ public class Main {
     static Pattern ecorceAbra = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/ecorceAbra.png").similar((float) 0.80);
     static Pattern epeeCombat = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/epeeCombat.png").similar((float) 0.80);
     static Pattern passerTour = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/passerTour.png").similar((float) 0.80);
-    static Pattern ennemiCombat = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/ennemiCombat.png").similar((float) 0.90);
+    static Pattern ennemiCombat = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/ennemiCombat.png").similar((float) 0.95);
     static Pattern allieCombat = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/allieCombat.png").similar((float) 0.80);
     static Pattern minerai = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/minerai.png").similar((float) 0.80);
     static Pattern argent = new Pattern("/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/argent.png").similar((float) 0.80);
@@ -175,9 +175,9 @@ public class Main {
         //botsCraft.potionVieillesse();
 
         BotsRecolte botsRecolte = new BotsRecolte();
-        //botsRecolte.recolteRiz();
-        botsRecolte.recolteChanvrePosX10Y5("cra");
-        //botsRecolte.recolteBlePosX11Y6();
+        botsRecolte.recolteRiz(8000);
+        //botsRecolte.recolteChanvrePosX10Y5("cra", 2000);
+        //botsRecolte.recolteBlePosX11Y6("cra", 3000);
         //botsRecolte.bucherForetAstrub("cra");
 
         BotsFourbe botsFourbe = new BotsFourbe();
