@@ -423,7 +423,7 @@ public class BotsRecolte extends Main{
         boolean first = true;
         while (true) {
             TimeUnit.SECONDS.sleep(5);
-            /*s.doubleClick(popoRappel);
+            s.doubleClick(popoRappel);
             TimeUnit.SECONDS.sleep(5);
             s.rightClick(zaapAstrub);
             TimeUnit.SECONDS.sleep(2);
@@ -519,7 +519,7 @@ public class BotsRecolte extends Main{
             for(int k=0; k < Math.round(pods/1000); k++){
                 s.doubleClick(new Location(1100, 250));
                 TimeUnit.MILLISECONDS.sleep(1000);
-            }*/
+            }
             general.zaapAstrubToMaisonCoffre1();
             TimeUnit.MILLISECONDS.sleep(2000);
             s.click(new Location(1100, 200));
