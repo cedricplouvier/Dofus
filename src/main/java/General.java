@@ -195,6 +195,95 @@ public class General extends Main {
         }
     }
 
+    public void zaapAstrubToChanvrePosX10Y5() throws FindFailed, InterruptedException {
+        Screen s = new Screen();
+
+        ArrayList<Location> mapsZaapAstrubToChanvrePosX10Y5 = new ArrayList<>();
+        mapsZaapAstrubToChanvrePosX10Y5.add(new Location(xRight, 380));
+        mapsZaapAstrubToChanvrePosX10Y5.add(new Location(570, yUp));
+        mapsZaapAstrubToChanvrePosX10Y5.add(new Location(xRight, 340));
+        mapsZaapAstrubToChanvrePosX10Y5.add(new Location(770, yUp));
+        mapsZaapAstrubToChanvrePosX10Y5.add(new Location(xRight, 270));
+        mapsZaapAstrubToChanvrePosX10Y5.add(new Location(xRight, 160));
+        mapsZaapAstrubToChanvrePosX10Y5.add(new Location(xRight, 340));
+
+        s.doubleClick(popoRappel);
+        TimeUnit.SECONDS.sleep(5);
+        s.rightClick(zaapAstrub);
+        TimeUnit.SECONDS.sleep(2);
+        s.doubleClick(milifutaie);
+        TimeUnit.SECONDS.sleep(3);
+        for( Location nexMap : mapsZaapAstrubToChanvrePosX10Y5){
+            s.click(nexMap);
+            TimeUnit.SECONDS.sleep(8);
+        }
+        if (s.exists(startChanvrePosX10Y5) == null){
+            zaapAstrubToChanvrePosX10Y5();
+        }
+    }
+
+    public void zaapAstrubToBlePosX11Y6() throws FindFailed, InterruptedException {
+        Screen s = new Screen();
+
+        ArrayList<Location> mapsZaapAstrubToBlePosX11Y6 = new ArrayList<>();
+        mapsZaapAstrubToBlePosX11Y6.add(new Location(xRight, 380));
+        mapsZaapAstrubToBlePosX11Y6.add(new Location(570, yUp));
+        mapsZaapAstrubToBlePosX11Y6.add(new Location(xRight, 340));
+        mapsZaapAstrubToBlePosX11Y6.add(new Location(xRight, 300));
+        mapsZaapAstrubToBlePosX11Y6.add(new Location(xRight, 305));
+        mapsZaapAstrubToBlePosX11Y6.add(new Location(xRight, 270));
+        mapsZaapAstrubToBlePosX11Y6.add(new Location(xRight, 265));
+
+        s.doubleClick(popoRappel);
+        TimeUnit.SECONDS.sleep(5);
+        s.rightClick(zaapAstrub);
+        TimeUnit.SECONDS.sleep(2);
+        s.doubleClick(milifutaie);
+        TimeUnit.SECONDS.sleep(3);
+        for( Location nexMap : mapsZaapAstrubToBlePosX11Y6){
+            s.click(nexMap);
+            TimeUnit.SECONDS.sleep(8);
+        }
+        if (s.exists(startBlePosX11Y6) == null){
+            zaapAstrubToBlePosX11Y6();
+        }
+    }
+
+    public void zaapAstrubToChanvrePosX32Y42() throws FindFailed, InterruptedException {
+        Screen s = new Screen();
+
+        ArrayList<Location> zaapAstrubToChanvrePosX32Y42 = new ArrayList<>();
+        zaapAstrubToChanvrePosX32Y42.add(new Location(xRight, 270));
+        zaapAstrubToChanvrePosX32Y42.add(new Location(830, yDown));
+        zaapAstrubToChanvrePosX32Y42.add(new Location(570, yDown));
+        zaapAstrubToChanvrePosX32Y42.add(new Location(770, yDown));
+        zaapAstrubToChanvrePosX32Y42.add(new Location(775, yDown));
+        zaapAstrubToChanvrePosX32Y42.add(new Location(773, yDown));
+        zaapAstrubToChanvrePosX32Y42.add(new Location(775, yDown));
+        zaapAstrubToChanvrePosX32Y42.add(new Location(773, yDown));
+        zaapAstrubToChanvrePosX32Y42.add(new Location(710, yDown));
+        zaapAstrubToChanvrePosX32Y42.add(new Location(xLeft, 300));
+        zaapAstrubToChanvrePosX32Y42.add(new Location(xLeft, 298));
+        zaapAstrubToChanvrePosX32Y42.add(new Location(xLeft, 300));
+
+        s.doubleClick(popoBonta);
+        TimeUnit.SECONDS.sleep(5);
+        s.rightClick(new Location(800, 230));
+        TimeUnit.SECONDS.sleep(3);
+        s.click(new Location(735, 150));
+        TimeUnit.SECONDS.sleep(1);
+        s.click(zaapiBouchers);
+        TimeUnit.SECONDS.sleep(2);
+
+        for( Location nexMap : zaapAstrubToChanvrePosX32Y42){
+            s.click(nexMap);
+            TimeUnit.SECONDS.sleep(8);
+        }
+        if (s.exists(startChanvrePosX32Y42) == null){
+            zaapAstrubToChanvrePosX32Y42();
+        }
+    }
+
     public void depodsAbraglands() throws InterruptedException, FindFailed {
         Screen s = new Screen();
         Keyboard kb = new DesktopKeyboard();

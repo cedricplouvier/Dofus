@@ -50,6 +50,7 @@ public class Main {
     static Pattern utiliser = new Pattern(imagePath + "utiliser.png").similar((float) 0.80);
     static Pattern selectZaapViVi = new Pattern(imagePath + "selectZaapViVi.png").similar((float) 0.80);
     static Pattern selectZaapMili = new Pattern(imagePath + "selectZaapMili.png").similar((float) 0.80);
+    static Pattern zaapiBouchers = new Pattern(imagePath + "zaapiBouchers.png").similar((float) 0.80);
     static Pattern milifutaie = new Pattern(imagePath + "milifutaie.png").similar((float) 0.80);
     static Pattern selectZaapScara = new Pattern(imagePath + "selectZaapScara.png").similar((float) 0.80);
     static Pattern oui = new Pattern(imagePath + "oui.png").similar((float) 0.80);
@@ -107,9 +108,14 @@ public class Main {
     static Pattern champChamp = new Pattern(imagePath + "champChamp.png").similar((float) 0.78);
     static Pattern champChamp2 = new Pattern(imagePath + "champChamp2.png").similar((float) 0.78);
     static Pattern champChamp3 = new Pattern(imagePath + "champChamp3.png").similar((float) 0.78);
+    static Pattern maitreBolet = new Pattern(imagePath + "maitreBolet.png").similar((float) 0.78);
     static Pattern baveBouftou = new Pattern(imagePath + "baveBouftou.png").similar((float) 0.78);
     static Pattern mapSudCheminFer = new Pattern(imagePath + "mapSudCheminFer.png").similar((float) 0.80);
     static Pattern startForetAstrub = new Pattern(imagePath + "startForetAstrub.png").similar((float) 0.80);
+    static Pattern startChanvrePosX10Y5 = new Pattern(imagePath + "startChanvrePosX10Y5.png").similar((float) 0.80);
+    static Pattern startChanvrePosX32Y42 = new Pattern(imagePath + "startChanvrePosX32Y42.png").similar((float) 0.80);
+    static Pattern startBlePosX11Y6 = new Pattern(imagePath + "startBlePosX11Y6.png").similar((float) 0.80);
+
 
     static Pattern potionFoyer = new Pattern(imagePath + "potionFoyer.png").similar((float) 0.80);
     static Pattern poudrePerlenpain = new Pattern(imagePath + "poudrePerlenpain.png").similar((float) 0.80);
@@ -145,7 +151,7 @@ public class Main {
     static Pattern bleRecolte = new Pattern(imagePath + "bleRecolte.png").similar((float) 0.75);
     static Pattern bleInventaire = new Pattern(imagePath + "bleInventaire.png").similar((float) 0.80);
     static Pattern trefle = new Pattern(imagePath + "trefle.png").similar((float) 0.80);
-    static Pattern chanvre = new Pattern(imagePath + "chanvre.png").similar((float) 0.80);
+    static Pattern chanvre = new Pattern(imagePath + "chanvre.png").similar((float) 0.70);
     static Pattern faucher = new Pattern(imagePath + "faucher.png").similar((float) 0.80);
     static Pattern cueillir = new Pattern(imagePath + "cueillir.png").similar((float) 0.80);
 
@@ -189,7 +195,8 @@ public class Main {
 
         BotsRecolte botsRecolte = new BotsRecolte();
         //botsRecolte.recolteRiz(8000);
-        botsRecolte.recolteChanvrePosX10Y5("alchi","cra", 4000);
+        //botsRecolte.recolteChanvrePosX10Y5("alchi","cra", 4000);
+        botsRecolte.recolteChanvrePosX32Y42("alchi","cra", 4000);
         //botsRecolte.recolteBlePosX11Y6("cra", 2000);
         //botsRecolte.bucherForetAstrub("cra", 3000, new ArrayList<String>(Arrays.asList("noyer","chene","chataignier")));
 

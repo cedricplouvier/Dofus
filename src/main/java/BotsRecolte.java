@@ -278,27 +278,7 @@ public class BotsRecolte extends Main{
         boolean first = true;
         while (true) {
             TimeUnit.SECONDS.sleep(5);
-            s.doubleClick(popoRappel);
-            TimeUnit.SECONDS.sleep(5);
-            s.rightClick(zaapAstrub);
-            TimeUnit.SECONDS.sleep(2);
-            s.doubleClick(milifutaie);
-            TimeUnit.SECONDS.sleep(3);
-            s.click(new Location(1250,380));
-            TimeUnit.SECONDS.sleep(5);
-            s.click(new Location(570,60));
-            TimeUnit.SECONDS.sleep(8);
-            s.click(new Location(1250,340));
-            TimeUnit.SECONDS.sleep(8);
-            s.click(new Location(770,60));
-            TimeUnit.SECONDS.sleep(8);
-            s.click(new Location(1250,270));
-            TimeUnit.SECONDS.sleep(8);
-            s.click(new Location(1250,160));
-            TimeUnit.SECONDS.sleep(8);
-            s.click(new Location(1250,340));
-            TimeUnit.SECONDS.sleep(8);
-
+            general.zaapAstrubToChanvrePosX10Y5();
             for (int i = 0; i < Math.round((pods/15)); i++) {
                 try {
                     s.click(chanvreRecolte);
@@ -331,7 +311,7 @@ public class BotsRecolte extends Main{
                         TimeUnit.MILLISECONDS.sleep(1000);
                         s.click(new Location(600, 290));
                         TimeUnit.MILLISECONDS.sleep(1000);
-                        s.click(new Location(940, 450));
+                        s.click(new Location(920, 460));
                         TimeUnit.MILLISECONDS.sleep(1000);
                     }
                     s.type(Key.F1);
@@ -355,9 +335,9 @@ public class BotsRecolte extends Main{
                         TimeUnit.SECONDS.sleep(5);
                     } else if (classe == "cra") {
                         s.click(new Location(700, 340));
-                        TimeUnit.SECONDS.sleep(3);
+                        TimeUnit.SECONDS.sleep(2);
                         s.click(new Location(840, 400));
-                        TimeUnit.SECONDS.sleep(3);
+                        TimeUnit.SECONDS.sleep(1);
                     }
                     while (s.exists(abondonner) != null) {
                         if (s.exists(epouventailFight) != null) {
@@ -426,9 +406,14 @@ public class BotsRecolte extends Main{
             TimeUnit.SECONDS.sleep(1);
             s.click(new Location(370, 200));
             TimeUnit.SECONDS.sleep(1);
-            Match region1 = s.find(chanvre);
-            s.dragDrop(region1, new Location(500, 470));
-            TimeUnit.SECONDS.sleep(1);
+            if (metier == "paysan") {
+                Match region1 = s.find(chanvre);
+                s.dragDrop(region1, new Location(500, 470));
+            } else if (metier == "alchi"){
+                Match region1 = s.find(fleurDeChanvre);
+                s.dragDrop(region1, new Location(500, 470));
+            }
+            TimeUnit.SECONDS.sleep(2);
             s.click(max);
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
@@ -439,32 +424,164 @@ public class BotsRecolte extends Main{
         }
     }
 
+    public void recolteChanvrePosX32Y42(String metier, String classe, int pods) throws InterruptedException, FindFailed, IOException {
+        Screen s = new Screen();
+
+        ArrayList<Point> mapsChanvreBonta = new ArrayList<>();
+        mapsChanvreBonta.add(new Point(770, yDown));
+        mapsChanvreBonta.add(new Point(773,yUp));
+
+        boolean first = true;
+        while (true) {
+            TimeUnit.SECONDS.sleep(5);
+            int routeCounter = 0;
+            general.zaapAstrubToChanvrePosX32Y42();
+            for (int i = 0; i < Math.round((pods/15)); i++) {
+                try {
+                    s.click(chanvreRecolte);
+                    try {
+                        if(metier == "paysan"){
+                            s.click(faucher);
+                        } else if (metier == "alchi"){
+                            s.click(cueillir);
+                        }
+                        TimeUnit.MILLISECONDS.sleep(2100);
+                        if (first){
+                            TimeUnit.MILLISECONDS.sleep(5000);
+                            first = false;
+                        }
+                    } catch (FindFailed e) {
+                        System.out.println("Faucher not found");
+                    }
+                } catch (FindFailed e) {
+                    System.out.println("Chanvre not found");
+                    Point nextPos = mapsChanvreBonta.get(routeCounter);
+                    s.click(new Location(nextPos.x, nextPos.y));
+                    routeCounter++;
+                    if(routeCounter  >= mapsChanvreBonta.size()){
+                        routeCounter = 0;
+                    }
+                    TimeUnit.MILLISECONDS.sleep(6000);
+                }
+                if (s.exists(pretCombat) != null) {
+                    s.type(Key.F1);
+                    TimeUnit.MILLISECONDS.sleep(10000);
+                    while (s.exists(abondonner) != null) {
+                        if (s.exists(epouventailFight) != null) {
+                            try {
+                                s.type(Key.F6);
+                                s.click(epouventailFight);
+                                TimeUnit.MILLISECONDS.sleep(500);
+                                s.mouseMove(-10, -100);
+                                TimeUnit.MILLISECONDS.sleep(500);
+                                s.type(Key.F6);
+                                s.click(epouventailFight);
+                                TimeUnit.MILLISECONDS.sleep(500);
+                                s.mouseMove(-10, -100);
+                            } catch (FindFailed e) {
+                                System.out.println("Epouventail not found");
+                            }
+                            TimeUnit.MILLISECONDS.sleep(500);
+                            s.type(Key.F1);
+                            TimeUnit.MILLISECONDS.sleep(6000);
+                        } else if (s.exists(bulbiChanvre) != null){
+                            try{
+                                s.type(Key.F6);
+                                s.click(bulbiChanvre);
+                                TimeUnit.MILLISECONDS.sleep(500);
+                                s.mouseMove(-10, -100);
+                                TimeUnit.MILLISECONDS.sleep(500);
+                                s.type(Key.F6);
+                                s.click(bulbiChanvre);
+                                TimeUnit.MILLISECONDS.sleep(500);
+                                s.mouseMove(-10, -100);
+                            } catch (FindFailed e) {
+                                System.out.println("bulbiChanvre not found");
+                            }
+                            TimeUnit.MILLISECONDS.sleep(500);
+                            s.type(Key.F1);
+                            TimeUnit.MILLISECONDS.sleep(6000);
+                        }
+                        else {
+                            if (s.exists(maitreBolet) != null){
+                                s.type(Key.F6);
+                                TimeUnit.MILLISECONDS.sleep(500);
+                                try {
+                                    s.click(maitreBolet);
+                                } catch (FindFailed e) {
+                                    System.out.println("Maitre bolet not found");
+                                }
+                                TimeUnit.MILLISECONDS.sleep(1000);
+                                s.type(Key.F6);
+                                TimeUnit.MILLISECONDS.sleep(500);
+                                try {
+                                    s.click(maitreBolet);
+                                } catch (FindFailed e) {
+                                    System.out.println("Maitre bolet not found");
+                                }
+                                TimeUnit.MILLISECONDS.sleep(500);
+                                s.type(Key.F1);
+                                TimeUnit.MILLISECONDS.sleep(500);
+                                s.mouseMove(-10, -100);
+                                TimeUnit.MILLISECONDS.sleep(6000);
+                            }
+                            else {
+                                s.type(Key.F6);
+                                TimeUnit.MILLISECONDS.sleep(500);
+                                s.click(new Location(1220, 560));
+                                TimeUnit.MILLISECONDS.sleep(1000);
+                                s.type(Key.F6);
+                                TimeUnit.MILLISECONDS.sleep(500);
+                                s.click(new Location(1220, 560));
+                                TimeUnit.MILLISECONDS.sleep(500);
+                                s.type(Key.F1);
+                                TimeUnit.MILLISECONDS.sleep(500);
+                                s.mouseMove(-10, -100);
+                                TimeUnit.MILLISECONDS.sleep(6000);
+                            }
+                        }
+                    }
+                }
+            }
+            s.click(new Location(1030, 630));
+            TimeUnit.MILLISECONDS.sleep(800);
+            s.click(new Location(1140, 155));
+            TimeUnit.MILLISECONDS.sleep(1000);
+            for(int k=0; k < Math.round(pods/1000); k++){
+                s.doubleClick(new Location(1100, 250));
+                TimeUnit.MILLISECONDS.sleep(500);
+            }
+            general.zaapAstrubToMaisonCoffre1();
+            TimeUnit.MILLISECONDS.sleep(2000);
+            s.click(new Location(1100, 200));
+            TimeUnit.SECONDS.sleep(1);
+            s.click(new Location(370, 200));
+            TimeUnit.SECONDS.sleep(1);
+
+            if (metier == "paysan") {
+                Match region1 = s.find(chanvre);
+                s.dragDrop(region1, new Location(500, 470));
+            } else if (metier == "alchi"){
+                Match region1 = s.find(fleurDeChanvre);
+                s.dragDrop(region1, new Location(500, 470));
+            }
+            TimeUnit.SECONDS.sleep(2);
+            s.click(max);
+            TimeUnit.SECONDS.sleep(1);
+            s.type(Key.ENTER);
+            TimeUnit.SECONDS.sleep(1);
+            s.type(Key.ESC);
+            TimeUnit.SECONDS.sleep(4);
+        }
+    }
+
     public void recolteBlePosX11Y6(String classe, int pods) throws InterruptedException, FindFailed, IOException {
         Screen s = new Screen();
 
         boolean first = true;
         while (true) {
             TimeUnit.SECONDS.sleep(5);
-            s.doubleClick(popoRappel);
-            TimeUnit.SECONDS.sleep(5);
-            s.rightClick(zaapAstrub);
-            TimeUnit.SECONDS.sleep(2);
-            s.doubleClick(milifutaie);
-            TimeUnit.SECONDS.sleep(3);
-            s.click(new Location(1250,380));
-            TimeUnit.SECONDS.sleep(5);
-            s.click(new Location(570,60));
-            TimeUnit.SECONDS.sleep(8);
-            s.click(new Location(1250,340));
-            TimeUnit.SECONDS.sleep(8);
-            s.click(new Location(1250,300));
-            TimeUnit.SECONDS.sleep(8);
-            s.click(new Location(1250,305));
-            TimeUnit.SECONDS.sleep(8);
-            s.click(new Location(1250,270));
-            TimeUnit.SECONDS.sleep(8);
-            s.click(new Location(1250,265));
-            TimeUnit.SECONDS.sleep(8);
+            general.zaapAstrubToBlePosX11Y6();
             for (int i = 0; i < Math.round(pods/25); i++) {
                 try {
                     s.click(bleRecolte);
