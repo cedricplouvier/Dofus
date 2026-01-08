@@ -178,7 +178,7 @@ public class Main {
         //botsCraft.craftSylvienPublic();
         //botsCraft.craftArcEco();
         //botsCraft.craftMedailleHoly();
-        botsCraft.polirPierres("rubis"); //rubis - emeraude - saphir - cristal
+        //botsCraft.polirPierres("rubis"); //rubis - emeraude - saphir - cristal
         //botsCraft.ouvrirRunes();
         //botsCraft.polirPDAPetiteHazar();
         //botsCraft.potionBonta();
@@ -188,7 +188,7 @@ public class Main {
 
         BotsRecolte botsRecolte = new BotsRecolte();
         //botsRecolte.recolteRiz(8000);
-        //botsRecolte.recolteChanvrePosX10Y5("alchi","cra", 2000);
+        botsRecolte.recolteChanvrePosX10Y5("alchi","cra", 4000);
         //botsRecolte.recolteBlePosX11Y6("cra", 2000);
         //botsRecolte.bucherForetAstrub("cra", 3000, new ArrayList<String>(Arrays.asList("noyer","chene","chataignier")));
 
