@@ -147,6 +147,7 @@ public class Main {
     static Pattern trefle = new Pattern(imagePath + "trefle.png").similar((float) 0.80);
     static Pattern chanvre = new Pattern(imagePath + "chanvre.png").similar((float) 0.80);
     static Pattern faucher = new Pattern(imagePath + "faucher.png").similar((float) 0.80);
+    static Pattern cueillir = new Pattern(imagePath + "cueillir.png").similar((float) 0.80);
 
     static Pattern epouventailFight = new Pattern(imagePath + "epouventailFight.png").similar((float) 0.80);
     static Pattern epouventail = new Pattern(imagePath + "epouventail.png").similar((float) 0.80);
@@ -177,7 +178,7 @@ public class Main {
         //botsCraft.craftSylvienPublic();
         //botsCraft.craftArcEco();
         //botsCraft.craftMedailleHoly();
-        //botsCraft.polirPierres("rubis"); //rubis - emeraude - saphir - cristal
+        botsCraft.polirPierres("rubis"); //rubis - emeraude - saphir - cristal
         //botsCraft.ouvrirRunes();
         //botsCraft.polirPDAPetiteHazar();
         //botsCraft.potionBonta();
@@ -187,8 +188,8 @@ public class Main {
 
         BotsRecolte botsRecolte = new BotsRecolte();
         //botsRecolte.recolteRiz(8000);
-        //botsRecolte.recolteChanvrePosX10Y5("cra", 3000);
-        botsRecolte.recolteBlePosX11Y6("cra", 3000);
+        //botsRecolte.recolteChanvrePosX10Y5("alchi","cra", 2000);
+        //botsRecolte.recolteBlePosX11Y6("cra", 2000);
         //botsRecolte.bucherForetAstrub("cra", 3000, new ArrayList<String>(Arrays.asList("noyer","chene","chataignier")));
 
         BotsFourbe botsFourbe = new BotsFourbe();

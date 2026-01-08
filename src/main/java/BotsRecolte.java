@@ -272,7 +272,7 @@ public class BotsRecolte extends Main{
         }
     }
 
-    public void recolteChanvrePosX10Y5(String classe, int pods) throws InterruptedException, FindFailed, IOException {
+    public void recolteChanvrePosX10Y5(String metier, String classe, int pods) throws InterruptedException, FindFailed, IOException {
         Screen s = new Screen();
 
         boolean first = true;
@@ -303,7 +303,11 @@ public class BotsRecolte extends Main{
                 try {
                     s.click(chanvreRecolte);
                     try {
-                        s.click(faucher);
+                        if(metier == "paysan"){
+                            s.click(faucher);
+                        } else if (metier == "alchi"){
+                            s.click(cueillir);
+                        }
                         TimeUnit.MILLISECONDS.sleep(2100);
                         if (first){
                             TimeUnit.MILLISECONDS.sleep(5000);
