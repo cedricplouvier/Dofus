@@ -396,7 +396,7 @@ public class BotsRecolte extends Main{
             TimeUnit.MILLISECONDS.sleep(800);
             s.click(new Location(1140, 155));
             TimeUnit.MILLISECONDS.sleep(1000);
-            for(int k=0; k < Math.round(pods/1000); k++){
+            for(int k=0; k < Math.round(pods/500); k++){
                 s.doubleClick(new Location(1100, 250));
                 TimeUnit.MILLISECONDS.sleep(500);
             }
@@ -547,7 +547,7 @@ public class BotsRecolte extends Main{
             TimeUnit.MILLISECONDS.sleep(800);
             s.click(new Location(1140, 155));
             TimeUnit.MILLISECONDS.sleep(1000);
-            for(int k=0; k < Math.round(pods/1000); k++){
+            for(int k=0; k < Math.round(pods/500); k++){
                 s.doubleClick(new Location(1100, 250));
                 TimeUnit.MILLISECONDS.sleep(500);
             }
