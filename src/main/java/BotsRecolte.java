@@ -377,7 +377,25 @@ public class BotsRecolte extends Main{
                             TimeUnit.MILLISECONDS.sleep(500);
                             s.type(Key.F1);
                             TimeUnit.MILLISECONDS.sleep(6000);
-                        } else {
+                        } else if (s.exists(bulbiChanvre) != null){
+                            try{
+                            s.type(Key.F6);
+                            s.click(bulbiChanvre);
+                            TimeUnit.MILLISECONDS.sleep(500);
+                            s.mouseMove(-10, -100);
+                            TimeUnit.MILLISECONDS.sleep(500);
+                            s.type(Key.F6);
+                            s.click(bulbiChanvre);
+                            TimeUnit.MILLISECONDS.sleep(500);
+                            s.mouseMove(-10, -100);
+                            } catch (FindFailed e) {
+                                System.out.println("bulbiChanvre not found");
+                            }
+                            TimeUnit.MILLISECONDS.sleep(500);
+                            s.type(Key.F1);
+                            TimeUnit.MILLISECONDS.sleep(6000);
+                        }
+                        else {
                             s.type(Key.F6);
                             TimeUnit.MILLISECONDS.sleep(500);
                             s.click(new Location(1220,560));

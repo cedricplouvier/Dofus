@@ -151,6 +151,7 @@ public class Main {
 
     static Pattern epouventailFight = new Pattern(imagePath + "epouventailFight.png").similar((float) 0.80);
     static Pattern epouventail = new Pattern(imagePath + "epouventail.png").similar((float) 0.80);
+    static Pattern bulbiChanvre = new Pattern(imagePath + "bulbiChanvre.png").similar((float) 0.80);
     static Pattern zaapPandalaEau = new Pattern(imagePath + "zaapPandalaEau.png").similar((float) 0.80);
     static Pattern sacDeRiz = new Pattern(imagePath + "sacDeRiz.png").similar((float) 0.80);
     static Pattern rizInventaire = new Pattern(imagePath + "rizInventaire.png").similar((float) 0.80);
