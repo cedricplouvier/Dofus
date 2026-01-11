@@ -449,13 +449,13 @@ public class BotsCraft extends Main{
             s.doubleClick(popoBrakmar);
             TimeUnit.SECONDS.sleep(3);
             s.click(new Location(1050, 145));
-            TimeUnit.MILLISECONDS.sleep(1000);
+            TimeUnit.MILLISECONDS.sleep(2000);
             s.click(new Location(1100, 185));
-            TimeUnit.SECONDS.sleep(4);
+            TimeUnit.SECONDS.sleep(5);
             s.click(new Location(600, 390));
-            TimeUnit.MILLISECONDS.sleep(3000);
-            s.click(new Location(690, 510));
-            TimeUnit.MILLISECONDS.sleep(20000);
+            TimeUnit.MILLISECONDS.sleep(5000);
+            s.click(new Location(670, 510));
+            TimeUnit.MILLISECONDS.sleep(15000);
             s.click(new Location(990, 300));
             TimeUnit.MILLISECONDS.sleep(700);
             Match briserObjet = s.find(general.briserObjet);
@@ -1838,6 +1838,86 @@ public class BotsCraft extends Main{
             s.type(Key.ESC);
             TimeUnit.MILLISECONDS.sleep(500);
             craftMedailleHoly();
+        }
+    }
+
+    public void graineChanvre() throws InterruptedException, FindFailed, IOException {
+        Keyboard kb = new DesktopKeyboard();
+        Screen s = new Screen();
+
+        boolean firstCraft = true;
+        TimeUnit.SECONDS.sleep(5);
+        while(true) {
+            TimeUnit.SECONDS.sleep(1);
+            general.zaapAstrubToMaisonCoffre1();
+
+            if (!firstCraft) {
+                for (int i = 0; i < 1; i++) {
+                    TimeUnit.SECONDS.sleep(1);
+                    s.click(new Location(1100, 200));
+                    TimeUnit.SECONDS.sleep(1);
+                    s.click(new Location(370, 200));
+                    TimeUnit.SECONDS.sleep(1);
+                    Match regionGraineChanvre = s.find(graineChanvre);
+                    s.dragDrop(regionGraineChanvre, new Location(500, 470));
+                    TimeUnit.SECONDS.sleep(1);
+                    s.click(max);
+                    TimeUnit.SECONDS.sleep(1);
+                    s.type(Key.ENTER);
+                    TimeUnit.SECONDS.sleep(1);
+                }
+            }
+
+            TimeUnit.SECONDS.sleep(3);
+            s.click(new Location(420, 200));
+            TimeUnit.SECONDS.sleep(1);
+
+            Match regionEau = s.find(fleurDeChanvre);
+            s.dragDrop(regionEau, new Location(1100, 470));
+            TimeUnit.SECONDS.sleep(1);
+            kb.type(Key.NUM5);
+            TimeUnit.MILLISECONDS.sleep(300);
+            kb.type(Key.NUM0);
+            TimeUnit.MILLISECONDS.sleep(300);
+            kb.type(Key.NUM0);
+            TimeUnit.MILLISECONDS.sleep(300);
+            kb.type(Key.NUM0);
+            TimeUnit.SECONDS.sleep(1);
+            s.type(Key.ENTER);
+            TimeUnit.SECONDS.sleep(1);
+
+            s.type(Key.ESC);
+
+            TimeUnit.SECONDS.sleep(1);
+            general.zaapAstrubAtelierPaysanAstrub();
+            TimeUnit.SECONDS.sleep(1);
+
+            s.click(new Location(930, 250));
+            TimeUnit.SECONDS.sleep(2);
+            Match regionEau2 = s.find(fleurDeChanvre);
+            s.dragDrop(regionEau2, new Location(1220, 500));
+            TimeUnit.SECONDS.sleep(1);
+            kb.type(Key.NUM5);
+            TimeUnit.MILLISECONDS.sleep(500);
+            s.type(Key.ENTER);
+            TimeUnit.SECONDS.sleep(1);
+
+            s.click(new Location(1000, 550));
+            TimeUnit.SECONDS.sleep(1);
+            s.click(maxCraft);
+            TimeUnit.SECONDS.sleep(1);
+            s.type(Key.ENTER);
+            TimeUnit.SECONDS.sleep(1);
+            s.click(new Location(1200, 550));
+            TimeUnit.SECONDS.sleep(1);
+            s.type(Key.ENTER);
+            TimeUnit.SECONDS.sleep(100);
+            s.type(Key.ENTER);
+            TimeUnit.SECONDS.sleep(1);
+            s.type(Key.ENTER);
+            TimeUnit.SECONDS.sleep(1);
+            s.type(Key.ESC);
+            firstCraft = false;
         }
     }
 }

@@ -436,7 +436,7 @@ public class BotsRecolte extends Main{
             TimeUnit.SECONDS.sleep(5);
             int routeCounter = 0;
             general.zaapAstrubToChanvrePosX32Y42();
-            for (int i = 0; i < Math.round((pods/15)); i++) {
+            for (int i = 0; i < Math.round((pods/16)); i++) {
                 try {
                     s.click(chanvreRecolte);
                     try {
@@ -464,10 +464,22 @@ public class BotsRecolte extends Main{
                     TimeUnit.MILLISECONDS.sleep(6000);
                 }
                 if (s.exists(pretCombat) != null) {
+                    if(classe == "cra") {
+                        TimeUnit.MILLISECONDS.sleep(500);
+                        s.click(new Location(770, 370));
+                        TimeUnit.MILLISECONDS.sleep(500);
+                        s.click(new Location(470, 290));
+                        TimeUnit.MILLISECONDS.sleep(500);
+                        s.click(new Location(700, 270));
+                        TimeUnit.MILLISECONDS.sleep(500);
+                        s.click(new Location(1035, 370));
+                        TimeUnit.MILLISECONDS.sleep(500);
+                    }
                     s.type(Key.F1);
                     TimeUnit.MILLISECONDS.sleep(10000);
                     while (s.exists(abondonner) != null) {
                         if (s.exists(epouventailFight) != null) {
+                            System.out.println("epouventail found");
                             try {
                                 s.type(Key.F6);
                                 s.click(epouventailFight);
@@ -485,6 +497,7 @@ public class BotsRecolte extends Main{
                             s.type(Key.F1);
                             TimeUnit.MILLISECONDS.sleep(6000);
                         } else if (s.exists(bulbiChanvre) != null){
+                            System.out.println("Bulbichanvre found");
                             try{
                                 s.type(Key.F6);
                                 s.click(bulbiChanvre);
@@ -502,30 +515,30 @@ public class BotsRecolte extends Main{
                             s.type(Key.F1);
                             TimeUnit.MILLISECONDS.sleep(6000);
                         }
+                        else if (s.exists(maitreBolet) != null){
+                                System.out.println("maitre bolet found");
+                                s.type(Key.F6);
+                                TimeUnit.MILLISECONDS.sleep(500);
+                                try {
+                                    s.click(maitreBolet);
+                                } catch (FindFailed e) {
+                                    System.out.println("Maitre bolet not found");
+                                }
+                                TimeUnit.MILLISECONDS.sleep(1000);
+                                s.type(Key.F6);
+                                TimeUnit.MILLISECONDS.sleep(500);
+                                try {
+                                    s.click(maitreBolet);
+                                } catch (FindFailed e) {
+                                    System.out.println("Maitre bolet not found");
+                                }
+                                TimeUnit.MILLISECONDS.sleep(500);
+                                s.type(Key.F1);
+                                TimeUnit.MILLISECONDS.sleep(500);
+                                s.mouseMove(-10, -100);
+                                TimeUnit.MILLISECONDS.sleep(6000);
+                        }
                         else {
-                            if (s.exists(maitreBolet) != null){
-                                s.type(Key.F6);
-                                TimeUnit.MILLISECONDS.sleep(500);
-                                try {
-                                    s.click(maitreBolet);
-                                } catch (FindFailed e) {
-                                    System.out.println("Maitre bolet not found");
-                                }
-                                TimeUnit.MILLISECONDS.sleep(1000);
-                                s.type(Key.F6);
-                                TimeUnit.MILLISECONDS.sleep(500);
-                                try {
-                                    s.click(maitreBolet);
-                                } catch (FindFailed e) {
-                                    System.out.println("Maitre bolet not found");
-                                }
-                                TimeUnit.MILLISECONDS.sleep(500);
-                                s.type(Key.F1);
-                                TimeUnit.MILLISECONDS.sleep(500);
-                                s.mouseMove(-10, -100);
-                                TimeUnit.MILLISECONDS.sleep(6000);
-                            }
-                            else {
                                 s.type(Key.F6);
                                 TimeUnit.MILLISECONDS.sleep(500);
                                 s.click(new Location(1220, 560));
@@ -538,9 +551,11 @@ public class BotsRecolte extends Main{
                                 TimeUnit.MILLISECONDS.sleep(500);
                                 s.mouseMove(-10, -100);
                                 TimeUnit.MILLISECONDS.sleep(6000);
-                            }
                         }
                     }
+                }
+                if(s.exists(zaapAstrub) != null){
+                    general.zaapAstrubToChanvrePosX32Y42();
                 }
             }
             s.click(new Location(1030, 630));
@@ -557,7 +572,6 @@ public class BotsRecolte extends Main{
             TimeUnit.SECONDS.sleep(1);
             s.click(new Location(370, 200));
             TimeUnit.SECONDS.sleep(1);
-
             if (metier == "paysan") {
                 Match region1 = s.find(chanvre);
                 s.dragDrop(region1, new Location(500, 470));

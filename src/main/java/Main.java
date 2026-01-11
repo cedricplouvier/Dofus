@@ -37,6 +37,10 @@ public class Main {
     static Pattern delock = new Pattern(imagePath + "delock.png").similar((float) 0.80);
     static Pattern ouvreCoffre = new Pattern(imagePath + "ouvreCoffre.png").similar((float) 0.80);
     static Pattern coffreOuvertKamas = new Pattern(imagePath + "coffreOuvertKamas.png").similar((float) 0.80);
+    static Pattern coffreMaisonGauche = new Pattern(imagePath + "coffreMaisonGauche.png").similar((float) 0.80);
+    static Pattern coffreMaisonDroite = new Pattern(imagePath + "coffreMaisonDroite.png").similar((float) 0.80);
+    static Pattern optionMenu = new Pattern(imagePath + "optionMenu.png").similar((float) 0.80);
+    static Pattern menuPrincipal = new Pattern(imagePath + "menuPrincipal.png").similar((float) 0.80);
     static Pattern ressourceInventaire = new Pattern(imagePath + "ressourceInventaire.png").similar((float) 0.80);
     static Pattern bworky = new Pattern(imagePath + "bworky.png").similar((float) 0.80);
     static Pattern arrowInventaire = new Pattern(imagePath + "arrowInventaire.png").similar((float) 0.80);
@@ -108,13 +112,14 @@ public class Main {
     static Pattern champChamp = new Pattern(imagePath + "champChamp.png").similar((float) 0.78);
     static Pattern champChamp2 = new Pattern(imagePath + "champChamp2.png").similar((float) 0.78);
     static Pattern champChamp3 = new Pattern(imagePath + "champChamp3.png").similar((float) 0.78);
-    static Pattern maitreBolet = new Pattern(imagePath + "maitreBolet.png").similar((float) 0.78);
+    static Pattern maitreBolet = new Pattern(imagePath + "maitreBolet.png").similar((float) 0.90);
     static Pattern baveBouftou = new Pattern(imagePath + "baveBouftou.png").similar((float) 0.78);
     static Pattern mapSudCheminFer = new Pattern(imagePath + "mapSudCheminFer.png").similar((float) 0.80);
     static Pattern startForetAstrub = new Pattern(imagePath + "startForetAstrub.png").similar((float) 0.80);
     static Pattern startChanvrePosX10Y5 = new Pattern(imagePath + "startChanvrePosX10Y5.png").similar((float) 0.80);
     static Pattern startChanvrePosX32Y42 = new Pattern(imagePath + "startChanvrePosX32Y42.png").similar((float) 0.80);
     static Pattern startBlePosX11Y6 = new Pattern(imagePath + "startBlePosX11Y6.png").similar((float) 0.80);
+    static Pattern checkAtelierPaysanAstrub = new Pattern(imagePath + "checkAtelierPaysanAstrub.png").similar((float) 0.80);
 
 
     static Pattern potionFoyer = new Pattern(imagePath + "potionFoyer.png").similar((float) 0.80);
@@ -152,12 +157,14 @@ public class Main {
     static Pattern bleInventaire = new Pattern(imagePath + "bleInventaire.png").similar((float) 0.80);
     static Pattern trefle = new Pattern(imagePath + "trefle.png").similar((float) 0.80);
     static Pattern chanvre = new Pattern(imagePath + "chanvre.png").similar((float) 0.70);
+    static Pattern graineChanvre = new Pattern(imagePath + "graineChanvre.png").similar((float) 0.80);
     static Pattern faucher = new Pattern(imagePath + "faucher.png").similar((float) 0.80);
     static Pattern cueillir = new Pattern(imagePath + "cueillir.png").similar((float) 0.80);
+    static Pattern egreneur = new Pattern(imagePath + "egreneur.png").similar((float) 0.80);
 
     static Pattern epouventailFight = new Pattern(imagePath + "epouventailFight.png").similar((float) 0.80);
     static Pattern epouventail = new Pattern(imagePath + "epouventail.png").similar((float) 0.80);
-    static Pattern bulbiChanvre = new Pattern(imagePath + "bulbiChanvre.png").similar((float) 0.80);
+    static Pattern bulbiChanvre = new Pattern(imagePath + "bulbiChanvre.png").similar((float) 0.90);
     static Pattern zaapPandalaEau = new Pattern(imagePath + "zaapPandalaEau.png").similar((float) 0.80);
     static Pattern sacDeRiz = new Pattern(imagePath + "sacDeRiz.png").similar((float) 0.80);
     static Pattern rizInventaire = new Pattern(imagePath + "rizInventaire.png").similar((float) 0.80);
@@ -192,11 +199,12 @@ public class Main {
         //botsCraft.potionRappel();
         //botsCraft.potionBrak();
         //botsCraft.potionVieillesse();
+        botsCraft.graineChanvre();
 
         BotsRecolte botsRecolte = new BotsRecolte();
         //botsRecolte.recolteRiz(8000);
-        //botsRecolte.recolteChanvrePosX10Y5("alchi","cra", 4000);
-        botsRecolte.recolteChanvrePosX32Y42("alchi","cra", 4000);
+        //botsRecolte.recolteChanvrePosX10Y5("alchi","cra", 6000);
+        //botsRecolte.recolteChanvrePosX32Y42("alchi","cra", 5000);
         //botsRecolte.recolteBlePosX11Y6("cra", 2000);
         //botsRecolte.bucherForetAstrub("cra", 3000, new ArrayList<String>(Arrays.asList("noyer","chene","chataignier")));
 
