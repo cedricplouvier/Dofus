@@ -38,7 +38,11 @@ public class BotsCraft extends Main{
                     Match regionArcEco = s.find(batonDakn);
                     s.dragDrop(regionArcEco, new Location(500, 470));
                     TimeUnit.SECONDS.sleep(1);
-                    s.click(max);
+                    try {
+                        s.click(max);
+                    } catch (FindFailed e) {
+                        System.out.println("max not found");
+                    }
                     TimeUnit.SECONDS.sleep(1);
                     s.type(Key.ENTER);
                 }
@@ -143,7 +147,11 @@ public class BotsCraft extends Main{
             TimeUnit.MILLISECONDS.sleep(500);
             s.click(new Location(1000, 550));
             TimeUnit.SECONDS.sleep(1);
-            s.click(maxCraft);
+            try {
+                 s.click(maxCraft);
+            } catch (FindFailed e) {
+                 System.out.println("maxCraft not found");
+            }
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
@@ -258,7 +266,11 @@ public class BotsCraft extends Main{
 
             s.click(new Location(1000, 550));
             TimeUnit.SECONDS.sleep(1);
-            s.click(maxCraft);
+            try {
+                 s.click(maxCraft);
+            } catch (FindFailed e) {
+                 System.out.println("maxCraft not found");
+            }
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
@@ -431,7 +443,11 @@ public class BotsCraft extends Main{
 
             s.click(new Location(1000, 550));
             TimeUnit.SECONDS.sleep(1);
-            s.click(maxCraft);
+            try {
+                 s.click(maxCraft);
+            } catch (FindFailed e) {
+                 System.out.println("maxCraft not found");
+            }
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
@@ -495,7 +511,11 @@ public class BotsCraft extends Main{
                     TimeUnit.SECONDS.sleep(1);
                     s.dragDrop(new Location(1050, 260), new Location(500, 470));
                     TimeUnit.SECONDS.sleep(1);
-                    s.click(max);
+                    try { 
+                        s.click(max);
+                    } catch (FindFailed e) {
+                        System.out.println("max not found");
+                    }
                     TimeUnit.SECONDS.sleep(1);
                     s.type(Key.ENTER);
                 }
@@ -607,7 +627,11 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             s.click(new Location(1000, 550));
             TimeUnit.SECONDS.sleep(1);
-            s.click(maxCraft);
+            try {
+                 s.click(maxCraft);
+            } catch (FindFailed e) {
+                 System.out.println("maxCraft not found");
+            }
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
@@ -739,7 +763,11 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             s.click(new Location(1000, 550));
             TimeUnit.SECONDS.sleep(1);
-            s.click(maxCraft);
+            try {
+                 s.click(maxCraft);
+            } catch (FindFailed e) {
+                 System.out.println("maxCraft not found");
+            }
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
@@ -899,7 +927,11 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             s.click(new Location(1000, 550));
             TimeUnit.SECONDS.sleep(1);
-            s.click(maxCraft);
+            try {
+                 s.click(maxCraft);
+            } catch (FindFailed e) {
+                 System.out.println("maxCraft not found");
+            }
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
@@ -962,7 +994,11 @@ public class BotsCraft extends Main{
                     TimeUnit.SECONDS.sleep(1);
                     s.dragDrop(new Location(1050, 260), new Location(500, 470));
                     TimeUnit.SECONDS.sleep(1);
-                    s.click(max);
+                    try { 
+                        s.click(max);
+                    } catch (FindFailed e) {
+                        System.out.println("max not found");
+                    }
                     TimeUnit.SECONDS.sleep(1);
                     s.type(Key.ENTER);
                 }
@@ -1065,7 +1101,11 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             s.click(new Location(1000, 550));
             TimeUnit.SECONDS.sleep(1);
-            s.click(maxCraft);
+            try {
+                 s.click(maxCraft);
+            } catch (FindFailed e) {
+                 System.out.println("maxCraft not found");
+            }
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
@@ -1099,7 +1139,11 @@ public class BotsCraft extends Main{
                     TimeUnit.SECONDS.sleep(1);
                     s.dragDrop(new Location(1050, 260), new Location(500, 470));
                     TimeUnit.SECONDS.sleep(1);
-                    s.click(max);
+                    try { 
+                        s.click(max);
+                    } catch (FindFailed e) {
+                        System.out.println("max not found");
+                    }
                     TimeUnit.SECONDS.sleep(1);
                     s.type(Key.ENTER);
                 }
@@ -1173,7 +1217,11 @@ public class BotsCraft extends Main{
 
             s.click(new Location(1000, 550));
             TimeUnit.SECONDS.sleep(1);
-            s.click(maxCraft);
+            try {
+                 s.click(maxCraft);
+            } catch (FindFailed e) {
+                 System.out.println("maxCraft not found");
+            }
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
@@ -1208,7 +1256,11 @@ public class BotsCraft extends Main{
                     Match regionPopoBonta = s.find(popoBontaInventaire);
                     s.dragDrop(regionPopoBonta, new Location(500, 470));
                     TimeUnit.SECONDS.sleep(2);
-                    s.click(max);
+                    try { 
+                        s.click(max);
+                    } catch (FindFailed e) {
+                        System.out.println("max not found");
+                    }
                     TimeUnit.SECONDS.sleep(2);
                     s.type(Key.ENTER);
                     TimeUnit.SECONDS.sleep(1);
@@ -1279,7 +1331,11 @@ public class BotsCraft extends Main{
 
             s.click(new Location(1000, 550));
             TimeUnit.SECONDS.sleep(1);
-            s.click(maxCraft);
+            try {
+                 s.click(maxCraft);
+            } catch (FindFailed e) {
+                 System.out.println("maxCraft not found");
+            }
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
@@ -1312,7 +1368,11 @@ public class BotsCraft extends Main{
                     Match regionPopoBrak = s.find(popoBrak);
                     s.dragDrop(regionPopoBrak, new Location(500, 470));
                     TimeUnit.SECONDS.sleep(1);
-                    s.click(max);
+                    try { 
+                        s.click(max);
+                    } catch (FindFailed e) {
+                        System.out.println("max not found");
+                    }
                     TimeUnit.SECONDS.sleep(1);
                     s.type(Key.ENTER);
                 }
@@ -1380,7 +1440,11 @@ public class BotsCraft extends Main{
 
             s.click(new Location(1000, 550));
             TimeUnit.SECONDS.sleep(1);
-            s.click(maxCraft);
+            try {
+                 s.click(maxCraft);
+            } catch (FindFailed e) {
+                 System.out.println("maxCraft not found");
+            }
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
@@ -1413,7 +1477,11 @@ public class BotsCraft extends Main{
                     Match regionPopoVieillesse = s.find(potionVieilesse);
                     s.dragDrop(regionPopoVieillesse, new Location(500, 470));
                     TimeUnit.SECONDS.sleep(1);
-                    s.click(max);
+                    try { 
+                        s.click(max);
+                    } catch (FindFailed e) {
+                        System.out.println("max not found");
+                    }
                     TimeUnit.SECONDS.sleep(1);
                     s.type(Key.ENTER);
                 }
@@ -1478,7 +1546,11 @@ public class BotsCraft extends Main{
 
             s.click(new Location(1000, 550));
             TimeUnit.SECONDS.sleep(1);
-            s.click(maxCraft);
+            try {
+                 s.click(maxCraft);
+            } catch (FindFailed e) {
+                 System.out.println("maxCraft not found");
+            }
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
@@ -1515,7 +1587,11 @@ public class BotsCraft extends Main{
                     Match regionPopoRappel = s.find(popoRappel);
                     s.dragDrop(regionPopoRappel, new Location(500, 470));
                     TimeUnit.SECONDS.sleep(1);
-                    s.click(max);
+                    try { 
+                        s.click(max);
+                    } catch (FindFailed e) {
+                        System.out.println("max not found");
+                    }
                     TimeUnit.SECONDS.sleep(1);
                     s.type(Key.ENTER);
                     TimeUnit.SECONDS.sleep(1);
@@ -1581,7 +1657,11 @@ public class BotsCraft extends Main{
 
             s.click(new Location(1000, 550));
             TimeUnit.SECONDS.sleep(1);
-            s.click(maxCraft);
+            try {
+                 s.click(maxCraft);
+            } catch (FindFailed e) {
+                 System.out.println("maxCraft not found");
+            }
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
@@ -1618,7 +1698,11 @@ public class BotsCraft extends Main{
                     Match regionArcEco = s.find(arcEco);
                     s.dragDrop(regionArcEco, new Location(500, 470));
                     TimeUnit.SECONDS.sleep(1);
-                    s.click(max);
+                    try { 
+                        s.click(max);
+                    } catch (FindFailed e) {
+                        System.out.println("max not found");
+                    }
                     TimeUnit.SECONDS.sleep(1);
                     s.type(Key.ENTER);
                 }
@@ -1698,7 +1782,11 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             s.click(new Location(1000, 550));
             TimeUnit.SECONDS.sleep(1);
-            s.click(maxCraft);
+            try {
+                 s.click(maxCraft);
+            } catch (FindFailed e) {
+                 System.out.println("maxCraft not found");
+            }
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
@@ -1793,7 +1881,11 @@ public class BotsCraft extends Main{
 
             s.click(new Location(1000, 550));
             TimeUnit.SECONDS.sleep(1);
-            s.click(maxCraft);
+            try {
+                 s.click(maxCraft);
+            } catch (FindFailed e) {
+                 System.out.println("maxCraft not found");
+            }
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
@@ -1861,7 +1953,11 @@ public class BotsCraft extends Main{
                     Match regionGraineChanvre = s.find(graineChanvre);
                     s.dragDrop(regionGraineChanvre, new Location(500, 470));
                     TimeUnit.SECONDS.sleep(1);
-                    s.click(max);
+                    try { 
+                        s.click(max);
+                    } catch (FindFailed e) {
+                        System.out.println("max not found");
+                    }
                     TimeUnit.SECONDS.sleep(1);
                     s.type(Key.ENTER);
                     TimeUnit.SECONDS.sleep(1);
@@ -1872,8 +1968,8 @@ public class BotsCraft extends Main{
             s.click(new Location(420, 200));
             TimeUnit.SECONDS.sleep(1);
 
-            Match regionEau = s.find(fleurDeChanvre);
-            s.dragDrop(regionEau, new Location(1100, 470));
+            Match regionFleurDeChanvre = s.find(fleurDeChanvre);
+            s.dragDrop(regionFleurDeChanvre, new Location(1100, 470));
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM5);
             TimeUnit.MILLISECONDS.sleep(300);
@@ -1885,17 +1981,19 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
-
             s.type(Key.ESC);
-
             TimeUnit.SECONDS.sleep(1);
+
             general.zaapAstrubAtelierPaysanAstrub();
             TimeUnit.SECONDS.sleep(1);
-
             s.click(new Location(930, 250));
             TimeUnit.SECONDS.sleep(2);
-            Match regionEau2 = s.find(fleurDeChanvre);
-            s.dragDrop(regionEau2, new Location(1220, 500));
+            try {
+                Match regionfleurDeChanvre2 = s.find(fleurDeChanvre);
+                s.dragDrop(regionfleurDeChanvre2, new Location(1220, 500));
+            } catch (FindFailed e){
+                System.out.println("fleurDeChanvre not found");
+            }
             TimeUnit.SECONDS.sleep(1);
             kb.type(Key.NUM5);
             TimeUnit.MILLISECONDS.sleep(500);
@@ -1904,7 +2002,11 @@ public class BotsCraft extends Main{
 
             s.click(new Location(1000, 550));
             TimeUnit.SECONDS.sleep(1);
-            s.click(maxCraft);
+            try {
+                 s.click(maxCraft);
+            } catch (FindFailed e) {
+                 System.out.println("maxCraft not found");
+            }
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);

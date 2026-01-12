@@ -101,7 +101,11 @@ public class BotsRecolte extends Main{
             TimeUnit.SECONDS.sleep(1);
             Match region1 = s.find(rizInventaire);
             s.dragDrop(region1, new Location(500, 470));
-            s.click(max);
+            try {
+                s.click(max);
+            } catch (FindFailed e) {
+                System.out.println("max not found");
+            }
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
@@ -244,25 +248,41 @@ public class BotsRecolte extends Main{
             TimeUnit.SECONDS.sleep(1);
             Match regionNoyer = s.find(boisNoyer);
             s.dragDrop(regionNoyer, new Location(500, 470));
-            s.click(max);
+            try {
+                s.click(max);
+            } catch (FindFailed e) {
+                System.out.println("max not found");
+            }
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Match regionChene = s.find(boisChene);
             s.dragDrop(regionChene, new Location(500, 470));
-            s.click(max);
+            try {
+                s.click(max);
+            } catch (FindFailed e) {
+                System.out.println("max not found");
+            }
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Match regionChataignier = s.find(boisChataignier);
             s.dragDrop(regionChataignier, new Location(500, 470));
-            s.click(max);
+            try {
+                s.click(max);
+            } catch (FindFailed e) {
+                System.out.println("max not found");
+            }
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Match regionFrene = s.find(boisFrene);
             s.dragDrop(regionFrene, new Location(500, 470));
-            s.click(max);
+            try {
+                s.click(max);
+            } catch (FindFailed e) {
+                System.out.println("max not found");
+            }
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
@@ -414,7 +434,11 @@ public class BotsRecolte extends Main{
                 s.dragDrop(region1, new Location(500, 470));
             }
             TimeUnit.SECONDS.sleep(2);
-            s.click(max);
+            try {
+                s.click(max);
+            } catch (FindFailed e) {
+                System.out.println("max not found");
+            }
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
@@ -580,7 +604,11 @@ public class BotsRecolte extends Main{
                 s.dragDrop(region1, new Location(500, 470));
             }
             TimeUnit.SECONDS.sleep(2);
-            s.click(max);
+            try {
+                s.click(max);
+            } catch (FindFailed e) {
+                System.out.println("max not found");
+            }
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
@@ -682,7 +710,11 @@ public class BotsRecolte extends Main{
             Match region1 = s.find(bleInventaire);
             s.dragDrop(region1, new Location(500, 470));
             TimeUnit.SECONDS.sleep(1);
-            s.click(max);
+            try {
+                s.click(max);
+            } catch (FindFailed e) {
+                System.out.println("max not found");
+            }
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);

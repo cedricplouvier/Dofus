@@ -66,22 +66,7 @@ public class General extends Main {
         TimeUnit.SECONDS.sleep(5);
         s.click(new Location(xRight, 350));
         TimeUnit.SECONDS.sleep(5);
-        s.click(new Location(490, 135));
-        TimeUnit.SECONDS.sleep(3);
-        try {
-            s.click(entreMaison);
-        } catch (FindFailed e){
-            System.out.println("FindFailed entreMaison");
-            s.type(Key.ENTER);
-            TimeUnit.SECONDS.sleep(1);
-            s.type(Key.ESC);
-            TimeUnit.SECONDS.sleep(1);
-            if(s.exists(menuPrincipal) != null){
-                s.type(Key.ESC);
-                TimeUnit.SECONDS.sleep(1);
-            }
-            zaapAstrubToMaisonCoffre1();
-        }
+        s.rightClick(new Location(490, 135));
         TimeUnit.SECONDS.sleep(3);
         insertCode("codeAstrubMaison");
         TimeUnit.MILLISECONDS.sleep(500);
@@ -93,21 +78,14 @@ public class General extends Main {
             s.rightClick(coffreMaisonGauche);
         } catch(FindFailed e){
             System.out.println("Findfailed coffreMaisonGauche");
-            s.type(Key.ENTER);
-            TimeUnit.SECONDS.sleep(1);
-            s.type(Key.ESC);
-            TimeUnit.SECONDS.sleep(1);
-            if(s.exists(menuPrincipal) != null){
-                s.type(Key.ESC);
-                TimeUnit.SECONDS.sleep(1);
-            }
             zaapAstrubToMaisonCoffre1();
         }
         TimeUnit.SECONDS.sleep(2);
         insertCode("codeAstrubCoffre1");
         s.type(Key.ENTER);
-        TimeUnit.SECONDS.sleep(1);
+        TimeUnit.SECONDS.sleep(2);
         if(s.exists(coffreOuvertKamas) == null){
+            System.out.println("coffe Ouvert not found");
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ESC);
@@ -129,22 +107,7 @@ public class General extends Main {
         TimeUnit.SECONDS.sleep(5);
         s.click(new Location(xRight, 350));
         TimeUnit.SECONDS.sleep(5);
-        s.click(new Location(490, 135));
-        TimeUnit.SECONDS.sleep(2);
-        try {
-            s.click(entreMaison);
-        } catch (FindFailed e){
-            System.out.println("FindFailed entreMaison");
-            s.type(Key.ENTER);
-            TimeUnit.SECONDS.sleep(1);
-            s.type(Key.ESC);
-            TimeUnit.SECONDS.sleep(1);
-            if(s.exists(menuPrincipal) != null){
-                s.type(Key.ESC);
-                TimeUnit.SECONDS.sleep(1);
-            }
-            zaapAstrubToMaisonCoffre2();
-        }
+        s.rightClick(new Location(490, 135));
         TimeUnit.SECONDS.sleep(3);
         insertCode("codeAstrubMaison");
         TimeUnit.MILLISECONDS.sleep(300);
@@ -158,14 +121,6 @@ public class General extends Main {
             s.rightClick(coffreMaisonDroite);
         } catch (FindFailed e){
             System.out.println("FindFailed coffreMaisonDroite");
-            s.type(Key.ENTER);
-            TimeUnit.SECONDS.sleep(1);
-            s.type(Key.ESC);
-            TimeUnit.SECONDS.sleep(1);
-            if(s.exists(menuPrincipal) != null){
-                s.type(Key.ESC);
-                TimeUnit.SECONDS.sleep(1);
-            }
             zaapAstrubToMaisonCoffre2();
         }
         TimeUnit.SECONDS.sleep(2);
@@ -254,15 +209,15 @@ public class General extends Main {
             s.click(nexMap);
             TimeUnit.SECONDS.sleep(7);
         }
+        if (s.exists(checkAtelierPaysanAstrub) == null){
+            zaapAstrubAtelierPaysanAstrub();
+        }
         try {
             s.rightClick(egreneur);
         } catch (FindFailed e){
             System.out.println("Egreneur not found");
         }
         TimeUnit.SECONDS.sleep(5);
-        if (s.exists(checkAtelierPaysanAstrub) == null){
-            zaapAstrubAtelierPaysanAstrub();
-        }
     }
 
     public void zaapAstrubToChanvrePosX10Y5() throws FindFailed, InterruptedException {
