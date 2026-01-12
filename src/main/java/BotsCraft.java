@@ -1340,7 +1340,7 @@ public class BotsCraft extends Main{
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             s.click(new Location(1200, 550));
-            TimeUnit.SECONDS.sleep(220);
+            TimeUnit.SECONDS.sleep(175);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
@@ -1449,7 +1449,7 @@ public class BotsCraft extends Main{
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             s.click(new Location(1200, 550));
-            TimeUnit.SECONDS.sleep(200);
+            TimeUnit.SECONDS.sleep(175);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);

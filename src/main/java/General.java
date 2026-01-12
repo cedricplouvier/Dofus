@@ -377,22 +377,17 @@ public class General extends Main {
     public void maisonAstrubToAtelierAlchi() throws FindFailed, InterruptedException {
         Screen s = new Screen();
 
-        s.click(new Location(785, 370));
-        TimeUnit.SECONDS.sleep(3);
         s.click(new Location(950, 410));
         TimeUnit.SECONDS.sleep(3);
         s.click(new Location(900, 420));
         TimeUnit.SECONDS.sleep(3);
         s.click(new Location(830, 410));
         TimeUnit.SECONDS.sleep(6);
-        s.click(new Location(920, 280));
-        TimeUnit.SECONDS.sleep(2);
-        try {
-            s.click(preparerPotion);
-        } catch (FindFailed e) {
+        s.rightClick(new Location(920, 280));
+        TimeUnit.SECONDS.sleep(3);
+        if (s.exists(checkAtelierAlchiAstrub) == null){
             maisonAstrubToAtelierAlchi();
         }
-        TimeUnit.SECONDS.sleep(3);
     }
 
     public void maisonAstrubToAterlierSculpteurArc() throws FindFailed, InterruptedException {

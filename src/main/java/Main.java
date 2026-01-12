@@ -120,6 +120,7 @@ public class Main {
     static Pattern startChanvrePosX32Y42 = new Pattern(imagePath + "startChanvrePosX32Y42.png").similar((float) 0.80);
     static Pattern startBlePosX11Y6 = new Pattern(imagePath + "startBlePosX11Y6.png").similar((float) 0.80);
     static Pattern checkAtelierPaysanAstrub = new Pattern(imagePath + "checkAtelierPaysanAstrub.png").similar((float) 0.80);
+    static Pattern checkAtelierAlchiAstrub = new Pattern(imagePath + "checkAtelierAlchiAstrub.png").similar((float) 0.80);
 
 
     static Pattern potionFoyer = new Pattern(imagePath + "potionFoyer.png").similar((float) 0.80);
@@ -197,14 +198,14 @@ public class Main {
         //botsCraft.polirPDAPetiteHazar();
         //botsCraft.potionBonta();
         //botsCraft.potionRappel();
-        //botsCraft.potionBrak();
+        botsCraft.potionBrak();
         //botsCraft.potionVieillesse();
-        botsCraft.graineChanvre();
+        //botsCraft.graineChanvre();
 
         BotsRecolte botsRecolte = new BotsRecolte();
         //botsRecolte.recolteRiz(8000);
         //botsRecolte.recolteChanvrePosX10Y5("alchi","cra", 6000);
-        //botsRecolte.recolteChanvrePosX32Y42("alchi","cra", 5000);
+        //botsRecolte.recolteChanvrePosX32Y42("alchi","cra", 6000);
         //botsRecolte.recolteBlePosX11Y6("cra", 2000);
         //botsRecolte.bucherForetAstrub("cra", 3000, new ArrayList<String>(Arrays.asList("noyer","chene","chataignier")));
 
