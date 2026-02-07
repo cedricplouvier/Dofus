@@ -11,7 +11,7 @@ public class BotsRecolte extends Main{
 
     static General general = new General();
 
-    public void recolteRiz(int pods) throws FindFailed, InterruptedException, IOException {
+    public void recolteRiz(String classe, int pods) throws FindFailed, InterruptedException, IOException {
         Screen s = new Screen();
         Keyboard kb = new DesktopKeyboard();
 
@@ -20,11 +20,20 @@ public class BotsRecolte extends Main{
             TimeUnit.SECONDS.sleep(5);
             s.doubleClick(popoRappel);
             TimeUnit.SECONDS.sleep(5);
-            s.rightClick(zaapAstrub);
+            try {
+                s.rightClick(zaapAstrub);
+            } catch (FindFailed e){
+                System.out.println("Zaap Astrub not found");
+                recolteRiz(classe, pods);
+            }
             TimeUnit.SECONDS.sleep(2);
             kb.type("pqn");
             TimeUnit.SECONDS.sleep(2);
-            s.doubleClick(zaapPandalaEau);
+            try {
+                s.doubleClick(zaapPandalaEau);
+            } catch (FindFailed e){
+                System.out.println("PandalaEau not found");
+            }
             TimeUnit.SECONDS.sleep(3);
             s.click(new Location(500, 60));
             TimeUnit.SECONDS.sleep(8);
@@ -32,12 +41,15 @@ public class BotsRecolte extends Main{
             TimeUnit.SECONDS.sleep(5);
             s.click(new Location(700, 70));
             TimeUnit.SECONDS.sleep(8);
+            if (s.exists(startRizPosX22Y24) == null){
+                recolteRiz(classe, pods);
+            }
             for (int i = 0; i < Math.round(pods/30); i++) {
                 try {
                     s.click(riz);
                     try {
                         s.click(faucher);
-                        TimeUnit.MILLISECONDS.sleep(2100);
+                        TimeUnit.MILLISECONDS.sleep(1000);
                         if (first){
                             TimeUnit.MILLISECONDS.sleep(5000);
                             first = false;
@@ -59,7 +71,15 @@ public class BotsRecolte extends Main{
                     TimeUnit.MILLISECONDS.sleep(800);
                     s.click(new Location(770, 370));
                     s.type(Key.F1);
+                    TimeUnit.MILLISECONDS.sleep(7000);
+                    if(classe == "enu") {
+                        s.type(Key.F7);
+                        TimeUnit.MILLISECONDS.sleep(500);
+                        s.click(new Location(700, 375));
+                        TimeUnit.MILLISECONDS.sleep(1000);
+                    }
                     while (s.exists(abondonner) != null) {
+                        TimeUnit.MILLISECONDS.sleep(8000);
                         s.type(Key.F6);
                         TimeUnit.MILLISECONDS.sleep(500);
                         try {
@@ -89,7 +109,7 @@ public class BotsRecolte extends Main{
             TimeUnit.MILLISECONDS.sleep(800);
             s.click(new Location(1140, 155));
             TimeUnit.MILLISECONDS.sleep(1000);
-            for(int k=0; k < Math.round(pods/1000); k++){
+            for(int k=0; k < Math.round(pods/500); k++){
                 s.doubleClick(new Location(1100, 250));
                 TimeUnit.MILLISECONDS.sleep(1000);
             }
@@ -256,8 +276,12 @@ public class BotsRecolte extends Main{
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
-            Match regionChene = s.find(boisChene);
-            s.dragDrop(regionChene, new Location(500, 470));
+            try {
+                Match regionChene = s.find(boisChene);
+                s.dragDrop(regionChene, new Location(500, 470));
+            } catch (FindFailed e){
+                System.out.println("boisChene not found");
+            }
             try {
                 s.click(max);
             } catch (FindFailed e) {
@@ -277,7 +301,11 @@ public class BotsRecolte extends Main{
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             Match regionFrene = s.find(boisFrene);
-            s.dragDrop(regionFrene, new Location(500, 470));
+            try {
+                s.dragDrop(regionFrene, new Location(500, 470));
+            } catch (FindFailed e){
+                System.out.println("No frene in inventaire");
+            }
             try {
                 s.click(max);
             } catch (FindFailed e) {
@@ -624,7 +652,7 @@ public class BotsRecolte extends Main{
         while (true) {
             TimeUnit.SECONDS.sleep(5);
             general.zaapAstrubToBlePosX11Y6();
-            for (int i = 0; i < Math.round(pods/25); i++) {
+            for (int i = 0; i < Math.round(pods/30); i++) {
                 try {
                     s.click(bleRecolte);
                     try {

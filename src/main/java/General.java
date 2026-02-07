@@ -71,7 +71,7 @@ public class General extends Main {
         insertCode("codeAstrubMaison");
         TimeUnit.MILLISECONDS.sleep(500);
         s.type(Key.ENTER);
-        TimeUnit.SECONDS.sleep(2);
+        TimeUnit.SECONDS.sleep(3);
         s.click(new Location(940, 370));
         TimeUnit.SECONDS.sleep(5);
         try {
@@ -80,7 +80,7 @@ public class General extends Main {
             System.out.println("Findfailed coffreMaisonGauche");
             zaapAstrubToMaisonCoffre1();
         }
-        TimeUnit.SECONDS.sleep(2);
+        TimeUnit.SECONDS.sleep(3);
         insertCode("codeAstrubCoffre1");
         s.type(Key.ENTER);
         TimeUnit.SECONDS.sleep(2);
@@ -177,7 +177,13 @@ public class General extends Main {
         mapsZaapAstrubToForetAstrub.add(new Location(xLeft, 305));
         mapsZaapAstrubToForetAstrub.add(new Location(770, yUp));
 
-        s.doubleClick(popoRappel);
+        try {
+            s.doubleClick(popoRappel);
+        }
+        catch (FindFailed e){
+            System.out.println("PopoRappel not found");
+            zaapAstrubForetAstrub();
+        }
         TimeUnit.SECONDS.sleep(5);
         for( Location nexMap : mapsZaapAstrubToForetAstrub){
             s.click(nexMap);

@@ -1131,7 +1131,7 @@ public class BotsCraft extends Main{
         TimeUnit.SECONDS.sleep(5);
         while(true) {
             TimeUnit.SECONDS.sleep(1);
-            general.zaapAstrubToMaisonCoffre2();
+            general.zaapAstrubToMaisonCoffre1();
             if (!firstCraft) {
                 for (int i = 0; i < 1; i++) {
                     TimeUnit.SECONDS.sleep(1);
@@ -1226,7 +1226,7 @@ public class BotsCraft extends Main{
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             s.click(new Location(1200, 550));
-            TimeUnit.SECONDS.sleep(10);
+            TimeUnit.SECONDS.sleep(6);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
@@ -2014,6 +2014,8 @@ public class BotsCraft extends Main{
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(100);
+            s.type(Key.ENTER);
+            TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);

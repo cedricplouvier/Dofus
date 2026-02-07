@@ -119,6 +119,7 @@ public class Main {
     static Pattern startChanvrePosX10Y5 = new Pattern(imagePath + "startChanvrePosX10Y5.png").similar((float) 0.80);
     static Pattern startChanvrePosX32Y42 = new Pattern(imagePath + "startChanvrePosX32Y42.png").similar((float) 0.80);
     static Pattern startBlePosX11Y6 = new Pattern(imagePath + "startBlePosX11Y6.png").similar((float) 0.80);
+    static Pattern startRizPosX22Y24 = new Pattern(imagePath + "startRizPosX22Y24.png").similar((float) 0.80);
     static Pattern checkAtelierPaysanAstrub = new Pattern(imagePath + "checkAtelierPaysanAstrub.png").similar((float) 0.80);
     static Pattern checkAtelierAlchiAstrub = new Pattern(imagePath + "checkAtelierAlchiAstrub.png").similar((float) 0.80);
 
@@ -131,7 +132,7 @@ public class Main {
 
     static Pattern osChafer = new Pattern(imagePath + "osChafer.png").similar((float) 0.80);
     static Pattern boisChataignier = new Pattern(imagePath + "boisChataignier.png").similar((float) 0.80);
-    static Pattern boisChene = new Pattern(imagePath + "boisChene.png").similar((float) 0.80);
+    static Pattern boisChene = new Pattern(imagePath + "boisChene.png").similar((float) 0.70);
     static Pattern boisFrene = new Pattern(imagePath + "boisFrene.png").similar((float) 0.80);
 
     static Pattern popoBrakmar = new Pattern(imagePath + "popoBrakmar.png").similar((float) 0.80);
@@ -154,7 +155,7 @@ public class Main {
 
     static Pattern riz = new Pattern(imagePath + "riz.png").similar((float) 0.80);
     static Pattern chanvreRecolte = new Pattern(imagePath + "chanvreRecolte.png").similar((float) 0.80);
-    static Pattern bleRecolte = new Pattern(imagePath + "bleRecolte.png").similar((float) 0.75);
+    static Pattern bleRecolte = new Pattern(imagePath + "bleRecolte.png").similar((float) 0.80);
     static Pattern bleInventaire = new Pattern(imagePath + "bleInventaire.png").similar((float) 0.80);
     static Pattern trefle = new Pattern(imagePath + "trefle.png").similar((float) 0.80);
     static Pattern chanvre = new Pattern(imagePath + "chanvre.png").similar((float) 0.70);
@@ -168,8 +169,8 @@ public class Main {
     static Pattern bulbiChanvre = new Pattern(imagePath + "bulbiChanvre.png").similar((float) 0.90);
     static Pattern zaapPandalaEau = new Pattern(imagePath + "zaapPandalaEau.png").similar((float) 0.80);
     static Pattern sacDeRiz = new Pattern(imagePath + "sacDeRiz.png").similar((float) 0.80);
-    static Pattern rizInventaire = new Pattern(imagePath + "rizInventaire.png").similar((float) 0.80);
-    static Pattern rizInventaire2 = new Pattern(imagePath + "rizInventaire2.png").similar((float) 0.80);
+    static Pattern rizInventaire = new Pattern(imagePath + "rizInventaire.png").similar((float) 0.70);
+    static Pattern rizInventaire2 = new Pattern(imagePath + "rizInventaire2.png").similar((float) 0.70);
 
     static Pattern pretCombat = new Pattern(imagePath + "pretCombat.png").similar((float) 0.80);
     static Pattern preparerPotion = new Pattern(imagePath + "preparerPotion.png").similar((float) 0.80);
@@ -198,16 +199,16 @@ public class Main {
         //botsCraft.polirPDAPetiteHazar();
         //botsCraft.potionBonta();
         //botsCraft.potionRappel();
-        botsCraft.potionBrak();
+        //botsCraft.potionBrak();
         //botsCraft.potionVieillesse();
         //botsCraft.graineChanvre();
 
         BotsRecolte botsRecolte = new BotsRecolte();
-        //botsRecolte.recolteRiz(8000);
-        //botsRecolte.recolteChanvrePosX10Y5("alchi","cra", 6000);
-        //botsRecolte.recolteChanvrePosX32Y42("alchi","cra", 6000);
-        //botsRecolte.recolteBlePosX11Y6("cra", 2000);
-        //botsRecolte.bucherForetAstrub("cra", 3000, new ArrayList<String>(Arrays.asList("noyer","chene","chataignier")));
+        //botsRecolte.recolteRiz("enu",6000);
+        //botsRecolte.recolteChanvrePosX10Y5("alchi","cra", 3000);
+        //botsRecolte.recolteChanvrePosX32Y42("paysan","cra", 4000);
+        //botsRecolte.recolteBlePosX11Y6("cra", 3000);
+        botsRecolte.bucherForetAstrub("cra", 2000, new ArrayList<String>(Arrays.asList("noyer","chene","chataignier","frene")));
 
         BotsFourbe botsFourbe = new BotsFourbe();
         //botsFourbe.cheminFer();
