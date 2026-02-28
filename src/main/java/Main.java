@@ -12,7 +12,7 @@ public class Main {
 
     static String imagePath = "/Users/cedricplouvier/Documents/Dofus/DofusBots/DofusBots/src/main/resources/img/";
 
-    static Pattern fleurDeChanvre = new Pattern(imagePath + "fleurDeChanvre.png").similar((float) 0.8);
+    static Pattern fleurDeChanvre = new Pattern(imagePath + "fleurDeChanvre.png").similar((float) 0.70);
     static Pattern phenix = new Pattern(imagePath + "phenix.png").similar((float) 0.8);
     static Pattern abondonner = new Pattern(imagePath + "abondonner.png").similar((float) 0.8);
     static Pattern couper = new Pattern(imagePath + "couper.png").similar((float) 0.8);
@@ -205,10 +205,10 @@ public class Main {
 
         BotsRecolte botsRecolte = new BotsRecolte();
         //botsRecolte.recolteRiz("enu",6000);
-        //botsRecolte.recolteChanvrePosX10Y5("alchi","cra", 3000);
-        //botsRecolte.recolteChanvrePosX32Y42("paysan","cra", 4000);
+        //botsRecolte.recolteChanvrePosX10Y5("paysan","cra", 3000);
+        //botsRecolte.recolteChanvrePosX32Y42("alchi","cra", 3000);
         //botsRecolte.recolteBlePosX11Y6("cra", 3000);
-        botsRecolte.bucherForetAstrub("cra", 2000, new ArrayList<String>(Arrays.asList("noyer","chene","chataignier","frene")));
+        //botsRecolte.bucherForetAstrub("cra", 2000, new ArrayList<String>(Arrays.asList("noyer","chene","chataignier")));
 
         BotsFourbe botsFourbe = new BotsFourbe();
         //botsFourbe.cheminFer();
@@ -217,11 +217,11 @@ public class Main {
         //botsJugement.donjonMorose();
 
         Abraglands abraglands = new Abraglands();
-        //abraglands.abraglandsSculpteurIop();
-        ///abraglands.abraglandsIopBoucherAmakna();
+        //abraglands.abraglandsSculpteurIop(200);
+        //abraglands.abraglandsIopBoucherAmakna(275);
         //abraglands.abraglandsIopAlchiAmakna();
-        //abraglands.abraglandsIopScaraNord();
-        //abraglands.abraglandsIopScaraNordGauche();
+        //abraglands.abraglandsIopScaraNord(200);
+        //abraglands.abraglandsIopScaraNordGauche(200);
 
         BotsElevage botsElevage = new BotsElevage();
         //botsElevage.nourirCorbac();

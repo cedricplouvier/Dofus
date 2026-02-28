@@ -70,6 +70,7 @@ public class BotsRecolte extends Main{
                     s.click(new Location(500, 370));
                     TimeUnit.MILLISECONDS.sleep(800);
                     s.click(new Location(770, 370));
+                    TimeUnit.MILLISECONDS.sleep(800);
                     s.type(Key.F1);
                     TimeUnit.MILLISECONDS.sleep(7000);
                     if(classe == "enu") {
@@ -158,6 +159,7 @@ public class BotsRecolte extends Main{
             general.zaapAstrubForetAstrub();
             int routeCounter=0;
             for (int i = 0; i < (Math.round(pods/30)); i++) {
+                boolean treeFound = false;
                 try {
                     if (sortesBois.contains("noyer")) {
                         if (s.exists(arbreNoyer) != null) {
@@ -166,6 +168,7 @@ public class BotsRecolte extends Main{
                                 try {
                                     s.click(couper);
                                     TimeUnit.MILLISECONDS.sleep(13000);
+                                    treeFound = true;
                                 } catch (FindFailed e) {
                                     System.out.println("Couper not found");
                                 }
@@ -181,6 +184,7 @@ public class BotsRecolte extends Main{
                                 try {
                                     s.click(couper);
                                     TimeUnit.MILLISECONDS.sleep(7000);
+                                    treeFound = true;
                                 } catch (FindFailed e) {
                                     System.out.println("Couper not found");
                                 }
@@ -196,6 +200,7 @@ public class BotsRecolte extends Main{
                                 try {
                                     s.click(couper);
                                     TimeUnit.MILLISECONDS.sleep(7000);
+                                    treeFound = true;
                                 } catch (FindFailed e) {
                                     System.out.println("Couper not found");
                                 }
@@ -211,6 +216,7 @@ public class BotsRecolte extends Main{
                                 try {
                                     s.click(couper);
                                     TimeUnit.MILLISECONDS.sleep(7000);
+                                    treeFound = true;
                                 } catch (FindFailed e) {
                                     System.out.println("Couper not found");
                                 }
@@ -238,7 +244,8 @@ public class BotsRecolte extends Main{
                             TimeUnit.MILLISECONDS.sleep(6000);
                         }
                     }
-                    else{
+                    if (treeFound == false){
+                        System.out.println("Nothing found, next map");
                         Point nextPos = foretAstrubMaps.get(routeCounter);
                         s.click(new Location(nextPos.x, nextPos.y));
                         routeCounter++;
@@ -300,16 +307,18 @@ public class BotsRecolte extends Main{
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
-            Match regionFrene = s.find(boisFrene);
-            try {
-                s.dragDrop(regionFrene, new Location(500, 470));
-            } catch (FindFailed e){
-                System.out.println("No frene in inventaire");
-            }
-            try {
-                s.click(max);
-            } catch (FindFailed e) {
-                System.out.println("max not found");
+            if(sortesBois.contains("frene")) {
+                Match regionFrene = s.find(boisFrene);
+                try {
+                    s.dragDrop(regionFrene, new Location(500, 470));
+                } catch (FindFailed e) {
+                    System.out.println("No frene in inventaire");
+                }
+                try {
+                    s.click(max);
+                } catch (FindFailed e) {
+                    System.out.println("max not found");
+                }
             }
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);

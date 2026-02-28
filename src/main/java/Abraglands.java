@@ -10,22 +10,18 @@ public class Abraglands extends Main {
 
     static General general = new General();
 
-    public void abraglandsSculpteurIop() throws InterruptedException, FindFailed, IOException {
+    public void abraglandsSculpteurIop(int amount) throws InterruptedException, FindFailed, IOException {
 
         TimeUnit.SECONDS.sleep(3);
         Keyboard kb = new DesktopKeyboard();
         Screen s = new Screen();
 
         TimeUnit.SECONDS.sleep(3);
-
-        s.click(zaapAstrub);
+        s.doubleClick(popoRappel);
+        TimeUnit.SECONDS.sleep(3);
+        s.rightClick(zaapAstrub);
         TimeUnit.SECONDS.sleep(1);
-        s.click(utiliser);
-        TimeUnit.SECONDS.sleep(1);
-        s.click(selectZaapMili);
-        TimeUnit.SECONDS.sleep(1);
-        s.click(oui);
-
+        s.doubleClick(selectZaapMili);
         TimeUnit.SECONDS.sleep(2);
         Location JJ = new Location(360, 270);
         s.click(JJ);
@@ -55,7 +51,7 @@ public class Abraglands extends Main {
         Location UU = new Location(635, 435);
         s.click(UU);
 
-        for (int i = 0; i < 200; i++) {
+        for (int i = 0; i < amount; i++) {
             try {
                 boolean abraFound = false;
                 TimeUnit.SECONDS.sleep(1);
@@ -145,26 +141,21 @@ public class Abraglands extends Main {
         TimeUnit.SECONDS.sleep(3);
         general.depodsAbraglands();
         TimeUnit.SECONDS.sleep(1);
-        abraglandsSculpteurIop();
+        abraglandsSculpteurIop(amount);
     }
 
-    public  void abraglandsIopBoucherAmakna() throws InterruptedException, FindFailed, IOException {
+    public  void abraglandsIopBoucherAmakna(int amount) throws InterruptedException, FindFailed, IOException {
 
         TimeUnit.SECONDS.sleep(3);
         Keyboard kb = new DesktopKeyboard();
         Screen s = new Screen();
 
         TimeUnit.SECONDS.sleep(3);
-
-        s.click(zaapAstrub);
+        s.doubleClick(popoRappel);
+        TimeUnit.SECONDS.sleep(2);
+        s.rightClick(zaapAstrub);
         TimeUnit.SECONDS.sleep(1);
-        s.click(utiliser);
-        TimeUnit.SECONDS.sleep(1);
-        s.click(selectZaapMili);
-        TimeUnit.SECONDS.sleep(1);
-        s.click(oui);
-
-
+        s.doubleClick(selectZaapMili);
         TimeUnit.SECONDS.sleep(2);
         Location JJ = new Location(360, 270);
         s.click(JJ);
@@ -206,7 +197,7 @@ public class Abraglands extends Main {
         Location UU = new Location(635, 435);
         s.click(UU);
 
-        for (int i = 0; i < 200; i++) {
+        for (int i = 0; i < 280; i++) {
             try {
                 boolean abraFound = false;
                 TimeUnit.SECONDS.sleep(1);
@@ -337,7 +328,7 @@ public class Abraglands extends Main {
         TimeUnit.SECONDS.sleep(3);
         general.depodsAbraglands();
         TimeUnit.SECONDS.sleep(1);
-        abraglandsIopBoucherAmakna();
+        abraglandsIopBoucherAmakna(amount);
     }
 
     public  void abraglandsIopAlchiAmakna() throws InterruptedException, FindFailed, IOException {
@@ -348,15 +339,9 @@ public class Abraglands extends Main {
 
         TimeUnit.SECONDS.sleep(3);
 
-        s.click(zaapAstrub);
+        s.rightClick(zaapAstrub);
         TimeUnit.SECONDS.sleep(1);
-        s.click(utiliser);
-        TimeUnit.SECONDS.sleep(1);
-        s.click(selectZaapMili);
-        TimeUnit.SECONDS.sleep(1);
-        s.click(oui);
-
-
+        s.doubleClick(selectZaapMili);
         TimeUnit.SECONDS.sleep(2);
         Location JJ = new Location(360, 270);
         s.click(JJ);
@@ -409,7 +394,7 @@ public class Abraglands extends Main {
         Location UU = new Location(660, 430);
         s.click(UU);
 
-        for (int i = 0; i < 200; i++) {
+        for (int i = 0; i < 300; i++) {
             try {
                 /*Location pain = new Location(1000, 680);
                 s.doubleClick(pain);
@@ -445,12 +430,14 @@ public class Abraglands extends Main {
                     TimeUnit.SECONDS.sleep(1);
                     Location A = new Location(700, 452);
                     Location B = new Location(950, 373);
-                    Color redMac = new Color(245,0,6);
+                    Color redMac = new Color(255,0,0);
                     Color redWindows = new Color(255, 0, 0);
                     Color colorA = A.getColor();
                     TimeUnit.MILLISECONDS.sleep(700);
                     if((colorA.equals(redMac)) || (colorA.equals(redWindows))) {
+                        TimeUnit.MILLISECONDS.sleep(700);
                         s.click(A);
+                        TimeUnit.MILLISECONDS.sleep(700);
                         s.type(Key.F1);
                         TimeUnit.SECONDS.sleep(2);
                         Location AA = new Location(860, 350);
@@ -465,7 +452,6 @@ public class Abraglands extends Main {
                         TimeUnit.MILLISECONDS.sleep(700);
                         s.type(Key.F7);
                         s.click(abraFight);
-
                     }
                     else{
                         s.click(B);
@@ -530,20 +516,22 @@ public class Abraglands extends Main {
 
     }
 
-    public  void abraglandsIopScaraNord() throws InterruptedException, FindFailed, IOException {
+    public  void abraglandsIopScaraNord(int amount) throws InterruptedException, FindFailed, IOException {
 
         TimeUnit.SECONDS.sleep(3);
         Keyboard kb = new DesktopKeyboard();
         Screen s = new Screen();
 
         TimeUnit.SECONDS.sleep(3);
-        s.click(zaapAstrub);
+        s.doubleClick(popoRappel);
+        TimeUnit.SECONDS.sleep(3);
+        s.rightClick(zaapAstrub);
+        //TimeUnit.SECONDS.sleep(1);
+        //s.click(utiliser);
         TimeUnit.SECONDS.sleep(1);
-        s.click(utiliser);
-        TimeUnit.SECONDS.sleep(1);
-        s.click(selectZaapScara);
-        TimeUnit.SECONDS.sleep(1);
-        s.click(oui);
+        s.doubleClick(selectZaapScara);
+        //TimeUnit.SECONDS.sleep(1);
+        //s.click(oui);
 
         TimeUnit.SECONDS.sleep(2);
         Location JJ = new Location(825, 100);
@@ -559,7 +547,7 @@ public class Abraglands extends Main {
         Location MM = new Location(560, 200);
         s.click(MM);
         TimeUnit.SECONDS.sleep(2);
-        for (int i = 0; i < 200; i++) {
+        for (int i = 0; i < amount; i++) {
             try {
                 boolean abraFound = false;
                 TimeUnit.SECONDS.sleep(1);
@@ -570,13 +558,13 @@ public class Abraglands extends Main {
                 s.rightClick(launch);
                 if (abraFound) {
                     TimeUnit.SECONDS.sleep(1);
-                    Location A = new Location(590, 270);
+                    Location A = new Location(580, 270);
                     Location B = new Location(770, 370);
                     Color redMac = new Color(245,0,6);
                     Color redWindows = new Color(255, 0, 0);
                     Color colorA = A.getColor();
                     TimeUnit.MILLISECONDS.sleep(700);
-                    if((colorA.equals(redMac)) || (colorA.equals(redWindows))) {
+                    //if((colorA.equals(redMac)) || (colorA.equals(redWindows))) {
                         s.click(A);
                         s.type(Key.F1);
                         TimeUnit.SECONDS.sleep(2);
@@ -603,8 +591,8 @@ public class Abraglands extends Main {
                         TimeUnit.MILLISECONDS.sleep(700);
                         s.type(Key.F7);
                         s.click(abraFight);
-                    }
-                    else{
+                    //}
+                    /*else{
                         s.click(B);
                         TimeUnit.MILLISECONDS.sleep(700);
                         s.type(Key.F1);
@@ -632,7 +620,7 @@ public class Abraglands extends Main {
                         TimeUnit.MILLISECONDS.sleep(700);
                         s.type(Key.F7);
                         s.click(abraFight);
-                    }
+                    }*/
 
                     TimeUnit.SECONDS.sleep(1);
                     while (s.exists(abraFight) != null) {
@@ -659,25 +647,21 @@ public class Abraglands extends Main {
         TimeUnit.SECONDS.sleep(3);
         general.depodsAbraglands();
         TimeUnit.SECONDS.sleep(1);
-        abraglandsIopScaraNord();
-
+        abraglandsIopScaraNord(amount);
     }
 
-    public  void abraglandsIopScaraNordGauche() throws InterruptedException, FindFailed, IOException {
+    public  void abraglandsIopScaraNordGauche(int amount) throws InterruptedException, FindFailed, IOException {
 
         TimeUnit.SECONDS.sleep(3);
         Keyboard kb = new DesktopKeyboard();
         Screen s = new Screen();
 
         TimeUnit.SECONDS.sleep(3);
-        s.click(zaapAstrub);
+        s.doubleClick(popoRappel);
+        TimeUnit.SECONDS.sleep(3);
+        s.rightClick(zaapAstrub);
         TimeUnit.SECONDS.sleep(1);
-        s.click(utiliser);
-        TimeUnit.SECONDS.sleep(1);
-        s.click(selectZaapScara);
-        TimeUnit.SECONDS.sleep(1);
-        s.click(oui);
-
+        s.doubleClick(selectZaapScara);
         TimeUnit.SECONDS.sleep(2);
         Location JJ = new Location(825, 100);
         s.click(JJ);
@@ -696,7 +680,7 @@ public class Abraglands extends Main {
         s.click(MM);
         TimeUnit.SECONDS.sleep(2);
 
-        for (int i = 0; i < 200; i++) {
+        for (int i = 0; i < amount; i++) {
             try {
                 boolean abraFound = false;
                 TimeUnit.SECONDS.sleep(1);
@@ -796,6 +780,6 @@ public class Abraglands extends Main {
         TimeUnit.SECONDS.sleep(3);
         general.depodsAbraglands();
         TimeUnit.SECONDS.sleep(1);
-        abraglandsIopScaraNordGauche();
+        abraglandsIopScaraNordGauche(amount);
     }
 }
