@@ -49,6 +49,7 @@ public class Main {
     static Pattern max = new Pattern(imagePath + "max.png").similar((float) 0.80);
     static Pattern check = new Pattern(imagePath + "check.png").similar((float) 0.80);
     static Pattern close = new Pattern(imagePath + "close.png").similar((float) 0.80);
+    static Pattern connectionInterrompue = new Pattern(imagePath + "connectionInterrompue.png").similar((float) 0.80);
     static Pattern zaapChateau = new Pattern(imagePath + "zaapChateau.png").similar((float) 0.80);
     static Pattern zaapAstrub = new Pattern(imagePath + "zaapAstrub.png").similar((float) 0.80);
     static Pattern utiliser = new Pattern(imagePath + "utiliser.png").similar((float) 0.80);
@@ -129,6 +130,7 @@ public class Main {
     static Pattern boisErable = new Pattern(imagePath + "boisErable.png").similar((float) 0.80);
     static Pattern boisNoyer = new Pattern(imagePath + "boisNoyer.png").similar((float) 0.80);
     static Pattern geleesRouge = new Pattern(imagePath + "geleesRouge.png").similar((float) 0.80);
+    static Pattern geleesBleu = new Pattern(imagePath + "geleesBleu.png").similar((float) 0.80);
 
     static Pattern osChafer = new Pattern(imagePath + "osChafer.png").similar((float) 0.80);
     static Pattern boisChataignier = new Pattern(imagePath + "boisChataignier.png").similar((float) 0.80);
@@ -155,7 +157,7 @@ public class Main {
 
     static Pattern riz = new Pattern(imagePath + "riz.png").similar((float) 0.80);
     static Pattern chanvreRecolte = new Pattern(imagePath + "chanvreRecolte.png").similar((float) 0.80);
-    static Pattern bleRecolte = new Pattern(imagePath + "bleRecolte.png").similar((float) 0.80);
+    static Pattern bleRecolte = new Pattern(imagePath + "bleRecolte.png").similar((float) 0.8545);
     static Pattern bleInventaire = new Pattern(imagePath + "bleInventaire.png").similar((float) 0.80);
     static Pattern trefle = new Pattern(imagePath + "trefle.png").similar((float) 0.80);
     static Pattern chanvre = new Pattern(imagePath + "chanvre.png").similar((float) 0.70);
@@ -175,15 +177,38 @@ public class Main {
     static Pattern pretCombat = new Pattern(imagePath + "pretCombat.png").similar((float) 0.80);
     static Pattern preparerPotion = new Pattern(imagePath + "preparerPotion.png").similar((float) 0.80);
     static Pattern fiolePandaburg = new Pattern(imagePath + "fiolePandaburg.png").similar((float) 0.80);
+    static Pattern cuirBouftou = new Pattern(imagePath + "cuirBouftou.png").similar((float) 0.80);
+    static Pattern pnjTempleSadi = new Pattern(imagePath + "pnjTempleSadi.png").similar((float) 0.80);
+    static Pattern echangerPNJ = new Pattern(imagePath + "echangerPNJ.png").similar((float) 0.80);
+    static Pattern vendrePNJ = new Pattern(imagePath + "vendrePNJ.png").similar((float) 0.80);
+    static Pattern tailladeuseBatonInventaire = new Pattern(imagePath + "tailladeuseBatonInventaire.png").similar((float) 0.80);
+
+    static Pattern pevpev = new Pattern(imagePath + "pevpev.png").similar((float) 0.80);
+    static Pattern pepepe = new Pattern(imagePath + "pepepe.png").similar((float) 0.80);
+    static Pattern pepepepepe = new Pattern(imagePath + "pepepepepe.png").similar((float) 0.80);
+    static Pattern ghoulinator = new Pattern(imagePath + "ghoulinator.png").similar((float) 0.80);
+    static Pattern ghoulash = new Pattern(imagePath + "ghoulash.png").similar((float) 0.80);
+    static Pattern ghoulinho = new Pattern(imagePath + "ghoulinho.png").similar((float) 0.80);
+    static Pattern sumatra = new Pattern(imagePath + "sumatra.png").similar((float) 0.80);
+    static Pattern nekfemeuj = new Pattern(imagePath + "nekfemeuj.png").similar((float) 0.80);
+    static Pattern poule = new Pattern(imagePath + "poule.png").similar((float) 0.80);
+    static Pattern part = new Pattern(imagePath + "part.png").similar((float) 0.80);
+    static Pattern serveurBoune = new Pattern(imagePath + "serveurBoune.png").similar((float) 0.80);
 
     static int yUp = 65;
     static int xLeft = 365;
     static int xRight = 1250;
     static int yDown = 580;
+    static int resourceInventaireX = 930;
+    static int resourceInventaireY = 175;
+    static int ressourceCoffreY = 200;
+    static int ressourceCoffreX = 420;
+
     public static void main(String[] args) throws IOException, InterruptedException, AWTException, FindFailed {
 
         General general = new General();
         //general.testCombatDefi();
+        //general.depodsAbraglands(275);
 
         BotsCraft botsCraft = new BotsCraft();
         //botsCraft.craftTristeLame();
@@ -202,12 +227,13 @@ public class Main {
         //botsCraft.potionBrak();
         //botsCraft.potionVieillesse();
         //botsCraft.graineChanvre();
+        botsCraft.botTempleSadi(3000, 3);
 
         BotsRecolte botsRecolte = new BotsRecolte();
         //botsRecolte.recolteRiz("enu",6000);
-        //botsRecolte.recolteChanvrePosX10Y5("paysan","cra", 3000);
-        //botsRecolte.recolteChanvrePosX32Y42("alchi","cra", 3000);
-        //botsRecolte.recolteBlePosX11Y6("cra", 3000);
+        botsRecolte.recolteChanvrePosX10Y5("paysan","cra", 3000, 3);
+        //botsRecolte.recolteChanvrePosX32Y42("alchi","cra", 4000);
+        //botsRecolte.recolteBlePosX11Y6("cra", 4000);
         //botsRecolte.bucherForetAstrub("cra", 2000, new ArrayList<String>(Arrays.asList("noyer","chene","chataignier")));
 
         BotsFourbe botsFourbe = new BotsFourbe();
@@ -217,14 +243,17 @@ public class Main {
         //botsJugement.donjonMorose();
 
         Abraglands abraglands = new Abraglands();
-        //abraglands.abraglandsSculpteurIop(200);
+        //abraglands.abraglandsSculpteurIop(275);
         //abraglands.abraglandsIopBoucherAmakna(275);
         //abraglands.abraglandsIopAlchiAmakna();
         //abraglands.abraglandsIopScaraNord(200);
-        //abraglands.abraglandsIopScaraNordGauche(200);
+        //abraglands.abraglandsIopScaraNordGauche(275);
 
         BotsElevage botsElevage = new BotsElevage();
-        //botsElevage.nourirCorbac();
+        //botsElevage.nourirCorbac(new ArrayList<Pattern>(Arrays.asList(ghoulinator)));
+        //botsElevage.nourirChacha(new ArrayList<Pattern>(Arrays.asList(ghoulinho, ghoulash, sumatra)));
+        //botsElevage.nourirChacha(new ArrayList<Pattern>(Arrays.asList(pepepepepe, pepepe, pevpev)));
+        //botsElevage.nourirChacha(new ArrayList<Pattern>(Arrays.asList(nekfemeuj, poule, part)));
 
         BotsEnu botsEnu = new BotsEnu();
         //botsEnu.abraglandsEnu();

@@ -4,9 +4,11 @@ import org.sikuli.script.*;
 
 import java.awt.*;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -140,6 +142,47 @@ public class General extends Main {
         }
     }
 
+    public void zaapAstrubToMaisonCoffre3() throws InterruptedException, FindFailed, IOException {
+        Screen s = new Screen();
+
+        s.doubleClick(popoRappel);
+        TimeUnit.SECONDS.sleep(5);
+        s.click(new Location(820, yUp));
+        TimeUnit.SECONDS.sleep(5);
+        s.click(new Location(xRight, 350));
+        TimeUnit.SECONDS.sleep(5);
+        s.click(new Location(780, yUp));
+        TimeUnit.SECONDS.sleep(5);
+        s.rightClick(new Location(620, 510));
+        TimeUnit.SECONDS.sleep(3);
+        insertCode("codeAstrubMaison2");
+        TimeUnit.MILLISECONDS.sleep(500);
+        s.type(Key.ENTER);
+        TimeUnit.SECONDS.sleep(3);
+        try {
+            s.rightClick(new Location(730, 300));
+        } catch(FindFailed e){
+            System.out.println("Findfailed coffreMaisonGauche");
+            zaapAstrubToMaisonCoffre3();
+        }
+        TimeUnit.SECONDS.sleep(3);
+        insertCode("codeAstrubCoffre3");
+        s.type(Key.ENTER);
+        TimeUnit.SECONDS.sleep(4);
+        if(s.exists(coffreOuvertKamas) == null){
+            System.out.println("coffe Ouvert not found");
+            s.type(Key.ENTER);
+            TimeUnit.SECONDS.sleep(1);
+            s.type(Key.ESC);
+            TimeUnit.SECONDS.sleep(1);
+            if(s.exists(menuPrincipal) != null){
+                s.type(Key.ESC);
+                TimeUnit.SECONDS.sleep(1);
+            }
+            zaapAstrubToMaisonCoffre3();
+        }
+    }
+
     public void maisonAstrubToAtelierMineur() throws FindFailed, InterruptedException {
         Screen s = new Screen();
 
@@ -191,6 +234,45 @@ public class General extends Main {
         }
         if (s.exists(startForetAstrub) == null){
             zaapAstrubForetAstrub();
+        }
+    }
+
+    public void zaapAstrubTempleSadi() throws FindFailed, InterruptedException, IOException {
+        Screen s = new Screen();
+        Keyboard kb = new DesktopKeyboard();
+
+        ArrayList<Location> mapsZaapAstrubToTempleSadi = new ArrayList<>();
+        mapsZaapAstrubToTempleSadi.add(new Location(xLeft, 270));
+        mapsZaapAstrubToTempleSadi.add(new Location(xLeft, 300));
+        mapsZaapAstrubToTempleSadi.add(new Location(580, yDown));
+        mapsZaapAstrubToTempleSadi.add(new Location(720, yDown));
+        mapsZaapAstrubToTempleSadi.add(new Location(xLeft, 200));
+        mapsZaapAstrubToTempleSadi.add(new Location(xLeft, 125));
+        mapsZaapAstrubToTempleSadi.add(new Location(xLeft, 270));
+        mapsZaapAstrubToTempleSadi.add(new Location(xLeft, 445));
+        mapsZaapAstrubToTempleSadi.add(new Location(910, 350));
+
+        TimeUnit.SECONDS.sleep(1);
+        try {
+            s.doubleClick(popoRappel);
+            TimeUnit.SECONDS.sleep(5);
+            s.rightClick(zaapAstrub);
+            TimeUnit.SECONDS.sleep(2);
+            s.doubleClick(milifutaie);
+            TimeUnit.SECONDS.sleep(3);
+        } catch (FindFailed e){
+            System.out.println("Zaap Astrub not found");
+            zaapAstrubTempleSadi();
+        }
+
+        TimeUnit.SECONDS.sleep(7);
+        for( Location nexMap : mapsZaapAstrubToTempleSadi){
+            s.click(nexMap);
+            TimeUnit.SECONDS.sleep(7);
+        }
+        TimeUnit.SECONDS.sleep(3);
+        if (s.exists(pnjTempleSadi) == null){
+            zaapAstrubTempleSadi();
         }
     }
 
@@ -319,65 +401,83 @@ public class General extends Main {
         }
     }
 
-    public void depodsAbraglands() throws InterruptedException, FindFailed {
+    public void depodsAbraglands(int amount) throws InterruptedException, FindFailed, FileNotFoundException {
         Screen s = new Screen();
-        Keyboard kb = new DesktopKeyboard();
 
         s.click(new Location(1100, 200));
         TimeUnit.SECONDS.sleep(1);
         s.click(new Location(370, 200));
         TimeUnit.SECONDS.sleep(1);
-        Match region1 = s.find(ambre);
-        s.dragDrop(region1, new Location(500, 470));
-        s.click(max);
+        try {
+            Match region1 = s.find(ambre);
+            s.dragDrop(region1, new Location(500, 470));
+            s.click(max);
+            TimeUnit.SECONDS.sleep(1);
+            s.type(Key.ENTER);
+        }catch(FindFailed e){
+            System.out.println("Ambre not found");
+        }
         TimeUnit.SECONDS.sleep(1);
-        s.type(Key.ENTER);
+        try {
+            Match region2 = s.find(ambreAbra);
+            s.dragDrop(region2, new Location(500, 470));
+            s.click(max);
+            TimeUnit.SECONDS.sleep(1);
+            s.type(Key.ENTER);
+        } catch (FindFailed e){
+            System.out.println("AmbreAbra not found");
+        }
         TimeUnit.SECONDS.sleep(1);
-        Match region2 = s.find(ambreAbra);
-        s.dragDrop(region2, new Location(500, 470));
-        s.click(max);
+        try {
+            Match region3 = s.find(bourgeonAbra);
+            s.dragDrop(region3, new Location(500, 470));
+            s.click(max);
+            TimeUnit.SECONDS.sleep(1);
+            s.type(Key.ENTER);
+        } catch(FindFailed e){
+            System.out.println("bourgeonAbra not found");
+        }
         TimeUnit.SECONDS.sleep(1);
-        s.type(Key.ENTER);
+        try {
+            Match region5 = s.find(racineAbra);
+            s.dragDrop(region5, new Location(500, 470));
+            s.click(max);
+            TimeUnit.SECONDS.sleep(1);
+            s.type(Key.ENTER);
+        } catch (FindFailed e){
+            System.out.println("racineAbra not found");
+        }
         TimeUnit.SECONDS.sleep(1);
-        Match region3 = s.find(bourgeonAbra);
-        s.dragDrop(region3, new Location(500, 470));
-        s.click(max);
+        try {
+            Match region6 = s.find(seveAbra);
+            s.dragDrop(region6, new Location(500, 470));
+            s.click(max);
+            TimeUnit.SECONDS.sleep(1);
+            s.type(Key.ENTER);
+        } catch (FindFailed e){
+            System.out.println("SeveAbra not found");
+        }
         TimeUnit.SECONDS.sleep(1);
-        s.type(Key.ENTER);
-        TimeUnit.SECONDS.sleep(1);
-        Match region5 = s.find(racineAbra);
-        s.dragDrop(region5, new Location(500, 470));
-        s.click(max);
-        TimeUnit.SECONDS.sleep(1);
-        s.type(Key.ENTER);
-        TimeUnit.SECONDS.sleep(1);
-        Match region6 = s.find(seveAbra);
-        s.dragDrop(region6, new Location(500, 470));
-        s.click(max);
-        TimeUnit.SECONDS.sleep(1);
-        s.type(Key.ENTER);
-        TimeUnit.SECONDS.sleep(1);
-        Match region7 = s.find(ecorceAbra);
-        s.dragDrop(region7, new Location(500, 470));
-        s.click(max);
-        TimeUnit.SECONDS.sleep(1);
-        s.type(Key.ENTER);
+        try {
+            Match region7 = s.find(ecorceAbra);
+            s.dragDrop(region7, new Location(500, 470));
+            s.click(max);
+            TimeUnit.SECONDS.sleep(1);
+            s.type(Key.ENTER);
+        } catch (FindFailed e){
+            System.out.println("ecorceAbra not found");
+        }
         TimeUnit.SECONDS.sleep(1);
         s.click(new Location(400, 200));
         Match region8 = s.find(abraGlands);
         s.dragDrop(region8, new Location(1100, 400));
         TimeUnit.SECONDS.sleep(1);
-        kb.type(Key.NUM2);
-        TimeUnit.SECONDS.sleep(1);
-        kb.type(Key.NUM0);
-        TimeUnit.SECONDS.sleep(1);
-        kb.type(Key.NUM0);
+        numberToKey(amount);
         TimeUnit.SECONDS.sleep(1);
         s.type(Key.ENTER);
         TimeUnit.SECONDS.sleep(1);
-        s.click(close);
-        TimeUnit.SECONDS.sleep(5);
-        s.doubleClick(popoRappel);
+        s.type(Key.ESC);
+        TimeUnit.SECONDS.sleep(1);
     }
 
     public void maisonAstrubToAtelierAlchi() throws FindFailed, InterruptedException {
@@ -535,6 +635,61 @@ public class General extends Main {
                 s.type(Key.F1);
                 TimeUnit.MILLISECONDS.sleep(6000);
             }
+        }
+    }
+
+    public void numberToKey(int number) throws InterruptedException, FileNotFoundException {
+        Keyboard kb = new DesktopKeyboard();
+
+        String numbers = Integer.toString(number);
+
+        for(int i=0; i<numbers.length(); i++){
+            if(numbers.charAt(i) == '0'){
+                kb.type(Key.NUM0);
+            }
+            if(numbers.charAt(i) == '1'){
+                kb.type(Key.NUM1);
+            }
+            if(numbers.charAt(i) == '2'){
+                kb.type(Key.NUM2);
+            }
+            if(numbers.charAt(i) == '3'){
+                kb.type(Key.NUM3);
+            }
+            if(numbers.charAt(i) == '4'){
+                kb.type(Key.NUM4);
+            }
+            if(numbers.charAt(i) == '5'){
+                kb.type(Key.NUM5);
+            }
+            if(numbers.charAt(i) == '6'){
+                kb.type(Key.NUM6);
+            }
+            if(numbers.charAt(i) == '7'){
+                kb.type(Key.NUM7);
+            }
+            if(numbers.charAt(i) == '8'){
+                kb.type(Key.NUM8);
+            }
+            if(numbers.charAt(i) == '9'){
+                kb.type(Key.NUM9);
+            }
+            TimeUnit.MILLISECONDS.sleep(500);
+        }
+    }
+
+    public void checkConnection() throws FindFailed, InterruptedException {
+        Screen s = new Screen();
+        if (s.exists(connectionInterrompue) != null){
+            TimeUnit.MILLISECONDS.sleep(2000);
+            s.click(connectionInterrompue);
+            TimeUnit.MILLISECONDS.sleep(2000);
+            s.type(Key.ENTER);
+            TimeUnit.MILLISECONDS.sleep(10000);
+            s.doubleClick(serveurBoune);
+            TimeUnit.MILLISECONDS.sleep(5000);
+            s.doubleClick(new Location(500, 540));
+            TimeUnit.MILLISECONDS.sleep(5000);
         }
     }
 }

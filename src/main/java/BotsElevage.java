@@ -1,15 +1,15 @@
 import org.sikuli.api.robot.Keyboard;
 import org.sikuli.api.robot.desktop.DesktopKeyboard;
-import org.sikuli.script.FindFailed;
-import org.sikuli.script.Key;
-import org.sikuli.script.Location;
-import org.sikuli.script.Screen;
+import org.sikuli.script.*;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 public class BotsElevage extends Main {
+
+    static General general = new General();
 
     private volatile boolean keepRunning = true;
 
@@ -17,58 +17,110 @@ public class BotsElevage extends Main {
         keepRunning = false;
     }
 
-    public void nourirCorbac() throws InterruptedException, FindFailed, IOException {
+    public void nourirCorbac(ArrayList<Pattern> characters) throws InterruptedException, FindFailed, IOException {
 
-        Keyboard kb = new DesktopKeyboard();
         Screen s = new Screen();
 
-        Location epees = new Location(790, 160);
-        Location ressources = new Location(840, 160);
-        Location premierSlot = new Location(760, 260);
-        Location premierPerso = new Location(150, 440);
-        Location Boune = new Location(150, 400);
-        Location slotFami = new Location(680, 260);
-        int offsetX = 40;
-        int offsetY = 40;
-        int offsetXPerso = 160;
+        Location epees = new Location(1100, 150);
+        Location ressources = new Location(1160, 150);
+        Location slotFami = new Location(1000, 250);
 
         TimeUnit.SECONDS.sleep(5);
 
-        Location slot = new Location(premierSlot);
-        Location slotPerso = new Location(premierPerso);
-        for(int z = 0; z<3; z++) {
-            s.doubleClick(Boune);
-            TimeUnit.MILLISECONDS.sleep(5000);
-            slotPerso = new Location(150 + (offsetXPerso * z), 440);
-            s.doubleClick(slotPerso);
-            TimeUnit.MILLISECONDS.sleep(5000);
-            kb.type("i");
+        for(Pattern character: characters) {
             TimeUnit.MILLISECONDS.sleep(2000);
-            for (int j = 0; j < 9; j++) {
-                for (int k = 0; k < 4; k++) {
-                    s.click(epees);
-                    TimeUnit.MILLISECONDS.sleep(700);
-                    slot = new Location(760 + (offsetX * k), 260 + (offsetY * j));
-                    s.doubleClick(slot);
-                    TimeUnit.MILLISECONDS.sleep(700);
-                    s.click(ressources);
-                    TimeUnit.MILLISECONDS.sleep(700);
-                    s.dragDrop(premierSlot, slotFami);
-                    TimeUnit.MILLISECONDS.sleep(700);
-                    s.doubleClick(slotFami);
+            s.doubleClick(serveurBoune);
+            TimeUnit.MILLISECONDS.sleep(5000);
+            s.doubleClick(character);
+            TimeUnit.MILLISECONDS.sleep(5000);
+            general.zaapAstrubToMaisonCoffre1();
+            s.click(new Location(420,200));
+            TimeUnit.MILLISECONDS.sleep(700);
+            Match regionOsChafer = s.find(osChafer);
+            s.dragDrop(regionOsChafer, new Location(1100, 400));
+            TimeUnit.SECONDS.sleep(1);
+            general.numberToKey(36);
+            TimeUnit.SECONDS.sleep(1);
+            s.type(Key.ENTER);
+            TimeUnit.SECONDS.sleep(1);
+            s.click(close);
+            s.click(new Location(1030, 630));
+            TimeUnit.MILLISECONDS.sleep(1000);
 
-                    TimeUnit.MILLISECONDS.sleep(2000);
-                }
+            for (int j = 0; j < 36; j++) {
+                s.click(epees);
+                TimeUnit.MILLISECONDS.sleep(500);
+                s.doubleClick(new Location(1200, 570));
+                TimeUnit.MILLISECONDS.sleep(700);
+                s.click(ressources);
+                TimeUnit.MILLISECONDS.sleep(700);
+                s.dragDrop(osChafer, slotFami);
+                TimeUnit.MILLISECONDS.sleep(700);
+                s.doubleClick(slotFami);
+                TimeUnit.MILLISECONDS.sleep(700);
             }
+            s.type(Key.ESC);
             TimeUnit.MILLISECONDS.sleep(2000);
-            kb.type(Key.ESC);
+            s.type(Key.ESC);
             TimeUnit.MILLISECONDS.sleep(2000);
-            kb.type(Key.ESC);
-            TimeUnit.MILLISECONDS.sleep(5000);
-            Location changerPerso = new Location(470, 280);
+            Location changerPerso = new Location(800, 270);
             s.click(changerPerso);
             TimeUnit.MILLISECONDS.sleep(2000);
-            kb.type(Key.ENTER);
+            s.type(Key.ENTER);
+            TimeUnit.MILLISECONDS.sleep(3000);
+        }
+    }
+
+    public void nourirChacha(ArrayList<Pattern> characters) throws InterruptedException, FindFailed, IOException {
+
+        Screen s = new Screen();
+
+        Location epees = new Location(1100, 150);
+        Location ressources = new Location(1160, 150);
+        Location slotFami = new Location(1000, 250);
+
+        TimeUnit.SECONDS.sleep(5);
+
+        for(Pattern character: characters) {
+            TimeUnit.MILLISECONDS.sleep(2000);
+            s.doubleClick(serveurBoune);
+            TimeUnit.MILLISECONDS.sleep(5000);
+            s.doubleClick(character);
+            TimeUnit.MILLISECONDS.sleep(5000);
+            general.zaapAstrubToMaisonCoffre1();
+            s.click(new Location(420,200));
+            TimeUnit.MILLISECONDS.sleep(700);
+            Match regionGeleesBleu = s.find(geleesBleu);
+            s.dragDrop(regionGeleesBleu, new Location(1100, 400));
+            TimeUnit.SECONDS.sleep(1);
+            general.numberToKey(36);
+            TimeUnit.SECONDS.sleep(1);
+            s.type(Key.ENTER);
+            TimeUnit.SECONDS.sleep(1);
+            s.click(close);
+            s.click(new Location(1030, 630));
+            TimeUnit.MILLISECONDS.sleep(1000);
+
+            for (int j = 0; j < 36; j++) {
+                s.click(epees);
+                TimeUnit.MILLISECONDS.sleep(500);
+                s.doubleClick(new Location(1200, 570));
+                TimeUnit.MILLISECONDS.sleep(700);
+                s.click(ressources);
+                TimeUnit.MILLISECONDS.sleep(700);
+                s.dragDrop(geleesBleu, slotFami);
+                TimeUnit.MILLISECONDS.sleep(700);
+                s.doubleClick(slotFami);
+                TimeUnit.MILLISECONDS.sleep(700);
+            }
+            s.type(Key.ESC);
+            TimeUnit.MILLISECONDS.sleep(2000);
+            s.type(Key.ESC);
+            TimeUnit.MILLISECONDS.sleep(2000);
+            Location changerPerso = new Location(800, 270);
+            s.click(changerPerso);
+            TimeUnit.MILLISECONDS.sleep(2000);
+            s.type(Key.ENTER);
             TimeUnit.MILLISECONDS.sleep(3000);
         }
     }

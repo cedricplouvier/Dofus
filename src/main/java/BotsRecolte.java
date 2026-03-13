@@ -106,6 +106,7 @@ public class BotsRecolte extends Main{
                     }
                 }
             }
+            general.checkConnection();
             s.click(new Location(1030, 630));
             TimeUnit.MILLISECONDS.sleep(800);
             s.click(new Location(1140, 155));
@@ -258,6 +259,7 @@ public class BotsRecolte extends Main{
                     System.out.println("Nothing found");
                 }
             }
+            general.checkConnection();
             TimeUnit.MILLISECONDS.sleep(10000);
             s.click(new Location(1030, 630));
             TimeUnit.MILLISECONDS.sleep(800);
@@ -329,7 +331,7 @@ public class BotsRecolte extends Main{
         }
     }
 
-    public void recolteChanvrePosX10Y5(String metier, String classe, int pods) throws InterruptedException, FindFailed, IOException {
+    public void recolteChanvrePosX10Y5(String metier, String classe, int pods, int coffre) throws InterruptedException, FindFailed, IOException {
         Screen s = new Screen();
 
         boolean first = true;
@@ -449,6 +451,7 @@ public class BotsRecolte extends Main{
                     }
                 }
             }
+            general.checkConnection();
             s.click(new Location(1030, 630));
             TimeUnit.MILLISECONDS.sleep(800);
             s.click(new Location(1140, 155));
@@ -457,7 +460,12 @@ public class BotsRecolte extends Main{
                 s.doubleClick(new Location(1100, 250));
                 TimeUnit.MILLISECONDS.sleep(500);
             }
-            general.zaapAstrubToMaisonCoffre1();
+            if(coffre==1) {
+                general.zaapAstrubToMaisonCoffre1();
+            }
+            else if(coffre==3){
+                general.zaapAstrubToMaisonCoffre3();
+            }
             TimeUnit.MILLISECONDS.sleep(2000);
             s.click(new Location(1100, 200));
             TimeUnit.SECONDS.sleep(1);
@@ -619,6 +627,7 @@ public class BotsRecolte extends Main{
                     general.zaapAstrubToChanvrePosX32Y42();
                 }
             }
+            general.checkConnection();
             s.click(new Location(1030, 630));
             TimeUnit.MILLISECONDS.sleep(800);
             s.click(new Location(1140, 155));
@@ -730,6 +739,7 @@ public class BotsRecolte extends Main{
                     }
                 }
             }
+            general.checkConnection();
             s.click(new Location(1030, 630));
             TimeUnit.MILLISECONDS.sleep(800);
             s.click(new Location(1140, 155));

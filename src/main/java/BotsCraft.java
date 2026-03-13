@@ -2024,4 +2024,69 @@ public class BotsCraft extends Main{
             firstCraft = false;
         }
     }
+
+    public void botTempleSadi(int amount, int coffre) throws InterruptedException, FindFailed, IOException {
+        Screen s = new Screen();
+        while(true) {
+            TimeUnit.SECONDS.sleep(3);
+            general.checkConnection();
+            if(coffre == 1){
+                general.zaapAstrubToMaisonCoffre1();
+            }
+            else if (coffre == 3){
+                general.zaapAstrubToMaisonCoffre3();
+            }
+            TimeUnit.SECONDS.sleep(3);
+            s.click(new Location(ressourceCoffreX, ressourceCoffreY));
+            TimeUnit.SECONDS.sleep(2);
+            try {
+                Match region1 = s.find(cuirBouftou);
+                TimeUnit.SECONDS.sleep(1);
+                s.dragDrop(region1, new Location(1100, 400));
+            }
+            catch (FindFailed e){
+                System.out.println("cuir bouf not found");
+            }
+            TimeUnit.SECONDS.sleep(1);
+            general.numberToKey(amount);
+            TimeUnit.SECONDS.sleep(1);
+            s.type(Key.ENTER);
+            TimeUnit.SECONDS.sleep(1);
+            s.type(Key.ESC);
+            TimeUnit.SECONDS.sleep(1);
+            general.zaapAstrubTempleSadi();
+            TimeUnit.SECONDS.sleep(1);
+            for (int i = 0; i < (amount/500); i++) {
+                s.click(pnjTempleSadi);
+                TimeUnit.SECONDS.sleep(1);
+                s.click(echangerPNJ);
+                TimeUnit.SECONDS.sleep(2);
+                s.click(new Location(resourceInventaireX, resourceInventaireY));
+                TimeUnit.SECONDS.sleep(1);
+                Match region2 = s.find(cuirBouftou);
+                s.dragDrop(region2, new Location(900, 450));
+                TimeUnit.SECONDS.sleep(1);
+                general.numberToKey(500);
+                TimeUnit.SECONDS.sleep(1);
+                s.type(Key.ENTER);
+                TimeUnit.SECONDS.sleep(5);
+                s.click(new Location(1200,550));
+                TimeUnit.SECONDS.sleep(2);
+                s.click(pnjTempleSadi);
+                TimeUnit.SECONDS.sleep(1);
+                s.click(vendrePNJ);
+                TimeUnit.SECONDS.sleep(1);
+                s.click(tailladeuseBatonInventaire);
+                TimeUnit.SECONDS.sleep(1);
+                s.click(new Location(900,500));
+                TimeUnit.SECONDS.sleep(1);
+                s.click(max);
+                TimeUnit.SECONDS.sleep(1);
+                s.type(Key.ENTER);
+                TimeUnit.SECONDS.sleep(1);
+                s.type(Key.ESC);
+                TimeUnit.SECONDS.sleep(1);
+            }
+        }
+    }
 }
