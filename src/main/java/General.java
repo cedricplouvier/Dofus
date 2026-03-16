@@ -153,7 +153,7 @@ public class General extends Main {
         TimeUnit.SECONDS.sleep(5);
         s.click(new Location(780, yUp));
         TimeUnit.SECONDS.sleep(5);
-        s.rightClick(new Location(620, 510));
+        s.rightClick(new Location(630, 480));
         TimeUnit.SECONDS.sleep(3);
         insertCode("codeAstrubMaison2");
         TimeUnit.MILLISECONDS.sleep(500);
@@ -490,6 +490,24 @@ public class General extends Main {
         s.click(new Location(830, 410));
         TimeUnit.SECONDS.sleep(6);
         s.rightClick(new Location(920, 280));
+        TimeUnit.SECONDS.sleep(3);
+        if (s.exists(checkAtelierAlchiAstrub) == null){
+            maisonAstrubToAtelierAlchi();
+        }
+    }
+
+    public void zaapAstrubToAtelierAlchi() throws FindFailed, InterruptedException {
+        Screen s = new Screen();
+
+        TimeUnit.SECONDS.sleep(3);
+        s.doubleClick(popoRappel);
+
+        TimeUnit.SECONDS.sleep(3);
+        s.click(new Location(830, yUp));
+        TimeUnit.SECONDS.sleep(5);
+        s.click(new Location(xRight, 340));
+        TimeUnit.SECONDS.sleep(6);
+        s.rightClick(new Location(840, 410));
         TimeUnit.SECONDS.sleep(3);
         if (s.exists(checkAtelierAlchiAstrub) == null){
             maisonAstrubToAtelierAlchi();

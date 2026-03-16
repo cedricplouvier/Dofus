@@ -11,7 +11,7 @@ public class BotsRecolte extends Main{
 
     static General general = new General();
 
-    public void recolteRiz(String classe, int pods) throws FindFailed, InterruptedException, IOException {
+    public void recolteRiz(String classe, int pods, int coffre) throws FindFailed, InterruptedException, IOException {
         Screen s = new Screen();
         Keyboard kb = new DesktopKeyboard();
 
@@ -24,7 +24,7 @@ public class BotsRecolte extends Main{
                 s.rightClick(zaapAstrub);
             } catch (FindFailed e){
                 System.out.println("Zaap Astrub not found");
-                recolteRiz(classe, pods);
+                recolteRiz(classe, pods, coffre);
             }
             TimeUnit.SECONDS.sleep(2);
             kb.type("pqn");
@@ -42,7 +42,7 @@ public class BotsRecolte extends Main{
             s.click(new Location(700, 70));
             TimeUnit.SECONDS.sleep(8);
             if (s.exists(startRizPosX22Y24) == null){
-                recolteRiz(classe, pods);
+                recolteRiz(classe, pods, coffre);
             }
             for (int i = 0; i < Math.round(pods/30); i++) {
                 try {
@@ -115,7 +115,12 @@ public class BotsRecolte extends Main{
                 s.doubleClick(new Location(1100, 250));
                 TimeUnit.MILLISECONDS.sleep(1000);
             }
-            general.zaapAstrubToMaisonCoffre1();
+            if(coffre==1) {
+                general.zaapAstrubToMaisonCoffre1();
+            }
+            else if(coffre==3){
+                general.zaapAstrubToMaisonCoffre3();
+            }
             TimeUnit.MILLISECONDS.sleep(2000);
             s.click(new Location(1100, 200));
             TimeUnit.SECONDS.sleep(1);
@@ -493,7 +498,7 @@ public class BotsRecolte extends Main{
         }
     }
 
-    public void recolteChanvrePosX32Y42(String metier, String classe, int pods) throws InterruptedException, FindFailed, IOException {
+    public void recolteChanvrePosX32Y42(String metier, String classe, int pods, int coffre) throws InterruptedException, FindFailed, IOException {
         Screen s = new Screen();
 
         ArrayList<Point> mapsChanvreBonta = new ArrayList<>();
@@ -636,7 +641,12 @@ public class BotsRecolte extends Main{
                 s.doubleClick(new Location(1100, 250));
                 TimeUnit.MILLISECONDS.sleep(500);
             }
-            general.zaapAstrubToMaisonCoffre1();
+            if(coffre==1) {
+                general.zaapAstrubToMaisonCoffre1();
+            }
+            else if(coffre==3){
+                general.zaapAstrubToMaisonCoffre3();
+            }
             TimeUnit.MILLISECONDS.sleep(2000);
             s.click(new Location(1100, 200));
             TimeUnit.SECONDS.sleep(1);

@@ -1459,7 +1459,7 @@ public class BotsCraft extends Main{
         }
     }
 
-    public void potionVieillesse() throws InterruptedException, FindFailed, IOException {
+    public void potionVieillesse(int coffre) throws InterruptedException, FindFailed, IOException {
         Keyboard kb = new DesktopKeyboard();
         Screen s = new Screen();
 
@@ -1467,7 +1467,12 @@ public class BotsCraft extends Main{
         TimeUnit.SECONDS.sleep(5);
         while(true) {
             TimeUnit.SECONDS.sleep(1);
-            general.zaapAstrubToMaisonCoffre1();
+            if(coffre==1) {
+                general.zaapAstrubToMaisonCoffre1();
+            }
+            else if (coffre==3){
+                general.zaapAstrubToMaisonCoffre3();
+            }
 
             if (!firstCraft) {
                 for (int i = 0; i < 1; i++) {
@@ -1523,7 +1528,12 @@ public class BotsCraft extends Main{
             s.type(Key.ESC);
 
             TimeUnit.SECONDS.sleep(1);
-            general.maisonAstrubToAtelierAlchi();
+            if(coffre==1) {
+                general.maisonAstrubToAtelierAlchi();
+            }
+            else if(coffre==3){
+                general.zaapAstrubToAtelierAlchi();
+            }
             TimeUnit.SECONDS.sleep(1);
 
 

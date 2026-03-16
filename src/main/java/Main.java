@@ -225,14 +225,14 @@ public class Main {
         //botsCraft.potionBonta();
         //botsCraft.potionRappel();
         //botsCraft.potionBrak();
-        //botsCraft.potionVieillesse();
-        //botsCraft.graineChanvre();
-        botsCraft.botTempleSadi(3000, 3);
+        //botsCraft.potionVieillesse(3);
+        //botsCraft.graineChanvre();0
+        //botsCraft.botTempleSadi(3000, 1);
 
         BotsRecolte botsRecolte = new BotsRecolte();
-        //botsRecolte.recolteRiz("enu",6000);
-        botsRecolte.recolteChanvrePosX10Y5("paysan","cra", 3000, 3);
-        //botsRecolte.recolteChanvrePosX32Y42("alchi","cra", 4000);
+        //botsRecolte.recolteRiz("enu",6000, 3);
+        //botsRecolte.recolteChanvrePosX10Y5("paysan","cra", 3000, 3);
+        //botsRecolte.recolteChanvrePosX32Y42("paysan","cra", 3000, 3);
         //botsRecolte.recolteBlePosX11Y6("cra", 4000);
         //botsRecolte.bucherForetAstrub("cra", 2000, new ArrayList<String>(Arrays.asList("noyer","chene","chataignier")));
 
