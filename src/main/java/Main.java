@@ -231,10 +231,10 @@ public class Main {
 
         BotsRecolte botsRecolte = new BotsRecolte();
         //botsRecolte.recolteRiz("enu",6000, 3);
-        //botsRecolte.recolteChanvrePosX10Y5("paysan","cra", 3000, 3);
+        //botsRecolte.recolteChanvrePosX10Y5("alchi","cra", 3000, 3);
         //botsRecolte.recolteChanvrePosX32Y42("paysan","cra", 3000, 3);
         //botsRecolte.recolteBlePosX11Y6("cra", 4000);
-        //botsRecolte.bucherForetAstrub("cra", 2000, new ArrayList<String>(Arrays.asList("noyer","chene","chataignier")));
+        botsRecolte.bucherForetAstrub("cra", 1000, new ArrayList<String>(Arrays.asList("noyer","chataignier","frene")));
 
         BotsFourbe botsFourbe = new BotsFourbe();
         //botsFourbe.cheminFer();
@@ -243,14 +243,15 @@ public class Main {
         //botsJugement.donjonMorose();
 
         Abraglands abraglands = new Abraglands();
-        //abraglands.abraglandsSculpteurIop(275);
+        //abraglands.abraglandsSculpteurIop(200);
         //abraglands.abraglandsIopBoucherAmakna(275);
         //abraglands.abraglandsIopAlchiAmakna();
         //abraglands.abraglandsIopScaraNord(200);
-        //abraglands.abraglandsIopScaraNordGauche(275);
+        //abraglands.abraglandsIopScaraNordGauche(200);
 
         BotsElevage botsElevage = new BotsElevage();
-        //botsElevage.nourirCorbac(new ArrayList<Pattern>(Arrays.asList(ghoulinator)));
+        //botsElevage.nourirCorbac(new ArrayList<Pattern>(Arrays.asList(pepepe)), 36);
+        //botsElevage.nourirChacha(new ArrayList<Pattern>(Arrays.asList(pevpev)), 200);
         //botsElevage.nourirChacha(new ArrayList<Pattern>(Arrays.asList(ghoulinho, ghoulash, sumatra)));
         //botsElevage.nourirChacha(new ArrayList<Pattern>(Arrays.asList(pepepepepe, pepepe, pevpev)));
         //botsElevage.nourirChacha(new ArrayList<Pattern>(Arrays.asList(nekfemeuj, poule, part)));

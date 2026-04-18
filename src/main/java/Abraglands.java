@@ -52,43 +52,50 @@ public class Abraglands extends Main {
                 TimeUnit.SECONDS.sleep(1);
                 s.rightClick(new Location(670, 410));
                 TimeUnit.SECONDS.sleep(1);
-                s.click(new Location(735, 410));
-                TimeUnit.MILLISECONDS.sleep(700);
-                s.click(new Location(900, 350));
+                if(s.exists(pretCombat) != null) {
+                    s.click(new Location(735, 410));
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    s.click(new Location(900, 350));
 
-                TimeUnit.MILLISECONDS.sleep(700);
-                s.type(Key.F1);
-
-                TimeUnit.SECONDS.sleep(2);
-                s.type(Key.F7);
-                s.click(abraFight);
-                TimeUnit.MILLISECONDS.sleep(500);
-                s.type(Key.F7);
-                s.click(abraFight);
-                TimeUnit.MILLISECONDS.sleep(500);
-                s.type(Key.F7);
-                s.click(abraFight);
-                TimeUnit.MILLISECONDS.sleep(500);
-                s.click(new Location(850, 360));
-                TimeUnit.MILLISECONDS.sleep(1500);
-                s.type(Key.F7);
-                s.click(abraFight);
-                TimeUnit.MILLISECONDS.sleep(500);
-                s.type(Key.F7);
-                s.click(abraFight);
-                TimeUnit.MILLISECONDS.sleep(500);
-                s.type(Key.F7);
-                s.click(abraFight);
-                TimeUnit.MILLISECONDS.sleep(500);
-                while (s.exists(abraFight) != null) {
-                    s.type(Key.F6);
-                    s.click(abraFight);
-                    TimeUnit.MILLISECONDS.sleep(500);
-                    s.type(Key.F6);
-                    s.click(abraFight);
-                    TimeUnit.MILLISECONDS.sleep(500);
+                    TimeUnit.MILLISECONDS.sleep(700);
                     s.type(Key.F1);
-                    TimeUnit.SECONDS.sleep(10);
+
+                    TimeUnit.SECONDS.sleep(2);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(500);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(500);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(500);
+                    s.click(new Location(850, 360));
+                    TimeUnit.MILLISECONDS.sleep(1500);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(500);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(500);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(500);
+                    while (s.exists(abraFight) != null) {
+                        s.type(Key.F6);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(500);
+                        s.type(Key.F6);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(500);
+                        s.type(Key.F1);
+                        TimeUnit.SECONDS.sleep(10);
+                    }
+                }
+                else{
+                    s.click(new Location(600, 410));
+                    TimeUnit.SECONDS.sleep(2);
+                    s.click(new Location(635, 435));
                 }
             } catch (FindFailed e) {
                 e.printStackTrace();
@@ -467,45 +474,51 @@ public class Abraglands extends Main {
                 TimeUnit.MILLISECONDS.sleep(500);
                 s.rightClick(new Location(610, 205));
                 TimeUnit.SECONDS.sleep(1);
-                TimeUnit.MILLISECONDS.sleep(1000);
-                s.click(new Location(1080, 530));
-                TimeUnit.MILLISECONDS.sleep(1000);
-                s.type(Key.F1);
-                TimeUnit.MILLISECONDS.sleep(2000);
-                s.click(new Location(950, 460));
-                TimeUnit.MILLISECONDS.sleep(1500);
-                s.type(Key.F7);
-                s.click(abraFight);
-                TimeUnit.MILLISECONDS.sleep(700);
-                s.type(Key.F7);
-                s.click(abraFight);
-                TimeUnit.MILLISECONDS.sleep(700);
-                s.type(Key.F7);
-                s.click(abraFight);
-                TimeUnit.MILLISECONDS.sleep(700);
-                s.type(Key.F7);
-                s.click(abraFight);
-                TimeUnit.MILLISECONDS.sleep(700);
-                s.click(new Location(890, 440));
-                TimeUnit.MILLISECONDS.sleep(1500);
-                s.type(Key.F7);
-                s.click(abraFight);
-                TimeUnit.MILLISECONDS.sleep(700);
-                s.type(Key.F7);
-                s.click(abraFight);
-                TimeUnit.MILLISECONDS.sleep(700);
-                s.type(Key.F7);
-                s.click(abraFight);
-                TimeUnit.MILLISECONDS.sleep(700);
-                while (s.exists(abraFight) != null) {
-                    s.type(Key.F6);
-                    s.click(abraFight);
-                    TimeUnit.MILLISECONDS.sleep(1000);
-                    s.type(Key.F6);
-                    s.click(abraFight);
+                if(s.exists(pretCombat) != null) {
+                    s.click(new Location(1080, 530));
                     TimeUnit.MILLISECONDS.sleep(1000);
                     s.type(Key.F1);
-                    TimeUnit.SECONDS.sleep(10);
+                    TimeUnit.MILLISECONDS.sleep(2000);
+                    s.click(new Location(950, 460));
+                    TimeUnit.MILLISECONDS.sleep(1500);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    s.click(new Location(890, 440));
+                    TimeUnit.MILLISECONDS.sleep(1500);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    while (s.exists(abraFight) != null) {
+                        s.type(Key.F6);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(1000);
+                        s.type(Key.F6);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(1000);
+                        s.type(Key.F1);
+                        TimeUnit.SECONDS.sleep(10);
+                    }
+                }
+                else{
+                    s.click(new Location(530, 180));
+                    TimeUnit.SECONDS.sleep(3);
+                    s.click(new Location(560, 200));
                 }
             } catch (FindFailed e) {
                 e.printStackTrace();

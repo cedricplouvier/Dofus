@@ -17,7 +17,7 @@ public class BotsElevage extends Main {
         keepRunning = false;
     }
 
-    public void nourirCorbac(ArrayList<Pattern> characters) throws InterruptedException, FindFailed, IOException {
+    public void nourirCorbac(ArrayList<Pattern> characters, int amount) throws InterruptedException, FindFailed, IOException {
 
         Screen s = new Screen();
 
@@ -39,7 +39,7 @@ public class BotsElevage extends Main {
             Match regionOsChafer = s.find(osChafer);
             s.dragDrop(regionOsChafer, new Location(1100, 400));
             TimeUnit.SECONDS.sleep(1);
-            general.numberToKey(36);
+            general.numberToKey(amount);
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
@@ -47,11 +47,13 @@ public class BotsElevage extends Main {
             s.click(new Location(1030, 630));
             TimeUnit.MILLISECONDS.sleep(1000);
 
-            for (int j = 0; j < 36; j++) {
+            for (int j = 0; j < amount; j++) {
                 s.click(epees);
                 TimeUnit.MILLISECONDS.sleep(500);
+                s.dragDrop(new Location(1240,270), new Location(1240, 660));
+                TimeUnit.MILLISECONDS.sleep(500);
                 s.doubleClick(new Location(1200, 570));
-                TimeUnit.MILLISECONDS.sleep(700);
+                TimeUnit.MILLISECONDS.sleep(500);
                 s.click(ressources);
                 TimeUnit.MILLISECONDS.sleep(700);
                 s.dragDrop(osChafer, slotFami);
@@ -71,7 +73,7 @@ public class BotsElevage extends Main {
         }
     }
 
-    public void nourirChacha(ArrayList<Pattern> characters) throws InterruptedException, FindFailed, IOException {
+    public void nourirChacha(ArrayList<Pattern> characters, int amount) throws InterruptedException, FindFailed, IOException {
 
         Screen s = new Screen();
 
@@ -86,26 +88,29 @@ public class BotsElevage extends Main {
             s.doubleClick(serveurBoune);
             TimeUnit.MILLISECONDS.sleep(5000);
             s.doubleClick(character);
-            TimeUnit.MILLISECONDS.sleep(5000);
+            TimeUnit.MILLISECONDS.sleep(10000);
             general.zaapAstrubToMaisonCoffre1();
             s.click(new Location(420,200));
             TimeUnit.MILLISECONDS.sleep(700);
             Match regionGeleesBleu = s.find(geleesBleu);
             s.dragDrop(regionGeleesBleu, new Location(1100, 400));
             TimeUnit.SECONDS.sleep(1);
-            general.numberToKey(36);
+            general.numberToKey(amount);
             TimeUnit.SECONDS.sleep(1);
             s.type(Key.ENTER);
             TimeUnit.SECONDS.sleep(1);
             s.click(close);
+            TimeUnit.MILLISECONDS.sleep(1000);
             s.click(new Location(1030, 630));
             TimeUnit.MILLISECONDS.sleep(1000);
 
-            for (int j = 0; j < 36; j++) {
+            for (int j = 0; j < amount; j++) {
                 s.click(epees);
                 TimeUnit.MILLISECONDS.sleep(500);
+                s.dragDrop(new Location(1240,270), new Location(1240, 660));
+                TimeUnit.MILLISECONDS.sleep(500);
                 s.doubleClick(new Location(1200, 570));
-                TimeUnit.MILLISECONDS.sleep(700);
+                TimeUnit.MILLISECONDS.sleep(500);
                 s.click(ressources);
                 TimeUnit.MILLISECONDS.sleep(700);
                 s.dragDrop(geleesBleu, slotFami);
