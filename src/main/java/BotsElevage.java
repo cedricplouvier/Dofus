@@ -3,6 +3,7 @@ import org.sikuli.api.robot.desktop.DesktopKeyboard;
 import org.sikuli.script.*;
 
 import java.io.IOException;
+import java.nio.file.FileSystemNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
@@ -83,6 +84,7 @@ public class BotsElevage extends Main {
 
         TimeUnit.SECONDS.sleep(5);
 
+        int counter = 0;
         for(Pattern character: characters) {
             TimeUnit.MILLISECONDS.sleep(2000);
             s.doubleClick(serveurBoune);
@@ -117,6 +119,8 @@ public class BotsElevage extends Main {
                 TimeUnit.MILLISECONDS.sleep(700);
                 s.doubleClick(slotFami);
                 TimeUnit.MILLISECONDS.sleep(700);
+                counter += 1;
+                System.out.println("Counter: " + counter);
             }
             s.type(Key.ESC);
             TimeUnit.MILLISECONDS.sleep(2000);

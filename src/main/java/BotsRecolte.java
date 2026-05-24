@@ -280,8 +280,12 @@ public class BotsRecolte extends Main{
             TimeUnit.SECONDS.sleep(1);
             s.click(new Location(370, 200));
             TimeUnit.SECONDS.sleep(1);
-            Match regionNoyer = s.find(boisNoyer);
-            s.dragDrop(regionNoyer, new Location(500, 470));
+            try {
+                Match regionNoyer = s.find(boisNoyer);
+                s.dragDrop(regionNoyer, new Location(500, 470));
+            } catch(FindFailed e){
+                System.out.println("boisNoyer not found");
+            }
             try {
                 s.click(max);
             } catch (FindFailed e) {

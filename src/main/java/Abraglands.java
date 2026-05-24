@@ -10,7 +10,7 @@ public class Abraglands extends Main {
 
     static General general = new General();
 
-    public void abraglandsSculpteurIop(int amount) throws InterruptedException, FindFailed, IOException {
+    public void abraglandsSculpteurIop(int amount, boolean repeat) throws InterruptedException, FindFailed, IOException {
 
         TimeUnit.SECONDS.sleep(3);
         Screen s = new Screen();
@@ -93,6 +93,10 @@ public class Abraglands extends Main {
                     }
                 }
                 else{
+                    if(s.exists(interfacePerco) != null){
+                        s.type(Key.ESC);
+                        TimeUnit.SECONDS.sleep(1);
+                    }
                     s.click(new Location(600, 410));
                     TimeUnit.SECONDS.sleep(2);
                     s.click(new Location(635, 435));
@@ -107,10 +111,12 @@ public class Abraglands extends Main {
         TimeUnit.SECONDS.sleep(1);
         general.zaapAstrubToMaisonCoffre1();
         TimeUnit.SECONDS.sleep(3);
-        abraglandsSculpteurIop(amount);
+        if (repeat) {
+            abraglandsSculpteurIop(amount, repeat);
+        }
     }
 
-    public  void abraglandsIopBoucherAmakna(int amount) throws InterruptedException, FindFailed, IOException {
+    public  void abraglandsIopBoucherAmakna(int amount, boolean repeat) throws InterruptedException, FindFailed, IOException {
 
         TimeUnit.SECONDS.sleep(3);
         Screen s = new Screen();
@@ -146,7 +152,7 @@ public class Abraglands extends Main {
         s.click(new Location(950, 220));
         TimeUnit.SECONDS.sleep(6);
         s.click(new Location(600, 410));
-        TimeUnit.SECONDS.sleep(6);
+        TimeUnit.SECONDS.sleep(2);
         s.click(new Location(635, 435));
 
         for (int i = 0; i < amount; i++) {
@@ -156,59 +162,70 @@ public class Abraglands extends Main {
                 TimeUnit.MILLISECONDS.sleep(500);
                 s.rightClick(new Location(670, 420));
                 TimeUnit.SECONDS.sleep(1);
-                s.click(new Location(925, 340));
-                TimeUnit.SECONDS.sleep(1);
-                s.click(new Location(840, 380));
-                TimeUnit.MILLISECONDS.sleep(700);
-                s.type(Key.F1);
-
-                TimeUnit.SECONDS.sleep(2);
-                s.type(Key.F7);
-                s.click(abraFight);
-                TimeUnit.MILLISECONDS.sleep(700);
-                s.type(Key.F7);
-                s.click(abraFight);
-                TimeUnit.MILLISECONDS.sleep(700);
-                s.type(Key.F7);
-                s.click(abraFight);
-
-                TimeUnit.MILLISECONDS.sleep(1000);
-                s.click(new Location(740, 410));
-
-                TimeUnit.MILLISECONDS.sleep(1500);
-                s.type(Key.F7);
-                s.click(abraFight);
-                TimeUnit.MILLISECONDS.sleep(700);
-                s.type(Key.F7);
-                s.click(abraFight);
-                TimeUnit.MILLISECONDS.sleep(700);
-                s.type(Key.F7);
-                s.click(abraFight);
-
-                TimeUnit.MILLISECONDS.sleep(1000);
-                s.click(new Location(850, 370));
-
-                TimeUnit.MILLISECONDS.sleep(1500);
-                s.type(Key.F7);
-                s.click(abraFight);
-                TimeUnit.MILLISECONDS.sleep(700);
-                s.type(Key.F7);
-                s.click(abraFight);
-                TimeUnit.MILLISECONDS.sleep(700);
-                s.type(Key.F7);
-                s.click(abraFight);
-
-                TimeUnit.SECONDS.sleep(1);
-                while (s.exists(abraFight) != null) {
-
-                    s.type(Key.F6);
-                    s.click(abraFight);
-                    TimeUnit.MILLISECONDS.sleep(1000);
-                    s.type(Key.F6);
-                    s.click(abraFight);
-                    TimeUnit.MILLISECONDS.sleep(1000);
+                if(s.exists(pretCombat) != null) {
+                    s.click(new Location(925, 340));
+                    TimeUnit.SECONDS.sleep(1);
+                    s.click(new Location(840, 380));
+                    TimeUnit.MILLISECONDS.sleep(700);
                     s.type(Key.F1);
-                    TimeUnit.SECONDS.sleep(10);
+
+                    TimeUnit.SECONDS.sleep(2);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+
+                    TimeUnit.MILLISECONDS.sleep(1000);
+                    s.click(new Location(740, 410));
+
+                    TimeUnit.MILLISECONDS.sleep(1500);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+
+                    TimeUnit.MILLISECONDS.sleep(1000);
+                    s.click(new Location(850, 370));
+
+                    TimeUnit.MILLISECONDS.sleep(1500);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+
+                    TimeUnit.SECONDS.sleep(1);
+                    while (s.exists(abraFight) != null) {
+
+                        s.type(Key.F6);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(1000);
+                        s.type(Key.F6);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(1000);
+                        s.type(Key.F1);
+                        TimeUnit.SECONDS.sleep(10);
+                    }
+                }
+                else{
+                    if(s.exists(interfacePerco) != null){
+                        s.type(Key.ESC);
+                        TimeUnit.SECONDS.sleep(1);
+                    }
+                    s.click(new Location(600, 410));
+                    TimeUnit.SECONDS.sleep(2);
+                    s.click(new Location(635, 435));
                 }
             } catch (FindFailed e) {
                 e.printStackTrace();
@@ -222,7 +239,9 @@ public class Abraglands extends Main {
         TimeUnit.SECONDS.sleep(3);
         general.depodsAbraglands(amount);
         TimeUnit.SECONDS.sleep(1);
-        abraglandsIopBoucherAmakna(amount);
+        if(repeat) {
+            abraglandsIopBoucherAmakna(amount, repeat);
+        }
     }
 
     public  void abraglandsIopAlchiAmakna(int amount) throws InterruptedException, FindFailed, IOException {
@@ -357,7 +376,7 @@ public class Abraglands extends Main {
         abraglandsIopAlchiAmakna(amount);
     }
 
-    public  void abraglandsIopScaraNord(int amount) throws InterruptedException, FindFailed, IOException {
+    public  void abraglandsIopScaraNord(int amount, boolean repeat) throws InterruptedException, FindFailed, IOException {
 
         TimeUnit.SECONDS.sleep(3);
         Screen s = new Screen();
@@ -390,41 +409,52 @@ public class Abraglands extends Main {
                 TimeUnit.MILLISECONDS.sleep(500);
                 s.rightClick(new Location(610, 205));
                 TimeUnit.SECONDS.sleep(1);
-                TimeUnit.MILLISECONDS.sleep(700);
-                s.click(new Location(580, 270));
-                s.type(Key.F1);
-                TimeUnit.SECONDS.sleep(2);
-                s.click(new Location(670, 320));
-                TimeUnit.MILLISECONDS.sleep(1500);
-                s.type(Key.F7);
-                s.click(abraFight);
-                TimeUnit.MILLISECONDS.sleep(700);
-                s.type(Key.F7);
-                s.click(abraFight);
-                TimeUnit.MILLISECONDS.sleep(700);
-                s.type(Key.F7);
-                s.click(abraFight);
-                TimeUnit.MILLISECONDS.sleep(700);
-                s.click(new Location(740, 360));
-                TimeUnit.MILLISECONDS.sleep(1500);
-                s.type(Key.F7);
-                s.click(abraFight);
-                TimeUnit.MILLISECONDS.sleep(700);
-                s.type(Key.F7);
-                s.click(abraFight);
-                TimeUnit.MILLISECONDS.sleep(700);
-                s.type(Key.F7);
-                s.click(abraFight);
-                TimeUnit.SECONDS.sleep(1);
-                while (s.exists(abraFight) != null) {
-                    s.type(Key.F6);
-                    s.click(abraFight);
-                    TimeUnit.MILLISECONDS.sleep(1000);
-                    s.type(Key.F6);
-                    s.click(abraFight);
-                    TimeUnit.MILLISECONDS.sleep(1000);
+                if(s.exists(pretCombat) != null) {
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    s.click(new Location(580, 270));
                     s.type(Key.F1);
-                    TimeUnit.SECONDS.sleep(10);
+                    TimeUnit.SECONDS.sleep(2);
+                    s.click(new Location(670, 320));
+                    TimeUnit.MILLISECONDS.sleep(1500);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    s.click(new Location(740, 360));
+                    TimeUnit.MILLISECONDS.sleep(1500);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.SECONDS.sleep(1);
+                    while (s.exists(abraFight) != null) {
+                        s.type(Key.F6);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(1000);
+                        s.type(Key.F6);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(1000);
+                        s.type(Key.F1);
+                        TimeUnit.SECONDS.sleep(10);
+                    }
+                }
+                else{
+                    if(s.exists(interfacePerco) != null){
+                        s.type(Key.ESC);
+                        TimeUnit.SECONDS.sleep(1);
+                    }
+                    s.click(new Location(530, 180));
+                    TimeUnit.SECONDS.sleep(7);
+                    s.click(new Location(560, 200));
                 }
             } catch (FindFailed e) {
                 e.printStackTrace();
@@ -437,10 +467,12 @@ public class Abraglands extends Main {
         TimeUnit.SECONDS.sleep(3);
         general.depodsAbraglands(amount);
         TimeUnit.SECONDS.sleep(1);
-        abraglandsIopScaraNord(amount);
+        if(repeat) {
+            abraglandsIopScaraNord(amount, repeat);
+        }
     }
 
-    public  void abraglandsIopScaraNordGauche(int amount) throws InterruptedException, FindFailed, IOException {
+    public  void abraglandsIopScaraNordGauche(int amount, boolean repeat) throws InterruptedException, FindFailed, IOException {
         TimeUnit.SECONDS.sleep(3);
         Screen s = new Screen();
 
@@ -469,18 +501,17 @@ public class Abraglands extends Main {
 
         for (int i = 0; i < amount; i++) {
             try {
-                TimeUnit.SECONDS.sleep(1);
                 s.type(Key.F2);
                 TimeUnit.MILLISECONDS.sleep(500);
                 s.rightClick(new Location(610, 205));
                 TimeUnit.SECONDS.sleep(1);
                 if(s.exists(pretCombat) != null) {
-                    s.click(new Location(1080, 530));
+                    s.click(new Location(1000, 360));
                     TimeUnit.MILLISECONDS.sleep(1000);
                     s.type(Key.F1);
                     TimeUnit.MILLISECONDS.sleep(2000);
-                    s.click(new Location(950, 460));
-                    TimeUnit.MILLISECONDS.sleep(1500);
+                    //s.click(new Location(970, 370));
+                    //TimeUnit.MILLISECONDS.sleep(1500);
                     s.type(Key.F7);
                     s.click(abraFight);
                     TimeUnit.MILLISECONDS.sleep(700);
@@ -490,32 +521,35 @@ public class Abraglands extends Main {
                     s.type(Key.F7);
                     s.click(abraFight);
                     TimeUnit.MILLISECONDS.sleep(700);
-                    s.type(Key.F7);
-                    s.click(abraFight);
-                    TimeUnit.MILLISECONDS.sleep(700);
-                    s.click(new Location(890, 440));
-                    TimeUnit.MILLISECONDS.sleep(1500);
-                    s.type(Key.F7);
-                    s.click(abraFight);
-                    TimeUnit.MILLISECONDS.sleep(700);
-                    s.type(Key.F7);
-                    s.click(abraFight);
-                    TimeUnit.MILLISECONDS.sleep(700);
-                    s.type(Key.F7);
-                    s.click(abraFight);
-                    TimeUnit.MILLISECONDS.sleep(700);
-                    while (s.exists(abraFight) != null) {
-                        s.type(Key.F6);
+                    if(s.exists(abraFight) != null) {
+                        s.click(new Location(850, 425));
+                        TimeUnit.MILLISECONDS.sleep(1500);
+                        s.type(Key.F7);
                         s.click(abraFight);
-                        TimeUnit.MILLISECONDS.sleep(1000);
-                        s.type(Key.F6);
+                        TimeUnit.MILLISECONDS.sleep(700);
+                        s.type(Key.F7);
                         s.click(abraFight);
-                        TimeUnit.MILLISECONDS.sleep(1000);
-                        s.type(Key.F1);
-                        TimeUnit.SECONDS.sleep(10);
+                        TimeUnit.MILLISECONDS.sleep(700);
+                        s.type(Key.F7);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(700);
+                        while (s.exists(abraFight) != null) {
+                            s.type(Key.F6);
+                            s.click(abraFight);
+                            TimeUnit.MILLISECONDS.sleep(1000);
+                            s.type(Key.F6);
+                            s.click(abraFight);
+                            TimeUnit.MILLISECONDS.sleep(1000);
+                            s.type(Key.F1);
+                            TimeUnit.SECONDS.sleep(10);
+                        }
                     }
                 }
                 else{
+                    if(s.exists(interfacePerco) != null){
+                        s.type(Key.ESC);
+                        TimeUnit.SECONDS.sleep(1);
+                    }
                     s.click(new Location(530, 180));
                     TimeUnit.SECONDS.sleep(3);
                     s.click(new Location(560, 200));
@@ -527,6 +561,655 @@ public class Abraglands extends Main {
         TimeUnit.SECONDS.sleep(2);
         s.type(Key.ESC);
         TimeUnit.SECONDS.sleep(1);
-        abraglandsIopScaraNordGauche(amount);
+        if(repeat) {
+            abraglandsIopScaraNordGauche(amount, repeat);
+        }
+    }
+
+    public  void abraglandsIopScaraAtelierPaysan1Etage(int amount, boolean repeat) throws InterruptedException, FindFailed, IOException {
+        TimeUnit.SECONDS.sleep(3);
+        Screen s = new Screen();
+
+        TimeUnit.SECONDS.sleep(3);
+        general.zaapAstrubToMaisonCoffre1();
+        TimeUnit.SECONDS.sleep(3);
+        general.depodsAbraglands(amount);
+        TimeUnit.SECONDS.sleep(3);
+        s.doubleClick(popoRappel);
+        TimeUnit.SECONDS.sleep(3);
+        s.rightClick(zaapAstrub);
+        TimeUnit.SECONDS.sleep(1);
+        s.doubleClick(selectZaapScara);
+
+        TimeUnit.SECONDS.sleep(2);
+        s.click(new Location(xRight, 310));
+        TimeUnit.SECONDS.sleep(5);
+        s.click(new Location(xRight, 510));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(xRight, 440));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(770, yDown));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(1000, 530));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(1001, 290));
+        TimeUnit.SECONDS.sleep(6);
+
+        s.click(new Location(860, 350));
+        TimeUnit.SECONDS.sleep(2);
+
+        for (int i = 0; i < amount; i++) {
+            try {
+                s.type(Key.F2);
+                TimeUnit.MILLISECONDS.sleep(500);
+                s.rightClick(new Location(900, 330));
+                TimeUnit.MILLISECONDS.sleep(500);
+                if(s.exists(pretCombat) != null) {
+                    s.click(new Location(810, 420));
+                    TimeUnit.MILLISECONDS.sleep(200);
+                    s.click(new Location(870, 350));
+                    TimeUnit.MILLISECONDS.sleep(1000);
+                    s.type(Key.F1);
+                    TimeUnit.MILLISECONDS.sleep(1500);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    if(s.exists(abraFight) != null) {
+                        TimeUnit.MILLISECONDS.sleep(200);
+                        s.click(new Location(830, 300));
+                        TimeUnit.MILLISECONDS.sleep(200);
+                        s.click(new Location(700, 475));
+                        TimeUnit.MILLISECONDS.sleep(1500);
+                        s.type(Key.F7);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(700);
+                        s.type(Key.F7);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(700);
+                        s.type(Key.F7);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(1000);
+                        while (s.exists(abraFight) != null) {
+                            s.type(Key.F6);
+                            s.click(abraFight);
+                            TimeUnit.MILLISECONDS.sleep(500);
+                            s.type(Key.F6);
+                            s.click(abraFight);
+                            TimeUnit.MILLISECONDS.sleep(500);
+                            s.type(Key.F1);
+                            TimeUnit.SECONDS.sleep(10);
+                        }
+                    }
+                }
+                else{
+                    if(s.exists(interfacePerco) != null){
+                        s.type(Key.ESC);
+                        TimeUnit.SECONDS.sleep(1);
+                    }
+                    s.click(new Location(820, 340));
+                    TimeUnit.SECONDS.sleep(3);
+                    s.click(new Location(860, 350));
+                    TimeUnit.SECONDS.sleep(2);
+                }
+            } catch (FindFailed e) {
+                e.printStackTrace();
+            }
+        }
+        TimeUnit.SECONDS.sleep(2);
+        s.type(Key.ESC);
+        TimeUnit.SECONDS.sleep(1);
+        if(repeat) {
+            abraglandsIopScaraAtelierPaysan1Etage(amount, repeat);
+        }
+    }
+
+    public  void abraglandsIopScaraAtelierPaysan1(int amount, boolean repeat) throws InterruptedException, FindFailed, IOException {
+        TimeUnit.SECONDS.sleep(3);
+        Screen s = new Screen();
+
+        TimeUnit.SECONDS.sleep(3);
+        general.zaapAstrubToMaisonCoffre1();
+        TimeUnit.SECONDS.sleep(3);
+        general.depodsAbraglands(amount);
+        TimeUnit.SECONDS.sleep(3);
+        s.doubleClick(popoRappel);
+        TimeUnit.SECONDS.sleep(3);
+        s.rightClick(zaapAstrub);
+        TimeUnit.SECONDS.sleep(1);
+        s.doubleClick(selectZaapScara);
+
+        TimeUnit.SECONDS.sleep(2);
+        s.click(new Location(xRight, 310));
+        TimeUnit.SECONDS.sleep(5);
+        s.click(new Location(xRight, 510));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(xRight, 440));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(770, yDown));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(1000, 530));
+        TimeUnit.SECONDS.sleep(6);
+
+        s.click(new Location(730, 450));
+        TimeUnit.SECONDS.sleep(2);
+
+        for (int i = 0; i < amount; i++) {
+            try {
+                s.type(Key.F2);
+                TimeUnit.MILLISECONDS.sleep(500);
+                s.rightClick(new Location(770, 450));
+                TimeUnit.MILLISECONDS.sleep(500);
+                if(s.exists(pretCombat) != null) {
+                    s.click(new Location(870, 390));
+                    TimeUnit.MILLISECONDS.sleep(200);
+                    s.click(new Location(770, 370));
+                    TimeUnit.MILLISECONDS.sleep(1000);
+                    s.type(Key.F1);
+                    TimeUnit.MILLISECONDS.sleep(1500);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    if(s.exists(abraFight) != null) {
+                        TimeUnit.MILLISECONDS.sleep(200);
+                        s.click(new Location(830, 300));
+                        TimeUnit.MILLISECONDS.sleep(200);
+                        s.click(new Location(700, 475));
+                        TimeUnit.MILLISECONDS.sleep(1500);
+                        s.type(Key.F7);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(700);
+                        s.type(Key.F7);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(700);
+                        s.type(Key.F7);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(1000);
+                        while (s.exists(abraFight) != null) {
+                            s.type(Key.F6);
+                            s.click(abraFight);
+                            TimeUnit.MILLISECONDS.sleep(500);
+                            s.type(Key.F6);
+                            s.click(abraFight);
+                            TimeUnit.MILLISECONDS.sleep(500);
+                            s.type(Key.F1);
+                            TimeUnit.SECONDS.sleep(10);
+                        }
+                    }
+                }
+                else{
+                    if(s.exists(interfacePerco) != null){
+                        s.type(Key.ESC);
+                        TimeUnit.SECONDS.sleep(1);
+                    }
+                    s.click(new Location(700, 450));
+                    TimeUnit.SECONDS.sleep(3);
+                    s.click(new Location(730, 450));
+                    TimeUnit.SECONDS.sleep(2);
+                }
+            } catch (FindFailed e) {
+                e.printStackTrace();
+            }
+        }
+        TimeUnit.SECONDS.sleep(2);
+        s.type(Key.ESC);
+        TimeUnit.SECONDS.sleep(1);
+        if(repeat) {
+            abraglandsIopScaraAtelierPaysan1(amount, repeat);
+        }
+    }
+
+    public  void abraglandsIopScaraAtelierBijoutier(int amount, boolean repeat) throws InterruptedException, FindFailed, IOException {
+        TimeUnit.SECONDS.sleep(3);
+        Screen s = new Screen();
+
+        TimeUnit.SECONDS.sleep(3);
+        general.zaapAstrubToMaisonCoffre1();
+        TimeUnit.SECONDS.sleep(3);
+        general.depodsAbraglands(amount);
+        TimeUnit.SECONDS.sleep(3);
+        s.doubleClick(popoRappel);
+        TimeUnit.SECONDS.sleep(3);
+        s.rightClick(zaapAstrub);
+        TimeUnit.SECONDS.sleep(1);
+        s.doubleClick(selectZaapScara);
+
+        TimeUnit.SECONDS.sleep(2);
+        s.click(new Location(xRight, 310));
+        TimeUnit.SECONDS.sleep(5);
+        s.click(new Location(xRight, 510));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(xRight, 440));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(770, yDown));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(900, yDown));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(960, yDown));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(780, yDown));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(760, yDown));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(970, 400));
+        TimeUnit.SECONDS.sleep(6);
+
+        s.click(new Location(730, 450));
+        TimeUnit.SECONDS.sleep(2);
+
+        for (int i = 0; i < amount; i++) {
+            try {
+                s.type(Key.F2);
+                TimeUnit.MILLISECONDS.sleep(500);
+                s.rightClick(new Location(770, 450));
+                TimeUnit.MILLISECONDS.sleep(500);
+                if(s.exists(pretCombat) != null) {
+                    s.click(new Location(800, 390));
+                    TimeUnit.MILLISECONDS.sleep(200);
+                    s.click(new Location(640, 410));
+                    TimeUnit.MILLISECONDS.sleep(1000);
+                    s.type(Key.F1);
+                    TimeUnit.MILLISECONDS.sleep(1500);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    if(s.exists(abraFight) != null) {
+                        TimeUnit.MILLISECONDS.sleep(200);
+                        s.click(new Location(740, 420));
+                        TimeUnit.MILLISECONDS.sleep(1500);
+                        s.type(Key.F7);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(700);
+                        s.type(Key.F7);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(700);
+                        s.type(Key.F7);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(1000);
+                        while (s.exists(abraFight) != null) {
+                            s.type(Key.F6);
+                            s.click(abraFight);
+                            TimeUnit.MILLISECONDS.sleep(500);
+                            s.type(Key.F6);
+                            s.click(abraFight);
+                            TimeUnit.MILLISECONDS.sleep(500);
+                            s.type(Key.F1);
+                            TimeUnit.SECONDS.sleep(10);
+                        }
+                    }
+                }
+                else{
+                    if(s.exists(interfacePerco) != null){
+                        s.type(Key.ESC);
+                        TimeUnit.SECONDS.sleep(1);
+                    }
+                    s.click(new Location(700, 450));
+                    TimeUnit.SECONDS.sleep(3);
+                    s.click(new Location(730, 450));
+                    TimeUnit.SECONDS.sleep(2);
+                }
+            } catch (FindFailed e) {
+                e.printStackTrace();
+            }
+        }
+        TimeUnit.SECONDS.sleep(2);
+        s.type(Key.ESC);
+        TimeUnit.SECONDS.sleep(1);
+        if(repeat) {
+            abraglandsIopScaraAtelierBijoutier(amount, repeat);
+        }
+    }
+
+    public  void abraglandsIopScaraAtelierBijoutierSecrete(int amount, boolean repeat) throws InterruptedException, FindFailed, IOException {
+        TimeUnit.SECONDS.sleep(3);
+        Screen s = new Screen();
+
+        TimeUnit.SECONDS.sleep(3);
+        general.zaapAstrubToMaisonCoffre1();
+        TimeUnit.SECONDS.sleep(3);
+        general.depodsAbraglands(amount);
+        TimeUnit.SECONDS.sleep(3);
+        s.doubleClick(popoRappel);
+        TimeUnit.SECONDS.sleep(3);
+        s.rightClick(zaapAstrub);
+        TimeUnit.SECONDS.sleep(1);
+        s.doubleClick(selectZaapScara);
+
+        TimeUnit.SECONDS.sleep(2);
+        s.click(new Location(xRight, 310));
+        TimeUnit.SECONDS.sleep(5);
+        s.click(new Location(xRight, 510));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(xRight, 440));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(770, yDown));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(900, yDown));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(960, yDown));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(780, yDown));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(760, yDown));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(970, 400));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(700, 310));
+        TimeUnit.SECONDS.sleep(6);
+
+        s.click(new Location(860, 280));
+        TimeUnit.SECONDS.sleep(5);
+        s.click(new Location(900, 300));
+        TimeUnit.SECONDS.sleep(2);
+
+        for (int i = 0; i < amount; i++) {
+            try {
+                s.type(Key.F2);
+                TimeUnit.MILLISECONDS.sleep(500);
+                s.rightClick(new Location(940, 300));
+                TimeUnit.MILLISECONDS.sleep(500);
+                if(s.exists(pretCombat) != null) {
+                    s.click(new Location(870, 320));
+                    TimeUnit.MILLISECONDS.sleep(200);
+                    s.click(new Location(770, 370));
+                    TimeUnit.MILLISECONDS.sleep(1000);
+                    s.type(Key.F1);
+                    TimeUnit.MILLISECONDS.sleep(1500);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    if(s.exists(abraFight) != null) {
+                        TimeUnit.MILLISECONDS.sleep(200);
+                        s.click(new Location(700, 400));
+                        TimeUnit.MILLISECONDS.sleep(200);
+                        s.click(new Location(840, 270));
+                        TimeUnit.MILLISECONDS.sleep(1500);
+                        s.type(Key.F7);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(700);
+                        s.type(Key.F7);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(700);
+                        s.type(Key.F7);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(1000);
+                        while (s.exists(abraFight) != null) {
+                            s.type(Key.F6);
+                            s.click(abraFight);
+                            TimeUnit.MILLISECONDS.sleep(500);
+                            s.type(Key.F6);
+                            s.click(abraFight);
+                            TimeUnit.MILLISECONDS.sleep(500);
+                            s.type(Key.F1);
+                            TimeUnit.SECONDS.sleep(10);
+                        }
+                    }
+                }
+                else{
+                    if(s.exists(interfacePerco) != null){
+                        s.type(Key.ESC);
+                        TimeUnit.SECONDS.sleep(1);
+                    }
+                    s.click(new Location(860, 280));
+                    TimeUnit.SECONDS.sleep(3);
+                    s.click(new Location(900, 300));
+                    TimeUnit.SECONDS.sleep(2);
+                }
+            } catch (FindFailed e) {
+                e.printStackTrace();
+            }
+        }
+        TimeUnit.SECONDS.sleep(2);
+        s.type(Key.ESC);
+        TimeUnit.SECONDS.sleep(1);
+        if(repeat) {
+            abraglandsIopScaraAtelierBijoutierSecrete(amount, repeat);
+        }
+    }
+
+    public  void abraglandsIopScaraAtelierSculpteur(int amount, boolean repeat) throws InterruptedException, FindFailed, IOException {
+        TimeUnit.SECONDS.sleep(3);
+        Screen s = new Screen();
+
+        TimeUnit.SECONDS.sleep(3);
+        general.zaapAstrubToMaisonCoffre1();
+        TimeUnit.SECONDS.sleep(3);
+        general.depodsAbraglands(amount);
+        TimeUnit.SECONDS.sleep(3);
+        s.doubleClick(popoRappel);
+        TimeUnit.SECONDS.sleep(3);
+        s.rightClick(zaapAstrub);
+        TimeUnit.SECONDS.sleep(1);
+        s.doubleClick(selectZaapScara);
+
+        TimeUnit.SECONDS.sleep(2);
+        s.click(new Location(xRight, 310));
+        TimeUnit.SECONDS.sleep(5);
+        s.click(new Location(xRight, 510));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(xRight, 440));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(770, yDown));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(900, yDown));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(960, yDown));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(780, yDown));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(760, yDown));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(700, yDown));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(770, 200));
+        TimeUnit.SECONDS.sleep(6);
+
+        s.click(new Location(600, 410));
+        TimeUnit.SECONDS.sleep(2);
+        s.click(new Location(635, 435));
+        TimeUnit.SECONDS.sleep(2);
+
+        for (int i = 0; i < amount; i++) {
+            try {
+                s.type(Key.F2);
+                TimeUnit.MILLISECONDS.sleep(500);
+                s.rightClick(new Location(670, 420));
+                TimeUnit.MILLISECONDS.sleep(500);
+                if(s.exists(pretCombat) != null) {
+                    s.click(new Location(740, 400));
+                    TimeUnit.MILLISECONDS.sleep(200);
+                    s.click(new Location(900, 350));
+                    TimeUnit.MILLISECONDS.sleep(1000);
+                    s.type(Key.F1);
+                    TimeUnit.MILLISECONDS.sleep(1500);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    if(s.exists(abraFight) != null) {
+                        TimeUnit.MILLISECONDS.sleep(200);
+                        s.click(new Location(810, 370));
+                        TimeUnit.MILLISECONDS.sleep(1500);
+                        s.type(Key.F7);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(700);
+                        s.type(Key.F7);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(700);
+                        s.type(Key.F7);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(1000);
+                        while (s.exists(abraFight) != null) {
+                            s.type(Key.F6);
+                            s.click(abraFight);
+                            TimeUnit.MILLISECONDS.sleep(500);
+                            s.type(Key.F6);
+                            s.click(abraFight);
+                            TimeUnit.MILLISECONDS.sleep(500);
+                            s.type(Key.F1);
+                            TimeUnit.SECONDS.sleep(10);
+                        }
+                    }
+                }
+                else{
+                    if(s.exists(interfacePerco) != null){
+                        s.type(Key.ESC);
+                        TimeUnit.SECONDS.sleep(1);
+                    }
+                    s.click(new Location(600, 410));
+                    TimeUnit.SECONDS.sleep(2);
+                    s.click(new Location(635, 435));
+                    TimeUnit.SECONDS.sleep(2);
+                }
+            } catch (FindFailed e) {
+                e.printStackTrace();
+            }
+        }
+        TimeUnit.SECONDS.sleep(2);
+        s.type(Key.ESC);
+        TimeUnit.SECONDS.sleep(1);
+        if(repeat) {
+            abraglandsIopScaraAtelierBijoutier(amount, repeat);
+        }
+    }
+
+    public  void abraglandsIopScaraAtelierForgeron(int amount, boolean repeat) throws InterruptedException, FindFailed, IOException {
+        TimeUnit.SECONDS.sleep(3);
+        Screen s = new Screen();
+
+        TimeUnit.SECONDS.sleep(3);
+        general.zaapAstrubToMaisonCoffre1();
+        TimeUnit.SECONDS.sleep(3);
+        general.depodsAbraglands(amount);
+        TimeUnit.SECONDS.sleep(3);
+        s.doubleClick(popoRappel);
+        TimeUnit.SECONDS.sleep(3);
+        s.rightClick(zaapAstrub);
+        TimeUnit.SECONDS.sleep(1);
+        s.doubleClick(selectZaapScara);
+
+        TimeUnit.SECONDS.sleep(2);
+        s.click(new Location(xRight, 310));
+        TimeUnit.SECONDS.sleep(5);
+        s.click(new Location(xRight, 510));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(xRight, 440));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(770, yDown));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(900, yDown));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(960, yDown));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(780, yDown));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(760, yDown));
+        TimeUnit.SECONDS.sleep(6);
+        s.click(new Location(xRight, 240));
+        TimeUnit.SECONDS.sleep(6);
+
+        s.click(new Location(670, 220));
+        TimeUnit.SECONDS.sleep(6);
+
+        s.click(new Location(940, 350));
+        TimeUnit.SECONDS.sleep(2);
+        s.click(new Location(975, 370));
+        TimeUnit.SECONDS.sleep(2);
+
+        for (int i = 0; i < amount; i++) {
+            try {
+                s.type(Key.F2);
+                TimeUnit.MILLISECONDS.sleep(500);
+                s.rightClick(new Location(1000, 360));
+                TimeUnit.MILLISECONDS.sleep(500);
+                if(s.exists(pretCombat) != null) {
+                    s.click(new Location(770, 420));
+                    TimeUnit.MILLISECONDS.sleep(200);
+                    s.click(new Location(900, 350));
+                    TimeUnit.MILLISECONDS.sleep(1000);
+                    s.type(Key.F1);
+                    TimeUnit.MILLISECONDS.sleep(1500);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    s.type(Key.F7);
+                    s.click(abraFight);
+                    TimeUnit.MILLISECONDS.sleep(700);
+                    if(s.exists(abraFight) != null) {
+                        TimeUnit.MILLISECONDS.sleep(200);
+                        s.click(new Location(840, 390));
+                        TimeUnit.MILLISECONDS.sleep(1500);
+                        s.type(Key.F7);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(700);
+                        s.type(Key.F7);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(700);
+                        s.type(Key.F7);
+                        s.click(abraFight);
+                        TimeUnit.MILLISECONDS.sleep(1000);
+                        while (s.exists(abraFight) != null) {
+                            s.type(Key.F6);
+                            s.click(abraFight);
+                            TimeUnit.MILLISECONDS.sleep(500);
+                            s.type(Key.F6);
+                            s.click(abraFight);
+                            TimeUnit.MILLISECONDS.sleep(500);
+                            s.type(Key.F1);
+                            TimeUnit.SECONDS.sleep(10);
+                        }
+                    }
+                }
+                else{
+                    if(s.exists(interfacePerco) != null){
+                        s.type(Key.ESC);
+                        TimeUnit.SECONDS.sleep(1);
+                    }
+                    s.click(new Location(940, 350));
+                    TimeUnit.SECONDS.sleep(2);
+                    s.click(new Location(975, 370));
+                    TimeUnit.SECONDS.sleep(2);
+                }
+            } catch (FindFailed e) {
+                e.printStackTrace();
+            }
+        }
+        TimeUnit.SECONDS.sleep(2);
+        s.type(Key.ESC);
+        TimeUnit.SECONDS.sleep(1);
+        if(repeat) {
+            abraglandsIopScaraAtelierForgeron(amount, repeat);
+        }
     }
 }

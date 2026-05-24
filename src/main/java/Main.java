@@ -14,6 +14,7 @@ public class Main {
 
     static Pattern fleurDeChanvre = new Pattern(imagePath + "fleurDeChanvre.png").similar((float) 0.70);
     static Pattern phenix = new Pattern(imagePath + "phenix.png").similar((float) 0.8);
+    static Pattern interfacePerco = new Pattern(imagePath + "interfacePerco.png").similar((float) 0.8);
     static Pattern abondonner = new Pattern(imagePath + "abondonner.png").similar((float) 0.8);
     static Pattern couper = new Pattern(imagePath + "couper.png").similar((float) 0.8);
     static Pattern arbreNoyer = new Pattern(imagePath + "arbreNoyer.png").similar((float) 0.8);
@@ -93,7 +94,6 @@ public class Main {
     static Pattern arcEco = new Pattern(imagePath + "arcEco.png").similar((float) 0.80);
     static Pattern batonDakn = new Pattern(imagePath + "batonDakn.png").similar((float) 0.80);
     static Pattern maxCraft = new Pattern(imagePath + "maxCraft.png").similar((float) 0.80);
-
     static Pattern arakneBack = new Pattern(imagePath + "arakneBackInv.png").similar((float) 0.78);
     static Pattern arakneLeft = new Pattern(imagePath + "arakneLeftInv.png").similar((float) 0.80);
     static Pattern arakneRight = new Pattern(imagePath + "arakneRightInv.png").similar((float) 0.78);
@@ -123,22 +123,17 @@ public class Main {
     static Pattern startRizPosX22Y24 = new Pattern(imagePath + "startRizPosX22Y24.png").similar((float) 0.80);
     static Pattern checkAtelierPaysanAstrub = new Pattern(imagePath + "checkAtelierPaysanAstrub.png").similar((float) 0.80);
     static Pattern checkAtelierAlchiAstrub = new Pattern(imagePath + "checkAtelierAlchiAstrub.png").similar((float) 0.80);
-
-
     static Pattern potionFoyer = new Pattern(imagePath + "potionFoyer.png").similar((float) 0.80);
     static Pattern poudrePerlenpain = new Pattern(imagePath + "poudrePerlenpain.png").similar((float) 0.80);
     static Pattern boisErable = new Pattern(imagePath + "boisErable.png").similar((float) 0.80);
     static Pattern boisNoyer = new Pattern(imagePath + "boisNoyer.png").similar((float) 0.80);
     static Pattern geleesRouge = new Pattern(imagePath + "geleesRouge.png").similar((float) 0.80);
     static Pattern geleesBleu = new Pattern(imagePath + "geleesBleu.png").similar((float) 0.80);
-
     static Pattern osChafer = new Pattern(imagePath + "osChafer.png").similar((float) 0.80);
     static Pattern boisChataignier = new Pattern(imagePath + "boisChataignier.png").similar((float) 0.80);
     static Pattern boisChene = new Pattern(imagePath + "boisChene.png").similar((float) 0.70);
     static Pattern boisFrene = new Pattern(imagePath + "boisFrene.png").similar((float) 0.80);
-
     static Pattern popoBrakmar = new Pattern(imagePath + "popoBrakmar.png").similar((float) 0.80);
-
     static Pattern polirPierre = new Pattern(imagePath + "polirPierre.png").similar((float) 0.80);
     static Pattern pierreSaphir = new Pattern(imagePath + "pierreSaphir.png").similar((float) 0.80);
     static Pattern eau = new Pattern(imagePath + "eau.png").similar((float) 0.80);
@@ -146,15 +141,10 @@ public class Main {
     static Pattern pierreEmeraude = new Pattern(imagePath + "pierreEmeraude.png").similar((float) 0.80);
     static Pattern pierreRubis = new Pattern(imagePath + "pierreRubis.png").similar((float) 0.80);
     static Pattern aluminite = new Pattern(imagePath + "aluminite.png").similar((float) 0.80);
-
     static Pattern silex = new Pattern(imagePath + "silex.png").similar((float) 0.80);
-
     static Pattern pierrePolie = new Pattern(imagePath + "pierrePolie.png").similar((float) 0.80);
-
     static Pattern pierreGranit = new Pattern(imagePath + "pierreGranit.png").similar((float) 0.80);
-
     static Pattern potionVieilesse = new Pattern(imagePath + "potionVieilesse.png").similar((float) 0.80);
-
     static Pattern riz = new Pattern(imagePath + "riz.png").similar((float) 0.80);
     static Pattern chanvreRecolte = new Pattern(imagePath + "chanvreRecolte.png").similar((float) 0.80);
     static Pattern bleRecolte = new Pattern(imagePath + "bleRecolte.png").similar((float) 0.8545);
@@ -225,16 +215,16 @@ public class Main {
         //botsCraft.potionBonta();
         //botsCraft.potionRappel();
         //botsCraft.potionBrak();
-        //botsCraft.potionVieillesse(3);
+        //botsCraft.potionVieillesse(1);
         //botsCraft.graineChanvre();0
         //botsCraft.botTempleSadi(3000, 1);
 
         BotsRecolte botsRecolte = new BotsRecolte();
         //botsRecolte.recolteRiz("enu",6000, 3);
-        //botsRecolte.recolteChanvrePosX10Y5("alchi","cra", 3000, 3);
-        //botsRecolte.recolteChanvrePosX32Y42("paysan","cra", 3000, 3);
+        //botsRecolte.recolteChanvrePosX10Y5("paysan","cra", 4000, 1);
+        //botsRecolte.recolteChanvrePosX32Y42("paysan","cra", 6000, 1);
         //botsRecolte.recolteBlePosX11Y6("cra", 4000);
-        botsRecolte.bucherForetAstrub("cra", 1000, new ArrayList<String>(Arrays.asList("noyer","chataignier","frene")));
+        //botsRecolte.bucherForetAstrub("cra", 1500, new ArrayList<String>(Arrays.asList("noyer","chataignier", "frene")));
 
         BotsFourbe botsFourbe = new BotsFourbe();
         //botsFourbe.cheminFer();
@@ -243,15 +233,26 @@ public class Main {
         //botsJugement.donjonMorose();
 
         Abraglands abraglands = new Abraglands();
-        //abraglands.abraglandsSculpteurIop(200);
-        //abraglands.abraglandsIopBoucherAmakna(275);
+        //abraglands.abraglandsIopBoucherAmakna(275, false);
         //abraglands.abraglandsIopAlchiAmakna();
-        //abraglands.abraglandsIopScaraNord(200);
-        //abraglands.abraglandsIopScaraNordGauche(200);
+        //abraglands.abraglandsSculpteurIop(250, false);
+        //abraglands.abraglandsIopScaraNord(250, false);
+        //abraglands.abraglandsIopScaraNordGauche(250, false);
+        //abraglands.abraglandsIopScaraAtelierBijoutier(250, false);
+        //abraglands.abraglandsIopScaraAtelierBijoutierSecrete(250, false);
+        //abraglands.abraglandsIopScaraAtelierPaysan1Etage(250, false);
+        //abraglands.abraglandsIopScaraAtelierPaysan1(250, false);
+        //abraglands.abraglandsIopScaraAtelierSculpteur(250, false);
+
+        // Loop abraglands
+        abraglands.abraglandsIopScaraAtelierBijoutier(250, false);
+        abraglands.abraglandsIopScaraAtelierBijoutierSecrete(250, false);
+        abraglands.abraglandsIopScaraNord(250, false);
+        abraglands.abraglandsIopScaraNord(250, false);
 
         BotsElevage botsElevage = new BotsElevage();
         //botsElevage.nourirCorbac(new ArrayList<Pattern>(Arrays.asList(pepepe)), 36);
-        //botsElevage.nourirChacha(new ArrayList<Pattern>(Arrays.asList(pevpev)), 200);
+        //botsElevage.nourirChacha(new ArrayList<Pattern>(Arrays.asList(pevpev)), 162);
         //botsElevage.nourirChacha(new ArrayList<Pattern>(Arrays.asList(ghoulinho, ghoulash, sumatra)));
         //botsElevage.nourirChacha(new ArrayList<Pattern>(Arrays.asList(pepepepepe, pepepe, pevpev)));
         //botsElevage.nourirChacha(new ArrayList<Pattern>(Arrays.asList(nekfemeuj, poule, part)));
