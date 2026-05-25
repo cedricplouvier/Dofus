@@ -233,7 +233,7 @@ public class Main {
         //botsJugement.donjonMorose();
 
         Abraglands abraglands = new Abraglands();
-        //abraglands.abraglandsIopBoucherAmakna(275, false);
+        //abraglands.abraglandsIopBoucherAmakna(250, false);
         //abraglands.abraglandsIopAlchiAmakna();
         //abraglands.abraglandsSculpteurIop(250, false);
         //abraglands.abraglandsIopScaraNord(250, false);
@@ -243,12 +243,17 @@ public class Main {
         //abraglands.abraglandsIopScaraAtelierPaysan1Etage(250, false);
         //abraglands.abraglandsIopScaraAtelierPaysan1(250, false);
         //abraglands.abraglandsIopScaraAtelierSculpteur(250, false);
+        //abraglands.abraglandsIopScaraAtelierForgeron(250, false);
 
         // Loop abraglands
-        abraglands.abraglandsIopScaraAtelierBijoutier(250, false);
-        abraglands.abraglandsIopScaraAtelierBijoutierSecrete(250, false);
+        //abraglands.abraglandsIopScaraAtelierForgeron(250, false);
+        //abraglands.abraglandsIopScaraAtelierSculpteur(250, false);
+        //abraglands.abraglandsIopScaraAtelierBijoutier(250, false);
+        //abraglands.abraglandsIopScaraAtelierBijoutierSecrete(250, false);
         abraglands.abraglandsIopScaraNord(250, false);
-        abraglands.abraglandsIopScaraNord(250, false);
+        abraglands.abraglandsIopScaraNordGauche(250, false);
+        abraglands.abraglandsSculpteurIop(250, false);
+        abraglands.abraglandsIopBoucherAmakna(250, false);
 
         BotsElevage botsElevage = new BotsElevage();
         //botsElevage.nourirCorbac(new ArrayList<Pattern>(Arrays.asList(pepepe)), 36);
