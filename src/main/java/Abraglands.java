@@ -56,7 +56,6 @@ public class Abraglands extends Main {
                     s.click(new Location(735, 410));
                     TimeUnit.MILLISECONDS.sleep(700);
                     s.click(new Location(900, 350));
-
                     TimeUnit.MILLISECONDS.sleep(700);
                     s.type(Key.F1);
 
@@ -120,10 +119,6 @@ public class Abraglands extends Main {
 
         TimeUnit.SECONDS.sleep(2);
         s.type(Key.ESC);
-        TimeUnit.SECONDS.sleep(1);
-        general.zaapAstrubToMaisonCoffre1();
-        TimeUnit.SECONDS.sleep(3);
-        general.depodsAbraglands(amount);
         TimeUnit.SECONDS.sleep(1);
         if (repeat) {
             abraglandsSculpteurIop(amount, repeat);
@@ -268,10 +263,6 @@ public class Abraglands extends Main {
 
         TimeUnit.SECONDS.sleep(2);
         s.type(Key.ESC);
-        TimeUnit.SECONDS.sleep(1);
-        general.zaapAstrubToMaisonCoffre1();
-        TimeUnit.SECONDS.sleep(3);
-        general.depodsAbraglands(amount);
         TimeUnit.SECONDS.sleep(1);
         if(repeat) {
             abraglandsIopBoucherAmakna(amount, repeat);
@@ -446,6 +437,7 @@ public class Abraglands extends Main {
                 if(s.exists(pretCombat) != null) {
                     TimeUnit.MILLISECONDS.sleep(700);
                     s.click(new Location(580, 270));
+                    TimeUnit.MILLISECONDS.sleep(700);
                     s.type(Key.F1);
                     TimeUnit.SECONDS.sleep(2);
                     s.click(new Location(670, 320));
@@ -508,10 +500,6 @@ public class Abraglands extends Main {
         }
         TimeUnit.SECONDS.sleep(2);
         s.type(Key.ESC);
-        TimeUnit.SECONDS.sleep(1);
-        general.zaapAstrubToMaisonCoffre1();
-        TimeUnit.SECONDS.sleep(3);
-        general.depodsAbraglands(amount);
         TimeUnit.SECONDS.sleep(1);
         if(repeat) {
             abraglandsIopScaraNord(amount, repeat);
